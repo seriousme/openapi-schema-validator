@@ -1,116 +1,121 @@
-import { load, dump } from "js-yaml";
-
 function escapeJsonPointer(str) {
-    return str.replace(/~/g, "~0").replace(/\//g, "~1");
+  return str.replace(/~/g, "~0").replace(/\//g, "~1");
 }
 
 function unescapeJsonPointer(str) {
-    return str.replace(/~1/g, "/").replace(/~0/g, "~");
+  return str.replace(/~1/g, "/").replace(/~0/g, "~");
 }
 
-const isObject = obj => (typeof obj === "object" && obj !== null);
-const pointerWords = new Set(["$ref", "$id", "$anchor", "$dynamicRef", "$dynamicAnchor", "$schema"]);
+const isObject = (obj) => typeof obj === "object" && obj !== null;
+const pointerWords = new Set([
+  "$ref",
+  "$id",
+  "$anchor",
+  "$dynamicRef",
+  "$dynamicAnchor",
+  "$schema",
+]);
 
-const filtered = raw => Object.fromEntries(
-    Object.entries(raw).filter(
-        ([key, _]) => (!pointerWords.has(key))
-    )
-);
-
+const filtered = (raw) =>
+  Object.fromEntries(
+    Object.entries(raw).filter(([key, _]) => !pointerWords.has(key))
+  );
 
 function resolveUri(uri, anchors) {
-    const [prefix, path] = uri.split("#", 2)
-    const err = new Error(`Can't resolve ${uri}`)
-    if (path[0] !== "/") {
-        if (anchors[uri]) {
-            return anchors[uri];
-        }
-        throw err;
+  const [prefix, path] = uri.split("#", 2);
+  const err = new Error(`Can't resolve ${uri}`);
+  if (path[0] !== "/") {
+    if (anchors[uri]) {
+      return anchors[uri];
     }
+    throw err;
+  }
 
-    if (!anchors[prefix]) {
-        throw err;
-    }
-    const paths = path.split("/").slice(1);
-    try {
-        const result = paths.reduce((o, n) => o[unescapeJsonPointer(n)], anchors[prefix]);
-        return result;
-    } catch (_) {
-        throw err;
-    }
+  if (!anchors[prefix]) {
+    throw err;
+  }
+  const paths = path.split("/").slice(1);
+  try {
+    const result = paths.reduce(
+      (o, n) => o[unescapeJsonPointer(n)],
+      anchors[prefix]
+    );
+    return result;
+  } catch (_) {
+    throw err;
+  }
 }
-
 
 export function resolve(tree) {
-    if (!isObject(tree)) {
-        return undefined
+  if (!isObject(tree)) {
+    return undefined;
+  }
+
+  const pointers = {};
+  pointerWords.forEach((word) => (pointers[word] = []));
+
+  function parse(obj, path, id) {
+    if (!isObject(obj)) {
+      return;
     }
-
-    const pointers = {};
-    pointerWords.forEach(word => pointers[word] = []);
-
-    function parse(obj, path, id) {
-        if (!isObject(obj)) {
-            return
-        }
-        if (obj.$id) {
-            id = obj.$id;
-        }
-        for (const prop in obj) {
-            if (pointerWords.has(prop)) {
-                pointers[prop].push({ ref: obj[prop], obj, prop, path, id });
-            }
-            parse(obj[prop], `${path}/${escapeJsonPointer(prop)}`, id)
-        }
+    if (obj.$id) {
+      id = obj.$id;
     }
-    // find all refs
-    parse(tree, "#", "");
+    for (const prop in obj) {
+      if (pointerWords.has(prop)) {
+        pointers[prop].push({ ref: obj[prop], obj, prop, path, id });
+      }
+      parse(obj[prop], `${path}/${escapeJsonPointer(prop)}`, id);
+    }
+  }
+  // find all refs
+  parse(tree, "#", "");
 
-    // resolve them
-    const anchors = { "": tree };
-    const dynamicAnchors = {};
-    pointers.$id.forEach(item => {
-        const { ref, obj, path } = item;
-        if (anchors[ref]) {
-            throw new Error(`$id : '${ref}' defined more than once at ${path}`);
-        }
-        anchors[ref] = obj
-    });
+  // resolve them
+  const anchors = { "": tree };
+  const dynamicAnchors = {};
+  pointers.$id.forEach((item) => {
+    const { ref, obj, path } = item;
+    if (anchors[ref]) {
+      throw new Error(`$id : '${ref}' defined more than once at ${path}`);
+    }
+    anchors[ref] = obj;
+  });
 
-    pointers.$anchor.forEach(item => {
-        const { ref, obj, prop, path, id } = item;
-        const fullRef = `${id}#${ref}`;
-        if (anchors[fullRef]) {
-            throw new Error(`$anchor : '${ref}' defined more than once at '${path}'`);
-        }
-        anchors[fullRef] = obj
-    });
+  pointers.$anchor.forEach((item) => {
+    const { ref, obj, path, id } = item;
+    const fullRef = `${id}#${ref}`;
+    if (anchors[fullRef]) {
+      throw new Error(`$anchor : '${ref}' defined more than once at '${path}'`);
+    }
+    anchors[fullRef] = obj;
+  });
 
-    pointers.$dynamicAnchor.forEach(item => {
-        const { ref, obj, prop, path } = item;
-        if (dynamicAnchors[`#${ref}`]) {
-            throw new Error(`$dynamicAnchor : '${ref}' defined more than once at '${path}'`);
-        }
-        dynamicAnchors[`#${ref}`] = obj;
-    });
+  pointers.$dynamicAnchor.forEach((item) => {
+    const { ref, obj, path } = item;
+    if (dynamicAnchors[`#${ref}`]) {
+      throw new Error(
+        `$dynamicAnchor : '${ref}' defined more than once at '${path}'`
+      );
+    }
+    dynamicAnchors[`#${ref}`] = obj;
+  });
 
-    pointers.$ref.forEach(item => {
-        const { ref, obj, prop, path, id } = item;
-        delete obj[prop]
-        const fullRef = ref[0] !== "#" ? ref : `${id}${ref}`;
-        const res = filtered(resolveUri(fullRef, anchors))
-        Object.assign(obj, filtered(resolveUri(fullRef, anchors)));
-    });
+  pointers.$ref.forEach((item) => {
+    const { ref, obj, prop, id } = item;
+    delete obj[prop];
+    const fullRef = ref[0] !== "#" ? ref : `${id}${ref}`;
+    Object.assign(obj, filtered(resolveUri(fullRef, anchors)));
+  });
 
-    pointers.$dynamicRef.forEach(item => {
-        const { ref, obj, prop, path, id } = item;
-        if (!dynamicAnchors[ref]){
-            throw new Error(`Can't resolve $dynamicAnchor : '${ref}'`);
-        }
-        delete obj[prop]
-        Object.assign(obj, filtered(dynamicAnchors[ref]));
-    });
+  pointers.$dynamicRef.forEach((item) => {
+    const { ref, obj, prop } = item;
+    if (!dynamicAnchors[ref]) {
+      throw new Error(`Can't resolve $dynamicAnchor : '${ref}'`);
+    }
+    delete obj[prop];
+    Object.assign(obj, filtered(dynamicAnchors[ref]));
+  });
 
-    return tree;
+  return tree;
 }
-
