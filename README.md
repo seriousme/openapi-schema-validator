@@ -42,15 +42,20 @@ if (res.valid){
 
 <a name="Usage"></a>
 ### API
+- [`new Validator(ajvOptions)`](#newValidator)
 - [`<instance>.validate(specification)`](#validate)
 - [`<instance>.version`](#version)
 - [`<instance>.resolveRefs(options)`](#resolveRefs)
 - [`Validator.supportedVersions`](#supportedVersions)
 
+<a name="newValidator"></a>
+### `new Validator(ajvOptions)`
+
+The constructor returns an instance of `Validator`. 
+By passing an ajv options object it is possible to influence the behavior of the [AJV schema validator](https://ajv.js.org/). 
+
 <a name="validate"></a>
-```
-<instance>.validate(specification)
-```
+### `<instance>.validate(specification)`
 
 This function tries to validata a specification against the OpenApi schemas. `specification` can be one of:
 
@@ -69,17 +74,13 @@ The result is an object:
 ```
 
 <a name="version"></a>
-```
-<instance>.version
-```
+### `<instance>.version`
 
 If validation is succesfull this will return the openApi version found e.g. ("2.0","3.0","3.1).
 The openApi specification only specifies major/minor versions as separate schemas. So "3.0.3" results in "3.0".
 
 <a name="resolveRefs"></a>
-```
-<instance>.resolveRefs(options)
-```
+### `<instance>.resolveRefs(options)`
 
 This function tries to resolve all internal references. External references are *not* automatically resolved so you need to inline them yourself if required. By default it will use the last specification passed to `<instance>.validate()`
 but you can explicity pass a specification by passing `{specification:<object>}` as options.
@@ -87,9 +88,7 @@ The result is an `object` where all references have been resolved.
 Resolution of references is `shallow` This should normally not be a problem for this use case.
 
 <a name="supportedVersions"></a>
-```
-Validator.supportedVersions
-```
+### `Validator.supportedVersions`
 
 This static property returns the OpenApi versions supported by this package as a `Set`. If present, the result of `<instance>.version` is a member of this `Set`.
 
