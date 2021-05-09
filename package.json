@@ -6,7 +6,6 @@
   "type": "module",
   "dependencies": {
     "ajv": "^8.3.0",
-    "ajv-formats": "^2.0.2",
     "js-yaml": "^4.1.0"
   },
   "scripts": {
