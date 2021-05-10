@@ -22,16 +22,16 @@ npm i @seriousme/openapi-schema-validator --save
 ### Usage
 
 ```javascript
-import Validator from "openapi-schema-validator";
+import Validator from "@seriousme/openapi-schema-validator";
 
-console.log(Validator.supportedVersions.has("3.1"))
+console.log(Validator.supportedVersions.has("3.1"));
 // prints true
 
 const validator = new Validator();
-const res = await validator.validate('./petstore.json');
-if (res.valid){
+const res = await validator.validate("./petstore.json");
+if (res.valid) {
   console.log("Specification matches schema for version", validator.version);
-  const schema = validator.resolveRefs());
+  const schema = validator.resolveRefs();
   // schema now contains a Javascript object containing the dereferenced schema
 } else {
   console.log("Specification does not match Schema");
