@@ -3,6 +3,10 @@
 ## [Unreleased]
 ### Changed
 
+## [v1.0.2] 10-05-2021
+### Changed
+- Updated example in README.md
+
 ## [v1.0.1] 09-05-2021
 ### Changed
 - Updated dependencies
