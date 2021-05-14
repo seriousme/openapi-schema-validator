@@ -1,11 +1,8 @@
-import Ajv from "ajv";
-import Ajv2020 from "ajv/dist/2020.js";
-import { createRequire } from "module";
-import JSYaml from "js-yaml";
-import { readFile } from "fs/promises";
-import { resolve } from "./resolve.js";
-
-const importJSON = createRequire(import.meta.url);
+const Ajv = require("ajv");
+const Ajv2020 = require("ajv/dist/2020.js");
+const JSYaml = require("js-yaml");
+const { readFile } = require("fs/promises");
+const { resolve } = require("./resolve.js");
 
 const openApiVersions = new Set(["2.0", "3.0", "3.1"]);
 const ajvVersions = {
@@ -42,9 +39,10 @@ async function getSpecFromData(data) {
       return undefined;
     }
   }
+  return undefined;
 }
 
-export default class Validator {
+module.exports = class Validator {
   constructor(ajvOptions = { strict: false, validateFormats: false }) {
     this.ajvOptions = ajvOptions;
     return this;
@@ -74,7 +72,7 @@ export default class Validator {
           "Cannot find supported swagger/openapi version in specification, version must be a string.",
       };
     }
-    const schema = await importJSON(`./schemas/v${version}/schema.json`);
+    const schema = require(`./schemas/v${version}/schema.json`);
     const schemaVersion = schema.$schema;
     const AjvClass = ajvVersions[schemaVersion];
     const ajv = new AjvClass(this.ajvOptions);
@@ -87,4 +85,4 @@ export default class Validator {
     }
     return result;
   }
-}
+};

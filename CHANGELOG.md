@@ -3,6 +3,10 @@
 ## [Unreleased]
 ### Changed
 
+## [v1.1.0] 10-05-2021
+### Changed
+ - Converted from ESM to CommonJS to improve compatibility
+
 ## [v1.0.3] 10-05-2021
 ### Changed
 - Fixed bug in v2.0 schema that disallowed multiple parameters

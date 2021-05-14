@@ -1,12 +1,8 @@
-import tap from "tap";
-const test = tap.test;
+const { test } = require("tap");
 
-import { createRequire } from "module";
-import Validator from "../index.js";
+const Validator = require("../index.js");
 const validator = new Validator();
 const resolve = (specification) => validator.resolveRefs({ specification });
-
-const importJSON = createRequire(import.meta.url);
 
 test(`non object returns undefined`, async (t) => {
   const schema = "schema";
