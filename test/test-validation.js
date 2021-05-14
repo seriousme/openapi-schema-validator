@@ -89,6 +89,17 @@ test(`yaml specification as filename works`, async (t) => {
   t.equal(ver, "3.0", "yaml spec version matches expected version");
 });
 
+test(`original petstore spec works`, async (t) => {
+  t.plan(2);
+  const validator = new Validator();
+  const petStoreSpec = await importJSON(`./validation/petstore-swagger.v2.json`);
+  const res = await validator.validate(petStoreSpec);
+  console.log(res.errors);
+  t.equal(res.valid, true, "original petstore spec is valid");
+  const ver = validator.version;
+  t.equal(ver, "2.0", "original petstore spec version matches expected version");
+});
+
 test(`Invalid filename returns an error`, async (t) => {
   t.plan(2);
   const validator = new Validator();

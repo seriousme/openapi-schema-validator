@@ -1461,7 +1461,7 @@
       "type": "array",
       "description": "The parameters needed to send a valid API call.",
       "additionalItems": false,
-      "items": [{
+      "items": {
         "oneOf": [
           {
             "$ref": "#/definitions/parameter"
@@ -1470,7 +1470,7 @@
             "$ref": "#/definitions/jsonReference"
           }
         ]
-      }],
+      },
       "uniqueItems": true
     },
     "schemesList": {
