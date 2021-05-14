@@ -3,21 +3,20 @@
   "version": "1.0.3",
   "description": "Validate OpenApi specifications against their JSON schema",
   "main": "index.js",
-  "type": "module",
+  "type": "commonjs",
   "dependencies": {
     "ajv": "^8.3.0",
     "js-yaml": "^4.1.0"
   },
   "scripts": {
-    "test": "c8 tap test/test-*.js",
-    "covtest": "c8 --reporter=lcov --checkcoverage --lines 100 --functions 100 --branches 100 npm test",
+    "test": "tap test/test-*.js",
+    "covtest": "tap --coverage-report=html test/test-*.js",
     "preversion": "npm test",
     "postversion": "git push && git push --tags"
   },
   "author": "Hans Klunder",
   "license": "MIT",
   "devDependencies": {
-    "c8": "^7.7.2",
     "tap": "^15.0.9"
   },
   "directories": {

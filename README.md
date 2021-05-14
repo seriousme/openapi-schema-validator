@@ -44,6 +44,7 @@ if (res.valid) {
 ### API
 - [`new Validator(ajvOptions)`](#newValidator)
 - [`<instance>.validate(specification)`](#validate)
+- [`<instance>.specification`](#specification)
 - [`<instance>.version`](#version)
 - [`<instance>.resolveRefs(options)`](#resolveRefs)
 - [`Validator.supportedVersions`](#supportedVersions)
@@ -72,6 +73,11 @@ The result is an object:
   errors: <any>  // only present if valid is false
 }
 ```
+
+<a name="specification"></a>
+### `<instance>.specification`
+
+If the validator managed to extract data from the specification parameter then the extracted specification is available in this property as javascript object. E.g. if you supplied a filename of a YAML file and the file was sucessfully read and its YAML decoded then the contents is here. Even if validation failed. 
 
 <a name="version"></a>
 ### `<instance>.version`

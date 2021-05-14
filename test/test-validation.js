@@ -1,20 +1,19 @@
-import tap from "tap";
-const test = tap.test;
+const { test } = require("tap");
 
-import { createRequire } from "module";
-import Validator from "../index.js";
-import { readFile } from "fs/promises";
+const Validator = require("../index.js");
+const { readFile } = require("fs/promises");
 
-const localFile = (fileName) => new URL(fileName, import.meta.url).pathname;
-const importJSON = createRequire(import.meta.url);
-const emptySpec = await importJSON(`./validation/empty.json`);
-const invalidSpec = await importJSON(`./validation/invalid-spec.json`);
+const localFile = (fileName) =>
+  new URL(fileName, `file://${__dirname}/`).pathname;
+const emptySpec = require(`./validation/empty.json`);
+const invalidSpec = require(`./validation/invalid-spec.json`);
+const { resolveSchema } = require("ajv/dist/compile");
 const yamlFileName = localFile(`./validation/petstore-openapi.v3.yaml`);
 
 async function testVersion(version) {
   test(`version ${version} works`, async (t) => {
     t.plan(2);
-    const petStoreSpec = await importJSON(`./v${version}/petstore.json`);
+    const petStoreSpec = require(`./v${version}/petstore.json`);
     const validator = new Validator();
 
     const res = await validator.validate(petStoreSpec);
@@ -49,6 +48,18 @@ test(`defect specification should fail`, async (t) => {
   const res = await validator.validate(invalidSpec);
   t.equal(res.valid, false, "defect specification is invalid");
   t.type(res.errors, Array, "got array with errors");
+});
+
+test(`undefined specification should fail`, async (t) => {
+  t.plan(2);
+  const validator = new Validator();
+  const res = await validator.validate();
+  t.equal(res.valid, false, "undefined specification is invalid");
+  t.equal(
+    res.errors,
+    "Cannot find JSON, YAML or filename in data",
+    "correct error message"
+  );
 });
 
 test(`yaml specification as string works`, async (t) => {
@@ -90,14 +101,24 @@ test(`yaml specification as filename works`, async (t) => {
 });
 
 test(`original petstore spec works`, async (t) => {
-  t.plan(2);
+  t.plan(3);
   const validator = new Validator();
-  const petStoreSpec = await importJSON(`./validation/petstore-swagger.v2.json`);
+  const petStoreSpec = require(`./validation/petstore-swagger.v2.json`);
   const res = await validator.validate(petStoreSpec);
   console.log(res.errors);
   t.equal(res.valid, true, "original petstore spec is valid");
   const ver = validator.version;
-  t.equal(ver, "2.0", "original petstore spec version matches expected version");
+  t.equal(
+    ver,
+    "2.0",
+    "original petstore spec version matches expected version"
+  );
+  const resolvedSpec = validator.resolveRefs();
+  t.equal(
+    resolvedSpec.paths["/pet"].post.parameters[0].schema.required[0],
+    "name",
+    "$refs are correctly resolved"
+  );
 });
 
 test(`Invalid filename returns an error`, async (t) => {
