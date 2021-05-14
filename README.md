@@ -22,13 +22,18 @@ npm i @seriousme/openapi-schema-validator --save
 ### Usage
 
 ```javascript
+// ESM
 import Validator from "@seriousme/openapi-schema-validator";
+// CommonJS
+const Validator = require("@seriousme/openapi-schema-validator");
 
 console.log(Validator.supportedVersions.has("3.1"));
 // prints true
 
 const validator = new Validator();
 const res = await validator.validate("./petstore.json");
+const specification = validator.specification;
+// specification now contains a Javascript object containing the specification
 if (res.valid) {
   console.log("Specification matches schema for version", validator.version);
   const schema = validator.resolveRefs();
