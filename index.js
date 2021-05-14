@@ -1,7 +1,10 @@
 const Ajv = require("ajv");
 const Ajv2020 = require("ajv/dist/2020.js");
 const JSYaml = require("js-yaml");
-const { readFile } = require("fs/promises");
+const util = require("util");
+const fs = require("fs");
+const readFile = util.promisify(fs.readFile);
+
 const { resolve } = require("./resolve.js");
 
 const openApiVersions = new Set(["2.0", "3.0", "3.1"]);
@@ -42,7 +45,7 @@ async function getSpecFromData(data) {
   return undefined;
 }
 
-module.exports = class Validator {
+class Validator {
   constructor(ajvOptions = { strict: false, validateFormats: false }) {
     this.ajvOptions = ajvOptions;
     return this;
@@ -51,8 +54,6 @@ module.exports = class Validator {
   resolveRefs(opts = {}) {
     return resolve(this.specification || opts.specification);
   }
-
-  static supportedVersions = openApiVersions;
 
   async validate(data) {
     const specification = await getSpecFromData(data);
@@ -85,4 +86,7 @@ module.exports = class Validator {
     }
     return result;
   }
-};
+}
+
+Validator.supportedVersions = openApiVersions;
+module.exports = Validator;
