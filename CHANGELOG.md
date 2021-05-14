@@ -3,6 +3,10 @@
 ## [Unreleased]
 ### Changed
 
+## [v1.1.2] 14-05-2021
+### Changed
+ - Added Node 10 support
+
 ## [v1.1.1] 14-05-2021
 ### Changed
  - Added CommonJS example to README.md
