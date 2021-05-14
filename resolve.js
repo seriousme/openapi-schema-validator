@@ -16,10 +16,15 @@ const pointerWords = new Set([
   "$schema",
 ]);
 
+function fromEntries(iterable) {
+  return [...iterable].reduce((obj, [key, val]) => {
+    obj[key] = val;
+    return obj;
+  }, {});
+}
+
 const filtered = (raw) =>
-  Object.fromEntries(
-    Object.entries(raw).filter(([key, _]) => !pointerWords.has(key))
-  );
+  fromEntries(Object.entries(raw).filter(([key, _]) => !pointerWords.has(key)));
 
 function resolveUri(uri, anchors) {
   const [prefix, path] = uri.split("#", 2);

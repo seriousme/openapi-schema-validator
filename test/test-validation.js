@@ -1,13 +1,15 @@
 const { test } = require("tap");
 
 const Validator = require("../index.js");
-const { readFile } = require("fs/promises");
+
+const util = require("util");
+const fs = require("fs");
+const readFile = util.promisify(fs.readFile);
 
 const localFile = (fileName) =>
   new URL(fileName, `file://${__dirname}/`).pathname;
 const emptySpec = require(`./validation/empty.json`);
 const invalidSpec = require(`./validation/invalid-spec.json`);
-const { resolveSchema } = require("ajv/dist/compile");
 const yamlFileName = localFile(`./validation/petstore-openapi.v3.yaml`);
 
 async function testVersion(version) {
