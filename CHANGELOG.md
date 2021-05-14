@@ -3,7 +3,11 @@
 ## [Unreleased]
 ### Changed
 
-## [v1.1.0] 10-05-2021
+## [v1.1.1] 14-05-2021
+### Changed
+ - Added CommonJS example to README.md
+
+## [v1.1.0] 14-05-2021
 ### Changed
  - Converted from ESM to CommonJS to improve compatibility
 
