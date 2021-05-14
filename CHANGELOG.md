@@ -3,6 +3,10 @@
 ## [Unreleased]
 ### Changed
 
+## [v1.0.3] 10-05-2021
+### Changed
+- Fixed bug in v2.0 schema that disallowed multiple parameters
+
 ## [v1.0.2] 10-05-2021
 ### Changed
 - Updated example in README.md
