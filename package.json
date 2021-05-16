@@ -11,8 +11,9 @@
   "scripts": {
     "test": "tap test/test-*.js",
     "covtest": "tap --coverage-report=html test/test-*.js",
-    "checkVersion": "tap test/check-versions.js",
-    "checkVersionSnapshot": "tap --snapshot test/check-versions.js",
+    "cloneOas": "git clone https://github.com/OAI/OpenAPI-Specification.git",
+    "checkOasVersions": "tap --no-coverage test/check-versions.js",
+    "checkOasVersionsSnapshot": "tap --no-coverage --snapshot test/check-versions.js",
     "preversion": "npm test",
     "postversion": "git push && git push --tags"
   },
