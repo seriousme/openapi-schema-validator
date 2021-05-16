@@ -84,3 +84,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# ignore the openApi specification in NPM 
+OpenAPI-Specification/
