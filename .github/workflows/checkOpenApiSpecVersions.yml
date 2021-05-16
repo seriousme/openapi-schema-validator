@@ -1,5 +1,6 @@
 name: "Check for changes in OpenApi specifications"
 on:
+  workflow_dispatch
   schedule:
   - cron: "0 0 * * *"
 
