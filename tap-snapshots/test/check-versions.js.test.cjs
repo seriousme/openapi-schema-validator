@@ -14,5 +14,5 @@ exports[`test/check-versions.js TAP Check if version 3.0 is unchanged > schema v
 `
 
 exports[`test/check-versions.js TAP Check if version 3.1 is unchanged > schema v3.1 is unchanged 1`] = `
-549386120954be0bdd3778c72ceb376becb83489b4143fe9c26b0b65ebe9891e
+a8e15b9431ff3b93f8ec7f6f2d1ea144b7a1361d2b6bf46db8e8327ce6ffa7a7
 `
