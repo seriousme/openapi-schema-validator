@@ -11,10 +11,12 @@
   "scripts": {
     "test": "tap test/test-*.js",
     "covtest": "tap --coverage-report=html test/test-*.js",
-    "cloneOas": "git clone https://github.com/OAI/OpenAPI-Specification.git",
+    "cloneOas": "rm -rf OpenAPI-Specification && git clone https://github.com/OAI/OpenAPI-Specification.git",
     "checkOasVersions": "tap --no-coverage test/check-versions.js",
     "checkOasVersionsSnapshot": "tap --no-coverage --snapshot test/check-versions.js",
-    "convert31": "node test/convert-3.1.js",
+    "preconvert31": "npm run cloneOas",
+    "convert31": "node test/convert-3.1.js ",
+    "postconvert31": "npm run checkOasVersionsSnapshot",
     "preversion": "npm test",
     "postversion": "git push && git push --tags"
   },
