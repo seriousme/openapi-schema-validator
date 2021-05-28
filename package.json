@@ -14,6 +14,7 @@
     "cloneOas": "git clone https://github.com/OAI/OpenAPI-Specification.git",
     "checkOasVersions": "tap --no-coverage test/check-versions.js",
     "checkOasVersionsSnapshot": "tap --no-coverage --snapshot test/check-versions.js",
+    "convert31":"node test/convert-3.1.js",
     "preversion": "npm test",
     "postversion": "git push && git push --tags"
   },
