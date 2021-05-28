@@ -3,7 +3,7 @@
 ## [Unreleased]
 ### Changed
 
-## [v1.1.3]
+## [v1.1.3] 28-05-2021
 ### Changed
 - Support schema 3.1 2021-05-20
 
