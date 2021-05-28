@@ -3,6 +3,10 @@
 ## [Unreleased]
 ### Changed
 
+## [v1.1.3]
+### Changed
+- Support schema 3.1 2021-05-20
+
 ## [v1.1.2] 14-05-2021
 ### Changed
  - Added Node 10 support
