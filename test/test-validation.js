@@ -123,6 +123,27 @@ test(`original petstore spec works`, async (t) => {
   );
 });
 
+test(`original petstore spec works with AJV strict:"log" option`, async (t) => {
+  t.plan(3);
+  const validator = new Validator({ strict: "log" });
+  const petStoreSpec = require(`./validation/petstore-swagger.v2.json`);
+  const res = await validator.validate(petStoreSpec);
+  console.log(res.errors);
+  t.equal(res.valid, true, "original petstore spec is valid");
+  const ver = validator.version;
+  t.equal(
+    ver,
+    "2.0",
+    "original petstore spec version matches expected version"
+  );
+  const resolvedSpec = validator.resolveRefs();
+  t.equal(
+    resolvedSpec.paths["/pet"].post.parameters[0].schema.required[0],
+    "name",
+    "$refs are correctly resolved"
+  );
+});
+
 test(`Invalid filename returns an error`, async (t) => {
   t.plan(2);
   const validator = new Validator();

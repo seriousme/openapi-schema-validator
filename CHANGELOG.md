@@ -3,6 +3,10 @@
 ## [Unreleased]
 ### Changed
 
+## [v1.1.4] 18-07-2021
+### Changed
+ - force AJV options strict:false and validateFormats:false even if user supplies empty ajvOptions 
+
 ## [v1.1.3] 28-05-2021
 ### Changed
 - Support schema 3.1 2021-05-20

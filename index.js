@@ -46,7 +46,13 @@ async function getSpecFromData(data) {
 }
 
 class Validator {
-  constructor(ajvOptions = { strict: false, validateFormats: false }) {
+  constructor(ajvOptions = {}) {
+    // AJV is a bit too strict in its strict validation of openAPI schemas
+    // so switch strict mode and validateFormats off
+    if (ajvOptions.strict !== "log") {
+      ajvOptions.strict = false;
+    }
+    ajvOptions.validateFormats = false;
     this.ajvOptions = ajvOptions;
     return this;
   }
