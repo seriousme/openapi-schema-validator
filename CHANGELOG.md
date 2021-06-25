@@ -6,6 +6,8 @@
 ## [v1.1.5] 25-06-2021
 ### Changed
  - fixed YAML parsing of date strings (e.g: `version: 2021-06-25`)
+ - Updated dependencies
+    -  ajv  ^8.3.0  →  ^8.6.0   
 
 ## [v1.1.4] 18-06-2021
 ### Changed
