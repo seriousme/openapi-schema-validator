@@ -3,7 +3,11 @@
 ## [Unreleased]
 ### Changed
 
-## [v1.1.4] 18-07-2021
+## [v1.1.5] 25-06-2021
+### Changed
+ - fixed YAML parsing of date strings (e.g: `version: 2021-06-25`)
+
+## [v1.1.4] 18-06-2021
 ### Changed
  - force AJV options strict:false and validateFormats:false even if user supplies empty ajvOptions 
 

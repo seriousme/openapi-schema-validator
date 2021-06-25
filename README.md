@@ -4,6 +4,7 @@
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/seriousme/openapi-schema-validator.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/seriousme/openapi-schema-validator/context:javascript)
 [![NPM version](https://img.shields.io/npm/v/@seriousme/openapi-schema-validator.svg)](https://www.npmjs.com/package/seriousme/openapi-schema-validator)
 ![npm](https://img.shields.io/npm/dm/@seriousme/openapi-schema-validator)
+[![Tested on APIs.guru](https://api.apis.guru/badges/tested_on.svg)](https://apis.guru/browse-apis/)
 
 
 
@@ -11,6 +12,8 @@ A JSON schema validator for [OpenAPI](https://www.openapis.org/) specifications,
 - [2.0](https://spec.openapis.org/oas/v2.0)
 - [3.0.x](https://spec.openapis.org/oas/v3.0.3)
 - [3.1.x](https://spec.openapis.org/oas/v3.1.0)
+
+Tested on [over 2,000 real-world APIs](https://apis.guru/browse-apis/) from AWS, Microsoft, Google etc.
 
 <a name="install"></a>
 ## Install 

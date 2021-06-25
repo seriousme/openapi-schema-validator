@@ -24,20 +24,21 @@ function getOpenApiVersion(specification) {
 }
 
 async function getSpecFromData(data) {
+  const yamlOpts = { schema: JSYaml.JSON_SCHEMA };
   if (typeof data === "object") {
     return data;
   }
   if (typeof data === "string") {
     if (data.match(/\n/)) {
       try {
-        return JSYaml.load(data);
+        return JSYaml.load(data, yamlOpts);
       } catch (_) {
         return undefined;
       }
     }
     try {
       const fileData = await readFile(data, "utf-8");
-      return JSYaml.load(fileData);
+      return JSYaml.load(fileData, yamlOpts);
     } catch (_) {
       return undefined;
     }

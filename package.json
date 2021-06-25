@@ -23,6 +23,7 @@
   "author": "Hans Klunder",
   "license": "MIT",
   "devDependencies": {
+    "node-fetch": "^2.6.1",
     "tap": "^15.0.9"
   },
   "directories": {
