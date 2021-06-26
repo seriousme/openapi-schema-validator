@@ -1,79 +1,4 @@
 {
-  "appcenter.ms": {
-    "name": "appcenter.ms",
-    "apiVersion": "v0.1",
-    "openApiVersion": "2.0",
-    "yamlUrl": "https://api.apis.guru/v2/specs/appcenter.ms/v0.1/swagger.yaml",
-    "jsonUrl": "https://api.apis.guru/v2/specs/appcenter.ms/v0.1/swagger.json",
-    "updated": "2021-06-21T12:16:53.715Z",
-    "result": {
-      "valid": false,
-      "errors": [
-        {
-          "instancePath": "/paths/~1v0.1~1apps~1{owner_name}~1{app_name}~1branches/get/responses/200/schema/items/properties/lastBuild/properties/id/exclusiveMinimum",
-          "schemaPath": "http://json-schema.org/draft-07/schema#/properties/exclusiveMinimum/type",
-          "keyword": "type",
-          "params": {
-            "type": "number"
-          },
-          "message": "must be number"
-        },
-        {
-          "instancePath": "/paths/~1v0.1~1apps~1{owner_name}~1{app_name}~1branches/get/responses/200/schema/items",
-          "schemaPath": "#/properties/items/anyOf/1/type",
-          "keyword": "type",
-          "params": {
-            "type": "array"
-          },
-          "message": "must be array"
-        },
-        {
-          "instancePath": "/paths/~1v0.1~1apps~1{owner_name}~1{app_name}~1branches/get/responses/200/schema/items",
-          "schemaPath": "#/properties/items/anyOf",
-          "keyword": "anyOf",
-          "params": {},
-          "message": "must match a schema in anyOf"
-        },
-        {
-          "instancePath": "/paths/~1v0.1~1apps~1{owner_name}~1{app_name}~1branches/get/responses/200/schema",
-          "schemaPath": "#/additionalProperties",
-          "keyword": "additionalProperties",
-          "params": {
-            "additionalProperty": "items"
-          },
-          "message": "must NOT have additional properties"
-        },
-        {
-          "instancePath": "/paths/~1v0.1~1apps~1{owner_name}~1{app_name}~1branches/get/responses/200/schema",
-          "schemaPath": "#/properties/schema/oneOf",
-          "keyword": "oneOf",
-          "params": {
-            "passingSchemas": null
-          },
-          "message": "must match exactly one schema in oneOf"
-        },
-        {
-          "instancePath": "/paths/~1v0.1~1apps~1{owner_name}~1{app_name}~1branches/get/responses/200",
-          "schemaPath": "#/required",
-          "keyword": "required",
-          "params": {
-            "missingProperty": "$ref"
-          },
-          "message": "must have required property '$ref'"
-        },
-        {
-          "instancePath": "/paths/~1v0.1~1apps~1{owner_name}~1{app_name}~1branches/get/responses/200",
-          "schemaPath": "#/oneOf",
-          "keyword": "oneOf",
-          "params": {
-            "passingSchemas": null
-          },
-          "message": "must match exactly one schema in oneOf"
-        }
-      ]
-    },
-    "knownFailed": true
-  },
   "ato.gov.au": {
     "name": "ato.gov.au",
     "apiVersion": "0.0.6",
@@ -115,167 +40,6 @@
     },
     "knownFailed": true
   },
-  "azure.com:cdn": {
-    "name": "azure.com:cdn",
-    "apiVersion": "2019-12-31",
-    "openApiVersion": "2.0",
-    "yamlUrl": "https://api.apis.guru/v2/specs/azure.com/cdn/2019-12-31/swagger.yaml",
-    "jsonUrl": "https://api.apis.guru/v2/specs/azure.com/cdn/2019-12-31/swagger.json",
-    "updated": null,
-    "result": {
-      "valid": false,
-      "errors": [
-        {
-          "instancePath": "/definitions/DeepCreatedOriginProperties/properties/httpPort/exclusiveMaximum",
-          "schemaPath": "http://json-schema.org/draft-07/schema#/properties/exclusiveMaximum/type",
-          "keyword": "type",
-          "params": {
-            "type": "number"
-          },
-          "message": "must be number"
-        }
-      ]
-    },
-    "knownFailed": true
-  },
-  "azure.com:cdn-cdnwebapplicationfirewall": {
-    "name": "azure.com:cdn-cdnwebapplicationfirewall",
-    "apiVersion": "2019-06-15-preview",
-    "openApiVersion": "2.0",
-    "yamlUrl": "https://api.apis.guru/v2/specs/azure.com/cdn-cdnwebapplicationfirewall/2019-06-15-preview/swagger.yaml",
-    "jsonUrl": "https://api.apis.guru/v2/specs/azure.com/cdn-cdnwebapplicationfirewall/2019-06-15-preview/swagger.json",
-    "updated": null,
-    "result": {
-      "valid": false,
-      "errors": [
-        {
-          "instancePath": "/definitions/CustomRule/properties/priority/exclusiveMaximum",
-          "schemaPath": "http://json-schema.org/draft-07/schema#/properties/exclusiveMaximum/type",
-          "keyword": "type",
-          "params": {
-            "type": "number"
-          },
-          "message": "must be number"
-        }
-      ]
-    },
-    "knownFailed": true
-  },
-  "azure.com:cognitiveservices-FormRecognizer": {
-    "name": "azure.com:cognitiveservices-FormRecognizer",
-    "apiVersion": "2.0-preview",
-    "openApiVersion": "2.0",
-    "yamlUrl": "https://api.apis.guru/v2/specs/azure.com/cognitiveservices-FormRecognizer/2.0-preview/swagger.yaml",
-    "jsonUrl": "https://api.apis.guru/v2/specs/azure.com/cognitiveservices-FormRecognizer/2.0-preview/swagger.json",
-    "updated": "2020-03-17T10:27:09.000Z",
-    "result": {
-      "valid": false,
-      "errors": [
-        {
-          "instancePath": "/definitions/ReadResult/properties/angle/exclusiveMinimum",
-          "schemaPath": "http://json-schema.org/draft-07/schema#/properties/exclusiveMinimum/type",
-          "keyword": "type",
-          "params": {
-            "type": "number"
-          },
-          "message": "must be number"
-        }
-      ]
-    },
-    "knownFailed": true
-  },
-  "azure.com:frontdoor": {
-    "name": "azure.com:frontdoor",
-    "apiVersion": "2020-01-01",
-    "openApiVersion": "2.0",
-    "yamlUrl": "https://api.apis.guru/v2/specs/azure.com/frontdoor/2020-01-01/swagger.yaml",
-    "jsonUrl": "https://api.apis.guru/v2/specs/azure.com/frontdoor/2020-01-01/swagger.json",
-    "updated": null,
-    "result": {
-      "valid": false,
-      "errors": [
-        {
-          "instancePath": "/definitions/Backend/properties/httpPort/exclusiveMaximum",
-          "schemaPath": "http://json-schema.org/draft-07/schema#/properties/exclusiveMaximum/type",
-          "keyword": "type",
-          "params": {
-            "type": "number"
-          },
-          "message": "must be number"
-        }
-      ]
-    },
-    "knownFailed": true
-  },
-  "azure.com:network-applicationGateway": {
-    "name": "azure.com:network-applicationGateway",
-    "apiVersion": "2019-08-01",
-    "openApiVersion": "2.0",
-    "yamlUrl": "https://api.apis.guru/v2/specs/azure.com/network-applicationGateway/2019-08-01/swagger.yaml",
-    "jsonUrl": "https://api.apis.guru/v2/specs/azure.com/network-applicationGateway/2019-08-01/swagger.json",
-    "updated": "2020-07-16T08:09:03.635Z",
-    "result": {
-      "valid": false,
-      "errors": [
-        {
-          "instancePath": "/definitions/ApplicationGatewayAutoscaleConfiguration/properties/maxCapacity/exclusiveMinimum",
-          "schemaPath": "http://json-schema.org/draft-07/schema#/properties/exclusiveMinimum/type",
-          "keyword": "type",
-          "params": {
-            "type": "number"
-          },
-          "message": "must be number"
-        }
-      ]
-    },
-    "knownFailed": true
-  },
-  "azure.com:network-azureFirewall": {
-    "name": "azure.com:network-azureFirewall",
-    "apiVersion": "2019-08-01",
-    "openApiVersion": "2.0",
-    "yamlUrl": "https://api.apis.guru/v2/specs/azure.com/network-azureFirewall/2019-08-01/swagger.yaml",
-    "jsonUrl": "https://api.apis.guru/v2/specs/azure.com/network-azureFirewall/2019-08-01/swagger.json",
-    "updated": null,
-    "result": {
-      "valid": false,
-      "errors": [
-        {
-          "instancePath": "/definitions/AzureFirewallApplicationRuleCollectionPropertiesFormat/properties/priority/exclusiveMaximum",
-          "schemaPath": "http://json-schema.org/draft-07/schema#/properties/exclusiveMaximum/type",
-          "keyword": "type",
-          "params": {
-            "type": "number"
-          },
-          "message": "must be number"
-        }
-      ]
-    },
-    "knownFailed": true
-  },
-  "azure.com:network-firewallPolicy": {
-    "name": "azure.com:network-firewallPolicy",
-    "apiVersion": "2019-08-01",
-    "openApiVersion": "2.0",
-    "yamlUrl": "https://api.apis.guru/v2/specs/azure.com/network-firewallPolicy/2019-08-01/swagger.yaml",
-    "jsonUrl": "https://api.apis.guru/v2/specs/azure.com/network-firewallPolicy/2019-08-01/swagger.json",
-    "updated": null,
-    "result": {
-      "valid": false,
-      "errors": [
-        {
-          "instancePath": "/definitions/FirewallPolicyRule/properties/priority/exclusiveMaximum",
-          "schemaPath": "http://json-schema.org/draft-07/schema#/properties/exclusiveMaximum/type",
-          "keyword": "type",
-          "params": {
-            "type": "number"
-          },
-          "message": "must be number"
-        }
-      ]
-    },
-    "knownFailed": true
-  },
   "bluemix.net:containers": {
     "name": "bluemix.net:containers",
     "apiVersion": "3.0.0",
@@ -297,39 +61,47 @@
         },
         {
           "instancePath": "/paths/~1build/post/parameters/6/in",
-          "schemaPath": "#/properties/in/const",
-          "keyword": "const",
+          "schemaPath": "#/properties/in/enum",
+          "keyword": "enum",
           "params": {
-            "allowedValue": "header"
+            "allowedValues": [
+              "header"
+            ]
           },
-          "message": "must be equal to constant"
+          "message": "must be equal to one of the allowed values"
         },
         {
           "instancePath": "/paths/~1build/post/parameters/6/in",
-          "schemaPath": "#/properties/in/const",
-          "keyword": "const",
+          "schemaPath": "#/properties/in/enum",
+          "keyword": "enum",
           "params": {
-            "allowedValue": "formData"
+            "allowedValues": [
+              "formData"
+            ]
           },
-          "message": "must be equal to constant"
+          "message": "must be equal to one of the allowed values"
         },
         {
           "instancePath": "/paths/~1build/post/parameters/6/in",
-          "schemaPath": "#/properties/in/const",
-          "keyword": "const",
+          "schemaPath": "#/properties/in/enum",
+          "keyword": "enum",
           "params": {
-            "allowedValue": "query"
+            "allowedValues": [
+              "query"
+            ]
           },
-          "message": "must be equal to constant"
+          "message": "must be equal to one of the allowed values"
         },
         {
           "instancePath": "/paths/~1build/post/parameters/6/in",
-          "schemaPath": "#/properties/in/const",
-          "keyword": "const",
+          "schemaPath": "#/properties/in/enum",
+          "keyword": "enum",
           "params": {
-            "allowedValue": "path"
+            "allowedValues": [
+              "path"
+            ]
           },
-          "message": "must be equal to constant"
+          "message": "must be equal to one of the allowed values"
         },
         {
           "instancePath": "/paths/~1build/post/parameters/6",
@@ -368,8 +140,7 @@
           "message": "must match exactly one schema in oneOf"
         }
       ]
-    },
-    "knownFailed": true
+    }
   },
   "britbox.co.uk": {
     "name": "britbox.co.uk",
@@ -471,106 +242,6 @@
     },
     "knownFailed": true
   },
-  "lyft.com": {
-    "name": "lyft.com",
-    "apiVersion": "1.0.0",
-    "openApiVersion": "2.0",
-    "yamlUrl": "https://api.apis.guru/v2/specs/lyft.com/1.0.0/swagger.yaml",
-    "jsonUrl": "https://api.apis.guru/v2/specs/lyft.com/1.0.0/swagger.json",
-    "updated": "2018-11-28T10:43:55.000Z",
-    "result": {
-      "valid": false,
-      "errors": [
-        {
-          "instancePath": "/parameters/OptionalLimit",
-          "schemaPath": "#/required",
-          "keyword": "required",
-          "params": {
-            "missingProperty": "schema"
-          },
-          "message": "must have required property 'schema'"
-        },
-        {
-          "instancePath": "/parameters/OptionalLimit/in",
-          "schemaPath": "#/properties/in/const",
-          "keyword": "const",
-          "params": {
-            "allowedValue": "header"
-          },
-          "message": "must be equal to constant"
-        },
-        {
-          "instancePath": "/parameters/OptionalLimit/in",
-          "schemaPath": "#/properties/in/const",
-          "keyword": "const",
-          "params": {
-            "allowedValue": "formData"
-          },
-          "message": "must be equal to constant"
-        },
-        {
-          "instancePath": "/parameters/OptionalLimit/exclusiveMaximum",
-          "schemaPath": "#/definitions/exclusiveMaximum/type",
-          "keyword": "type",
-          "params": {
-            "type": "number"
-          },
-          "message": "must be number"
-        },
-        {
-          "instancePath": "/parameters/OptionalLimit",
-          "schemaPath": "#/required",
-          "keyword": "required",
-          "params": {
-            "missingProperty": "required"
-          },
-          "message": "must have required property 'required'"
-        },
-        {
-          "instancePath": "/parameters/OptionalLimit",
-          "schemaPath": "#/oneOf",
-          "keyword": "oneOf",
-          "params": {
-            "passingSchemas": null
-          },
-          "message": "must match exactly one schema in oneOf"
-        },
-        {
-          "instancePath": "/parameters/OptionalLimit",
-          "schemaPath": "#/oneOf",
-          "keyword": "oneOf",
-          "params": {
-            "passingSchemas": null
-          },
-          "message": "must match exactly one schema in oneOf"
-        }
-      ]
-    },
-    "knownFailed": true
-  },
-  "mastercard.com:open-banking-connect-pis": {
-    "name": "mastercard.com:open-banking-connect-pis",
-    "apiVersion": "1.16.0",
-    "openApiVersion": "2.0",
-    "yamlUrl": "https://api.apis.guru/v2/specs/mastercard.com/open-banking-connect-pis/1.16.0/swagger.yaml",
-    "jsonUrl": "https://api.apis.guru/v2/specs/mastercard.com/open-banking-connect-pis/1.16.0/swagger.json",
-    "updated": "2020-08-24T15:45:12.170Z",
-    "result": {
-      "valid": false,
-      "errors": [
-        {
-          "instancePath": "/definitions/postPaymentsCrossBorderCreditTransfersConsentsParamsBodyPaymentsInstructedAmount/properties/amount/exclusiveMinimum",
-          "schemaPath": "http://json-schema.org/draft-07/schema#/properties/exclusiveMinimum/type",
-          "keyword": "type",
-          "params": {
-            "type": "number"
-          },
-          "message": "must be number"
-        }
-      ]
-    },
-    "knownFailed": true
-  },
   "nasa.gov:apod": {
     "name": "nasa.gov:apod",
     "apiVersion": "1.0.0",
@@ -664,29 +335,6 @@
             "passingSchemas": null
           },
           "message": "must match exactly one schema in oneOf"
-        }
-      ]
-    },
-    "knownFailed": true
-  },
-  "zalando.com": {
-    "name": "zalando.com",
-    "apiVersion": "v1.0",
-    "openApiVersion": "2.0",
-    "yamlUrl": "https://api.apis.guru/v2/specs/zalando.com/v1.0/swagger.yaml",
-    "jsonUrl": "https://api.apis.guru/v2/specs/zalando.com/v1.0/swagger.json",
-    "updated": "2018-09-27T12:24:15.000Z",
-    "result": {
-      "valid": false,
-      "errors": [
-        {
-          "instancePath": "/definitions/Domain/properties/taxRate/exclusiveMaximum",
-          "schemaPath": "http://json-schema.org/draft-07/schema#/properties/exclusiveMaximum/type",
-          "keyword": "type",
-          "params": {
-            "type": "number"
-          },
-          "message": "must be number"
         }
       ]
     },

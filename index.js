@@ -1,4 +1,4 @@
-const Ajv = require("ajv");
+const Ajv04 = require("ajv-draft-04");
 const Ajv2020 = require("ajv/dist/2020.js");
 const JSYaml = require("js-yaml");
 const util = require("util");
@@ -9,7 +9,7 @@ const { resolve } = require("./resolve.js");
 
 const openApiVersions = new Set(["2.0", "3.0", "3.1"]);
 const ajvVersions = {
-  "http://json-schema.org/draft-07/schema": Ajv,
+  "http://json-schema.org/draft-04/schema#": Ajv04,
   "https://json-schema.org/draft/2020-12/schema": Ajv2020,
 };
 

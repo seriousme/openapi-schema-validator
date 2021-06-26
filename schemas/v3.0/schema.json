@@ -1,6 +1,6 @@
 {
-  "$id": "https://spec.openapis.org/oas/3.0/schema/2019-04-02",
-  "$schema": "http://json-schema.org/draft-07/schema",
+  "id": "https://spec.openapis.org/oas/3.0/schema/2019-04-02",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "description": "Validation schema for OpenAPI Specification 3.0.X.",
   "type": "object",
   "required": [
@@ -46,7 +46,8 @@
     }
   },
   "patternProperties": {
-    "^x-": true
+    "^x-": {
+    }
   },
   "additionalProperties": false,
   "definitions": {
@@ -90,7 +91,8 @@
         }
       },
       "patternProperties": {
-        "^x-": true
+        "^x-": {
+        }
       },
       "additionalProperties": false
     },
@@ -110,7 +112,8 @@
         }
       },
       "patternProperties": {
-        "^x-": true
+        "^x-": {
+        }
       },
       "additionalProperties": false
     },
@@ -129,7 +132,8 @@
         }
       },
       "patternProperties": {
-        "^x-": true
+        "^x-": {
+        }
       },
       "additionalProperties": false
     },
@@ -153,7 +157,8 @@
         }
       },
       "patternProperties": {
-        "^x-": true
+        "^x-": {
+        }
       },
       "additionalProperties": false
     },
@@ -177,7 +182,8 @@
         }
       },
       "patternProperties": {
-        "^x-": true
+        "^x-": {
+        }
       },
       "additionalProperties": false
     },
@@ -321,7 +327,8 @@
         }
       },
       "patternProperties": {
-        "^x-": true
+        "^x-": {
+        }
       },
       "additionalProperties": false
     },
@@ -333,7 +340,8 @@
         },
         "multipleOf": {
           "type": "number",
-          "exclusiveMinimum": 0
+          "minimum": 0,
+          "exclusiveMinimum": true
         },
         "maximum": {
           "type": "number"
@@ -394,7 +402,8 @@
         },
         "enum": {
           "type": "array",
-          "items": true,
+          "items": {
+          },
           "minItems": 1,
           "uniqueItems": false
         },
@@ -501,7 +510,8 @@
         "format": {
           "type": "string"
         },
-        "default": true,
+        "default": {
+        },
         "nullable": {
           "type": "boolean",
           "default": false
@@ -517,7 +527,8 @@
           "type": "boolean",
           "default": false
         },
-        "example": true,
+        "example": {
+        },
         "externalDocs": {
           "$ref": "#/definitions/ExternalDocumentation"
         },
@@ -530,7 +541,8 @@
         }
       },
       "patternProperties": {
-        "^x-": true
+        "^x-": {
+        }
       },
       "additionalProperties": false
     },
@@ -574,7 +586,8 @@
         }
       },
       "patternProperties": {
-        "^x-": true
+        "^x-": {
+        }
       },
       "additionalProperties": false
     },
@@ -621,7 +634,8 @@
         }
       },
       "patternProperties": {
-        "^x-": true
+        "^x-": {
+        }
       },
       "additionalProperties": false
     },
@@ -638,7 +652,8 @@
             }
           ]
         },
-        "example": true,
+        "example": {
+        },
         "examples": {
           "type": "object",
           "additionalProperties": {
@@ -660,7 +675,8 @@
         }
       },
       "patternProperties": {
-        "^x-": true
+        "^x-": {
+        }
       },
       "additionalProperties": false,
       "allOf": [
@@ -678,14 +694,16 @@
         "description": {
           "type": "string"
         },
-        "value": true,
+        "value": {
+        },
         "externalValue": {
           "type": "string",
           "format": "uri-reference"
         }
       },
       "patternProperties": {
-        "^x-": true
+        "^x-": {
+        }
       },
       "additionalProperties": false
     },
@@ -709,7 +727,9 @@
         },
         "style": {
           "type": "string",
-          "const": "simple",
+          "enum": [
+            "simple"
+          ],
           "default": "simple"
         },
         "explode": {
@@ -737,7 +757,8 @@
           "minProperties": 1,
           "maxProperties": 1
         },
-        "example": true,
+        "example": {
+        },
         "examples": {
           "type": "object",
           "additionalProperties": {
@@ -753,7 +774,8 @@
         }
       },
       "patternProperties": {
-        "^x-": true
+        "^x-": {
+        }
       },
       "additionalProperties": false,
       "allOf": [
@@ -771,7 +793,8 @@
         "^\\/": {
           "$ref": "#/definitions/PathItem"
         },
-        "^x-": true
+        "^x-": {
+        }
       },
       "additionalProperties": false
     },
@@ -812,7 +835,8 @@
         "^(get|put|post|delete|options|head|patch|trace)$": {
           "$ref": "#/definitions/Operation"
         },
-        "^x-": true
+        "^x-": {
+        }
       },
       "additionalProperties": false
     },
@@ -898,7 +922,8 @@
         }
       },
       "patternProperties": {
-        "^x-": true
+        "^x-": {
+        }
       },
       "additionalProperties": false
     },
@@ -927,7 +952,8 @@
             }
           ]
         },
-        "^x-": true
+        "^x-": {
+        }
       },
       "minProperties": 1,
       "additionalProperties": false
@@ -958,7 +984,8 @@
         }
       },
       "patternProperties": {
-        "^x-": true
+        "^x-": {
+        }
       },
       "additionalProperties": false
     },
@@ -977,7 +1004,8 @@
         }
       },
       "patternProperties": {
-        "^x-": true
+        "^x-": {
+        }
       },
       "additionalProperties": false
     },
@@ -1101,7 +1129,8 @@
           "minProperties": 1,
           "maxProperties": 1
         },
-        "example": true,
+        "example": {
+        },
         "examples": {
           "type": "object",
           "additionalProperties": {
@@ -1117,7 +1146,8 @@
         }
       },
       "patternProperties": {
-        "^x-": true
+        "^x-": {
+        }
       },
       "additionalProperties": false,
       "required": [
@@ -1146,7 +1176,9 @@
           ],
           "properties": {
             "in": {
-              "const": "path"
+              "enum": [
+                "path"
+              ]
             },
             "style": {
               "enum": [
@@ -1157,7 +1189,9 @@
               "default": "simple"
             },
             "required": {
-              "const": true
+              "enum": [
+                true
+              ]
             }
           }
         },
@@ -1165,7 +1199,9 @@
           "description": "Parameter in query",
           "properties": {
             "in": {
-              "const": "query"
+              "enum": [
+                "query"
+              ]
             },
             "style": {
               "enum": [
@@ -1182,10 +1218,14 @@
           "description": "Parameter in header",
           "properties": {
             "in": {
-              "const": "header"
+              "enum": [
+                "header"
+              ]
             },
             "style": {
-              "const": "simple",
+              "enum": [
+                "simple"
+              ],
               "default": "simple"
             }
           }
@@ -1194,10 +1234,14 @@
           "description": "Parameter in cookie",
           "properties": {
             "in": {
-              "const": "cookie"
+              "enum": [
+                "cookie"
+              ]
             },
             "style": {
-              "const": "form",
+              "enum": [
+                "form"
+              ],
               "default": "form"
             }
           }
@@ -1225,7 +1269,8 @@
         }
       },
       "patternProperties": {
-        "^x-": true
+        "^x-": {
+        }
       },
       "additionalProperties": false
     },
@@ -1255,7 +1300,9 @@
       "properties": {
         "type": {
           "type": "string",
-          "const": "apiKey"
+          "enum": [
+            "apiKey"
+          ]
         },
         "name": {
           "type": "string"
@@ -1273,7 +1320,8 @@
         }
       },
       "patternProperties": {
-        "^x-": true
+        "^x-": {
+        }
       },
       "additionalProperties": false
     },
@@ -1295,11 +1343,14 @@
         },
         "type": {
           "type": "string",
-          "const": "http"
+          "enum": [
+            "http"
+          ]
         }
       },
       "patternProperties": {
-        "^x-": true
+        "^x-": {
+        }
       },
       "additionalProperties": false,
       "oneOf": [
@@ -1307,7 +1358,9 @@
           "description": "Bearer",
           "properties": {
             "scheme": {
-              "const": "bearer"
+              "enum": [
+                "bearer"
+              ]
             }
           }
         },
@@ -1321,7 +1374,9 @@
           "properties": {
             "scheme": {
               "not": {
-                "const": "bearer"
+                "enum": [
+                  "bearer"
+                ]
               }
             }
           }
@@ -1337,7 +1392,9 @@
       "properties": {
         "type": {
           "type": "string",
-          "const": "oauth2"
+          "enum": [
+            "oauth2"
+          ]
         },
         "flows": {
           "$ref": "#/definitions/OAuthFlows"
@@ -1347,7 +1404,8 @@
         }
       },
       "patternProperties": {
-        "^x-": true
+        "^x-": {
+        }
       },
       "additionalProperties": false
     },
@@ -1360,7 +1418,9 @@
       "properties": {
         "type": {
           "type": "string",
-          "const": "openIdConnect"
+          "enum": [
+            "openIdConnect"
+          ]
         },
         "openIdConnectUrl": {
           "type": "string",
@@ -1371,7 +1431,8 @@
         }
       },
       "patternProperties": {
-        "^x-": true
+        "^x-": {
+        }
       },
       "additionalProperties": false
     },
@@ -1392,7 +1453,8 @@
         }
       },
       "patternProperties": {
-        "^x-": true
+        "^x-": {
+        }
       },
       "additionalProperties": false
     },
@@ -1419,7 +1481,8 @@
         }
       },
       "patternProperties": {
-        "^x-": true
+        "^x-": {
+        }
       },
       "additionalProperties": false
     },
@@ -1445,7 +1508,8 @@
         }
       },
       "patternProperties": {
-        "^x-": true
+        "^x-": {
+        }
       },
       "additionalProperties": false
     },
@@ -1471,7 +1535,8 @@
         }
       },
       "patternProperties": {
-        "^x-": true
+        "^x-": {
+        }
       },
       "additionalProperties": false
     },
@@ -1502,7 +1567,8 @@
         }
       },
       "patternProperties": {
-        "^x-": true
+        "^x-": {
+        }
       },
       "additionalProperties": false
     },
@@ -1518,9 +1584,11 @@
         },
         "parameters": {
           "type": "object",
-          "additionalProperties": true
+          "additionalProperties": {
+          }
         },
-        "requestBody": true,
+        "requestBody": {
+        },
         "description": {
           "type": "string"
         },
@@ -1529,7 +1597,8 @@
         }
       },
       "patternProperties": {
-        "^x-": true
+        "^x-": {
+        }
       },
       "additionalProperties": false,
       "not": {
@@ -1546,7 +1615,8 @@
         "$ref": "#/definitions/PathItem"
       },
       "patternProperties": {
-        "^x-": true
+        "^x-": {
+        }
       }
     },
     "Encoding": {
