@@ -9,7 +9,7 @@
 # the `language` matrix defined below to confirm you have the correct set of
 # supported CodeQL languages.
 #
-name: "RealWorld"
+name: "Real world API test"
 
 on:
   schedule:
@@ -17,7 +17,7 @@ on:
     - cron: '19 16 * * 4'
 
 jobs:
- CheckVersion:
+ realWorldTest:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
