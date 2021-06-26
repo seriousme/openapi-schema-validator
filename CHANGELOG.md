@@ -3,6 +3,10 @@
 ## [Unreleased]
 ### Changed
 
+## [v1.1.6] 26-06-2021
+### Changed
+ - Switched to original draft-04 schemas instead of converted draft-07 schemas now that AJV supports draft-04
+
 ## [v1.1.5] 25-06-2021
 ### Changed
  - fixed YAML parsing of date strings (e.g: `version: 2021-06-25`)
