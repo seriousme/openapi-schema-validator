@@ -16,7 +16,7 @@ async function fetchApiList(onlyFailed = false) {
   const apiList = await response.json();
   const apiMap = new Map();
   for (const key in apiList) {
-    if ((!onlyFailed) || failedMap.has(key)) {
+    if (!onlyFailed || failedMap.has(key)) {
       const api = apiList[key];
       const latestVersion = api.versions[api.preferred];
       apiMap.set(key, {
@@ -25,8 +25,8 @@ async function fetchApiList(onlyFailed = false) {
         openApiVersion: latestVersion.openapiVer,
         yamlUrl: latestVersion.swaggerYamlUrl,
         jsonUrl: latestVersion.swaggerUrl,
-        updated: latestVersion.updated
-      })
+        updated: latestVersion.updated,
+      });
     }
   }
   return apiMap;
@@ -46,7 +46,7 @@ async function testAPIs(onlyFailed = false) {
   const apiList = await fetchApiList(onlyFailed);
   const failed = new Map();
   const results = {
-    total: apiList.length,
+    total: apiList.size,
     current: 0,
     valid: 0,
     invalid: 0,
@@ -61,8 +61,10 @@ async function testAPIs(onlyFailed = false) {
     } else {
       results.invalid++;
       if (failedMap.has(name)) {
-        const failedApiErrors = JSON.stringify(failedMap.get(name).result.errors);
-        if (failedApiErrors === JSON.stringify(api.result.errors)){
+        const failedApiErrors = JSON.stringify(
+          failedMap.get(name).result.errors
+        );
+        if (failedApiErrors === JSON.stringify(api.result.errors)) {
           results.knownFailed++;
           api.knownFailed = true;
         }
@@ -71,8 +73,19 @@ async function testAPIs(onlyFailed = false) {
     }
     console.log(JSON.stringify(results), name);
   }
-  console.log(`Finished testing ${results.total} APIs, creating ${newFailedFile}`);
-  writeFileSync(newFailedFile, JSON.stringify(Object.fromEntries(failed), null, 2), "utf8");
+  console.log(
+    `Finished testing ${results.total} APIs
+     ${results.invalid} tests failed of which ${results.knownFailed} were known failures`
+  );
+  if (results.knownFailed !== results.invalid) {
+    console.log(`new failures found, creating ${newFailedFile}`);
+    writeFileSync(
+      newFailedFile,
+      JSON.stringify(Object.fromEntries(failed), null, 2),
+      "utf8"
+    );
+    process.exit(1);
+  }
 }
 
 testAPIs();
