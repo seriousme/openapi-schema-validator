@@ -75,6 +75,19 @@ test(`yaml specification as string works`, async (t) => {
   t.equal(ver, "3.0", "yaml spec version matches expected version");
 });
 
+test(`multiple consecutive validations work`, async (t) => {
+  t.plan(3);
+  const yamlSpec = await readFile(yamlFileName, "utf-8");
+  const validator = new Validator();
+
+  const res = await validator.validate(yamlSpec);
+  t.equal(res.valid, true, "yaml spec as string is valid in round 1");
+  const res2 = await validator.validate(yamlSpec);
+  t.equal(res2.valid, true, "yaml spec as string is valid in round 2");
+  const ver = validator.version;
+  t.equal(ver, "3.0", "yaml spec version matches expected version");
+});
+
 test(`Invalid yaml specification as string gives an error`, async (t) => {
   t.plan(2);
   const yamlSpec = `

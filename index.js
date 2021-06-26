@@ -55,6 +55,7 @@ class Validator {
     }
     ajvOptions.validateFormats = false;
     this.ajvOptions = ajvOptions;
+    this.ajvValidators = {};
     return this;
   }
 
@@ -80,11 +81,7 @@ class Validator {
           "Cannot find supported swagger/openapi version in specification, version must be a string.",
       };
     }
-    const schema = require(`./schemas/v${version}/schema.json`);
-    const schemaVersion = schema.$schema;
-    const AjvClass = ajvVersions[schemaVersion];
-    const ajv = new AjvClass(this.ajvOptions);
-    const validate = ajv.compile(schema);
+    const validate = this.getAjvValidator(version);
     const result = {
       valid: validate(specification),
     };
@@ -92,6 +89,17 @@ class Validator {
       result.errors = validate.errors;
     }
     return result;
+  }
+
+  getAjvValidator(version) {
+    if (!this.ajvValidators[version]){
+      const schema = require(`./schemas/v${version}/schema.json`);
+      const schemaVersion = schema.$schema;
+      const AjvClass = ajvVersions[schemaVersion];
+      const ajv = new AjvClass(this.ajvOptions);
+      this.ajvValidators[version] = ajv.compile(schema);
+    }
+    return this.ajvValidators[version];
   }
 }
 
