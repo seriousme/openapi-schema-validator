@@ -25,4 +25,4 @@ jobs:
       uses: actions/setup-node@v1
     - run: npm ci --ignore-scripts --no-audit --no-progress --prefer-offline
     - run: npm run build --if-present
-    - run: npm run realWorldTest
+    - run: npm run realWorldTestAll
