@@ -19,7 +19,8 @@
     "convert31": "node test/convert-3.1.js ",
     "postconvert31": "npm run checkOasVersionsSnapshot",
     "preversion": "npm test",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "realWorldTest": "node test/realworld/realworld.js"
   },
   "author": "Hans Klunder",
   "license": "MIT",
