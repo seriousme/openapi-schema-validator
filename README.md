@@ -17,8 +17,8 @@ Tested on [over 2,000 real-world APIs](https://apis.guru/browse-apis/) from AWS,
 
 <a name="install"></a>
 ## Install 
-```
-npm i @seriousme/openapi-schema-validator --save
+```bash
+npm install @seriousme/openapi-schema-validator
 ```
 
 <a name="Usage"></a>
