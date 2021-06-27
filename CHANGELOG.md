@@ -3,6 +3,11 @@
 ## [Unreleased]
 ### Changed
 
+## [v1.2.0] 27-06-2021
+### Changed
+ - Cache AJV validators so that multiple validation calls are faster
+ - Added CLI tool
+
 ## [v1.1.6] 26-06-2021
 ### Changed
  - Switched to original draft-04 schemas instead of converted draft-07 schemas now that AJV supports draft-04

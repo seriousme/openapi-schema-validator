@@ -22,7 +22,7 @@ npm install @seriousme/openapi-schema-validator
 ```
 
 <a name="Usage"></a>
-### Usage
+## Usage
 
 ```javascript
 // ESM
@@ -48,8 +48,15 @@ if (res.valid) {
 
 ```
 
-<a name="Usage"></a>
-### API
+<a name="CLI"></a>
+### CLI
+```bash
+npx validate-api <filename>
+```
+
+
+<a name="API"></a>
+## API
 - [`new Validator(ajvOptions)`](#newValidator)
 - [`<instance>.validate(specification)`](#validate)
 - [`<instance>.specification`](#specification)

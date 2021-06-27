@@ -4,6 +4,9 @@
   "description": "Validate OpenApi specifications against their JSON schema",
   "main": "index.js",
   "type": "commonjs",
+  "bin": {
+    "validate-api": "./bin/validate-api-cli.js"
+  },
   "dependencies": {
     "ajv": "^8.6.0",
     "ajv-draft-04": "^1.0.0",
