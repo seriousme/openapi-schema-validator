@@ -50,10 +50,19 @@ if (res.valid) {
 
 <a name="CLI"></a>
 ### CLI
+
+Run with global install:
 ```bash
 npm install @seriousme/openapi-schema-validator -g
 validate-api <filename>
 ```
+
+Run without install:
+```bash
+npx -p @seriousme/openapi-schema-validator validate-api <filename>
+```
+
+Where `<filename>` refers to a YAML or JSON file containing the specification. 
 
 <a name="API"></a>
 ## API
