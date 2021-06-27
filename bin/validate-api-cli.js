@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const Validator = require("../index.js");
 const validator = new Validator();
 const { argv, exit } = require("process");
