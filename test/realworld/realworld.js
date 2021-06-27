@@ -2,7 +2,7 @@ const Validator = require("../../index.js");
 const validator = new Validator();
 const { writeFileSync } = require("fs");
 const fetch = require("node-fetch");
-const { argv } = require("process");
+const { argv, exit } = require("process");
 const failedFile = "./failed.json";
 const newFailedFile = "./failed.updated.json";
 const defaultPercentage = 10;
@@ -12,7 +12,7 @@ const failedMap = new Map(Object.entries(failedData));
 
 function sample(fullMap, percentage) {
   const { floor, random } = Math;
-  const len = fullMap.size
+  const len = fullMap.size;
   const size = floor(len * (percentage / 100));
   const sampleMap = new Map();
   const mapKeys = Array.from(fullMap.keys());
@@ -22,8 +22,7 @@ function sample(fullMap, percentage) {
     do {
       index = floor(random() * len);
       key = mapKeys[index];
-    }
-    while (sampleMap.has(key));
+    } while (sampleMap.has(key));
 
     sampleMap.set(key, fullMap.get(key));
   }
@@ -37,7 +36,7 @@ async function fetchApiList(percentage, onlyFailed = false) {
     throw new Error("Unable to download real-world APIs from apis.guru");
   }
   const apiList = await response.json();
-  const apiMap = new Map()
+  const apiMap = new Map();
   for (const key in apiList) {
     if (!onlyFailed || failedMap.has(key)) {
       const api = apiList[key];
@@ -53,10 +52,12 @@ async function fetchApiList(percentage, onlyFailed = false) {
     }
   }
   if (percentage !== 100) {
-    console.log(`testing a random set containing ${percentage}% of ${apiMap.size} available APIs`)
+    console.log(
+      `testing a random set containing ${percentage}% of ${apiMap.size} available APIs`
+    );
     return sample(apiMap, percentage);
   }
-  console.log(`testing all ${apiMap.size} available APIs`)
+  console.log(`testing all ${apiMap.size} available APIs`);
   return apiMap;
 }
 
@@ -122,29 +123,29 @@ async function testAPIs(percentage, onlyFailed) {
 }
 
 function parseArgs() {
-    const args = process.argv.slice(2)
-    const params = new Set();
-    const opts = ['failedOnly', 'all']
-    args.forEach(arg => {
-        opts.forEach(opt => {
-            if (`--${opt}`.startsWith(arg)) {
-                params.add(opt)
-            }
-        })
+  const args = argv.slice(2);
+  const params = new Set();
+  const opts = ["failedOnly", "all"];
+  args.forEach((arg) => {
+    opts.forEach((opt) => {
+      if (`--${opt}`.startsWith(arg)) {
+        params.add(opt);
+      }
     });
-    if (params.size !== args.length) {
-        console.log(`
-        usage: ${process.argv[1].split("/").pop()} [--failedOnly] [--all]
+  });
+  if (params.size !== args.length) {
+    console.log(`
+        usage: ${argv[1].split("/").pop()} [--failedOnly] [--all]
         where: 
         --failedOnly will only try all APIs that have previously been found failing
         --all will test all APIs on the list, by default only ${defaultPercentage}% of APIs will be tested.
         `);
-        process.exit(1);
-    }
-    return params;
+    exit(1);
+  }
+  return params;
 }
 
 const params = parseArgs();
-const failedOnly = params.has('failedOnly');
-const percentage = params.has('all') ? 100 : defaultPercentage;
+const failedOnly = params.has("failedOnly");
+const percentage = params.has("all") ? 100 : defaultPercentage;
 testAPIs(percentage, failedOnly);
