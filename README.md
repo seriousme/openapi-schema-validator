@@ -51,9 +51,9 @@ if (res.valid) {
 <a name="CLI"></a>
 ### CLI
 ```bash
-npx validate-api <filename>
+npm install @seriousme/openapi-schema-validator -g
+validate-api <filename>
 ```
-
 
 <a name="API"></a>
 ## API
