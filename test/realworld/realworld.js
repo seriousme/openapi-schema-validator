@@ -1,3 +1,4 @@
+// test the validator against the APIs of https://apis.guru
 const Validator = require("../../index.js");
 const validator = new Validator();
 const { writeFileSync } = require("fs");
