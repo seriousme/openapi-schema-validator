@@ -1,7 +1,8 @@
 # this workflow runs a check on the collection of APIs at https://apis.guru/
 # if more than one specification is present per API it will only check the lastest
 # about 2200 specifications are checked this way
-# the job failes if it finds specifications that do not match the relevant openApi JSON schema 
+# The job failes if it finds specifications that do not match the relevant openApi JSON schema 
+# and for which no previous failure is known in /test/realworld/failed.json
 #
 name: "Real world API test"
 
