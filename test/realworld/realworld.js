@@ -4,8 +4,8 @@ const validator = new Validator();
 const { writeFileSync } = require("fs");
 const fetch = require("node-fetch");
 const { argv, exit } = require("process");
-const failedFile = "./failed.json";
-const newFailedFile = "./failed.updated.json";
+const failedFile = `${__dirname}/failed.json`;
+const newFailedFile = `${__dirname}/failed.updated.json`;
 const defaultPercentage = 10;
 
 const failedData = require(failedFile);
@@ -110,9 +110,12 @@ async function testAPIs(percentage, onlyFailed) {
     `Finished testing ${results.total} APIs
      ${results.invalid} tests failed of which ${results.knownFailed} were known failures`
   );
-  if (results.knownFailed !== results.invalid) {
+  if (
+    results.knownFailed !== results.invalid ||
+    (onlyFailed && results.invalid !== results.total)
+  ) {
     if (percentage === 100) {
-      console.log(`new failures found, creating ${newFailedFile}`);
+      console.log(`new/updated failures found, creating ${newFailedFile}`);
       writeFileSync(
         newFailedFile,
         JSON.stringify(Object.fromEntries(failed), null, 2),
