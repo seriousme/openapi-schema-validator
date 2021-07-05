@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 ### Changed
+ - Updated dependencies
+    -  ajv  ^8.6.0  →  ^8.6.1   
 
 ## [v1.2.0] 27-06-2021
 ### Changed
