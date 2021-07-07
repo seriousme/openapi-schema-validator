@@ -1,5 +1,6 @@
 const Ajv04 = require("ajv-draft-04");
 const Ajv2020 = require("ajv/dist/2020.js");
+const addFormats = require("ajv-formats");
 const JSYaml = require("js-yaml");
 const util = require("util");
 const fs = require("fs");
@@ -53,7 +54,6 @@ class Validator {
     if (ajvOptions.strict !== "log") {
       ajvOptions.strict = false;
     }
-    ajvOptions.validateFormats = false;
     this.ajvOptions = ajvOptions;
     this.ajvValidators = {};
     return this;
@@ -97,6 +97,8 @@ class Validator {
       const schemaVersion = schema.$schema;
       const AjvClass = ajvVersions[schemaVersion];
       const ajv = new AjvClass(this.ajvOptions);
+      addFormats(ajv);
+      ajv.addFormat('media-range',true); // used in 3.1
       this.ajvValidators[version] = ajv.compile(schema);
     }
     return this.ajvValidators[version];

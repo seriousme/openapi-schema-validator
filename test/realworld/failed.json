@@ -1,4 +1,80 @@
 {
+  "airport-web.appspot.com": {
+    "name": "airport-web.appspot.com",
+    "apiVersion": "v1",
+    "openApiVersion": "2.0",
+    "yamlUrl": "https://api.apis.guru/v2/specs/airport-web.appspot.com/v1/swagger.yaml",
+    "jsonUrl": "https://api.apis.guru/v2/specs/airport-web.appspot.com/v1/swagger.json",
+    "updated": "2021-06-21T12:16:53.715Z",
+    "result": {
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/securityDefinitions/google_id_token",
+          "schemaPath": "#/additionalProperties",
+          "keyword": "additionalProperties",
+          "params": {
+            "additionalProperty": "authorizationUrl"
+          },
+          "message": "must NOT have additional properties"
+        },
+        {
+          "instancePath": "/securityDefinitions/google_id_token",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "name"
+          },
+          "message": "must have required property 'name'"
+        },
+        {
+          "instancePath": "/securityDefinitions/google_id_token/authorizationUrl",
+          "schemaPath": "#/properties/authorizationUrl/format",
+          "keyword": "format",
+          "params": {
+            "format": "uri"
+          },
+          "message": "must match format \"uri\""
+        },
+        {
+          "instancePath": "/securityDefinitions/google_id_token",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "tokenUrl"
+          },
+          "message": "must have required property 'tokenUrl'"
+        },
+        {
+          "instancePath": "/securityDefinitions/google_id_token",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "tokenUrl"
+          },
+          "message": "must have required property 'tokenUrl'"
+        },
+        {
+          "instancePath": "/securityDefinitions/google_id_token",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "tokenUrl"
+          },
+          "message": "must have required property 'tokenUrl'"
+        },
+        {
+          "instancePath": "/securityDefinitions/google_id_token",
+          "schemaPath": "#/additionalProperties/oneOf",
+          "keyword": "oneOf",
+          "params": {
+            "passingSchemas": null
+          },
+          "message": "must match exactly one schema in oneOf"
+        }
+      ]
+    }
+  },
   "ato.gov.au": {
     "name": "ato.gov.au",
     "apiVersion": "0.0.6",
@@ -39,6 +115,268 @@
       ]
     },
     "knownFailed": true
+  },
+  "azure.com:servicebus": {
+    "name": "azure.com:servicebus",
+    "apiVersion": "2017-04-01",
+    "openApiVersion": "2.0",
+    "yamlUrl": "https://api.apis.guru/v2/specs/azure.com/servicebus/2017-04-01/swagger.yaml",
+    "jsonUrl": "https://api.apis.guru/v2/specs/azure.com/servicebus/2017-04-01/swagger.json",
+    "updated": "2019-09-23T09:26:07.000Z",
+    "result": {
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/paths/~1subscriptions~1{subscriptionId}~1resourceGroups~1{resourceGroupName}~1providers~1Microsoft.ServiceBus~1namespaces~1{namespaceName}~1topics~1{topicName}~1subscriptions~1{subscriptionName}~1rules~1{ruleName}/get/externalDocs/url",
+          "schemaPath": "#/properties/url/format",
+          "keyword": "format",
+          "params": {
+            "format": "uri"
+          },
+          "message": "must match format \"uri\""
+        }
+      ]
+    }
+  },
+  "azure.com:storageimportexport": {
+    "name": "azure.com:storageimportexport",
+    "apiVersion": "2016-11-01",
+    "openApiVersion": "2.0",
+    "yamlUrl": "https://api.apis.guru/v2/specs/azure.com/storageimportexport/2016-11-01/swagger.yaml",
+    "jsonUrl": "https://api.apis.guru/v2/specs/azure.com/storageimportexport/2016-11-01/swagger.json",
+    "updated": "2019-07-22T11:03:07.000Z",
+    "result": {
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/paths/~1providers~1Microsoft.ImportExport~1locations/get/externalDocs/url",
+          "schemaPath": "#/properties/url/format",
+          "keyword": "format",
+          "params": {
+            "format": "uri"
+          },
+          "message": "must match format \"uri\""
+        }
+      ]
+    }
+  },
+  "brex.io": {
+    "name": "brex.io",
+    "apiVersion": "2021.12",
+    "openApiVersion": "3.0.0",
+    "yamlUrl": "https://api.apis.guru/v2/specs/brex.io/2021.12/openapi.yaml",
+    "jsonUrl": "https://api.apis.guru/v2/specs/brex.io/2021.12/openapi.json",
+    "updated": "2021-07-05T15:07:17.927Z",
+    "result": {
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/paths/~1api~1v1~1company~1deepsearch~1name~1{country}~1{name}/get/responses/200",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "description"
+          },
+          "message": "must have required property 'description'"
+        },
+        {
+          "instancePath": "/paths/~1api~1v1~1company~1deepsearch~1name~1{country}~1{name}/get/responses/200/$ref",
+          "schemaPath": "#/definitions/Reference/patternProperties/%5E%5C%24ref%24/format",
+          "keyword": "format",
+          "params": {
+            "format": "uri-reference"
+          },
+          "message": "must match format \"uri-reference\""
+        },
+        {
+          "instancePath": "/paths/~1api~1v1~1company~1deepsearch~1name~1{country}~1{name}/get/responses/200",
+          "schemaPath": "#/patternProperties/%5E%5B1-5%5D(%3F%3A%5Cd%7B2%7D%7CXX)%24/oneOf",
+          "keyword": "oneOf",
+          "params": {
+            "passingSchemas": null
+          },
+          "message": "must match exactly one schema in oneOf"
+        }
+      ]
+    }
+  },
+  "conjur.local": {
+    "name": "conjur.local",
+    "apiVersion": "5.1.1",
+    "openApiVersion": "3.0.0",
+    "yamlUrl": "https://api.apis.guru/v2/specs/conjur.local/5.1.1/openapi.yaml",
+    "jsonUrl": "https://api.apis.guru/v2/specs/conjur.local/5.1.1/openapi.json",
+    "updated": "2021-07-05T15:07:17.927Z",
+    "result": {
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/paths/~1authn-azure~1{service_id}~1{account}~1{login}~1authenticate/post/parameters/2/schema",
+          "schemaPath": "#/additionalProperties",
+          "keyword": "additionalProperties",
+          "params": {
+            "additionalProperty": "$ref"
+          },
+          "message": "must NOT have additional properties"
+        },
+        {
+          "instancePath": "/paths/~1authn-azure~1{service_id}~1{account}~1{login}~1authenticate/post/parameters/2/schema/$ref",
+          "schemaPath": "#/definitions/Reference/patternProperties/%5E%5C%24ref%24/format",
+          "keyword": "format",
+          "params": {
+            "format": "uri-reference"
+          },
+          "message": "must match format \"uri-reference\""
+        },
+        {
+          "instancePath": "/paths/~1authn-azure~1{service_id}~1{account}~1{login}~1authenticate/post/parameters/2/schema",
+          "schemaPath": "#/properties/schema/oneOf",
+          "keyword": "oneOf",
+          "params": {
+            "passingSchemas": null
+          },
+          "message": "must match exactly one schema in oneOf"
+        },
+        {
+          "instancePath": "/paths/~1authn-azure~1{service_id}~1{account}~1{login}~1authenticate/post/parameters/2",
+          "schemaPath": "#/definitions/Reference/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "$ref"
+          },
+          "message": "must have required property '$ref'"
+        },
+        {
+          "instancePath": "/paths/~1authn-azure~1{service_id}~1{account}~1{login}~1authenticate/post/parameters/2",
+          "schemaPath": "#/properties/parameters/items/oneOf",
+          "keyword": "oneOf",
+          "params": {
+            "passingSchemas": null
+          },
+          "message": "must match exactly one schema in oneOf"
+        }
+      ]
+    }
+  },
+  "digitalocean.com": {
+    "name": "digitalocean.com",
+    "apiVersion": "2.0",
+    "openApiVersion": "3.0.0",
+    "yamlUrl": "https://api.apis.guru/v2/specs/digitalocean.com/2.0/openapi.yaml",
+    "jsonUrl": "https://api.apis.guru/v2/specs/digitalocean.com/2.0/openapi.json",
+    "updated": "2021-07-05T15:07:17.927Z",
+    "result": {
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/paths/~1v2~1account~1keys~1{ssh_key_identifier}/delete/parameters/0",
+          "schemaPath": "#/definitions/SchemaXORContent/oneOf/0/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "schema"
+          },
+          "message": "must have required property 'schema'"
+        },
+        {
+          "instancePath": "/paths/~1v2~1account~1keys~1{ssh_key_identifier}/delete/parameters/0",
+          "schemaPath": "#/definitions/SchemaXORContent/oneOf/1/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "content"
+          },
+          "message": "must have required property 'content'"
+        },
+        {
+          "instancePath": "/paths/~1v2~1account~1keys~1{ssh_key_identifier}/delete/parameters/0",
+          "schemaPath": "#/definitions/SchemaXORContent/oneOf",
+          "keyword": "oneOf",
+          "params": {
+            "passingSchemas": null
+          },
+          "message": "must match exactly one schema in oneOf"
+        },
+        {
+          "instancePath": "/paths/~1v2~1account~1keys~1{ssh_key_identifier}/delete/parameters/0/$ref",
+          "schemaPath": "#/definitions/Reference/patternProperties/%5E%5C%24ref%24/format",
+          "keyword": "format",
+          "params": {
+            "format": "uri-reference"
+          },
+          "message": "must match format \"uri-reference\""
+        },
+        {
+          "instancePath": "/paths/~1v2~1account~1keys~1{ssh_key_identifier}/delete/parameters/0",
+          "schemaPath": "#/properties/parameters/items/oneOf",
+          "keyword": "oneOf",
+          "params": {
+            "passingSchemas": null
+          },
+          "message": "must match exactly one schema in oneOf"
+        }
+      ]
+    }
+  },
+  "googleapis.com:datacatalog": {
+    "name": "googleapis.com:datacatalog",
+    "apiVersion": "v1beta1",
+    "openApiVersion": "3.0.0",
+    "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/datacatalog/v1beta1/openapi.yaml",
+    "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/datacatalog/v1beta1/openapi.json",
+    "updated": "2021-07-05T23:08:37.856Z",
+    "result": {
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "",
+          "schemaPath": "#/additionalProperties",
+          "keyword": "additionalProperties",
+          "params": {
+            "additionalProperty": "source"
+          },
+          "message": "must NOT have additional properties"
+        }
+      ]
+    }
+  },
+  "nexmo.com:application.v2": {
+    "name": "nexmo.com:application.v2",
+    "apiVersion": "2.1.0",
+    "openApiVersion": "3.0.0",
+    "yamlUrl": "https://api.apis.guru/v2/specs/nexmo.com/application.v2/2.1.0/openapi.yaml",
+    "jsonUrl": "https://api.apis.guru/v2/specs/nexmo.com/application.v2/2.1.0/openapi.json",
+    "updated": "2021-07-05T15:07:17.927Z",
+    "result": {
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/paths/~1{id}/delete/responses/404",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "description"
+          },
+          "message": "must have required property 'description'"
+        },
+        {
+          "instancePath": "/paths/~1{id}/delete/responses/404/$ref",
+          "schemaPath": "#/definitions/Reference/patternProperties/%5E%5C%24ref%24/format",
+          "keyword": "format",
+          "params": {
+            "format": "uri-reference"
+          },
+          "message": "must match format \"uri-reference\""
+        },
+        {
+          "instancePath": "/paths/~1{id}/delete/responses/404",
+          "schemaPath": "#/patternProperties/%5E%5B1-5%5D(%3F%3A%5Cd%7B2%7D%7CXX)%24/oneOf",
+          "keyword": "oneOf",
+          "params": {
+            "passingSchemas": null
+          },
+          "message": "must match exactly one schema in oneOf"
+        }
+      ]
+    }
   },
   "openapi-generator.tech": {
     "name": "openapi-generator.tech",
@@ -114,5 +452,385 @@
       ]
     },
     "knownFailed": true
+  },
+  "opensuse.org:obs": {
+    "name": "opensuse.org:obs",
+    "apiVersion": "2.10.50",
+    "openApiVersion": "3.0.0",
+    "yamlUrl": "https://api.apis.guru/v2/specs/opensuse.org/obs/2.10.50/openapi.yaml",
+    "jsonUrl": "https://api.apis.guru/v2/specs/opensuse.org/obs/2.10.50/openapi.json",
+    "updated": "2021-07-05T15:07:17.927Z",
+    "result": {
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/paths/~1architectures~1{architecture_name}/get/responses/404/content/application~1xml; charset=utf-8/schema",
+          "schemaPath": "#/additionalProperties",
+          "keyword": "additionalProperties",
+          "params": {
+            "additionalProperty": "$ref"
+          },
+          "message": "must NOT have additional properties"
+        },
+        {
+          "instancePath": "/paths/~1architectures~1{architecture_name}/get/responses/404/content/application~1xml; charset=utf-8/schema/$ref",
+          "schemaPath": "#/definitions/Reference/patternProperties/%5E%5C%24ref%24/format",
+          "keyword": "format",
+          "params": {
+            "format": "uri-reference"
+          },
+          "message": "must match format \"uri-reference\""
+        },
+        {
+          "instancePath": "/paths/~1architectures~1{architecture_name}/get/responses/404/content/application~1xml; charset=utf-8/schema",
+          "schemaPath": "#/properties/schema/oneOf",
+          "keyword": "oneOf",
+          "params": {
+            "passingSchemas": null
+          },
+          "message": "must match exactly one schema in oneOf"
+        },
+        {
+          "instancePath": "/paths/~1architectures~1{architecture_name}/get/responses/404",
+          "schemaPath": "#/definitions/Reference/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "$ref"
+          },
+          "message": "must have required property '$ref'"
+        },
+        {
+          "instancePath": "/paths/~1architectures~1{architecture_name}/get/responses/404",
+          "schemaPath": "#/patternProperties/%5E%5B1-5%5D(%3F%3A%5Cd%7B2%7D%7CXX)%24/oneOf",
+          "keyword": "oneOf",
+          "params": {
+            "passingSchemas": null
+          },
+          "message": "must match exactly one schema in oneOf"
+        }
+      ]
+    }
+  },
+  "parliament.uk:statutoryinstruments": {
+    "name": "parliament.uk:statutoryinstruments",
+    "apiVersion": "v1",
+    "openApiVersion": "2.0",
+    "yamlUrl": "https://api.apis.guru/v2/specs/parliament.uk/statutoryinstruments/v1/swagger.yaml",
+    "jsonUrl": "https://api.apis.guru/v2/specs/parliament.uk/statutoryinstruments/v1/swagger.json",
+    "updated": "2021-06-21T12:16:53.715Z",
+    "result": {
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/info/contact/url",
+          "schemaPath": "#/properties/url/format",
+          "keyword": "format",
+          "params": {
+            "format": "uri"
+          },
+          "message": "must match format \"uri\""
+        }
+      ]
+    }
+  },
+  "parliament.uk:treaties": {
+    "name": "parliament.uk:treaties",
+    "apiVersion": "v1",
+    "openApiVersion": "2.0",
+    "yamlUrl": "https://api.apis.guru/v2/specs/parliament.uk/treaties/v1/swagger.yaml",
+    "jsonUrl": "https://api.apis.guru/v2/specs/parliament.uk/treaties/v1/swagger.json",
+    "updated": "2021-05-24T10:27:51.952Z",
+    "result": {
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/info/contact/url",
+          "schemaPath": "#/properties/url/format",
+          "keyword": "format",
+          "params": {
+            "format": "uri"
+          },
+          "message": "must match format \"uri\""
+        }
+      ]
+    }
+  },
+  "prss.org": {
+    "name": "prss.org",
+    "apiVersion": "2.0.0",
+    "openApiVersion": "2.0",
+    "yamlUrl": "https://api.apis.guru/v2/specs/prss.org/2.0.0/swagger.yaml",
+    "jsonUrl": "https://api.apis.guru/v2/specs/prss.org/2.0.0/swagger.json",
+    "updated": "2021-06-21T12:16:53.715Z",
+    "result": {
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202/schema/externalDocs/url",
+          "schemaPath": "#/properties/url/format",
+          "keyword": "format",
+          "params": {
+            "format": "uri"
+          },
+          "message": "must match format \"uri\""
+        },
+        {
+          "instancePath": "/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202/schema",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "type"
+          },
+          "message": "must have required property 'type'"
+        },
+        {
+          "instancePath": "/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202/schema",
+          "schemaPath": "#/properties/schema/oneOf",
+          "keyword": "oneOf",
+          "params": {
+            "passingSchemas": null
+          },
+          "message": "must match exactly one schema in oneOf"
+        },
+        {
+          "instancePath": "/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "$ref"
+          },
+          "message": "must have required property '$ref'"
+        },
+        {
+          "instancePath": "/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202",
+          "schemaPath": "#/oneOf",
+          "keyword": "oneOf",
+          "params": {
+            "passingSchemas": null
+          },
+          "message": "must match exactly one schema in oneOf"
+        }
+      ]
+    }
+  },
+  "rev.ai": {
+    "name": "rev.ai",
+    "apiVersion": "v1",
+    "openApiVersion": "3.0.1",
+    "yamlUrl": "https://api.apis.guru/v2/specs/rev.ai/v1/openapi.yaml",
+    "jsonUrl": "https://api.apis.guru/v2/specs/rev.ai/v1/openapi.json",
+    "updated": "2021-07-05T15:07:17.927Z",
+    "result": {
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/paths/~1account/get/responses/401",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "description"
+          },
+          "message": "must have required property 'description'"
+        },
+        {
+          "instancePath": "/paths/~1account/get/responses/401/$ref",
+          "schemaPath": "#/definitions/Reference/patternProperties/%5E%5C%24ref%24/format",
+          "keyword": "format",
+          "params": {
+            "format": "uri-reference"
+          },
+          "message": "must match format \"uri-reference\""
+        },
+        {
+          "instancePath": "/paths/~1account/get/responses/401",
+          "schemaPath": "#/patternProperties/%5E%5B1-5%5D(%3F%3A%5Cd%7B2%7D%7CXX)%24/oneOf",
+          "keyword": "oneOf",
+          "params": {
+            "passingSchemas": null
+          },
+          "message": "must match exactly one schema in oneOf"
+        }
+      ]
+    }
+  },
+  "surevoip.co.uk": {
+    "name": "surevoip.co.uk",
+    "apiVersion": "9dcb0dc8",
+    "openApiVersion": "3.0.3",
+    "yamlUrl": "https://api.apis.guru/v2/specs/surevoip.co.uk/9dcb0dc8/openapi.yaml",
+    "jsonUrl": "https://api.apis.guru/v2/specs/surevoip.co.uk/9dcb0dc8/openapi.json",
+    "updated": "2021-07-05T15:07:17.927Z",
+    "result": {
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/paths/~1customers~1{account}~1announcements~1{announcement_id}/delete/parameters/0",
+          "schemaPath": "#/definitions/SchemaXORContent/oneOf/0/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "schema"
+          },
+          "message": "must have required property 'schema'"
+        },
+        {
+          "instancePath": "/paths/~1customers~1{account}~1announcements~1{announcement_id}/delete/parameters/0",
+          "schemaPath": "#/definitions/SchemaXORContent/oneOf/1/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "content"
+          },
+          "message": "must have required property 'content'"
+        },
+        {
+          "instancePath": "/paths/~1customers~1{account}~1announcements~1{announcement_id}/delete/parameters/0",
+          "schemaPath": "#/definitions/SchemaXORContent/oneOf",
+          "keyword": "oneOf",
+          "params": {
+            "passingSchemas": null
+          },
+          "message": "must match exactly one schema in oneOf"
+        },
+        {
+          "instancePath": "/paths/~1customers~1{account}~1announcements~1{announcement_id}/delete/parameters/0/$ref",
+          "schemaPath": "#/definitions/Reference/patternProperties/%5E%5C%24ref%24/format",
+          "keyword": "format",
+          "params": {
+            "format": "uri-reference"
+          },
+          "message": "must match format \"uri-reference\""
+        },
+        {
+          "instancePath": "/paths/~1customers~1{account}~1announcements~1{announcement_id}/delete/parameters/0",
+          "schemaPath": "#/properties/parameters/items/oneOf",
+          "keyword": "oneOf",
+          "params": {
+            "passingSchemas": null
+          },
+          "message": "must match exactly one schema in oneOf"
+        }
+      ]
+    }
+  },
+  "trashnothing.com": {
+    "name": "trashnothing.com",
+    "apiVersion": "1.2",
+    "openApiVersion": "3.0.0",
+    "yamlUrl": "https://api.apis.guru/v2/specs/trashnothing.com/1.2/openapi.yaml",
+    "jsonUrl": "https://api.apis.guru/v2/specs/trashnothing.com/1.2/openapi.json",
+    "updated": "2021-06-21T12:16:53.715Z",
+    "result": {
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/info/termsOfService",
+          "schemaPath": "#/properties/termsOfService/format",
+          "keyword": "format",
+          "params": {
+            "format": "uri-reference"
+          },
+          "message": "must match format \"uri-reference\""
+        }
+      ]
+    }
+  },
+  "twinehealth.com": {
+    "name": "twinehealth.com",
+    "apiVersion": "v7.78.1",
+    "openApiVersion": "2.0",
+    "yamlUrl": "https://api.apis.guru/v2/specs/twinehealth.com/v7.78.1/swagger.yaml",
+    "jsonUrl": "https://api.apis.guru/v2/specs/twinehealth.com/v7.78.1/swagger.json",
+    "updated": "2021-06-21T12:16:53.715Z",
+    "result": {
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/securityDefinitions/OAuth2",
+          "schemaPath": "#/additionalProperties",
+          "keyword": "additionalProperties",
+          "params": {
+            "additionalProperty": "flow"
+          },
+          "message": "must NOT have additional properties"
+        },
+        {
+          "instancePath": "/securityDefinitions/OAuth2",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "name"
+          },
+          "message": "must have required property 'name'"
+        },
+        {
+          "instancePath": "/securityDefinitions/OAuth2",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "authorizationUrl"
+          },
+          "message": "must have required property 'authorizationUrl'"
+        },
+        {
+          "instancePath": "/securityDefinitions/OAuth2/flow",
+          "schemaPath": "#/properties/flow/enum",
+          "keyword": "enum",
+          "params": {
+            "allowedValues": [
+              "password"
+            ]
+          },
+          "message": "must be equal to one of the allowed values"
+        },
+        {
+          "instancePath": "/securityDefinitions/OAuth2/tokenUrl",
+          "schemaPath": "#/properties/tokenUrl/format",
+          "keyword": "format",
+          "params": {
+            "format": "uri"
+          },
+          "message": "must match format \"uri\""
+        },
+        {
+          "instancePath": "/securityDefinitions/OAuth2",
+          "schemaPath": "#/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "authorizationUrl"
+          },
+          "message": "must have required property 'authorizationUrl'"
+        },
+        {
+          "instancePath": "/securityDefinitions/OAuth2",
+          "schemaPath": "#/additionalProperties/oneOf",
+          "keyword": "oneOf",
+          "params": {
+            "passingSchemas": null
+          },
+          "message": "must match exactly one schema in oneOf"
+        }
+      ]
+    }
+  },
+  "whapi.com:numbers": {
+    "name": "whapi.com:numbers",
+    "apiVersion": "2.0",
+    "openApiVersion": "2.0",
+    "yamlUrl": "https://api.apis.guru/v2/specs/whapi.com/numbers/2.0/swagger.yaml",
+    "jsonUrl": "https://api.apis.guru/v2/specs/whapi.com/numbers/2.0/swagger.json",
+    "updated": "2021-06-21T12:16:53.715Z",
+    "result": {
+      "valid": false,
+      "errors": [
+        {
+          "instancePath": "/info/license/url",
+          "schemaPath": "#/properties/url/format",
+          "keyword": "format",
+          "params": {
+            "format": "uri"
+          },
+          "message": "must match format \"uri\""
+        }
+      ]
+    }
   }
 }

@@ -2,6 +2,7 @@
 
 ## [Unreleased]
 ### Changed
+ - Added validation of formats
  - Updated dependencies
     -  ajv  ^8.6.0  →  ^8.6.1   
 

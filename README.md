@@ -77,7 +77,7 @@ Where `<filename>` refers to a YAML or JSON file containing the specification.
 ### `new Validator(ajvOptions)`
 
 The constructor returns an instance of `Validator`. 
-By passing an ajv options object it is possible to influence the behavior of the [AJV schema validator](https://ajv.js.org/). AJV fails to process the openApi schemas if you set `strict:true` or `validateFormats: true` therefore these are overridden and set to `false` if present. This is not a bug but a result of the complexity of the openApi JSON schemas.
+By passing an ajv options object it is possible to influence the behavior of the [AJV schema validator](https://ajv.js.org/). AJV fails to process the openApi schemas if you set `strict:true` therefore this set to `false` if present. This is not a bug but a result of the complexity of the openApi JSON schemas.
 
 <a name="validate"></a>
 ### `<instance>.validate(specification)`
