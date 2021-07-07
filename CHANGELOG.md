@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 ### Changed
+
+## [v1.3.0] 07-07-2021
+### Changed
  - Added validation of formats
  - Updated dependencies
     -  ajv  ^8.6.0  →  ^8.6.1   
