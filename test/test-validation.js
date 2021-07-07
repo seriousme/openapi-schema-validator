@@ -120,7 +120,6 @@ test(`original petstore spec works`, async (t) => {
   const validator = new Validator();
   const petStoreSpec = require(`./validation/petstore-swagger.v2.json`);
   const res = await validator.validate(petStoreSpec);
-  console.log(res.errors);
   t.equal(res.valid, true, "original petstore spec is valid");
   const ver = validator.version;
   t.equal(
@@ -137,11 +136,13 @@ test(`original petstore spec works`, async (t) => {
 });
 
 test(`original petstore spec works with AJV strict:"log" option`, async (t) => {
-  t.plan(3);
-  const validator = new Validator({ strict: "log" });
+  t.plan(4);
+  let logcount = 0;
+  const log = warn = error = () => logcount++;
+  const logger = { log, warn, error };
+  const validator = new Validator({ strict: "log", logger });
   const petStoreSpec = require(`./validation/petstore-swagger.v2.json`);
   const res = await validator.validate(petStoreSpec);
-  console.log(res.errors);
   t.equal(res.valid, true, "original petstore spec is valid");
   const ver = validator.version;
   t.equal(
@@ -155,6 +156,7 @@ test(`original petstore spec works with AJV strict:"log" option`, async (t) => {
     "name",
     "$refs are correctly resolved"
   );
+  t.equal(logcount > 0, true, "warnings are being logged");
 });
 
 test(`Invalid filename returns an error`, async (t) => {
