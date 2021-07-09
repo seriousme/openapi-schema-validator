@@ -16,7 +16,14 @@
           "params": {
             "additionalProperty": "authorizationUrl"
           },
-          "message": "must NOT have additional properties"
+          "message": "must NOT have additional properties",
+          "instanceValue": {
+            "authorizationUrl": "",
+            "flow": "implicit",
+            "type": "oauth2",
+            "x-google-issuer": "accounts.google.com",
+            "x-google-jwks_uri": "https://www.googleapis.com/oauth2/v1/certs"
+          }
         },
         {
           "instancePath": "/securityDefinitions/google_id_token",
@@ -25,7 +32,14 @@
           "params": {
             "missingProperty": "name"
           },
-          "message": "must have required property 'name'"
+          "message": "must have required property 'name'",
+          "instanceValue": {
+            "authorizationUrl": "",
+            "flow": "implicit",
+            "type": "oauth2",
+            "x-google-issuer": "accounts.google.com",
+            "x-google-jwks_uri": "https://www.googleapis.com/oauth2/v1/certs"
+          }
         },
         {
           "instancePath": "/securityDefinitions/google_id_token/authorizationUrl",
@@ -34,7 +48,8 @@
           "params": {
             "format": "uri"
           },
-          "message": "must match format \"uri\""
+          "message": "must match format \"uri\"",
+          "instanceValue": ""
         },
         {
           "instancePath": "/securityDefinitions/google_id_token",
@@ -43,7 +58,14 @@
           "params": {
             "missingProperty": "tokenUrl"
           },
-          "message": "must have required property 'tokenUrl'"
+          "message": "must have required property 'tokenUrl'",
+          "instanceValue": {
+            "authorizationUrl": "",
+            "flow": "implicit",
+            "type": "oauth2",
+            "x-google-issuer": "accounts.google.com",
+            "x-google-jwks_uri": "https://www.googleapis.com/oauth2/v1/certs"
+          }
         },
         {
           "instancePath": "/securityDefinitions/google_id_token",
@@ -52,7 +74,14 @@
           "params": {
             "missingProperty": "tokenUrl"
           },
-          "message": "must have required property 'tokenUrl'"
+          "message": "must have required property 'tokenUrl'",
+          "instanceValue": {
+            "authorizationUrl": "",
+            "flow": "implicit",
+            "type": "oauth2",
+            "x-google-issuer": "accounts.google.com",
+            "x-google-jwks_uri": "https://www.googleapis.com/oauth2/v1/certs"
+          }
         },
         {
           "instancePath": "/securityDefinitions/google_id_token",
@@ -61,7 +90,14 @@
           "params": {
             "missingProperty": "tokenUrl"
           },
-          "message": "must have required property 'tokenUrl'"
+          "message": "must have required property 'tokenUrl'",
+          "instanceValue": {
+            "authorizationUrl": "",
+            "flow": "implicit",
+            "type": "oauth2",
+            "x-google-issuer": "accounts.google.com",
+            "x-google-jwks_uri": "https://www.googleapis.com/oauth2/v1/certs"
+          }
         },
         {
           "instancePath": "/securityDefinitions/google_id_token",
@@ -70,7 +106,14 @@
           "params": {
             "passingSchemas": null
           },
-          "message": "must match exactly one schema in oneOf"
+          "message": "must match exactly one schema in oneOf",
+          "instanceValue": {
+            "authorizationUrl": "",
+            "flow": "implicit",
+            "type": "oauth2",
+            "x-google-issuer": "accounts.google.com",
+            "x-google-jwks_uri": "https://www.googleapis.com/oauth2/v1/certs"
+          }
         }
       ]
     }
@@ -92,7 +135,11 @@
           "params": {
             "additionalProperty": "$ref"
           },
-          "message": "must NOT have additional properties"
+          "message": "must NOT have additional properties",
+          "instanceValue": {
+            "$ref": "#/responses/FailedPrecondition",
+            "description": "Individual has related resources and cannot be deleted"
+          }
         },
         {
           "instancePath": "/paths/~1individuals~1{partyId}/delete/responses/400",
@@ -101,7 +148,11 @@
           "params": {
             "additionalProperty": "description"
           },
-          "message": "must NOT have additional properties"
+          "message": "must NOT have additional properties",
+          "instanceValue": {
+            "$ref": "#/responses/FailedPrecondition",
+            "description": "Individual has related resources and cannot be deleted"
+          }
         },
         {
           "instancePath": "/paths/~1individuals~1{partyId}/delete/responses/400",
@@ -110,11 +161,14 @@
           "params": {
             "passingSchemas": null
           },
-          "message": "must match exactly one schema in oneOf"
+          "message": "must match exactly one schema in oneOf",
+          "instanceValue": {
+            "$ref": "#/responses/FailedPrecondition",
+            "description": "Individual has related resources and cannot be deleted"
+          }
         }
       ]
-    },
-    "knownFailed": true
+    }
   },
   "azure.com:servicebus": {
     "name": "azure.com:servicebus",
@@ -133,7 +187,8 @@
           "params": {
             "format": "uri"
           },
-          "message": "must match format \"uri\""
+          "message": "must match format \"uri\"",
+          "instanceValue": ""
         }
       ]
     }
@@ -155,7 +210,8 @@
           "params": {
             "format": "uri"
           },
-          "message": "must match format \"uri\""
+          "message": "must match format \"uri\"",
+          "instanceValue": ""
         }
       ]
     }
@@ -177,7 +233,10 @@
           "params": {
             "missingProperty": "description"
           },
-          "message": "must have required property 'description'"
+          "message": "must have required property 'description'",
+          "instanceValue": {
+            "$ref": "#/paths/~1api~1v1~1company~1search~1name~1{country}~1{name}/get/responses/200"
+          }
         },
         {
           "instancePath": "/paths/~1api~1v1~1company~1deepsearch~1name~1{country}~1{name}/get/responses/200/$ref",
@@ -186,7 +245,8 @@
           "params": {
             "format": "uri-reference"
           },
-          "message": "must match format \"uri-reference\""
+          "message": "must match format \"uri-reference\"",
+          "instanceValue": "#/paths/~1api~1v1~1company~1search~1name~1{country}~1{name}/get/responses/200"
         },
         {
           "instancePath": "/paths/~1api~1v1~1company~1deepsearch~1name~1{country}~1{name}/get/responses/200",
@@ -195,7 +255,10 @@
           "params": {
             "passingSchemas": null
           },
-          "message": "must match exactly one schema in oneOf"
+          "message": "must match exactly one schema in oneOf",
+          "instanceValue": {
+            "$ref": "#/paths/~1api~1v1~1company~1search~1name~1{country}~1{name}/get/responses/200"
+          }
         }
       ]
     }
@@ -217,7 +280,10 @@
           "params": {
             "additionalProperty": "$ref"
           },
-          "message": "must NOT have additional properties"
+          "message": "must NOT have additional properties",
+          "instanceValue": {
+            "$ref": "#/paths/~1authn~1{account}~1{login}~1authenticate/post/parameters/1/schema"
+          }
         },
         {
           "instancePath": "/paths/~1authn-azure~1{service_id}~1{account}~1{login}~1authenticate/post/parameters/2/schema/$ref",
@@ -226,7 +292,8 @@
           "params": {
             "format": "uri-reference"
           },
-          "message": "must match format \"uri-reference\""
+          "message": "must match format \"uri-reference\"",
+          "instanceValue": "#/paths/~1authn~1{account}~1{login}~1authenticate/post/parameters/1/schema"
         },
         {
           "instancePath": "/paths/~1authn-azure~1{service_id}~1{account}~1{login}~1authenticate/post/parameters/2/schema",
@@ -235,7 +302,10 @@
           "params": {
             "passingSchemas": null
           },
-          "message": "must match exactly one schema in oneOf"
+          "message": "must match exactly one schema in oneOf",
+          "instanceValue": {
+            "$ref": "#/paths/~1authn~1{account}~1{login}~1authenticate/post/parameters/1/schema"
+          }
         },
         {
           "instancePath": "/paths/~1authn-azure~1{service_id}~1{account}~1{login}~1authenticate/post/parameters/2",
@@ -244,7 +314,16 @@
           "params": {
             "missingProperty": "$ref"
           },
-          "message": "must have required property '$ref'"
+          "message": "must have required property '$ref'",
+          "instanceValue": {
+            "description": "URL-encoded login name. For users, it’s the user ID. For hosts, the login name is `host/<host-id>`",
+            "in": "path",
+            "name": "login",
+            "required": true,
+            "schema": {
+              "$ref": "#/paths/~1authn~1{account}~1{login}~1authenticate/post/parameters/1/schema"
+            }
+          }
         },
         {
           "instancePath": "/paths/~1authn-azure~1{service_id}~1{account}~1{login}~1authenticate/post/parameters/2",
@@ -253,7 +332,16 @@
           "params": {
             "passingSchemas": null
           },
-          "message": "must match exactly one schema in oneOf"
+          "message": "must match exactly one schema in oneOf",
+          "instanceValue": {
+            "description": "URL-encoded login name. For users, it’s the user ID. For hosts, the login name is `host/<host-id>`",
+            "in": "path",
+            "name": "login",
+            "required": true,
+            "schema": {
+              "$ref": "#/paths/~1authn~1{account}~1{login}~1authenticate/post/parameters/1/schema"
+            }
+          }
         }
       ]
     }
@@ -275,7 +363,10 @@
           "params": {
             "missingProperty": "schema"
           },
-          "message": "must have required property 'schema'"
+          "message": "must have required property 'schema'",
+          "instanceValue": {
+            "$ref": "#/paths/~1v2~1account~1keys~1{ssh_key_identifier}/get/parameters/0"
+          }
         },
         {
           "instancePath": "/paths/~1v2~1account~1keys~1{ssh_key_identifier}/delete/parameters/0",
@@ -284,7 +375,10 @@
           "params": {
             "missingProperty": "content"
           },
-          "message": "must have required property 'content'"
+          "message": "must have required property 'content'",
+          "instanceValue": {
+            "$ref": "#/paths/~1v2~1account~1keys~1{ssh_key_identifier}/get/parameters/0"
+          }
         },
         {
           "instancePath": "/paths/~1v2~1account~1keys~1{ssh_key_identifier}/delete/parameters/0",
@@ -293,7 +387,10 @@
           "params": {
             "passingSchemas": null
           },
-          "message": "must match exactly one schema in oneOf"
+          "message": "must match exactly one schema in oneOf",
+          "instanceValue": {
+            "$ref": "#/paths/~1v2~1account~1keys~1{ssh_key_identifier}/get/parameters/0"
+          }
         },
         {
           "instancePath": "/paths/~1v2~1account~1keys~1{ssh_key_identifier}/delete/parameters/0/$ref",
@@ -302,7 +399,8 @@
           "params": {
             "format": "uri-reference"
           },
-          "message": "must match format \"uri-reference\""
+          "message": "must match format \"uri-reference\"",
+          "instanceValue": "#/paths/~1v2~1account~1keys~1{ssh_key_identifier}/get/parameters/0"
         },
         {
           "instancePath": "/paths/~1v2~1account~1keys~1{ssh_key_identifier}/delete/parameters/0",
@@ -311,7 +409,10 @@
           "params": {
             "passingSchemas": null
           },
-          "message": "must match exactly one schema in oneOf"
+          "message": "must match exactly one schema in oneOf",
+          "instanceValue": {
+            "$ref": "#/paths/~1v2~1account~1keys~1{ssh_key_identifier}/get/parameters/0"
+          }
         }
       ]
     }
@@ -333,7 +434,8 @@
           "params": {
             "additionalProperty": "source"
           },
-          "message": "must NOT have additional properties"
+          "message": "must NOT have additional properties",
+          "instanceValue": "full specification"
         }
       ]
     }
@@ -355,7 +457,10 @@
           "params": {
             "missingProperty": "description"
           },
-          "message": "must have required property 'description'"
+          "message": "must have required property 'description'",
+          "instanceValue": {
+            "$ref": "#/paths/~1{id}/get/responses/404"
+          }
         },
         {
           "instancePath": "/paths/~1{id}/delete/responses/404/$ref",
@@ -364,7 +469,8 @@
           "params": {
             "format": "uri-reference"
           },
-          "message": "must match format \"uri-reference\""
+          "message": "must match format \"uri-reference\"",
+          "instanceValue": "#/paths/~1{id}/get/responses/404"
         },
         {
           "instancePath": "/paths/~1{id}/delete/responses/404",
@@ -373,7 +479,10 @@
           "params": {
             "passingSchemas": null
           },
-          "message": "must match exactly one schema in oneOf"
+          "message": "must match exactly one schema in oneOf",
+          "instanceValue": {
+            "$ref": "#/paths/~1{id}/get/responses/404"
+          }
         }
       ]
     }
@@ -395,7 +504,11 @@
           "params": {
             "additionalProperty": "originalRef"
           },
-          "message": "must NOT have additional properties"
+          "message": "must NOT have additional properties",
+          "instanceValue": {
+            "$ref": "#/definitions/CliOption",
+            "originalRef": "CliOption"
+          }
         },
         {
           "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200/schema/additionalProperties",
@@ -404,14 +517,22 @@
           "params": {
             "type": "boolean"
           },
-          "message": "must be boolean"
+          "message": "must be boolean",
+          "instanceValue": {
+            "$ref": "#/definitions/CliOption",
+            "originalRef": "CliOption"
+          }
         },
         {
           "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200/schema/additionalProperties",
           "schemaPath": "#/properties/additionalProperties/anyOf",
           "keyword": "anyOf",
           "params": {},
-          "message": "must match a schema in anyOf"
+          "message": "must match a schema in anyOf",
+          "instanceValue": {
+            "$ref": "#/definitions/CliOption",
+            "originalRef": "CliOption"
+          }
         },
         {
           "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200/schema",
@@ -420,7 +541,14 @@
           "params": {
             "additionalProperty": "additionalProperties"
           },
-          "message": "must NOT have additional properties"
+          "message": "must NOT have additional properties",
+          "instanceValue": {
+            "additionalProperties": {
+              "$ref": "#/definitions/CliOption",
+              "originalRef": "CliOption"
+            },
+            "type": "object"
+          }
         },
         {
           "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200/schema",
@@ -429,7 +557,14 @@
           "params": {
             "passingSchemas": null
           },
-          "message": "must match exactly one schema in oneOf"
+          "message": "must match exactly one schema in oneOf",
+          "instanceValue": {
+            "additionalProperties": {
+              "$ref": "#/definitions/CliOption",
+              "originalRef": "CliOption"
+            },
+            "type": "object"
+          }
         },
         {
           "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200",
@@ -438,7 +573,17 @@
           "params": {
             "missingProperty": "$ref"
           },
-          "message": "must have required property '$ref'"
+          "message": "must have required property '$ref'",
+          "instanceValue": {
+            "description": "successful operation",
+            "schema": {
+              "additionalProperties": {
+                "$ref": "#/definitions/CliOption",
+                "originalRef": "CliOption"
+              },
+              "type": "object"
+            }
+          }
         },
         {
           "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200",
@@ -447,11 +592,20 @@
           "params": {
             "passingSchemas": null
           },
-          "message": "must match exactly one schema in oneOf"
+          "message": "must match exactly one schema in oneOf",
+          "instanceValue": {
+            "description": "successful operation",
+            "schema": {
+              "additionalProperties": {
+                "$ref": "#/definitions/CliOption",
+                "originalRef": "CliOption"
+              },
+              "type": "object"
+            }
+          }
         }
       ]
-    },
-    "knownFailed": true
+    }
   },
   "opensuse.org:obs": {
     "name": "opensuse.org:obs",
@@ -470,7 +624,10 @@
           "params": {
             "additionalProperty": "$ref"
           },
-          "message": "must NOT have additional properties"
+          "message": "must NOT have additional properties",
+          "instanceValue": {
+            "$ref": "#/paths/~1architectures/get/responses/401/content/application~1xml; charset=utf-8/schema"
+          }
         },
         {
           "instancePath": "/paths/~1architectures~1{architecture_name}/get/responses/404/content/application~1xml; charset=utf-8/schema/$ref",
@@ -479,7 +636,8 @@
           "params": {
             "format": "uri-reference"
           },
-          "message": "must match format \"uri-reference\""
+          "message": "must match format \"uri-reference\"",
+          "instanceValue": "#/paths/~1architectures/get/responses/401/content/application~1xml; charset=utf-8/schema"
         },
         {
           "instancePath": "/paths/~1architectures~1{architecture_name}/get/responses/404/content/application~1xml; charset=utf-8/schema",
@@ -488,7 +646,10 @@
           "params": {
             "passingSchemas": null
           },
-          "message": "must match exactly one schema in oneOf"
+          "message": "must match exactly one schema in oneOf",
+          "instanceValue": {
+            "$ref": "#/paths/~1architectures/get/responses/401/content/application~1xml; charset=utf-8/schema"
+          }
         },
         {
           "instancePath": "/paths/~1architectures~1{architecture_name}/get/responses/404",
@@ -497,7 +658,21 @@
           "params": {
             "missingProperty": "$ref"
           },
-          "message": "must have required property '$ref'"
+          "message": "must have required property '$ref'",
+          "instanceValue": {
+            "content": {
+              "application/xml; charset=utf-8": {
+                "example": {
+                  "code": "unknown_architecture",
+                  "summary": "Architecture does not exist: x999"
+                },
+                "schema": {
+                  "$ref": "#/paths/~1architectures/get/responses/401/content/application~1xml; charset=utf-8/schema"
+                }
+              }
+            },
+            "description": "Not Found."
+          }
         },
         {
           "instancePath": "/paths/~1architectures~1{architecture_name}/get/responses/404",
@@ -506,7 +681,21 @@
           "params": {
             "passingSchemas": null
           },
-          "message": "must match exactly one schema in oneOf"
+          "message": "must match exactly one schema in oneOf",
+          "instanceValue": {
+            "content": {
+              "application/xml; charset=utf-8": {
+                "example": {
+                  "code": "unknown_architecture",
+                  "summary": "Architecture does not exist: x999"
+                },
+                "schema": {
+                  "$ref": "#/paths/~1architectures/get/responses/401/content/application~1xml; charset=utf-8/schema"
+                }
+              }
+            },
+            "description": "Not Found."
+          }
         }
       ]
     }
@@ -528,7 +717,8 @@
           "params": {
             "format": "uri"
           },
-          "message": "must match format \"uri\""
+          "message": "must match format \"uri\"",
+          "instanceValue": ""
         }
       ]
     }
@@ -550,7 +740,8 @@
           "params": {
             "format": "uri"
           },
-          "message": "must match format \"uri\""
+          "message": "must match format \"uri\"",
+          "instanceValue": ""
         }
       ]
     }
@@ -572,7 +763,8 @@
           "params": {
             "format": "uri"
           },
-          "message": "must match format \"uri\""
+          "message": "must match format \"uri\"",
+          "instanceValue": "/api/epg-cd-mapping.html"
         },
         {
           "instancePath": "/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202/schema",
@@ -581,7 +773,14 @@
           "params": {
             "missingProperty": "type"
           },
-          "message": "must have required property 'type'"
+          "message": "must have required property 'type'",
+          "instanceValue": {
+            "$ref": "#/definitions/ProgramInformationBatch",
+            "externalDocs": {
+              "description": "Find RadioDns to ContentDepot Mapping here",
+              "url": "/api/epg-cd-mapping.html"
+            }
+          }
         },
         {
           "instancePath": "/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202/schema",
@@ -590,7 +789,14 @@
           "params": {
             "passingSchemas": null
           },
-          "message": "must match exactly one schema in oneOf"
+          "message": "must match exactly one schema in oneOf",
+          "instanceValue": {
+            "$ref": "#/definitions/ProgramInformationBatch",
+            "externalDocs": {
+              "description": "Find RadioDns to ContentDepot Mapping here",
+              "url": "/api/epg-cd-mapping.html"
+            }
+          }
         },
         {
           "instancePath": "/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202",
@@ -599,7 +805,17 @@
           "params": {
             "missingProperty": "$ref"
           },
-          "message": "must have required property '$ref'"
+          "message": "must have required property '$ref'",
+          "instanceValue": {
+            "description": "The accepted batch information that is queued for processing.",
+            "schema": {
+              "$ref": "#/definitions/ProgramInformationBatch",
+              "externalDocs": {
+                "description": "Find RadioDns to ContentDepot Mapping here",
+                "url": "/api/epg-cd-mapping.html"
+              }
+            }
+          }
         },
         {
           "instancePath": "/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202",
@@ -608,7 +824,17 @@
           "params": {
             "passingSchemas": null
           },
-          "message": "must match exactly one schema in oneOf"
+          "message": "must match exactly one schema in oneOf",
+          "instanceValue": {
+            "description": "The accepted batch information that is queued for processing.",
+            "schema": {
+              "$ref": "#/definitions/ProgramInformationBatch",
+              "externalDocs": {
+                "description": "Find RadioDns to ContentDepot Mapping here",
+                "url": "/api/epg-cd-mapping.html"
+              }
+            }
+          }
         }
       ]
     }
@@ -630,7 +856,10 @@
           "params": {
             "missingProperty": "description"
           },
-          "message": "must have required property 'description'"
+          "message": "must have required property 'description'",
+          "instanceValue": {
+            "$ref": "#/paths/~1jobs~1{id}/get/responses/401"
+          }
         },
         {
           "instancePath": "/paths/~1account/get/responses/401/$ref",
@@ -639,7 +868,8 @@
           "params": {
             "format": "uri-reference"
           },
-          "message": "must match format \"uri-reference\""
+          "message": "must match format \"uri-reference\"",
+          "instanceValue": "#/paths/~1jobs~1{id}/get/responses/401"
         },
         {
           "instancePath": "/paths/~1account/get/responses/401",
@@ -648,7 +878,10 @@
           "params": {
             "passingSchemas": null
           },
-          "message": "must match exactly one schema in oneOf"
+          "message": "must match exactly one schema in oneOf",
+          "instanceValue": {
+            "$ref": "#/paths/~1jobs~1{id}/get/responses/401"
+          }
         }
       ]
     }
@@ -670,7 +903,10 @@
           "params": {
             "missingProperty": "schema"
           },
-          "message": "must have required property 'schema'"
+          "message": "must have required property 'schema'",
+          "instanceValue": {
+            "$ref": "#/paths/~1customers~1{account}~1announcements/get/parameters/0"
+          }
         },
         {
           "instancePath": "/paths/~1customers~1{account}~1announcements~1{announcement_id}/delete/parameters/0",
@@ -679,7 +915,10 @@
           "params": {
             "missingProperty": "content"
           },
-          "message": "must have required property 'content'"
+          "message": "must have required property 'content'",
+          "instanceValue": {
+            "$ref": "#/paths/~1customers~1{account}~1announcements/get/parameters/0"
+          }
         },
         {
           "instancePath": "/paths/~1customers~1{account}~1announcements~1{announcement_id}/delete/parameters/0",
@@ -688,7 +927,10 @@
           "params": {
             "passingSchemas": null
           },
-          "message": "must match exactly one schema in oneOf"
+          "message": "must match exactly one schema in oneOf",
+          "instanceValue": {
+            "$ref": "#/paths/~1customers~1{account}~1announcements/get/parameters/0"
+          }
         },
         {
           "instancePath": "/paths/~1customers~1{account}~1announcements~1{announcement_id}/delete/parameters/0/$ref",
@@ -697,7 +939,8 @@
           "params": {
             "format": "uri-reference"
           },
-          "message": "must match format \"uri-reference\""
+          "message": "must match format \"uri-reference\"",
+          "instanceValue": "#/paths/~1customers~1{account}~1announcements/get/parameters/0"
         },
         {
           "instancePath": "/paths/~1customers~1{account}~1announcements~1{announcement_id}/delete/parameters/0",
@@ -706,7 +949,10 @@
           "params": {
             "passingSchemas": null
           },
-          "message": "must match exactly one schema in oneOf"
+          "message": "must match exactly one schema in oneOf",
+          "instanceValue": {
+            "$ref": "#/paths/~1customers~1{account}~1announcements/get/parameters/0"
+          }
         }
       ]
     }
@@ -728,7 +974,8 @@
           "params": {
             "format": "uri-reference"
           },
-          "message": "must match format \"uri-reference\""
+          "message": "must match format \"uri-reference\"",
+          "instanceValue": "https://trashnothing.com/tos\n"
         }
       ]
     }
@@ -750,7 +997,17 @@
           "params": {
             "additionalProperty": "flow"
           },
-          "message": "must NOT have additional properties"
+          "message": "must NOT have additional properties",
+          "instanceValue": {
+            "description": "Fitbit Plus allows customers to access data for their organization using client credentials.\nOAuth2 is a safe and secure way to give you access.\n",
+            "flow": "application",
+            "scopes": {
+              "group": "access patients and data within a group",
+              "organization": "access patients and data within an organization"
+            },
+            "tokenUrl": "/oauth/token",
+            "type": "oauth2"
+          }
         },
         {
           "instancePath": "/securityDefinitions/OAuth2",
@@ -759,7 +1016,17 @@
           "params": {
             "missingProperty": "name"
           },
-          "message": "must have required property 'name'"
+          "message": "must have required property 'name'",
+          "instanceValue": {
+            "description": "Fitbit Plus allows customers to access data for their organization using client credentials.\nOAuth2 is a safe and secure way to give you access.\n",
+            "flow": "application",
+            "scopes": {
+              "group": "access patients and data within a group",
+              "organization": "access patients and data within an organization"
+            },
+            "tokenUrl": "/oauth/token",
+            "type": "oauth2"
+          }
         },
         {
           "instancePath": "/securityDefinitions/OAuth2",
@@ -768,7 +1035,17 @@
           "params": {
             "missingProperty": "authorizationUrl"
           },
-          "message": "must have required property 'authorizationUrl'"
+          "message": "must have required property 'authorizationUrl'",
+          "instanceValue": {
+            "description": "Fitbit Plus allows customers to access data for their organization using client credentials.\nOAuth2 is a safe and secure way to give you access.\n",
+            "flow": "application",
+            "scopes": {
+              "group": "access patients and data within a group",
+              "organization": "access patients and data within an organization"
+            },
+            "tokenUrl": "/oauth/token",
+            "type": "oauth2"
+          }
         },
         {
           "instancePath": "/securityDefinitions/OAuth2/flow",
@@ -779,7 +1056,8 @@
               "password"
             ]
           },
-          "message": "must be equal to one of the allowed values"
+          "message": "must be equal to one of the allowed values",
+          "instanceValue": "application"
         },
         {
           "instancePath": "/securityDefinitions/OAuth2/tokenUrl",
@@ -788,7 +1066,8 @@
           "params": {
             "format": "uri"
           },
-          "message": "must match format \"uri\""
+          "message": "must match format \"uri\"",
+          "instanceValue": "/oauth/token"
         },
         {
           "instancePath": "/securityDefinitions/OAuth2",
@@ -797,7 +1076,17 @@
           "params": {
             "missingProperty": "authorizationUrl"
           },
-          "message": "must have required property 'authorizationUrl'"
+          "message": "must have required property 'authorizationUrl'",
+          "instanceValue": {
+            "description": "Fitbit Plus allows customers to access data for their organization using client credentials.\nOAuth2 is a safe and secure way to give you access.\n",
+            "flow": "application",
+            "scopes": {
+              "group": "access patients and data within a group",
+              "organization": "access patients and data within an organization"
+            },
+            "tokenUrl": "/oauth/token",
+            "type": "oauth2"
+          }
         },
         {
           "instancePath": "/securityDefinitions/OAuth2",
@@ -806,7 +1095,17 @@
           "params": {
             "passingSchemas": null
           },
-          "message": "must match exactly one schema in oneOf"
+          "message": "must match exactly one schema in oneOf",
+          "instanceValue": {
+            "description": "Fitbit Plus allows customers to access data for their organization using client credentials.\nOAuth2 is a safe and secure way to give you access.\n",
+            "flow": "application",
+            "scopes": {
+              "group": "access patients and data within a group",
+              "organization": "access patients and data within an organization"
+            },
+            "tokenUrl": "/oauth/token",
+            "type": "oauth2"
+          }
         }
       ]
     }
@@ -828,7 +1127,8 @@
           "params": {
             "format": "uri"
           },
-          "message": "must match format \"uri\""
+          "message": "must match format \"uri\"",
+          "instanceValue": "www.williamhill.com"
         }
       ]
     }

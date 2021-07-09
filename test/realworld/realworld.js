@@ -4,6 +4,8 @@ const validator = new Validator();
 const { writeFileSync } = require("fs");
 const fetch = require("node-fetch");
 const { argv, exit } = require("process");
+const JSYaml = require("js-yaml");
+const yamlOpts = { schema: JSYaml.JSON_SCHEMA };
 const failedFile = `${__dirname}/failed.json`;
 const newFailedFile = `${__dirname}/failed.updated.json`;
 const defaultPercentage = 10;
@@ -28,6 +30,20 @@ function sample(fullMap, percentage) {
     sampleMap.set(key, fullMap.get(key));
   }
   return sampleMap;
+}
+
+function unescapeJsonPointer(str) {
+  return str.replace(/~1/g, "/").replace(/~0/g, "~");
+}
+
+function getInstanceValue(yamlSpec, path) {
+  if (path === "") {
+    return "full specification";
+  }
+  const obj = JSYaml.load(yamlSpec, yamlOpts);
+  const paths = path.split("/").slice(1);
+  const result = paths.reduce((o, n) => o[unescapeJsonPointer(n)], obj);
+  return result;
 }
 
 async function fetchApiList(percentage, onlyFailed = false) {
@@ -93,6 +109,9 @@ async function testAPIs(percentage, onlyFailed) {
       results.valid++;
     } else {
       results.invalid++;
+      api.result.errors.map((item) => {
+        item.instanceValue = getInstanceValue(spec, item.instancePath);
+      });
       if (failedMap.has(name)) {
         const failedApiErrors = JSON.stringify(
           failedMap.get(name).result.errors
