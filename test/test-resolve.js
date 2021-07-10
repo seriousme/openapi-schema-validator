@@ -69,6 +69,23 @@ test(`number in path`, async (t) => {
   t.equal(res.required[0], "billing_address", "followed number in path");
 });
 
+test(`ref to #`, async (t) => {
+  const schema = {
+    $id: "http://www.example.com/",
+    $schema: "http://json-schema.org/draft-07/schema#",
+
+    definitions: {
+      2: {
+        required: ["billing_address"],
+      },
+    },
+    $ref: "#",
+  };
+  t.plan(1);
+  const res = resolve(schema);
+  t.equal(res.definitions[2].required[0], "billing_address", "followed # in path");
+});
+
 test(`$ref to $anchor`, async (t) => {
   const schema = {
     $id: "http://www.example.com/",

@@ -29,10 +29,8 @@ const filtered = (raw) =>
 function resolveUri(uri, anchors) {
   const [prefix, path] = uri.split("#", 2);
   const err = new Error(`Can't resolve ${uri}`);
-  if (path === undefined) {
-    throw err;
-  }
-  if (path[0] !== "/") {
+
+  if (path.length && path[0] !== "/") {
     if (anchors[uri]) {
       return anchors[uri];
     }
