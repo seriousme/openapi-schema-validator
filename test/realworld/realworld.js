@@ -35,6 +35,49 @@ function sample(fullMap, percentage) {
 function unescapeJsonPointer(str) {
   return str.replace(/~1/g, "/").replace(/~0/g, "~");
 }
+function makeRexp(pathItem) {
+  const res = unescapeJsonPointer(pathItem);
+  return res.replace("$", "\\$");
+}
+
+function yamlLine(yamlSpec, path) {
+  const lines = yamlSpec.split("\n");
+  const paths = path.split("/").slice(1);
+  let num = 0;
+  for (pathItem of paths) {
+    if (Number.isInteger(+pathItem)) {
+      num = findArrayItem(lines, num, pathItem);
+    } else {
+      num = findItem(lines, num, pathItem);
+    }
+  }
+  return num + 1;
+}
+
+function findArrayItem(lines, num, pathIdx) {
+  const firstItem = lines[num + 1];
+  const match = firstItem.match(/^\s*-/);
+  if (match === null) {
+    // it was not an array index, but a key
+    return findItem(lines, num, pathItem);
+  }
+  const prefix = match[0];
+  while (pathIdx > 0) {
+    num++;
+    if (lines[num].startsWith(prefix)) {
+      pathIdx--;
+    }
+  }
+  return num + 1;
+}
+
+function findItem(lines, num, pathItem) {
+  const token = new RegExp(`^\\s*"?${makeRexp(pathItem)}"?:`);
+  while (!lines[num].match(token)) {
+    num++;
+  }
+  return num;
+}
 
 function getInstanceValue(yamlSpec, path) {
   if (path === "") {
@@ -44,6 +87,13 @@ function getInstanceValue(yamlSpec, path) {
   const paths = path.split("/").slice(1);
   const result = paths.reduce((o, n) => o[unescapeJsonPointer(n)], obj);
   return result;
+}
+
+function yamlToGitHub(url) {
+  return url.replace(
+    "https://api.apis.guru/v2/specs/",
+    "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/"
+  );
 }
 
 async function fetchApiList(percentage, onlyFailed = false) {
@@ -64,6 +114,7 @@ async function fetchApiList(percentage, onlyFailed = false) {
         openApiVersion: latestVersion.openapiVer,
         yamlUrl: latestVersion.swaggerYamlUrl,
         jsonUrl: latestVersion.swaggerUrl,
+        gitHubUrl: yamlToGitHub(latestVersion.swaggerYamlUrl),
         updated: latestVersion.updated,
       });
     }
@@ -111,6 +162,10 @@ async function testAPIs(percentage, onlyFailed) {
       results.invalid++;
       api.result.errors.map((item) => {
         item.instanceValue = getInstanceValue(spec, item.instancePath);
+        item.gitHubUrl = `${api.gitHubUrl}#L${yamlLine(
+          spec,
+          item.instancePath
+        )}`;
       });
       if (failedMap.has(name)) {
         const failedApiErrors = JSON.stringify(

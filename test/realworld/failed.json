@@ -5,6 +5,7 @@
     "openApiVersion": "2.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/airport-web.appspot.com/v1/swagger.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/airport-web.appspot.com/v1/swagger.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/airport-web.appspot.com/v1/swagger.yaml",
     "updated": "2021-06-21T12:16:53.715Z",
     "result": {
       "valid": false,
@@ -23,7 +24,8 @@
             "type": "oauth2",
             "x-google-issuer": "accounts.google.com",
             "x-google-jwks_uri": "https://www.googleapis.com/oauth2/v1/certs"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/airport-web.appspot.com/v1/swagger.yaml#L25"
         },
         {
           "instancePath": "/securityDefinitions/google_id_token",
@@ -39,7 +41,8 @@
             "type": "oauth2",
             "x-google-issuer": "accounts.google.com",
             "x-google-jwks_uri": "https://www.googleapis.com/oauth2/v1/certs"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/airport-web.appspot.com/v1/swagger.yaml#L25"
         },
         {
           "instancePath": "/securityDefinitions/google_id_token/authorizationUrl",
@@ -49,7 +52,8 @@
             "format": "uri"
           },
           "message": "must match format \"uri\"",
-          "instanceValue": ""
+          "instanceValue": "",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/airport-web.appspot.com/v1/swagger.yaml#L26"
         },
         {
           "instancePath": "/securityDefinitions/google_id_token",
@@ -65,7 +69,8 @@
             "type": "oauth2",
             "x-google-issuer": "accounts.google.com",
             "x-google-jwks_uri": "https://www.googleapis.com/oauth2/v1/certs"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/airport-web.appspot.com/v1/swagger.yaml#L25"
         },
         {
           "instancePath": "/securityDefinitions/google_id_token",
@@ -81,7 +86,8 @@
             "type": "oauth2",
             "x-google-issuer": "accounts.google.com",
             "x-google-jwks_uri": "https://www.googleapis.com/oauth2/v1/certs"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/airport-web.appspot.com/v1/swagger.yaml#L25"
         },
         {
           "instancePath": "/securityDefinitions/google_id_token",
@@ -97,7 +103,8 @@
             "type": "oauth2",
             "x-google-issuer": "accounts.google.com",
             "x-google-jwks_uri": "https://www.googleapis.com/oauth2/v1/certs"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/airport-web.appspot.com/v1/swagger.yaml#L25"
         },
         {
           "instancePath": "/securityDefinitions/google_id_token",
@@ -113,10 +120,12 @@
             "type": "oauth2",
             "x-google-issuer": "accounts.google.com",
             "x-google-jwks_uri": "https://www.googleapis.com/oauth2/v1/certs"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/airport-web.appspot.com/v1/swagger.yaml#L25"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "ato.gov.au": {
     "name": "ato.gov.au",
@@ -124,6 +133,7 @@
     "openApiVersion": "2.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/ato.gov.au/0.0.6/swagger.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/ato.gov.au/0.0.6/swagger.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/ato.gov.au/0.0.6/swagger.yaml",
     "updated": "2017-09-06T11:44:38.000Z",
     "result": {
       "valid": false,
@@ -139,7 +149,8 @@
           "instanceValue": {
             "$ref": "#/responses/FailedPrecondition",
             "description": "Individual has related resources and cannot be deleted"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/ato.gov.au/0.0.6/swagger.yaml#L1004"
         },
         {
           "instancePath": "/paths/~1individuals~1{partyId}/delete/responses/400",
@@ -152,7 +163,8 @@
           "instanceValue": {
             "$ref": "#/responses/FailedPrecondition",
             "description": "Individual has related resources and cannot be deleted"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/ato.gov.au/0.0.6/swagger.yaml#L1004"
         },
         {
           "instancePath": "/paths/~1individuals~1{partyId}/delete/responses/400",
@@ -165,7 +177,8 @@
           "instanceValue": {
             "$ref": "#/responses/FailedPrecondition",
             "description": "Individual has related resources and cannot be deleted"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/ato.gov.au/0.0.6/swagger.yaml#L1004"
         }
       ]
     }
@@ -176,6 +189,7 @@
     "openApiVersion": "2.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/azure.com/servicebus/2017-04-01/swagger.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/azure.com/servicebus/2017-04-01/swagger.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/servicebus/2017-04-01/swagger.yaml",
     "updated": "2019-09-23T09:26:07.000Z",
     "result": {
       "valid": false,
@@ -188,10 +202,12 @@
             "format": "uri"
           },
           "message": "must match format \"uri\"",
-          "instanceValue": ""
+          "instanceValue": "",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/servicebus/2017-04-01/swagger.yaml#L4255"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "azure.com:storageimportexport": {
     "name": "azure.com:storageimportexport",
@@ -199,6 +215,7 @@
     "openApiVersion": "2.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/azure.com/storageimportexport/2016-11-01/swagger.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/azure.com/storageimportexport/2016-11-01/swagger.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/storageimportexport/2016-11-01/swagger.yaml",
     "updated": "2019-07-22T11:03:07.000Z",
     "result": {
       "valid": false,
@@ -211,10 +228,12 @@
             "format": "uri"
           },
           "message": "must match format \"uri\"",
-          "instanceValue": ""
+          "instanceValue": "",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/storageimportexport/2016-11-01/swagger.yaml#L82"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "brex.io": {
     "name": "brex.io",
@@ -222,6 +241,7 @@
     "openApiVersion": "3.0.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/brex.io/2021.12/openapi.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/brex.io/2021.12/openapi.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/brex.io/2021.12/openapi.yaml",
     "updated": "2021-07-05T15:07:17.927Z",
     "result": {
       "valid": false,
@@ -236,7 +256,8 @@
           "message": "must have required property 'description'",
           "instanceValue": {
             "$ref": "#/paths/~1api~1v1~1company~1search~1name~1{country}~1{name}/get/responses/200"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/brex.io/2021.12/openapi.yaml#L276"
         },
         {
           "instancePath": "/paths/~1api~1v1~1company~1deepsearch~1name~1{country}~1{name}/get/responses/200/$ref",
@@ -246,7 +267,8 @@
             "format": "uri-reference"
           },
           "message": "must match format \"uri-reference\"",
-          "instanceValue": "#/paths/~1api~1v1~1company~1search~1name~1{country}~1{name}/get/responses/200"
+          "instanceValue": "#/paths/~1api~1v1~1company~1search~1name~1{country}~1{name}/get/responses/200",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/brex.io/2021.12/openapi.yaml#L277"
         },
         {
           "instancePath": "/paths/~1api~1v1~1company~1deepsearch~1name~1{country}~1{name}/get/responses/200",
@@ -258,7 +280,8 @@
           "message": "must match exactly one schema in oneOf",
           "instanceValue": {
             "$ref": "#/paths/~1api~1v1~1company~1search~1name~1{country}~1{name}/get/responses/200"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/brex.io/2021.12/openapi.yaml#L276"
         }
       ]
     }
@@ -269,6 +292,7 @@
     "openApiVersion": "3.0.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/conjur.local/5.1.1/openapi.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/conjur.local/5.1.1/openapi.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/conjur.local/5.1.1/openapi.yaml",
     "updated": "2021-07-05T15:07:17.927Z",
     "result": {
       "valid": false,
@@ -283,7 +307,8 @@
           "message": "must NOT have additional properties",
           "instanceValue": {
             "$ref": "#/paths/~1authn~1{account}~1{login}~1authenticate/post/parameters/1/schema"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/conjur.local/5.1.1/openapi.yaml#L136"
         },
         {
           "instancePath": "/paths/~1authn-azure~1{service_id}~1{account}~1{login}~1authenticate/post/parameters/2/schema/$ref",
@@ -293,7 +318,8 @@
             "format": "uri-reference"
           },
           "message": "must match format \"uri-reference\"",
-          "instanceValue": "#/paths/~1authn~1{account}~1{login}~1authenticate/post/parameters/1/schema"
+          "instanceValue": "#/paths/~1authn~1{account}~1{login}~1authenticate/post/parameters/1/schema",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/conjur.local/5.1.1/openapi.yaml#L137"
         },
         {
           "instancePath": "/paths/~1authn-azure~1{service_id}~1{account}~1{login}~1authenticate/post/parameters/2/schema",
@@ -305,7 +331,8 @@
           "message": "must match exactly one schema in oneOf",
           "instanceValue": {
             "$ref": "#/paths/~1authn~1{account}~1{login}~1authenticate/post/parameters/1/schema"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/conjur.local/5.1.1/openapi.yaml#L136"
         },
         {
           "instancePath": "/paths/~1authn-azure~1{service_id}~1{account}~1{login}~1authenticate/post/parameters/2",
@@ -323,7 +350,8 @@
             "schema": {
               "$ref": "#/paths/~1authn~1{account}~1{login}~1authenticate/post/parameters/1/schema"
             }
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/conjur.local/5.1.1/openapi.yaml#L133"
         },
         {
           "instancePath": "/paths/~1authn-azure~1{service_id}~1{account}~1{login}~1authenticate/post/parameters/2",
@@ -341,7 +369,8 @@
             "schema": {
               "$ref": "#/paths/~1authn~1{account}~1{login}~1authenticate/post/parameters/1/schema"
             }
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/conjur.local/5.1.1/openapi.yaml#L133"
         }
       ]
     }
@@ -352,6 +381,7 @@
     "openApiVersion": "3.0.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/digitalocean.com/2.0/openapi.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/digitalocean.com/2.0/openapi.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/digitalocean.com/2.0/openapi.yaml",
     "updated": "2021-07-05T15:07:17.927Z",
     "result": {
       "valid": false,
@@ -366,7 +396,8 @@
           "message": "must have required property 'schema'",
           "instanceValue": {
             "$ref": "#/paths/~1v2~1account~1keys~1{ssh_key_identifier}/get/parameters/0"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/digitalocean.com/2.0/openapi.yaml#L1653"
         },
         {
           "instancePath": "/paths/~1v2~1account~1keys~1{ssh_key_identifier}/delete/parameters/0",
@@ -378,7 +409,8 @@
           "message": "must have required property 'content'",
           "instanceValue": {
             "$ref": "#/paths/~1v2~1account~1keys~1{ssh_key_identifier}/get/parameters/0"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/digitalocean.com/2.0/openapi.yaml#L1653"
         },
         {
           "instancePath": "/paths/~1v2~1account~1keys~1{ssh_key_identifier}/delete/parameters/0",
@@ -390,7 +422,8 @@
           "message": "must match exactly one schema in oneOf",
           "instanceValue": {
             "$ref": "#/paths/~1v2~1account~1keys~1{ssh_key_identifier}/get/parameters/0"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/digitalocean.com/2.0/openapi.yaml#L1653"
         },
         {
           "instancePath": "/paths/~1v2~1account~1keys~1{ssh_key_identifier}/delete/parameters/0/$ref",
@@ -400,7 +433,8 @@
             "format": "uri-reference"
           },
           "message": "must match format \"uri-reference\"",
-          "instanceValue": "#/paths/~1v2~1account~1keys~1{ssh_key_identifier}/get/parameters/0"
+          "instanceValue": "#/paths/~1v2~1account~1keys~1{ssh_key_identifier}/get/parameters/0",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/digitalocean.com/2.0/openapi.yaml#L1659"
         },
         {
           "instancePath": "/paths/~1v2~1account~1keys~1{ssh_key_identifier}/delete/parameters/0",
@@ -412,7 +446,8 @@
           "message": "must match exactly one schema in oneOf",
           "instanceValue": {
             "$ref": "#/paths/~1v2~1account~1keys~1{ssh_key_identifier}/get/parameters/0"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/digitalocean.com/2.0/openapi.yaml#L1653"
         }
       ]
     }
@@ -423,6 +458,7 @@
     "openApiVersion": "3.0.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/datacatalog/v1beta1/openapi.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/datacatalog/v1beta1/openapi.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/datacatalog/v1beta1/openapi.yaml",
     "updated": "2021-07-05T23:08:37.856Z",
     "result": {
       "valid": false,
@@ -435,10 +471,12 @@
             "additionalProperty": "source"
           },
           "message": "must NOT have additional properties",
-          "instanceValue": "full specification"
+          "instanceValue": "full specification",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/datacatalog/v1beta1/openapi.yaml#L1"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "nexmo.com:application.v2": {
     "name": "nexmo.com:application.v2",
@@ -446,6 +484,7 @@
     "openApiVersion": "3.0.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/nexmo.com/application.v2/2.1.0/openapi.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/nexmo.com/application.v2/2.1.0/openapi.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/nexmo.com/application.v2/2.1.0/openapi.yaml",
     "updated": "2021-07-05T15:07:17.927Z",
     "result": {
       "valid": false,
@@ -460,7 +499,8 @@
           "message": "must have required property 'description'",
           "instanceValue": {
             "$ref": "#/paths/~1{id}/get/responses/404"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/nexmo.com/application.v2/2.1.0/openapi.yaml#L442"
         },
         {
           "instancePath": "/paths/~1{id}/delete/responses/404/$ref",
@@ -470,7 +510,8 @@
             "format": "uri-reference"
           },
           "message": "must match format \"uri-reference\"",
-          "instanceValue": "#/paths/~1{id}/get/responses/404"
+          "instanceValue": "#/paths/~1{id}/get/responses/404",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/nexmo.com/application.v2/2.1.0/openapi.yaml#L443"
         },
         {
           "instancePath": "/paths/~1{id}/delete/responses/404",
@@ -482,7 +523,8 @@
           "message": "must match exactly one schema in oneOf",
           "instanceValue": {
             "$ref": "#/paths/~1{id}/get/responses/404"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/nexmo.com/application.v2/2.1.0/openapi.yaml#L442"
         }
       ]
     }
@@ -493,6 +535,7 @@
     "openApiVersion": "2.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/openapi-generator.tech/5.1.1/swagger.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/openapi-generator.tech/5.1.1/swagger.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml",
     "updated": "2021-06-21T12:16:53.715Z",
     "result": {
       "valid": false,
@@ -508,7 +551,8 @@
           "instanceValue": {
             "$ref": "#/definitions/CliOption",
             "originalRef": "CliOption"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml#L62"
         },
         {
           "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200/schema/additionalProperties",
@@ -521,7 +565,8 @@
           "instanceValue": {
             "$ref": "#/definitions/CliOption",
             "originalRef": "CliOption"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml#L62"
         },
         {
           "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200/schema/additionalProperties",
@@ -532,7 +577,8 @@
           "instanceValue": {
             "$ref": "#/definitions/CliOption",
             "originalRef": "CliOption"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml#L62"
         },
         {
           "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200/schema",
@@ -548,7 +594,8 @@
               "originalRef": "CliOption"
             },
             "type": "object"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml#L61"
         },
         {
           "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200/schema",
@@ -564,7 +611,8 @@
               "originalRef": "CliOption"
             },
             "type": "object"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml#L61"
         },
         {
           "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200",
@@ -583,7 +631,8 @@
               },
               "type": "object"
             }
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml#L59"
         },
         {
           "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200",
@@ -602,7 +651,8 @@
               },
               "type": "object"
             }
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml#L59"
         }
       ]
     }
@@ -613,6 +663,7 @@
     "openApiVersion": "3.0.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/opensuse.org/obs/2.10.50/openapi.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/opensuse.org/obs/2.10.50/openapi.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml",
     "updated": "2021-07-05T15:07:17.927Z",
     "result": {
       "valid": false,
@@ -627,7 +678,8 @@
           "message": "must NOT have additional properties",
           "instanceValue": {
             "$ref": "#/paths/~1architectures/get/responses/401/content/application~1xml; charset=utf-8/schema"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L328"
         },
         {
           "instancePath": "/paths/~1architectures~1{architecture_name}/get/responses/404/content/application~1xml; charset=utf-8/schema/$ref",
@@ -637,7 +689,8 @@
             "format": "uri-reference"
           },
           "message": "must match format \"uri-reference\"",
-          "instanceValue": "#/paths/~1architectures/get/responses/401/content/application~1xml; charset=utf-8/schema"
+          "instanceValue": "#/paths/~1architectures/get/responses/401/content/application~1xml; charset=utf-8/schema",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L329"
         },
         {
           "instancePath": "/paths/~1architectures~1{architecture_name}/get/responses/404/content/application~1xml; charset=utf-8/schema",
@@ -649,7 +702,8 @@
           "message": "must match exactly one schema in oneOf",
           "instanceValue": {
             "$ref": "#/paths/~1architectures/get/responses/401/content/application~1xml; charset=utf-8/schema"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L328"
         },
         {
           "instancePath": "/paths/~1architectures~1{architecture_name}/get/responses/404",
@@ -672,7 +726,8 @@
               }
             },
             "description": "Not Found."
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L322"
         },
         {
           "instancePath": "/paths/~1architectures~1{architecture_name}/get/responses/404",
@@ -695,7 +750,8 @@
               }
             },
             "description": "Not Found."
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L322"
         }
       ]
     }
@@ -706,6 +762,7 @@
     "openApiVersion": "2.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/parliament.uk/statutoryinstruments/v1/swagger.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/parliament.uk/statutoryinstruments/v1/swagger.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/statutoryinstruments/v1/swagger.yaml",
     "updated": "2021-06-21T12:16:53.715Z",
     "result": {
       "valid": false,
@@ -718,10 +775,12 @@
             "format": "uri"
           },
           "message": "must match format \"uri\"",
-          "instanceValue": ""
+          "instanceValue": "",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/statutoryinstruments/v1/swagger.yaml#L6"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "parliament.uk:treaties": {
     "name": "parliament.uk:treaties",
@@ -729,6 +788,7 @@
     "openApiVersion": "2.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/parliament.uk/treaties/v1/swagger.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/parliament.uk/treaties/v1/swagger.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/treaties/v1/swagger.yaml",
     "updated": "2021-05-24T10:27:51.952Z",
     "result": {
       "valid": false,
@@ -741,10 +801,12 @@
             "format": "uri"
           },
           "message": "must match format \"uri\"",
-          "instanceValue": ""
+          "instanceValue": "",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/treaties/v1/swagger.yaml#L6"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "prss.org": {
     "name": "prss.org",
@@ -752,6 +814,7 @@
     "openApiVersion": "2.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/prss.org/2.0.0/swagger.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/prss.org/2.0.0/swagger.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml",
     "updated": "2021-06-21T12:16:53.715Z",
     "result": {
       "valid": false,
@@ -764,7 +827,8 @@
             "format": "uri"
           },
           "message": "must match format \"uri\"",
-          "instanceValue": "/api/epg-cd-mapping.html"
+          "instanceValue": "/api/epg-cd-mapping.html",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L455"
         },
         {
           "instancePath": "/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202/schema",
@@ -780,7 +844,8 @@
               "description": "Find RadioDns to ContentDepot Mapping here",
               "url": "/api/epg-cd-mapping.html"
             }
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L451"
         },
         {
           "instancePath": "/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202/schema",
@@ -796,7 +861,8 @@
               "description": "Find RadioDns to ContentDepot Mapping here",
               "url": "/api/epg-cd-mapping.html"
             }
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L451"
         },
         {
           "instancePath": "/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202",
@@ -815,7 +881,8 @@
                 "url": "/api/epg-cd-mapping.html"
               }
             }
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L449"
         },
         {
           "instancePath": "/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202",
@@ -834,7 +901,8 @@
                 "url": "/api/epg-cd-mapping.html"
               }
             }
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L449"
         }
       ]
     }
@@ -845,6 +913,7 @@
     "openApiVersion": "3.0.1",
     "yamlUrl": "https://api.apis.guru/v2/specs/rev.ai/v1/openapi.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/rev.ai/v1/openapi.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/rev.ai/v1/openapi.yaml",
     "updated": "2021-07-05T15:07:17.927Z",
     "result": {
       "valid": false,
@@ -859,7 +928,8 @@
           "message": "must have required property 'description'",
           "instanceValue": {
             "$ref": "#/paths/~1jobs~1{id}/get/responses/401"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/rev.ai/v1/openapi.yaml#L332"
         },
         {
           "instancePath": "/paths/~1account/get/responses/401/$ref",
@@ -869,7 +939,8 @@
             "format": "uri-reference"
           },
           "message": "must match format \"uri-reference\"",
-          "instanceValue": "#/paths/~1jobs~1{id}/get/responses/401"
+          "instanceValue": "#/paths/~1jobs~1{id}/get/responses/401",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/rev.ai/v1/openapi.yaml#L333"
         },
         {
           "instancePath": "/paths/~1account/get/responses/401",
@@ -881,7 +952,8 @@
           "message": "must match exactly one schema in oneOf",
           "instanceValue": {
             "$ref": "#/paths/~1jobs~1{id}/get/responses/401"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/rev.ai/v1/openapi.yaml#L332"
         }
       ]
     }
@@ -892,6 +964,7 @@
     "openApiVersion": "3.0.3",
     "yamlUrl": "https://api.apis.guru/v2/specs/surevoip.co.uk/9dcb0dc8/openapi.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/surevoip.co.uk/9dcb0dc8/openapi.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/surevoip.co.uk/9dcb0dc8/openapi.yaml",
     "updated": "2021-07-05T15:07:17.927Z",
     "result": {
       "valid": false,
@@ -906,7 +979,8 @@
           "message": "must have required property 'schema'",
           "instanceValue": {
             "$ref": "#/paths/~1customers~1{account}~1announcements/get/parameters/0"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/surevoip.co.uk/9dcb0dc8/openapi.yaml#L584"
         },
         {
           "instancePath": "/paths/~1customers~1{account}~1announcements~1{announcement_id}/delete/parameters/0",
@@ -918,7 +992,8 @@
           "message": "must have required property 'content'",
           "instanceValue": {
             "$ref": "#/paths/~1customers~1{account}~1announcements/get/parameters/0"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/surevoip.co.uk/9dcb0dc8/openapi.yaml#L584"
         },
         {
           "instancePath": "/paths/~1customers~1{account}~1announcements~1{announcement_id}/delete/parameters/0",
@@ -930,7 +1005,8 @@
           "message": "must match exactly one schema in oneOf",
           "instanceValue": {
             "$ref": "#/paths/~1customers~1{account}~1announcements/get/parameters/0"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/surevoip.co.uk/9dcb0dc8/openapi.yaml#L584"
         },
         {
           "instancePath": "/paths/~1customers~1{account}~1announcements~1{announcement_id}/delete/parameters/0/$ref",
@@ -940,7 +1016,8 @@
             "format": "uri-reference"
           },
           "message": "must match format \"uri-reference\"",
-          "instanceValue": "#/paths/~1customers~1{account}~1announcements/get/parameters/0"
+          "instanceValue": "#/paths/~1customers~1{account}~1announcements/get/parameters/0",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/surevoip.co.uk/9dcb0dc8/openapi.yaml#L592"
         },
         {
           "instancePath": "/paths/~1customers~1{account}~1announcements~1{announcement_id}/delete/parameters/0",
@@ -952,7 +1029,8 @@
           "message": "must match exactly one schema in oneOf",
           "instanceValue": {
             "$ref": "#/paths/~1customers~1{account}~1announcements/get/parameters/0"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/surevoip.co.uk/9dcb0dc8/openapi.yaml#L584"
         }
       ]
     }
@@ -963,6 +1041,7 @@
     "openApiVersion": "3.0.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/trashnothing.com/1.2/openapi.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/trashnothing.com/1.2/openapi.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/trashnothing.com/1.2/openapi.yaml",
     "updated": "2021-06-21T12:16:53.715Z",
     "result": {
       "valid": false,
@@ -975,10 +1054,12 @@
             "format": "uri-reference"
           },
           "message": "must match format \"uri-reference\"",
-          "instanceValue": "https://trashnothing.com/tos\n"
+          "instanceValue": "https://trashnothing.com/tos\n",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/trashnothing.com/1.2/openapi.yaml#L20"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "twinehealth.com": {
     "name": "twinehealth.com",
@@ -986,6 +1067,7 @@
     "openApiVersion": "2.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/twinehealth.com/v7.78.1/swagger.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/twinehealth.com/v7.78.1/swagger.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml",
     "updated": "2021-06-21T12:16:53.715Z",
     "result": {
       "valid": false,
@@ -1007,7 +1089,8 @@
             },
             "tokenUrl": "/oauth/token",
             "type": "oauth2"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L109"
         },
         {
           "instancePath": "/securityDefinitions/OAuth2",
@@ -1026,7 +1109,8 @@
             },
             "tokenUrl": "/oauth/token",
             "type": "oauth2"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L109"
         },
         {
           "instancePath": "/securityDefinitions/OAuth2",
@@ -1045,7 +1129,8 @@
             },
             "tokenUrl": "/oauth/token",
             "type": "oauth2"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L109"
         },
         {
           "instancePath": "/securityDefinitions/OAuth2/flow",
@@ -1057,7 +1142,8 @@
             ]
           },
           "message": "must be equal to one of the allowed values",
-          "instanceValue": "application"
+          "instanceValue": "application",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L115"
         },
         {
           "instancePath": "/securityDefinitions/OAuth2/tokenUrl",
@@ -1067,7 +1153,8 @@
             "format": "uri"
           },
           "message": "must match format \"uri\"",
-          "instanceValue": "/oauth/token"
+          "instanceValue": "/oauth/token",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L119"
         },
         {
           "instancePath": "/securityDefinitions/OAuth2",
@@ -1086,7 +1173,8 @@
             },
             "tokenUrl": "/oauth/token",
             "type": "oauth2"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L109"
         },
         {
           "instancePath": "/securityDefinitions/OAuth2",
@@ -1105,10 +1193,12 @@
             },
             "tokenUrl": "/oauth/token",
             "type": "oauth2"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L109"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "whapi.com:numbers": {
     "name": "whapi.com:numbers",
@@ -1116,6 +1206,7 @@
     "openApiVersion": "2.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/whapi.com/numbers/2.0/swagger.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/whapi.com/numbers/2.0/swagger.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/whapi.com/numbers/2.0/swagger.yaml",
     "updated": "2021-06-21T12:16:53.715Z",
     "result": {
       "valid": false,
@@ -1128,9 +1219,11 @@
             "format": "uri"
           },
           "message": "must match format \"uri\"",
-          "instanceValue": "www.williamhill.com"
+          "instanceValue": "www.williamhill.com",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/whapi.com/numbers/2.0/swagger.yaml#L21"
         }
       ]
-    }
+    },
+    "knownFailed": true
   }
 }
