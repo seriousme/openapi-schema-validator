@@ -2,6 +2,7 @@
 
 ## [Unreleased]
 ### Changed
+ - Added URI decoding to refs
 
 ## [v1.3.0] 07-07-2021
 ### Changed
