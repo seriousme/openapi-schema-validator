@@ -29,7 +29,8 @@ const filtered = (raw) =>
 function resolveUri(uri, anchors) {
   const [prefix, path] = uri.split("#", 2);
   const err = new Error(`Can't resolve ${uri}`);
-  if (path[0] !== "/") {
+
+  if (path.length && path[0] !== "/") {
     if (anchors[uri]) {
       return anchors[uri];
     }
@@ -45,6 +46,9 @@ function resolveUri(uri, anchors) {
       (o, n) => o[unescapeJsonPointer(n)],
       anchors[prefix]
     );
+    if (result === undefined) {
+      throw "";
+    }
     return result;
   } catch (_) {
     throw err;
@@ -109,7 +113,8 @@ function resolve(tree) {
   pointers.$ref.forEach((item) => {
     const { ref, obj, prop, id } = item;
     delete obj[prop];
-    const fullRef = ref[0] !== "#" ? ref : `${id}${ref}`;
+    const decodedRef = decodeURIComponent(ref);
+    const fullRef = decodedRef[0] !== "#" ? decodedRef : `${id}${decodedRef}`;
     Object.assign(obj, filtered(resolveUri(fullRef, anchors)));
   });
 

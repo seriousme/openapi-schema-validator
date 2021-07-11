@@ -5,6 +5,7 @@
     "openApiVersion": "2.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/airport-web.appspot.com/v1/swagger.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/airport-web.appspot.com/v1/swagger.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/airport-web.appspot.com/v1/swagger.yaml",
     "updated": "2021-06-21T12:16:53.715Z",
     "result": {
       "valid": false,
@@ -17,13 +18,15 @@
             "additionalProperty": "authorizationUrl"
           },
           "message": "must NOT have additional properties",
+          "hasInstanceValue": true,
           "instanceValue": {
             "authorizationUrl": "",
             "flow": "implicit",
             "type": "oauth2",
             "x-google-issuer": "accounts.google.com",
             "x-google-jwks_uri": "https://www.googleapis.com/oauth2/v1/certs"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/airport-web.appspot.com/v1/swagger.yaml#L24"
         },
         {
           "instancePath": "/securityDefinitions/google_id_token",
@@ -33,13 +36,15 @@
             "missingProperty": "name"
           },
           "message": "must have required property 'name'",
+          "hasInstanceValue": true,
           "instanceValue": {
             "authorizationUrl": "",
             "flow": "implicit",
             "type": "oauth2",
             "x-google-issuer": "accounts.google.com",
             "x-google-jwks_uri": "https://www.googleapis.com/oauth2/v1/certs"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/airport-web.appspot.com/v1/swagger.yaml#L24"
         },
         {
           "instancePath": "/securityDefinitions/google_id_token/authorizationUrl",
@@ -49,7 +54,9 @@
             "format": "uri"
           },
           "message": "must match format \"uri\"",
-          "instanceValue": ""
+          "hasInstanceValue": true,
+          "instanceValue": "",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/airport-web.appspot.com/v1/swagger.yaml#L25"
         },
         {
           "instancePath": "/securityDefinitions/google_id_token",
@@ -59,13 +66,15 @@
             "missingProperty": "tokenUrl"
           },
           "message": "must have required property 'tokenUrl'",
+          "hasInstanceValue": true,
           "instanceValue": {
             "authorizationUrl": "",
             "flow": "implicit",
             "type": "oauth2",
             "x-google-issuer": "accounts.google.com",
             "x-google-jwks_uri": "https://www.googleapis.com/oauth2/v1/certs"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/airport-web.appspot.com/v1/swagger.yaml#L24"
         },
         {
           "instancePath": "/securityDefinitions/google_id_token",
@@ -75,13 +84,15 @@
             "missingProperty": "tokenUrl"
           },
           "message": "must have required property 'tokenUrl'",
+          "hasInstanceValue": true,
           "instanceValue": {
             "authorizationUrl": "",
             "flow": "implicit",
             "type": "oauth2",
             "x-google-issuer": "accounts.google.com",
             "x-google-jwks_uri": "https://www.googleapis.com/oauth2/v1/certs"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/airport-web.appspot.com/v1/swagger.yaml#L24"
         },
         {
           "instancePath": "/securityDefinitions/google_id_token",
@@ -91,13 +102,15 @@
             "missingProperty": "tokenUrl"
           },
           "message": "must have required property 'tokenUrl'",
+          "hasInstanceValue": true,
           "instanceValue": {
             "authorizationUrl": "",
             "flow": "implicit",
             "type": "oauth2",
             "x-google-issuer": "accounts.google.com",
             "x-google-jwks_uri": "https://www.googleapis.com/oauth2/v1/certs"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/airport-web.appspot.com/v1/swagger.yaml#L24"
         },
         {
           "instancePath": "/securityDefinitions/google_id_token",
@@ -107,13 +120,15 @@
             "passingSchemas": null
           },
           "message": "must match exactly one schema in oneOf",
+          "hasInstanceValue": true,
           "instanceValue": {
             "authorizationUrl": "",
             "flow": "implicit",
             "type": "oauth2",
             "x-google-issuer": "accounts.google.com",
             "x-google-jwks_uri": "https://www.googleapis.com/oauth2/v1/certs"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/airport-web.appspot.com/v1/swagger.yaml#L24"
         }
       ]
     }
@@ -124,6 +139,7 @@
     "openApiVersion": "2.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/ato.gov.au/0.0.6/swagger.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/ato.gov.au/0.0.6/swagger.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/ato.gov.au/0.0.6/swagger.yaml",
     "updated": "2017-09-06T11:44:38.000Z",
     "result": {
       "valid": false,
@@ -136,10 +152,12 @@
             "additionalProperty": "$ref"
           },
           "message": "must NOT have additional properties",
+          "hasInstanceValue": true,
           "instanceValue": {
             "$ref": "#/responses/FailedPrecondition",
             "description": "Individual has related resources and cannot be deleted"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/ato.gov.au/0.0.6/swagger.yaml#L902"
         },
         {
           "instancePath": "/paths/~1individuals~1{partyId}/delete/responses/400",
@@ -149,10 +167,12 @@
             "additionalProperty": "description"
           },
           "message": "must NOT have additional properties",
+          "hasInstanceValue": true,
           "instanceValue": {
             "$ref": "#/responses/FailedPrecondition",
             "description": "Individual has related resources and cannot be deleted"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/ato.gov.au/0.0.6/swagger.yaml#L902"
         },
         {
           "instancePath": "/paths/~1individuals~1{partyId}/delete/responses/400",
@@ -162,13 +182,16 @@
             "passingSchemas": null
           },
           "message": "must match exactly one schema in oneOf",
+          "hasInstanceValue": true,
           "instanceValue": {
             "$ref": "#/responses/FailedPrecondition",
             "description": "Individual has related resources and cannot be deleted"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/ato.gov.au/0.0.6/swagger.yaml#L902"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "azure.com:servicebus": {
     "name": "azure.com:servicebus",
@@ -176,6 +199,7 @@
     "openApiVersion": "2.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/azure.com/servicebus/2017-04-01/swagger.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/azure.com/servicebus/2017-04-01/swagger.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/servicebus/2017-04-01/swagger.yaml",
     "updated": "2019-09-23T09:26:07.000Z",
     "result": {
       "valid": false,
@@ -188,10 +212,13 @@
             "format": "uri"
           },
           "message": "must match format \"uri\"",
-          "instanceValue": ""
+          "hasInstanceValue": true,
+          "instanceValue": "",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/servicebus/2017-04-01/swagger.yaml#L4207"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "azure.com:storageimportexport": {
     "name": "azure.com:storageimportexport",
@@ -199,6 +226,7 @@
     "openApiVersion": "2.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/azure.com/storageimportexport/2016-11-01/swagger.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/azure.com/storageimportexport/2016-11-01/swagger.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/storageimportexport/2016-11-01/swagger.yaml",
     "updated": "2019-07-22T11:03:07.000Z",
     "result": {
       "valid": false,
@@ -211,140 +239,13 @@
             "format": "uri"
           },
           "message": "must match format \"uri\"",
-          "instanceValue": ""
+          "hasInstanceValue": true,
+          "instanceValue": "",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/storageimportexport/2016-11-01/swagger.yaml#L79"
         }
       ]
-    }
-  },
-  "brex.io": {
-    "name": "brex.io",
-    "apiVersion": "2021.12",
-    "openApiVersion": "3.0.0",
-    "yamlUrl": "https://api.apis.guru/v2/specs/brex.io/2021.12/openapi.yaml",
-    "jsonUrl": "https://api.apis.guru/v2/specs/brex.io/2021.12/openapi.json",
-    "updated": "2021-07-05T15:07:17.927Z",
-    "result": {
-      "valid": false,
-      "errors": [
-        {
-          "instancePath": "/paths/~1api~1v1~1company~1deepsearch~1name~1{country}~1{name}/get/responses/200",
-          "schemaPath": "#/required",
-          "keyword": "required",
-          "params": {
-            "missingProperty": "description"
-          },
-          "message": "must have required property 'description'",
-          "instanceValue": {
-            "$ref": "#/paths/~1api~1v1~1company~1search~1name~1{country}~1{name}/get/responses/200"
-          }
-        },
-        {
-          "instancePath": "/paths/~1api~1v1~1company~1deepsearch~1name~1{country}~1{name}/get/responses/200/$ref",
-          "schemaPath": "#/definitions/Reference/patternProperties/%5E%5C%24ref%24/format",
-          "keyword": "format",
-          "params": {
-            "format": "uri-reference"
-          },
-          "message": "must match format \"uri-reference\"",
-          "instanceValue": "#/paths/~1api~1v1~1company~1search~1name~1{country}~1{name}/get/responses/200"
-        },
-        {
-          "instancePath": "/paths/~1api~1v1~1company~1deepsearch~1name~1{country}~1{name}/get/responses/200",
-          "schemaPath": "#/patternProperties/%5E%5B1-5%5D(%3F%3A%5Cd%7B2%7D%7CXX)%24/oneOf",
-          "keyword": "oneOf",
-          "params": {
-            "passingSchemas": null
-          },
-          "message": "must match exactly one schema in oneOf",
-          "instanceValue": {
-            "$ref": "#/paths/~1api~1v1~1company~1search~1name~1{country}~1{name}/get/responses/200"
-          }
-        }
-      ]
-    }
-  },
-  "conjur.local": {
-    "name": "conjur.local",
-    "apiVersion": "5.1.1",
-    "openApiVersion": "3.0.0",
-    "yamlUrl": "https://api.apis.guru/v2/specs/conjur.local/5.1.1/openapi.yaml",
-    "jsonUrl": "https://api.apis.guru/v2/specs/conjur.local/5.1.1/openapi.json",
-    "updated": "2021-07-05T15:07:17.927Z",
-    "result": {
-      "valid": false,
-      "errors": [
-        {
-          "instancePath": "/paths/~1authn-azure~1{service_id}~1{account}~1{login}~1authenticate/post/parameters/2/schema",
-          "schemaPath": "#/additionalProperties",
-          "keyword": "additionalProperties",
-          "params": {
-            "additionalProperty": "$ref"
-          },
-          "message": "must NOT have additional properties",
-          "instanceValue": {
-            "$ref": "#/paths/~1authn~1{account}~1{login}~1authenticate/post/parameters/1/schema"
-          }
-        },
-        {
-          "instancePath": "/paths/~1authn-azure~1{service_id}~1{account}~1{login}~1authenticate/post/parameters/2/schema/$ref",
-          "schemaPath": "#/definitions/Reference/patternProperties/%5E%5C%24ref%24/format",
-          "keyword": "format",
-          "params": {
-            "format": "uri-reference"
-          },
-          "message": "must match format \"uri-reference\"",
-          "instanceValue": "#/paths/~1authn~1{account}~1{login}~1authenticate/post/parameters/1/schema"
-        },
-        {
-          "instancePath": "/paths/~1authn-azure~1{service_id}~1{account}~1{login}~1authenticate/post/parameters/2/schema",
-          "schemaPath": "#/properties/schema/oneOf",
-          "keyword": "oneOf",
-          "params": {
-            "passingSchemas": null
-          },
-          "message": "must match exactly one schema in oneOf",
-          "instanceValue": {
-            "$ref": "#/paths/~1authn~1{account}~1{login}~1authenticate/post/parameters/1/schema"
-          }
-        },
-        {
-          "instancePath": "/paths/~1authn-azure~1{service_id}~1{account}~1{login}~1authenticate/post/parameters/2",
-          "schemaPath": "#/definitions/Reference/required",
-          "keyword": "required",
-          "params": {
-            "missingProperty": "$ref"
-          },
-          "message": "must have required property '$ref'",
-          "instanceValue": {
-            "description": "URL-encoded login name. For users, it’s the user ID. For hosts, the login name is `host/<host-id>`",
-            "in": "path",
-            "name": "login",
-            "required": true,
-            "schema": {
-              "$ref": "#/paths/~1authn~1{account}~1{login}~1authenticate/post/parameters/1/schema"
-            }
-          }
-        },
-        {
-          "instancePath": "/paths/~1authn-azure~1{service_id}~1{account}~1{login}~1authenticate/post/parameters/2",
-          "schemaPath": "#/properties/parameters/items/oneOf",
-          "keyword": "oneOf",
-          "params": {
-            "passingSchemas": null
-          },
-          "message": "must match exactly one schema in oneOf",
-          "instanceValue": {
-            "description": "URL-encoded login name. For users, it’s the user ID. For hosts, the login name is `host/<host-id>`",
-            "in": "path",
-            "name": "login",
-            "required": true,
-            "schema": {
-              "$ref": "#/paths/~1authn~1{account}~1{login}~1authenticate/post/parameters/1/schema"
-            }
-          }
-        }
-      ]
-    }
+    },
+    "knownFailed": true
   },
   "digitalocean.com": {
     "name": "digitalocean.com",
@@ -352,6 +253,7 @@
     "openApiVersion": "3.0.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/digitalocean.com/2.0/openapi.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/digitalocean.com/2.0/openapi.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/digitalocean.com/2.0/openapi.yaml",
     "updated": "2021-07-05T15:07:17.927Z",
     "result": {
       "valid": false,
@@ -364,9 +266,11 @@
             "missingProperty": "schema"
           },
           "message": "must have required property 'schema'",
+          "hasInstanceValue": true,
           "instanceValue": {
             "$ref": "#/paths/~1v2~1account~1keys~1{ssh_key_identifier}/get/parameters/0"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/digitalocean.com/2.0/openapi.yaml#L1189"
         },
         {
           "instancePath": "/paths/~1v2~1account~1keys~1{ssh_key_identifier}/delete/parameters/0",
@@ -376,9 +280,11 @@
             "missingProperty": "content"
           },
           "message": "must have required property 'content'",
+          "hasInstanceValue": true,
           "instanceValue": {
             "$ref": "#/paths/~1v2~1account~1keys~1{ssh_key_identifier}/get/parameters/0"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/digitalocean.com/2.0/openapi.yaml#L1189"
         },
         {
           "instancePath": "/paths/~1v2~1account~1keys~1{ssh_key_identifier}/delete/parameters/0",
@@ -388,9 +294,11 @@
             "passingSchemas": null
           },
           "message": "must match exactly one schema in oneOf",
+          "hasInstanceValue": true,
           "instanceValue": {
             "$ref": "#/paths/~1v2~1account~1keys~1{ssh_key_identifier}/get/parameters/0"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/digitalocean.com/2.0/openapi.yaml#L1189"
         },
         {
           "instancePath": "/paths/~1v2~1account~1keys~1{ssh_key_identifier}/delete/parameters/0/$ref",
@@ -400,7 +308,9 @@
             "format": "uri-reference"
           },
           "message": "must match format \"uri-reference\"",
-          "instanceValue": "#/paths/~1v2~1account~1keys~1{ssh_key_identifier}/get/parameters/0"
+          "hasInstanceValue": true,
+          "instanceValue": "#/paths/~1v2~1account~1keys~1{ssh_key_identifier}/get/parameters/0",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/digitalocean.com/2.0/openapi.yaml#L1195"
         },
         {
           "instancePath": "/paths/~1v2~1account~1keys~1{ssh_key_identifier}/delete/parameters/0",
@@ -410,12 +320,15 @@
             "passingSchemas": null
           },
           "message": "must match exactly one schema in oneOf",
+          "hasInstanceValue": true,
           "instanceValue": {
             "$ref": "#/paths/~1v2~1account~1keys~1{ssh_key_identifier}/get/parameters/0"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/digitalocean.com/2.0/openapi.yaml#L1189"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "googleapis.com:datacatalog": {
     "name": "googleapis.com:datacatalog",
@@ -423,6 +336,7 @@
     "openApiVersion": "3.0.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/datacatalog/v1beta1/openapi.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/datacatalog/v1beta1/openapi.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/datacatalog/v1beta1/openapi.yaml",
     "updated": "2021-07-05T23:08:37.856Z",
     "result": {
       "valid": false,
@@ -435,57 +349,13 @@
             "additionalProperty": "source"
           },
           "message": "must NOT have additional properties",
-          "instanceValue": "full specification"
+          "hasInstanceValue": false,
+          "instanceValue": "content too large",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/datacatalog/v1beta1/openapi.yaml#L1"
         }
       ]
-    }
-  },
-  "nexmo.com:application.v2": {
-    "name": "nexmo.com:application.v2",
-    "apiVersion": "2.1.0",
-    "openApiVersion": "3.0.0",
-    "yamlUrl": "https://api.apis.guru/v2/specs/nexmo.com/application.v2/2.1.0/openapi.yaml",
-    "jsonUrl": "https://api.apis.guru/v2/specs/nexmo.com/application.v2/2.1.0/openapi.json",
-    "updated": "2021-07-05T15:07:17.927Z",
-    "result": {
-      "valid": false,
-      "errors": [
-        {
-          "instancePath": "/paths/~1{id}/delete/responses/404",
-          "schemaPath": "#/required",
-          "keyword": "required",
-          "params": {
-            "missingProperty": "description"
-          },
-          "message": "must have required property 'description'",
-          "instanceValue": {
-            "$ref": "#/paths/~1{id}/get/responses/404"
-          }
-        },
-        {
-          "instancePath": "/paths/~1{id}/delete/responses/404/$ref",
-          "schemaPath": "#/definitions/Reference/patternProperties/%5E%5C%24ref%24/format",
-          "keyword": "format",
-          "params": {
-            "format": "uri-reference"
-          },
-          "message": "must match format \"uri-reference\"",
-          "instanceValue": "#/paths/~1{id}/get/responses/404"
-        },
-        {
-          "instancePath": "/paths/~1{id}/delete/responses/404",
-          "schemaPath": "#/patternProperties/%5E%5B1-5%5D(%3F%3A%5Cd%7B2%7D%7CXX)%24/oneOf",
-          "keyword": "oneOf",
-          "params": {
-            "passingSchemas": null
-          },
-          "message": "must match exactly one schema in oneOf",
-          "instanceValue": {
-            "$ref": "#/paths/~1{id}/get/responses/404"
-          }
-        }
-      ]
-    }
+    },
+    "knownFailed": true
   },
   "openapi-generator.tech": {
     "name": "openapi-generator.tech",
@@ -493,6 +363,7 @@
     "openApiVersion": "2.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/openapi-generator.tech/5.1.1/swagger.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/openapi-generator.tech/5.1.1/swagger.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml",
     "updated": "2021-06-21T12:16:53.715Z",
     "result": {
       "valid": false,
@@ -505,10 +376,12 @@
             "additionalProperty": "originalRef"
           },
           "message": "must NOT have additional properties",
+          "hasInstanceValue": true,
           "instanceValue": {
             "$ref": "#/definitions/CliOption",
             "originalRef": "CliOption"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml#L61"
         },
         {
           "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200/schema/additionalProperties",
@@ -518,10 +391,12 @@
             "type": "boolean"
           },
           "message": "must be boolean",
+          "hasInstanceValue": true,
           "instanceValue": {
             "$ref": "#/definitions/CliOption",
             "originalRef": "CliOption"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml#L61"
         },
         {
           "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200/schema/additionalProperties",
@@ -529,10 +404,12 @@
           "keyword": "anyOf",
           "params": {},
           "message": "must match a schema in anyOf",
+          "hasInstanceValue": true,
           "instanceValue": {
             "$ref": "#/definitions/CliOption",
             "originalRef": "CliOption"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml#L61"
         },
         {
           "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200/schema",
@@ -542,13 +419,15 @@
             "additionalProperty": "additionalProperties"
           },
           "message": "must NOT have additional properties",
+          "hasInstanceValue": true,
           "instanceValue": {
             "additionalProperties": {
               "$ref": "#/definitions/CliOption",
               "originalRef": "CliOption"
             },
             "type": "object"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml#L60"
         },
         {
           "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200/schema",
@@ -558,13 +437,15 @@
             "passingSchemas": null
           },
           "message": "must match exactly one schema in oneOf",
+          "hasInstanceValue": true,
           "instanceValue": {
             "additionalProperties": {
               "$ref": "#/definitions/CliOption",
               "originalRef": "CliOption"
             },
             "type": "object"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml#L60"
         },
         {
           "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200",
@@ -574,6 +455,7 @@
             "missingProperty": "$ref"
           },
           "message": "must have required property '$ref'",
+          "hasInstanceValue": true,
           "instanceValue": {
             "description": "successful operation",
             "schema": {
@@ -583,7 +465,8 @@
               },
               "type": "object"
             }
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml#L58"
         },
         {
           "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200",
@@ -593,6 +476,7 @@
             "passingSchemas": null
           },
           "message": "must match exactly one schema in oneOf",
+          "hasInstanceValue": true,
           "instanceValue": {
             "description": "successful operation",
             "schema": {
@@ -602,10 +486,12 @@
               },
               "type": "object"
             }
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml#L58"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "opensuse.org:obs": {
     "name": "opensuse.org:obs",
@@ -613,92 +499,519 @@
     "openApiVersion": "3.0.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/opensuse.org/obs/2.10.50/openapi.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/opensuse.org/obs/2.10.50/openapi.json",
-    "updated": "2021-07-05T15:07:17.927Z",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml",
+    "updated": "2021-07-11T13:49:21.785Z",
     "result": {
       "valid": false,
       "errors": [
         {
-          "instancePath": "/paths/~1architectures~1{architecture_name}/get/responses/404/content/application~1xml; charset=utf-8/schema",
-          "schemaPath": "#/additionalProperties",
+          "instancePath": "/paths/~1published~1{project_name}~1{repository_name}~1{architecture_name}~1{binary_filename}?view=ymp/get/responses/200/content/application~1xml; charset=utf-8/schema/properties/xmlns/xml",
+          "schemaPath": "#/definitions/XML/additionalProperties",
           "keyword": "additionalProperties",
           "params": {
-            "additionalProperty": "$ref"
+            "additionalProperty": "example"
           },
           "message": "must NOT have additional properties",
+          "hasInstanceValue": true,
           "instanceValue": {
-            "$ref": "#/paths/~1architectures/get/responses/401/content/application~1xml; charset=utf-8/schema"
-          }
-        },
-        {
-          "instancePath": "/paths/~1architectures~1{architecture_name}/get/responses/404/content/application~1xml; charset=utf-8/schema/$ref",
-          "schemaPath": "#/definitions/Reference/patternProperties/%5E%5C%24ref%24/format",
-          "keyword": "format",
-          "params": {
-            "format": "uri-reference"
+            "attribute": true,
+            "example": "http://opensuse.org/Standards/One_Click_Install"
           },
-          "message": "must match format \"uri-reference\"",
-          "instanceValue": "#/paths/~1architectures/get/responses/401/content/application~1xml; charset=utf-8/schema"
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L4020"
         },
         {
-          "instancePath": "/paths/~1architectures~1{architecture_name}/get/responses/404/content/application~1xml; charset=utf-8/schema",
-          "schemaPath": "#/properties/schema/oneOf",
-          "keyword": "oneOf",
-          "params": {
-            "passingSchemas": null
-          },
-          "message": "must match exactly one schema in oneOf",
-          "instanceValue": {
-            "$ref": "#/paths/~1architectures/get/responses/401/content/application~1xml; charset=utf-8/schema"
-          }
-        },
-        {
-          "instancePath": "/paths/~1architectures~1{architecture_name}/get/responses/404",
+          "instancePath": "/paths/~1published~1{project_name}~1{repository_name}~1{architecture_name}~1{binary_filename}?view=ymp/get/responses/200/content/application~1xml; charset=utf-8/schema/properties/xmlns",
           "schemaPath": "#/definitions/Reference/required",
           "keyword": "required",
           "params": {
             "missingProperty": "$ref"
           },
           "message": "must have required property '$ref'",
+          "hasInstanceValue": true,
+          "instanceValue": {
+            "type": "string",
+            "xml": {
+              "attribute": true,
+              "example": "http://opensuse.org/Standards/One_Click_Install"
+            }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L4018"
+        },
+        {
+          "instancePath": "/paths/~1published~1{project_name}~1{repository_name}~1{architecture_name}~1{binary_filename}?view=ymp/get/responses/200/content/application~1xml; charset=utf-8/schema/properties/xmlns",
+          "schemaPath": "#/properties/properties/additionalProperties/oneOf",
+          "keyword": "oneOf",
+          "params": {
+            "passingSchemas": null
+          },
+          "message": "must match exactly one schema in oneOf",
+          "hasInstanceValue": true,
+          "instanceValue": {
+            "type": "string",
+            "xml": {
+              "attribute": true,
+              "example": "http://opensuse.org/Standards/One_Click_Install"
+            }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L4018"
+        },
+        {
+          "instancePath": "/paths/~1published~1{project_name}~1{repository_name}~1{architecture_name}~1{binary_filename}?view=ymp/get/responses/200/content/application~1xml; charset=utf-8/schema",
+          "schemaPath": "#/definitions/Reference/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "$ref"
+          },
+          "message": "must have required property '$ref'",
+          "hasInstanceValue": true,
+          "instanceValue": {
+            "properties": {
+              "group": {
+                "properties": {
+                  "distversion": {
+                    "type": "string",
+                    "xml": {
+                      "attribute": true
+                    }
+                  },
+                  "repositories": {
+                    "properties": {
+                      "repository": {
+                        "items": {
+                          "properties": {
+                            "description": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "recommended": {
+                              "type": "string",
+                              "xml": {
+                                "attribute": true
+                              }
+                            },
+                            "summary": {
+                              "type": "string"
+                            },
+                            "url": {
+                              "type": "string"
+                            }
+                          },
+                          "type": "object"
+                        },
+                        "type": "array"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "software": {
+                    "properties": {
+                      "item": {
+                        "properties": {
+                          "description": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "summary": {
+                            "type": "string"
+                          }
+                        },
+                        "type": "object"
+                      }
+                    },
+                    "type": "object"
+                  }
+                },
+                "type": "object"
+              },
+              "xmlns": {
+                "type": "string",
+                "xml": {
+                  "attribute": true,
+                  "example": "http://opensuse.org/Standards/One_Click_Install"
+                }
+              },
+              "xmlns:os": {
+                "type": "string",
+                "xml": {
+                  "attribute": true,
+                  "example": "http://opensuse.org/Standards/One_Click_Install"
+                }
+              }
+            },
+            "type": "object",
+            "xml": {
+              "name": "metapackage"
+            }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L3977"
+        },
+        {
+          "instancePath": "/paths/~1published~1{project_name}~1{repository_name}~1{architecture_name}~1{binary_filename}?view=ymp/get/responses/200/content/application~1xml; charset=utf-8/schema",
+          "schemaPath": "#/properties/schema/oneOf",
+          "keyword": "oneOf",
+          "params": {
+            "passingSchemas": null
+          },
+          "message": "must match exactly one schema in oneOf",
+          "hasInstanceValue": true,
+          "instanceValue": {
+            "properties": {
+              "group": {
+                "properties": {
+                  "distversion": {
+                    "type": "string",
+                    "xml": {
+                      "attribute": true
+                    }
+                  },
+                  "repositories": {
+                    "properties": {
+                      "repository": {
+                        "items": {
+                          "properties": {
+                            "description": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "recommended": {
+                              "type": "string",
+                              "xml": {
+                                "attribute": true
+                              }
+                            },
+                            "summary": {
+                              "type": "string"
+                            },
+                            "url": {
+                              "type": "string"
+                            }
+                          },
+                          "type": "object"
+                        },
+                        "type": "array"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "software": {
+                    "properties": {
+                      "item": {
+                        "properties": {
+                          "description": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "summary": {
+                            "type": "string"
+                          }
+                        },
+                        "type": "object"
+                      }
+                    },
+                    "type": "object"
+                  }
+                },
+                "type": "object"
+              },
+              "xmlns": {
+                "type": "string",
+                "xml": {
+                  "attribute": true,
+                  "example": "http://opensuse.org/Standards/One_Click_Install"
+                }
+              },
+              "xmlns:os": {
+                "type": "string",
+                "xml": {
+                  "attribute": true,
+                  "example": "http://opensuse.org/Standards/One_Click_Install"
+                }
+              }
+            },
+            "type": "object",
+            "xml": {
+              "name": "metapackage"
+            }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L3977"
+        },
+        {
+          "instancePath": "/paths/~1published~1{project_name}~1{repository_name}~1{architecture_name}~1{binary_filename}?view=ymp/get/responses/200",
+          "schemaPath": "#/definitions/Reference/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "$ref"
+          },
+          "message": "must have required property '$ref'",
+          "hasInstanceValue": true,
           "instanceValue": {
             "content": {
               "application/xml; charset=utf-8": {
                 "example": {
-                  "code": "unknown_architecture",
-                  "summary": "Architecture does not exist: x999"
+                  "group": {
+                    "distversion": "openSUSEsLeap 15.2",
+                    "repositories": {
+                      "repository": [
+                        {
+                          "description": "These are the developer versions of the tools for the Open Build Service project",
+                          "name": "OBS:Server:Unstable",
+                          "recommended": true,
+                          "summary": "Developer versions of the Open Build Service Server",
+                          "url": "https://download.opensuse.org/repositories/OBS:/Server:/Unstable/openSUSE_15.2"
+                        },
+                        {
+                          "description": "openSUSE Leap borrows packages from SLE for the base system",
+                          "name": "openSUSE:Leap:15.2",
+                          "recommended": false,
+                          "summary": "openSUSE Leap 15.2",
+                          "url": "http://download.opensuse.org/distribution/leap/15.2/repo/oss"
+                        }
+                      ]
+                    },
+                    "software": {
+                      "item": {
+                        "description": "This package provides debug information for package virt-v2v",
+                        "name": "virt-v2v-debuginfo",
+                        "summary": "Debug information for package virt-v2v"
+                      }
+                    }
+                  },
+                  "xmlns": "http://opensuse.org/Standards/One_Click_Install",
+                  "xmlns:os": "http://opensuse.org/Standards/One_Click_Install"
                 },
                 "schema": {
-                  "$ref": "#/paths/~1architectures/get/responses/401/content/application~1xml; charset=utf-8/schema"
+                  "properties": {
+                    "group": {
+                      "properties": {
+                        "distversion": {
+                          "type": "string",
+                          "xml": {
+                            "attribute": true
+                          }
+                        },
+                        "repositories": {
+                          "properties": {
+                            "repository": {
+                              "items": {
+                                "properties": {
+                                  "description": {
+                                    "type": "string"
+                                  },
+                                  "name": {
+                                    "type": "string"
+                                  },
+                                  "recommended": {
+                                    "type": "string",
+                                    "xml": {
+                                      "attribute": true
+                                    }
+                                  },
+                                  "summary": {
+                                    "type": "string"
+                                  },
+                                  "url": {
+                                    "type": "string"
+                                  }
+                                },
+                                "type": "object"
+                              },
+                              "type": "array"
+                            }
+                          },
+                          "type": "object"
+                        },
+                        "software": {
+                          "properties": {
+                            "item": {
+                              "properties": {
+                                "description": {
+                                  "type": "string"
+                                },
+                                "name": {
+                                  "type": "string"
+                                },
+                                "summary": {
+                                  "type": "string"
+                                }
+                              },
+                              "type": "object"
+                            }
+                          },
+                          "type": "object"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    "xmlns": {
+                      "type": "string",
+                      "xml": {
+                        "attribute": true,
+                        "example": "http://opensuse.org/Standards/One_Click_Install"
+                      }
+                    },
+                    "xmlns:os": {
+                      "type": "string",
+                      "xml": {
+                        "attribute": true,
+                        "example": "http://opensuse.org/Standards/One_Click_Install"
+                      }
+                    }
+                  },
+                  "type": "object",
+                  "xml": {
+                    "name": "metapackage"
+                  }
                 }
               }
             },
-            "description": "Not Found."
-          }
+            "description": "OK."
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L3952"
         },
         {
-          "instancePath": "/paths/~1architectures~1{architecture_name}/get/responses/404",
+          "instancePath": "/paths/~1published~1{project_name}~1{repository_name}~1{architecture_name}~1{binary_filename}?view=ymp/get/responses/200",
           "schemaPath": "#/patternProperties/%5E%5B1-5%5D(%3F%3A%5Cd%7B2%7D%7CXX)%24/oneOf",
           "keyword": "oneOf",
           "params": {
             "passingSchemas": null
           },
           "message": "must match exactly one schema in oneOf",
+          "hasInstanceValue": true,
           "instanceValue": {
             "content": {
               "application/xml; charset=utf-8": {
                 "example": {
-                  "code": "unknown_architecture",
-                  "summary": "Architecture does not exist: x999"
+                  "group": {
+                    "distversion": "openSUSEsLeap 15.2",
+                    "repositories": {
+                      "repository": [
+                        {
+                          "description": "These are the developer versions of the tools for the Open Build Service project",
+                          "name": "OBS:Server:Unstable",
+                          "recommended": true,
+                          "summary": "Developer versions of the Open Build Service Server",
+                          "url": "https://download.opensuse.org/repositories/OBS:/Server:/Unstable/openSUSE_15.2"
+                        },
+                        {
+                          "description": "openSUSE Leap borrows packages from SLE for the base system",
+                          "name": "openSUSE:Leap:15.2",
+                          "recommended": false,
+                          "summary": "openSUSE Leap 15.2",
+                          "url": "http://download.opensuse.org/distribution/leap/15.2/repo/oss"
+                        }
+                      ]
+                    },
+                    "software": {
+                      "item": {
+                        "description": "This package provides debug information for package virt-v2v",
+                        "name": "virt-v2v-debuginfo",
+                        "summary": "Debug information for package virt-v2v"
+                      }
+                    }
+                  },
+                  "xmlns": "http://opensuse.org/Standards/One_Click_Install",
+                  "xmlns:os": "http://opensuse.org/Standards/One_Click_Install"
                 },
                 "schema": {
-                  "$ref": "#/paths/~1architectures/get/responses/401/content/application~1xml; charset=utf-8/schema"
+                  "properties": {
+                    "group": {
+                      "properties": {
+                        "distversion": {
+                          "type": "string",
+                          "xml": {
+                            "attribute": true
+                          }
+                        },
+                        "repositories": {
+                          "properties": {
+                            "repository": {
+                              "items": {
+                                "properties": {
+                                  "description": {
+                                    "type": "string"
+                                  },
+                                  "name": {
+                                    "type": "string"
+                                  },
+                                  "recommended": {
+                                    "type": "string",
+                                    "xml": {
+                                      "attribute": true
+                                    }
+                                  },
+                                  "summary": {
+                                    "type": "string"
+                                  },
+                                  "url": {
+                                    "type": "string"
+                                  }
+                                },
+                                "type": "object"
+                              },
+                              "type": "array"
+                            }
+                          },
+                          "type": "object"
+                        },
+                        "software": {
+                          "properties": {
+                            "item": {
+                              "properties": {
+                                "description": {
+                                  "type": "string"
+                                },
+                                "name": {
+                                  "type": "string"
+                                },
+                                "summary": {
+                                  "type": "string"
+                                }
+                              },
+                              "type": "object"
+                            }
+                          },
+                          "type": "object"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    "xmlns": {
+                      "type": "string",
+                      "xml": {
+                        "attribute": true,
+                        "example": "http://opensuse.org/Standards/One_Click_Install"
+                      }
+                    },
+                    "xmlns:os": {
+                      "type": "string",
+                      "xml": {
+                        "attribute": true,
+                        "example": "http://opensuse.org/Standards/One_Click_Install"
+                      }
+                    }
+                  },
+                  "type": "object",
+                  "xml": {
+                    "name": "metapackage"
+                  }
                 }
               }
             },
-            "description": "Not Found."
-          }
+            "description": "OK."
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L3952"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "parliament.uk:statutoryinstruments": {
     "name": "parliament.uk:statutoryinstruments",
@@ -706,6 +1019,7 @@
     "openApiVersion": "2.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/parliament.uk/statutoryinstruments/v1/swagger.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/parliament.uk/statutoryinstruments/v1/swagger.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/statutoryinstruments/v1/swagger.yaml",
     "updated": "2021-06-21T12:16:53.715Z",
     "result": {
       "valid": false,
@@ -718,10 +1032,13 @@
             "format": "uri"
           },
           "message": "must match format \"uri\"",
-          "instanceValue": ""
+          "hasInstanceValue": true,
+          "instanceValue": "",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/statutoryinstruments/v1/swagger.yaml#L6"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "parliament.uk:treaties": {
     "name": "parliament.uk:treaties",
@@ -729,6 +1046,7 @@
     "openApiVersion": "2.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/parliament.uk/treaties/v1/swagger.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/parliament.uk/treaties/v1/swagger.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/treaties/v1/swagger.yaml",
     "updated": "2021-05-24T10:27:51.952Z",
     "result": {
       "valid": false,
@@ -741,10 +1059,13 @@
             "format": "uri"
           },
           "message": "must match format \"uri\"",
-          "instanceValue": ""
+          "hasInstanceValue": true,
+          "instanceValue": "",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/treaties/v1/swagger.yaml#L6"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "prss.org": {
     "name": "prss.org",
@@ -752,6 +1073,7 @@
     "openApiVersion": "2.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/prss.org/2.0.0/swagger.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/prss.org/2.0.0/swagger.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml",
     "updated": "2021-06-21T12:16:53.715Z",
     "result": {
       "valid": false,
@@ -764,7 +1086,9 @@
             "format": "uri"
           },
           "message": "must match format \"uri\"",
-          "instanceValue": "/api/epg-cd-mapping.html"
+          "hasInstanceValue": true,
+          "instanceValue": "/api/epg-cd-mapping.html",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L417"
         },
         {
           "instancePath": "/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202/schema",
@@ -774,13 +1098,15 @@
             "missingProperty": "type"
           },
           "message": "must have required property 'type'",
+          "hasInstanceValue": true,
           "instanceValue": {
             "$ref": "#/definitions/ProgramInformationBatch",
             "externalDocs": {
               "description": "Find RadioDns to ContentDepot Mapping here",
               "url": "/api/epg-cd-mapping.html"
             }
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L413"
         },
         {
           "instancePath": "/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202/schema",
@@ -790,13 +1116,15 @@
             "passingSchemas": null
           },
           "message": "must match exactly one schema in oneOf",
+          "hasInstanceValue": true,
           "instanceValue": {
             "$ref": "#/definitions/ProgramInformationBatch",
             "externalDocs": {
               "description": "Find RadioDns to ContentDepot Mapping here",
               "url": "/api/epg-cd-mapping.html"
             }
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L413"
         },
         {
           "instancePath": "/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202",
@@ -806,6 +1134,7 @@
             "missingProperty": "$ref"
           },
           "message": "must have required property '$ref'",
+          "hasInstanceValue": true,
           "instanceValue": {
             "description": "The accepted batch information that is queued for processing.",
             "schema": {
@@ -815,7 +1144,8 @@
                 "url": "/api/epg-cd-mapping.html"
               }
             }
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L411"
         },
         {
           "instancePath": "/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202",
@@ -825,6 +1155,7 @@
             "passingSchemas": null
           },
           "message": "must match exactly one schema in oneOf",
+          "hasInstanceValue": true,
           "instanceValue": {
             "description": "The accepted batch information that is queued for processing.",
             "schema": {
@@ -834,128 +1165,12 @@
                 "url": "/api/epg-cd-mapping.html"
               }
             }
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L411"
         }
       ]
-    }
-  },
-  "rev.ai": {
-    "name": "rev.ai",
-    "apiVersion": "v1",
-    "openApiVersion": "3.0.1",
-    "yamlUrl": "https://api.apis.guru/v2/specs/rev.ai/v1/openapi.yaml",
-    "jsonUrl": "https://api.apis.guru/v2/specs/rev.ai/v1/openapi.json",
-    "updated": "2021-07-05T15:07:17.927Z",
-    "result": {
-      "valid": false,
-      "errors": [
-        {
-          "instancePath": "/paths/~1account/get/responses/401",
-          "schemaPath": "#/required",
-          "keyword": "required",
-          "params": {
-            "missingProperty": "description"
-          },
-          "message": "must have required property 'description'",
-          "instanceValue": {
-            "$ref": "#/paths/~1jobs~1{id}/get/responses/401"
-          }
-        },
-        {
-          "instancePath": "/paths/~1account/get/responses/401/$ref",
-          "schemaPath": "#/definitions/Reference/patternProperties/%5E%5C%24ref%24/format",
-          "keyword": "format",
-          "params": {
-            "format": "uri-reference"
-          },
-          "message": "must match format \"uri-reference\"",
-          "instanceValue": "#/paths/~1jobs~1{id}/get/responses/401"
-        },
-        {
-          "instancePath": "/paths/~1account/get/responses/401",
-          "schemaPath": "#/patternProperties/%5E%5B1-5%5D(%3F%3A%5Cd%7B2%7D%7CXX)%24/oneOf",
-          "keyword": "oneOf",
-          "params": {
-            "passingSchemas": null
-          },
-          "message": "must match exactly one schema in oneOf",
-          "instanceValue": {
-            "$ref": "#/paths/~1jobs~1{id}/get/responses/401"
-          }
-        }
-      ]
-    }
-  },
-  "surevoip.co.uk": {
-    "name": "surevoip.co.uk",
-    "apiVersion": "9dcb0dc8",
-    "openApiVersion": "3.0.3",
-    "yamlUrl": "https://api.apis.guru/v2/specs/surevoip.co.uk/9dcb0dc8/openapi.yaml",
-    "jsonUrl": "https://api.apis.guru/v2/specs/surevoip.co.uk/9dcb0dc8/openapi.json",
-    "updated": "2021-07-05T15:07:17.927Z",
-    "result": {
-      "valid": false,
-      "errors": [
-        {
-          "instancePath": "/paths/~1customers~1{account}~1announcements~1{announcement_id}/delete/parameters/0",
-          "schemaPath": "#/definitions/SchemaXORContent/oneOf/0/required",
-          "keyword": "required",
-          "params": {
-            "missingProperty": "schema"
-          },
-          "message": "must have required property 'schema'",
-          "instanceValue": {
-            "$ref": "#/paths/~1customers~1{account}~1announcements/get/parameters/0"
-          }
-        },
-        {
-          "instancePath": "/paths/~1customers~1{account}~1announcements~1{announcement_id}/delete/parameters/0",
-          "schemaPath": "#/definitions/SchemaXORContent/oneOf/1/required",
-          "keyword": "required",
-          "params": {
-            "missingProperty": "content"
-          },
-          "message": "must have required property 'content'",
-          "instanceValue": {
-            "$ref": "#/paths/~1customers~1{account}~1announcements/get/parameters/0"
-          }
-        },
-        {
-          "instancePath": "/paths/~1customers~1{account}~1announcements~1{announcement_id}/delete/parameters/0",
-          "schemaPath": "#/definitions/SchemaXORContent/oneOf",
-          "keyword": "oneOf",
-          "params": {
-            "passingSchemas": null
-          },
-          "message": "must match exactly one schema in oneOf",
-          "instanceValue": {
-            "$ref": "#/paths/~1customers~1{account}~1announcements/get/parameters/0"
-          }
-        },
-        {
-          "instancePath": "/paths/~1customers~1{account}~1announcements~1{announcement_id}/delete/parameters/0/$ref",
-          "schemaPath": "#/definitions/Reference/patternProperties/%5E%5C%24ref%24/format",
-          "keyword": "format",
-          "params": {
-            "format": "uri-reference"
-          },
-          "message": "must match format \"uri-reference\"",
-          "instanceValue": "#/paths/~1customers~1{account}~1announcements/get/parameters/0"
-        },
-        {
-          "instancePath": "/paths/~1customers~1{account}~1announcements~1{announcement_id}/delete/parameters/0",
-          "schemaPath": "#/properties/parameters/items/oneOf",
-          "keyword": "oneOf",
-          "params": {
-            "passingSchemas": null
-          },
-          "message": "must match exactly one schema in oneOf",
-          "instanceValue": {
-            "$ref": "#/paths/~1customers~1{account}~1announcements/get/parameters/0"
-          }
-        }
-      ]
-    }
+    },
+    "knownFailed": true
   },
   "trashnothing.com": {
     "name": "trashnothing.com",
@@ -963,6 +1178,7 @@
     "openApiVersion": "3.0.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/trashnothing.com/1.2/openapi.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/trashnothing.com/1.2/openapi.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/trashnothing.com/1.2/openapi.yaml",
     "updated": "2021-06-21T12:16:53.715Z",
     "result": {
       "valid": false,
@@ -975,10 +1191,13 @@
             "format": "uri-reference"
           },
           "message": "must match format \"uri-reference\"",
-          "instanceValue": "https://trashnothing.com/tos\n"
+          "hasInstanceValue": true,
+          "instanceValue": "https://trashnothing.com/tos\n",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/trashnothing.com/1.2/openapi.yaml#L15"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "twinehealth.com": {
     "name": "twinehealth.com",
@@ -986,6 +1205,7 @@
     "openApiVersion": "2.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/twinehealth.com/v7.78.1/swagger.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/twinehealth.com/v7.78.1/swagger.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml",
     "updated": "2021-06-21T12:16:53.715Z",
     "result": {
       "valid": false,
@@ -998,6 +1218,7 @@
             "additionalProperty": "flow"
           },
           "message": "must NOT have additional properties",
+          "hasInstanceValue": true,
           "instanceValue": {
             "description": "Fitbit Plus allows customers to access data for their organization using client credentials.\nOAuth2 is a safe and secure way to give you access.\n",
             "flow": "application",
@@ -1007,7 +1228,8 @@
             },
             "tokenUrl": "/oauth/token",
             "type": "oauth2"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L77"
         },
         {
           "instancePath": "/securityDefinitions/OAuth2",
@@ -1017,6 +1239,7 @@
             "missingProperty": "name"
           },
           "message": "must have required property 'name'",
+          "hasInstanceValue": true,
           "instanceValue": {
             "description": "Fitbit Plus allows customers to access data for their organization using client credentials.\nOAuth2 is a safe and secure way to give you access.\n",
             "flow": "application",
@@ -1026,7 +1249,8 @@
             },
             "tokenUrl": "/oauth/token",
             "type": "oauth2"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L77"
         },
         {
           "instancePath": "/securityDefinitions/OAuth2",
@@ -1036,6 +1260,7 @@
             "missingProperty": "authorizationUrl"
           },
           "message": "must have required property 'authorizationUrl'",
+          "hasInstanceValue": true,
           "instanceValue": {
             "description": "Fitbit Plus allows customers to access data for their organization using client credentials.\nOAuth2 is a safe and secure way to give you access.\n",
             "flow": "application",
@@ -1045,7 +1270,8 @@
             },
             "tokenUrl": "/oauth/token",
             "type": "oauth2"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L77"
         },
         {
           "instancePath": "/securityDefinitions/OAuth2/flow",
@@ -1057,7 +1283,9 @@
             ]
           },
           "message": "must be equal to one of the allowed values",
-          "instanceValue": "application"
+          "hasInstanceValue": true,
+          "instanceValue": "application",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L81"
         },
         {
           "instancePath": "/securityDefinitions/OAuth2/tokenUrl",
@@ -1067,7 +1295,9 @@
             "format": "uri"
           },
           "message": "must match format \"uri\"",
-          "instanceValue": "/oauth/token"
+          "hasInstanceValue": true,
+          "instanceValue": "/oauth/token",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L85"
         },
         {
           "instancePath": "/securityDefinitions/OAuth2",
@@ -1077,6 +1307,7 @@
             "missingProperty": "authorizationUrl"
           },
           "message": "must have required property 'authorizationUrl'",
+          "hasInstanceValue": true,
           "instanceValue": {
             "description": "Fitbit Plus allows customers to access data for their organization using client credentials.\nOAuth2 is a safe and secure way to give you access.\n",
             "flow": "application",
@@ -1086,7 +1317,8 @@
             },
             "tokenUrl": "/oauth/token",
             "type": "oauth2"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L77"
         },
         {
           "instancePath": "/securityDefinitions/OAuth2",
@@ -1096,6 +1328,7 @@
             "passingSchemas": null
           },
           "message": "must match exactly one schema in oneOf",
+          "hasInstanceValue": true,
           "instanceValue": {
             "description": "Fitbit Plus allows customers to access data for their organization using client credentials.\nOAuth2 is a safe and secure way to give you access.\n",
             "flow": "application",
@@ -1105,10 +1338,12 @@
             },
             "tokenUrl": "/oauth/token",
             "type": "oauth2"
-          }
+          },
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L77"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "whapi.com:numbers": {
     "name": "whapi.com:numbers",
@@ -1116,6 +1351,7 @@
     "openApiVersion": "2.0",
     "yamlUrl": "https://api.apis.guru/v2/specs/whapi.com/numbers/2.0/swagger.yaml",
     "jsonUrl": "https://api.apis.guru/v2/specs/whapi.com/numbers/2.0/swagger.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/whapi.com/numbers/2.0/swagger.yaml",
     "updated": "2021-06-21T12:16:53.715Z",
     "result": {
       "valid": false,
@@ -1128,9 +1364,12 @@
             "format": "uri"
           },
           "message": "must match format \"uri\"",
-          "instanceValue": "www.williamhill.com"
+          "hasInstanceValue": true,
+          "instanceValue": "www.williamhill.com",
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/whapi.com/numbers/2.0/swagger.yaml#L12"
         }
       ]
-    }
+    },
+    "knownFailed": true
   }
 }

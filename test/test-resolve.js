@@ -66,7 +66,24 @@ test(`number in path`, async (t) => {
   };
   t.plan(1);
   const res = resolve(schema);
-  t.equal(res.required[0], "billing_address", "followed $ref to $anchor");
+  t.equal(res.required[0], "billing_address", "followed number in path");
+});
+
+test(`ref to #`, async (t) => {
+  const schema = {
+    $id: "http://www.example.com/",
+    $schema: "http://json-schema.org/draft-07/schema#",
+
+    definitions: {
+      2: {
+        required: ["billing_address"],
+      },
+    },
+    $ref: "#",
+  };
+  t.plan(1);
+  const res = resolve(schema);
+  t.equal(res.definitions[2].required[0], "billing_address", "followed # in path");
 });
 
 test(`$ref to $anchor`, async (t) => {
@@ -110,6 +127,23 @@ test(`non-existing path throws error`, async (t) => {
     $id: "http://www.example.com/",
     $schema: "http://json-schema.org/draft-07/schema#",
     $ref: "#/definitions/req",
+  };
+  t.plan(1);
+  t.throws(
+    () => resolve(schema),
+    "Error: Can't resolve http://www.example.com/#/definitions/req",
+    "got expected error"
+  );
+});
+
+test(`non-existing leaf path throws error`, async (t) => {
+  const schema = {
+    $id: "http://www.example.com/",
+    $schema: "http://json-schema.org/draft-07/schema#",
+    definitions: {
+      req: { required: ["billing_address"] },
+    },
+    $ref: "#/definitions/non-existing",
   };
   t.plan(1);
   t.throws(
@@ -187,15 +221,15 @@ test(`non-unique $anchor throws error`, async (t) => {
     $id: "http://www.example.com/",
     $schema: "http://json-schema.org/draft-07/schema#",
     definitions: {
-      "anchor A": { $anchor: "#myAnchor" },
-      "anchor B": { $anchor: "#myAnchor" },
+      anchor_A: { $anchor: "#myAnchor" },
+      anchor_B: { $anchor: "#myAnchor" },
     },
   };
   t.plan(1);
   t.throws(
     () => resolve(schema),
     new Error(
-      "$anchor : '#myAnchor' defined more than once at '#/definitions/anchor B'"
+      "$anchor : '#myAnchor' defined more than once at '#/definitions/anchor_B'"
     ),
     "got expected error"
   );
@@ -206,16 +240,58 @@ test(`non-unique $dynamicAnchor throws error`, async (t) => {
     $id: "http://www.example.com/",
     $schema: "http://json-schema.org/draft-07/schema#",
     definitions: {
-      "anchor A": { $dynamicAnchor: "#myAnchor" },
-      "anchor B": { $dynamicAnchor: "#myAnchor" },
+      anchor_A: { $dynamicAnchor: "#myAnchor" },
+      anchor_B: { $dynamicAnchor: "#myAnchor" },
     },
   };
   t.plan(1);
   t.throws(
     () => resolve(schema),
     new Error(
-      "$dynamicAnchor : '#myAnchor' defined more than once at '#/definitions/anchor B'"
+      "$dynamicAnchor : '#myAnchor' defined more than once at '#/definitions/anchor_B'"
     ),
     "got expected error"
+  );
+});
+
+test(`correctly URL encoded URI`, async (t) => {
+  const schema = {
+    $id: "http://www.example.com/",
+    $schema: "http://json-schema.org/draft-07/schema#",
+
+    definitions: {
+      "/path{id}": {
+        required: ["billing_address"],
+      },
+    },
+    $ref: "%23%2Fdefinitions%2F~1path%7Bid%7D", // "#/definitions/~1path{id}"
+  };
+  t.plan(1);
+  const res = resolve(schema);
+  t.equal(
+    res.required[0],
+    "billing_address",
+    "followed $ref to URL encoded path"
+  );
+});
+
+test(`incorrectly URL encoded URI also works (normally blocked by schema format)`, async (t) => {
+  const schema = {
+    $id: "http://www.example.com/",
+    $schema: "http://json-schema.org/draft-07/schema#",
+
+    definitions: {
+      "/path{id}": {
+        required: ["billing_address"],
+      },
+    },
+    $ref: "#/definitions/~1path{id}",
+  };
+  t.plan(1);
+  const res = resolve(schema);
+  t.equal(
+    res.required[0],
+    "billing_address",
+    "followed $ref to URL encoded path"
   );
 });
