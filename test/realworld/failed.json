@@ -190,7 +190,8 @@
           "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/ato.gov.au/0.0.6/swagger.yaml#L902"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "azure.com:servicebus": {
     "name": "azure.com:servicebus",
@@ -216,7 +217,8 @@
           "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/servicebus/2017-04-01/swagger.yaml#L4207"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "azure.com:storageimportexport": {
     "name": "azure.com:storageimportexport",
@@ -242,7 +244,8 @@
           "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/storageimportexport/2016-11-01/swagger.yaml#L79"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "digitalocean.com": {
     "name": "digitalocean.com",
@@ -324,7 +327,8 @@
           "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/digitalocean.com/2.0/openapi.yaml#L1189"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "googleapis.com:datacatalog": {
     "name": "googleapis.com:datacatalog",
@@ -350,7 +354,8 @@
           "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/datacatalog/v1beta1/openapi.yaml#L1"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "openapi-generator.tech": {
     "name": "openapi-generator.tech",
@@ -485,7 +490,8 @@
           "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml#L58"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "opensuse.org:obs": {
     "name": "opensuse.org:obs",
@@ -1004,7 +1010,8 @@
           "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L3952"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "parliament.uk:statutoryinstruments": {
     "name": "parliament.uk:statutoryinstruments",
@@ -1030,7 +1037,8 @@
           "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/statutoryinstruments/v1/swagger.yaml#L6"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "parliament.uk:treaties": {
     "name": "parliament.uk:treaties",
@@ -1056,7 +1064,8 @@
           "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/treaties/v1/swagger.yaml#L6"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "prss.org": {
     "name": "prss.org",
@@ -1160,7 +1169,8 @@
           "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L411"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "trashnothing.com": {
     "name": "trashnothing.com",
@@ -1186,7 +1196,8 @@
           "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/trashnothing.com/1.2/openapi.yaml#L15"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "twinehealth.com": {
     "name": "twinehealth.com",
@@ -1331,7 +1342,8 @@
           "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L77"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "whapi.com:numbers": {
     "name": "whapi.com:numbers",
@@ -1357,6 +1369,7 @@
           "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/whapi.com/numbers/2.0/swagger.yaml#L12"
         }
       ]
-    }
+    },
+    "knownFailed": true
   }
 }

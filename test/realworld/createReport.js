@@ -35,6 +35,8 @@ Value: ${item.hasValue ? `
 ${item.value}
 \`\`\`` : 'content too large'}
 
+AJV errors:
+
    |Keyword |Params |Message |
    |--------|-------|--------|
 ${item.errors.map(err => `   |${err.keyword} |${err.params}| ${err.message}`).join("\n")}

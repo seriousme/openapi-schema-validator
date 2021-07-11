@@ -1,5 +1,5 @@
 # Results of real world testing
-Report generated at: Sun Jul 11 2021 19:49:13 GMT+0200 (Central European Summer Time)
+Report generated at: Sun Jul 11 2021 20:00:10 GMT+0200 (Central European Summer Time)
 
 Number of APIs failing validation: 14
 
@@ -26,6 +26,8 @@ Value:
 }
 ```
 
+AJV errors:
+
    |Keyword |Params |Message |
    |--------|-------|--------|
    |additionalProperties |{"additionalProperty":"authorizationUrl"}| must NOT have additional properties
@@ -40,6 +42,8 @@ Value:
 ```json
 ""
 ```
+
+AJV errors:
 
    |Keyword |Params |Message |
    |--------|-------|--------|
@@ -65,6 +69,8 @@ Value:
 }
 ```
 
+AJV errors:
+
    |Keyword |Params |Message |
    |--------|-------|--------|
    |additionalProperties |{"additionalProperty":"$ref"}| must NOT have additional properties
@@ -88,6 +94,8 @@ Value:
 ""
 ```
 
+AJV errors:
+
    |Keyword |Params |Message |
    |--------|-------|--------|
    |format |{"format":"uri"}| must match format "uri"
@@ -108,6 +116,8 @@ Value:
 ```json
 ""
 ```
+
+AJV errors:
 
    |Keyword |Params |Message |
    |--------|-------|--------|
@@ -132,6 +142,8 @@ Value:
 }
 ```
 
+AJV errors:
+
    |Keyword |Params |Message |
    |--------|-------|--------|
    |required |{"missingProperty":"schema"}| must have required property 'schema'
@@ -145,6 +157,8 @@ Value:
 ```json
 "#/paths/~1v2~1account~1keys~1{ssh_key_identifier}/get/parameters/0"
 ```
+
+AJV errors:
 
    |Keyword |Params |Message |
    |--------|-------|--------|
@@ -163,6 +177,8 @@ Updated: 2021-07-05T23:08:37.856Z
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/datacatalog/v1beta1/openapi.yaml#L1)
 
 Value: content too large
+
+AJV errors:
 
    |Keyword |Params |Message |
    |--------|-------|--------|
@@ -188,6 +204,8 @@ Value:
 }
 ```
 
+AJV errors:
+
    |Keyword |Params |Message |
    |--------|-------|--------|
    |additionalProperties |{"additionalProperty":"originalRef"}| must NOT have additional properties
@@ -207,6 +225,8 @@ Value:
   "type": "object"
 }
 ```
+
+AJV errors:
 
    |Keyword |Params |Message |
    |--------|-------|--------|
@@ -229,6 +249,8 @@ Value:
   }
 }
 ```
+
+AJV errors:
 
    |Keyword |Params |Message |
    |--------|-------|--------|
@@ -255,6 +277,8 @@ Value:
 }
 ```
 
+AJV errors:
+
    |Keyword |Params |Message |
    |--------|-------|--------|
    |additionalProperties |{"additionalProperty":"example"}| must NOT have additional properties
@@ -272,6 +296,8 @@ Value:
   }
 }
 ```
+
+AJV errors:
 
    |Keyword |Params |Message |
    |--------|-------|--------|
@@ -367,6 +393,8 @@ Value:
   }
 }
 ```
+
+AJV errors:
 
    |Keyword |Params |Message |
    |--------|-------|--------|
@@ -502,6 +530,8 @@ Value:
 }
 ```
 
+AJV errors:
+
    |Keyword |Params |Message |
    |--------|-------|--------|
    |required |{"missingProperty":"$ref"}| must have required property '$ref'
@@ -524,6 +554,8 @@ Value:
 ""
 ```
 
+AJV errors:
+
    |Keyword |Params |Message |
    |--------|-------|--------|
    |format |{"format":"uri"}| must match format "uri"
@@ -544,6 +576,8 @@ Value:
 ```json
 ""
 ```
+
+AJV errors:
 
    |Keyword |Params |Message |
    |--------|-------|--------|
@@ -566,6 +600,8 @@ Value:
 "/api/epg-cd-mapping.html"
 ```
 
+AJV errors:
+
    |Keyword |Params |Message |
    |--------|-------|--------|
    |format |{"format":"uri"}| must match format "uri"
@@ -583,6 +619,8 @@ Value:
   }
 }
 ```
+
+AJV errors:
 
    |Keyword |Params |Message |
    |--------|-------|--------|
@@ -606,6 +644,8 @@ Value:
 }
 ```
 
+AJV errors:
+
    |Keyword |Params |Message |
    |--------|-------|--------|
    |required |{"missingProperty":"$ref"}| must have required property '$ref'
@@ -627,6 +667,8 @@ Value:
 ```json
 "https://trashnothing.com/tos\n"
 ```
+
+AJV errors:
 
    |Keyword |Params |Message |
    |--------|-------|--------|
@@ -658,6 +700,8 @@ Value:
 }
 ```
 
+AJV errors:
+
    |Keyword |Params |Message |
    |--------|-------|--------|
    |additionalProperties |{"additionalProperty":"flow"}| must NOT have additional properties
@@ -673,6 +717,8 @@ Value:
 "application"
 ```
 
+AJV errors:
+
    |Keyword |Params |Message |
    |--------|-------|--------|
    |enum |{"allowedValues":["password"]}| must be equal to one of the allowed values
@@ -684,6 +730,8 @@ Value:
 ```json
 "/oauth/token"
 ```
+
+AJV errors:
 
    |Keyword |Params |Message |
    |--------|-------|--------|
@@ -705,6 +753,8 @@ Value:
 ```json
 "www.williamhill.com"
 ```
+
+AJV errors:
 
    |Keyword |Params |Message |
    |--------|-------|--------|
