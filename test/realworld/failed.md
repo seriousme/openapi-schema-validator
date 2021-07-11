@@ -1,18 +1,18 @@
 # Results of real world testing
-Report generated at: Sun Jul 11 2021 20:00:10 GMT+0200 (Central European Summer Time)
+Report generated at: Sun Jul 11 2021 20:39:05 GMT+0200 (Central European Summer Time)
 
 Number of APIs failing validation: 14
 
 
 
-## `airport-web.appspot.com (version: v1) `
+## API: airport-web\.appspot\.com (version: v1) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 
-On Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/airport-web.appspot.com/v1/swagger.yaml)
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/airport-web.appspot.com/v1/swagger.yaml)
 
-Updated: 2021-06-21T12:16:53.715Z
+API updated: 2021-06-21T12:16:53.715Z
 
-### Path: `/securityDefinitions/google_id_token`
+### Path: /securityDefinitions/google_id_token
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/airport-web.appspot.com/v1/swagger.yaml#L24)
 
 Value: 
@@ -35,7 +35,7 @@ AJV errors:
    |required |{"missingProperty":"tokenUrl"}| must have required property 'tokenUrl'
    |oneOf |{"passingSchemas":null}| must match exactly one schema in oneOf
 
-### Path: `/securityDefinitions/google_id_token/authorizationUrl`
+### Path: /securityDefinitions/google_id_token/authorizationUrl
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/airport-web.appspot.com/v1/swagger.yaml#L25)
 
 Value: 
@@ -51,14 +51,14 @@ AJV errors:
 
     
 
-## `ato.gov.au (version: 0.0.6) `
+## API: ato\.gov\.au (version: 0.0.6) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 
-On Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/ato.gov.au/0.0.6/swagger.yaml)
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/ato.gov.au/0.0.6/swagger.yaml)
 
-Updated: 2017-09-06T11:44:38.000Z
+API updated: 2017-09-06T11:44:38.000Z
 
-### Path: `/paths/~1individuals~1{partyId}/delete/responses/400`
+### Path: /paths/\~1individuals\~1\{partyId\}/delete/responses/400
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/ato.gov.au/0.0.6/swagger.yaml#L902)
 
 Value: 
@@ -79,14 +79,14 @@ AJV errors:
 
     
 
-## `azure.com:servicebus (version: 2017-04-01) `
+## API: azure\.com:servicebus (version: 2017-04-01) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 
-On Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/servicebus/2017-04-01/swagger.yaml)
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/servicebus/2017-04-01/swagger.yaml)
 
-Updated: 2019-09-23T09:26:07.000Z
+API updated: 2019-09-23T09:26:07.000Z
 
-### Path: `/paths/~1subscriptions~1{subscriptionId}~1resourceGroups~1{resourceGroupName}~1providers~1Microsoft.ServiceBus~1namespaces~1{namespaceName}~1topics~1{topicName}~1subscriptions~1{subscriptionName}~1rules~1{ruleName}/get/externalDocs/url`
+### Path: /paths/\~1subscriptions\~1\{subscriptionId\}\~1resourceGroups\~1\{resourceGroupName\}\~1providers\~1Microsoft\.ServiceBus\~1namespaces\~1\{namespaceName\}\~1topics\~1\{topicName\}\~1subscriptions\~1\{subscriptionName\}\~1rules\~1\{ruleName\}/get/externalDocs/url
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/servicebus/2017-04-01/swagger.yaml#L4207)
 
 Value: 
@@ -102,14 +102,14 @@ AJV errors:
 
     
 
-## `azure.com:storageimportexport (version: 2016-11-01) `
+## API: azure\.com:storageimportexport (version: 2016-11-01) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 
-On Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/storageimportexport/2016-11-01/swagger.yaml)
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/storageimportexport/2016-11-01/swagger.yaml)
 
-Updated: 2019-07-22T11:03:07.000Z
+API updated: 2019-07-22T11:03:07.000Z
 
-### Path: `/paths/~1providers~1Microsoft.ImportExport~1locations/get/externalDocs/url`
+### Path: /paths/\~1providers\~1Microsoft\.ImportExport\~1locations/get/externalDocs/url
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/storageimportexport/2016-11-01/swagger.yaml#L79)
 
 Value: 
@@ -125,14 +125,14 @@ AJV errors:
 
     
 
-## `digitalocean.com (version: 2.0) `
+## API: digitalocean\.com (version: 2.0) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 
-On Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/digitalocean.com/2.0/openapi.yaml)
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/digitalocean.com/2.0/openapi.yaml)
 
-Updated: 2021-07-05T15:07:17.927Z
+API updated: 2021-07-05T15:07:17.927Z
 
-### Path: `/paths/~1v2~1account~1keys~1{ssh_key_identifier}/delete/parameters/0`
+### Path: /paths/\~1v2\~1account\~1keys\~1\{ssh_key_identifier\}/delete/parameters/0
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/digitalocean.com/2.0/openapi.yaml#L1189)
 
 Value: 
@@ -150,7 +150,7 @@ AJV errors:
    |required |{"missingProperty":"content"}| must have required property 'content'
    |oneOf |{"passingSchemas":null}| must match exactly one schema in oneOf
 
-### Path: `/paths/~1v2~1account~1keys~1{ssh_key_identifier}/delete/parameters/0/$ref`
+### Path: /paths/\~1v2\~1account\~1keys\~1\{ssh_key_identifier\}/delete/parameters/0/\$ref
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/digitalocean.com/2.0/openapi.yaml#L1195)
 
 Value: 
@@ -166,14 +166,14 @@ AJV errors:
 
     
 
-## `googleapis.com:datacatalog (version: v1beta1) `
+## API: googleapis\.com:datacatalog (version: v1beta1) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 
-On Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/datacatalog/v1beta1/openapi.yaml)
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/datacatalog/v1beta1/openapi.yaml)
 
-Updated: 2021-07-05T23:08:37.856Z
+API updated: 2021-07-05T23:08:37.856Z
 
-### Path: ``
+### Path: 
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/datacatalog/v1beta1/openapi.yaml#L1)
 
 Value: content too large
@@ -186,14 +186,14 @@ AJV errors:
 
     
 
-## `openapi-generator.tech (version: 5.1.1) `
+## API: openapi-generator\.tech (version: 5.1.1) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 
-On Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml)
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml)
 
-Updated: 2021-06-21T12:16:53.715Z
+API updated: 2021-06-21T12:16:53.715Z
 
-### Path: `/paths/~1api~1gen~1clients~1{language}/get/responses/200/schema/additionalProperties`
+### Path: /paths/\~1api\~1gen\~1clients\~1\{language\}/get/responses/200/schema/additionalProperties
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml#L61)
 
 Value: 
@@ -212,7 +212,7 @@ AJV errors:
    |type |{"type":"boolean"}| must be boolean
    |anyOf |{}| must match a schema in anyOf
 
-### Path: `/paths/~1api~1gen~1clients~1{language}/get/responses/200/schema`
+### Path: /paths/\~1api\~1gen\~1clients\~1\{language\}/get/responses/200/schema
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml#L60)
 
 Value: 
@@ -233,7 +233,7 @@ AJV errors:
    |additionalProperties |{"additionalProperty":"additionalProperties"}| must NOT have additional properties
    |oneOf |{"passingSchemas":null}| must match exactly one schema in oneOf
 
-### Path: `/paths/~1api~1gen~1clients~1{language}/get/responses/200`
+### Path: /paths/\~1api\~1gen\~1clients\~1\{language\}/get/responses/200
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml#L58)
 
 Value: 
@@ -259,14 +259,14 @@ AJV errors:
 
     
 
-## `opensuse.org:obs (version: 2.10.50) `
+## API: opensuse\.org:obs (version: 2.10.50) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 
-On Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml)
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml)
 
-Updated: 2021-07-11T13:49:21.785Z
+API updated: 2021-07-11T13:49:21.785Z
 
-### Path: `/paths/~1published~1{project_name}~1{repository_name}~1{architecture_name}~1{binary_filename}?view=ymp/get/responses/200/content/application~1xml; charset=utf-8/schema/properties/xmlns/xml`
+### Path: /paths/\~1published\~1\{project_name\}\~1\{repository_name\}\~1\{architecture_name\}\~1\{binary_filename\}\?view=ymp/get/responses/200/content/application\~1xml; charset=utf-8/schema/properties/xmlns/xml
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L4020)
 
 Value: 
@@ -283,7 +283,7 @@ AJV errors:
    |--------|-------|--------|
    |additionalProperties |{"additionalProperty":"example"}| must NOT have additional properties
 
-### Path: `/paths/~1published~1{project_name}~1{repository_name}~1{architecture_name}~1{binary_filename}?view=ymp/get/responses/200/content/application~1xml; charset=utf-8/schema/properties/xmlns`
+### Path: /paths/\~1published\~1\{project_name\}\~1\{repository_name\}\~1\{architecture_name\}\~1\{binary_filename\}\?view=ymp/get/responses/200/content/application\~1xml; charset=utf-8/schema/properties/xmlns
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L4018)
 
 Value: 
@@ -304,7 +304,7 @@ AJV errors:
    |required |{"missingProperty":"$ref"}| must have required property '$ref'
    |oneOf |{"passingSchemas":null}| must match exactly one schema in oneOf
 
-### Path: `/paths/~1published~1{project_name}~1{repository_name}~1{architecture_name}~1{binary_filename}?view=ymp/get/responses/200/content/application~1xml; charset=utf-8/schema`
+### Path: /paths/\~1published\~1\{project_name\}\~1\{repository_name\}\~1\{architecture_name\}\~1\{binary_filename\}\?view=ymp/get/responses/200/content/application\~1xml; charset=utf-8/schema
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L3977)
 
 Value: 
@@ -401,7 +401,7 @@ AJV errors:
    |required |{"missingProperty":"$ref"}| must have required property '$ref'
    |oneOf |{"passingSchemas":null}| must match exactly one schema in oneOf
 
-### Path: `/paths/~1published~1{project_name}~1{repository_name}~1{architecture_name}~1{binary_filename}?view=ymp/get/responses/200`
+### Path: /paths/\~1published\~1\{project_name\}\~1\{repository_name\}\~1\{architecture_name\}\~1\{binary_filename\}\?view=ymp/get/responses/200
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L3952)
 
 Value: 
@@ -539,14 +539,14 @@ AJV errors:
 
     
 
-## `parliament.uk:statutoryinstruments (version: v1) `
+## API: parliament\.uk:statutoryinstruments (version: v1) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 
-On Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/statutoryinstruments/v1/swagger.yaml)
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/statutoryinstruments/v1/swagger.yaml)
 
-Updated: 2021-06-21T12:16:53.715Z
+API updated: 2021-06-21T12:16:53.715Z
 
-### Path: `/info/contact/url`
+### Path: /info/contact/url
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/statutoryinstruments/v1/swagger.yaml#L6)
 
 Value: 
@@ -562,14 +562,14 @@ AJV errors:
 
     
 
-## `parliament.uk:treaties (version: v1) `
+## API: parliament\.uk:treaties (version: v1) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 
-On Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/treaties/v1/swagger.yaml)
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/treaties/v1/swagger.yaml)
 
-Updated: 2021-05-24T10:27:51.952Z
+API updated: 2021-05-24T10:27:51.952Z
 
-### Path: `/info/contact/url`
+### Path: /info/contact/url
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/treaties/v1/swagger.yaml#L6)
 
 Value: 
@@ -585,14 +585,14 @@ AJV errors:
 
     
 
-## `prss.org (version: 2.0.0) `
+## API: prss\.org (version: 2.0.0) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 
-On Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml)
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml)
 
-Updated: 2021-06-21T12:16:53.715Z
+API updated: 2021-06-21T12:16:53.715Z
 
-### Path: `/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202/schema/externalDocs/url`
+### Path: /paths/\~1api\~1v2\~1metapub\~1program-information\~1batch/post/responses/202/schema/externalDocs/url
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L417)
 
 Value: 
@@ -606,7 +606,7 @@ AJV errors:
    |--------|-------|--------|
    |format |{"format":"uri"}| must match format "uri"
 
-### Path: `/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202/schema`
+### Path: /paths/\~1api\~1v2\~1metapub\~1program-information\~1batch/post/responses/202/schema
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L413)
 
 Value: 
@@ -627,7 +627,7 @@ AJV errors:
    |required |{"missingProperty":"type"}| must have required property 'type'
    |oneOf |{"passingSchemas":null}| must match exactly one schema in oneOf
 
-### Path: `/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202`
+### Path: /paths/\~1api\~1v2\~1metapub\~1program-information\~1batch/post/responses/202
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L411)
 
 Value: 
@@ -653,14 +653,14 @@ AJV errors:
 
     
 
-## `trashnothing.com (version: 1.2) `
+## API: trashnothing\.com (version: 1.2) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 
-On Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/trashnothing.com/1.2/openapi.yaml)
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/trashnothing.com/1.2/openapi.yaml)
 
-Updated: 2021-06-21T12:16:53.715Z
+API updated: 2021-06-21T12:16:53.715Z
 
-### Path: `/info/termsOfService`
+### Path: /info/termsOfService
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/trashnothing.com/1.2/openapi.yaml#L15)
 
 Value: 
@@ -676,14 +676,14 @@ AJV errors:
 
     
 
-## `twinehealth.com (version: v7.78.1) `
+## API: twinehealth\.com (version: v7.78.1) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 
-On Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml)
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml)
 
-Updated: 2021-06-21T12:16:53.715Z
+API updated: 2021-06-21T12:16:53.715Z
 
-### Path: `/securityDefinitions/OAuth2`
+### Path: /securityDefinitions/OAuth2
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L77)
 
 Value: 
@@ -709,7 +709,7 @@ AJV errors:
    |required |{"missingProperty":"authorizationUrl"}| must have required property 'authorizationUrl'
    |oneOf |{"passingSchemas":null}| must match exactly one schema in oneOf
 
-### Path: `/securityDefinitions/OAuth2/flow`
+### Path: /securityDefinitions/OAuth2/flow
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L81)
 
 Value: 
@@ -723,7 +723,7 @@ AJV errors:
    |--------|-------|--------|
    |enum |{"allowedValues":["password"]}| must be equal to one of the allowed values
 
-### Path: `/securityDefinitions/OAuth2/tokenUrl`
+### Path: /securityDefinitions/OAuth2/tokenUrl
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L85)
 
 Value: 
@@ -739,14 +739,14 @@ AJV errors:
 
     
 
-## `whapi.com:numbers (version: 2.0) `
+## API: whapi\.com:numbers (version: 2.0) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 
-On Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/whapi.com/numbers/2.0/swagger.yaml)
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/whapi.com/numbers/2.0/swagger.yaml)
 
-Updated: 2021-06-21T12:16:53.715Z
+API updated: 2021-06-21T12:16:53.715Z
 
-### Path: `/info/license/url`
+### Path: /info/license/url
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/whapi.com/numbers/2.0/swagger.yaml#L12)
 
 Value: 

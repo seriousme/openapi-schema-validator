@@ -1,3 +1,7 @@
+function escapeMarkDown(string){
+    return string.replace(/[.*+?^~${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+}
+
 function processErrors(errors) {
     const data = {};
     for (const item of errors) {
@@ -27,7 +31,7 @@ function processErrors(errors) {
     for (const key in data) {
         item = data[key];
         output += `
-### Path: \`${item.path}\`
+### Path: ${escapeMarkDown(item.path)}
 Path on Github: [link](${item.gitHubUrl})
 
 Value: ${item.hasValue ? `
@@ -55,12 +59,12 @@ Number of APIs failing validation: ${Object.values(results).length}
 
 
 ${Object.values(results).map(item => `
-## \`${item.name} (version: ${item.apiVersion}) \`
+## API: ${escapeMarkDown(item.name)} (version: ${item.apiVersion}) 
 ${item.openApiVersion === "2.0" ? "Swagger" : "OpenApi"}: [${item.openApiVersion}](https://spec.openapis.org/oas/v${item.openApiVersion})
 
-On Github: [link](${item.gitHubUrl})
+API on Github: [link](${item.gitHubUrl})
 
-Updated: ${item.updated}
+API updated: ${item.updated}
 ${processErrors(item.result.errors)}
     ` ).join("\n")}`;
 }
