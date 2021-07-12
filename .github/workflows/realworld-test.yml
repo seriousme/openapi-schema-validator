@@ -27,6 +27,8 @@ jobs:
     - run: npm ci --ignore-scripts --no-audit --no-progress --prefer-offline
     - run: npm run build --if-present
     - name: Start the test
+      env: 
+        GITHUB_EVENT_INPUTS_DELAY: ${{ github.event.inputs.delay }}
       run: npm run realWorldTestCI
     - name: push changes to remote
       run: |
@@ -38,5 +40,3 @@ jobs:
         --author "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>" \
         || echo "Nothing to commit, proceeding"
         git push
-      with: 
-        GITHUB_EVENT_INPUTS_DELAY: ${{ github.event.inputs.delay }}
