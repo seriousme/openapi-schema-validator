@@ -38,3 +38,5 @@ jobs:
         --author "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>" \
         || echo "Nothing to commit, proceeding"
         git push
+      with: 
+        GITHUB_EVENT_INPUTS_DELAY: ${{ github.event.inputs.delay }}
