@@ -26,6 +26,8 @@ jobs:
       uses: actions/setup-node@v1
     - run: npm ci --ignore-scripts --no-audit --no-progress --prefer-offline
     - run: npm run build --if-present
+    - name: disable hardware networking
+      run: sudo ethtool -K eth0 tx off rx off
     - name: Start the test
       env: 
         GITHUB_EVENT_INPUTS_DELAY: ${{ github.event.inputs.delay }}
