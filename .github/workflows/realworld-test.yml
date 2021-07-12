@@ -15,7 +15,7 @@ on:
       delay:
         description: Delay in micro seconds between requests
         required: false
-        default: 100
+        default: "100"
 
 jobs:
  realWorldTest:
@@ -26,12 +26,10 @@ jobs:
       uses: actions/setup-node@v1
     - run: npm ci --ignore-scripts --no-audit --no-progress --prefer-offline
     - run: npm run build --if-present
-    - name: disable hardware networking
-      run: sudo ethtool -K eth0 tx off rx off
     - name: Start the test
       env: 
         GITHUB_EVENT_INPUTS_DELAY: ${{ github.event.inputs.delay }}
-      run: npm run realWorldTestCI
+      run: npm run realWorldTest
     - name: push changes to remote
       run: |
         git add test/realworld/failed*
