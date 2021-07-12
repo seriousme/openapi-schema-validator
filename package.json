@@ -26,7 +26,8 @@
     "postversion": "git push && git push --tags",
     "realWorldTest": "node test/realworld/realworld.js",
     "realWorldTestAll": "node test/realworld/realworld.js --all",
-    "realWorldTestFailed": "node test/realworld/realworld.js --failedOnly"
+    "realWorldTestFailed": "node test/realworld/realworld.js --failedOnly",
+    "realWorldTestCI": "node test/realworld/realworld.js --ci"
   },
   "author": "Hans Klunder",
   "license": "MIT",
