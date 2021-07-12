@@ -8,9 +8,11 @@ const JSYaml = require("js-yaml");
 const { createReport } = require("./createReport.js");
 const yamlOpts = { schema: JSYaml.JSON_SCHEMA };
 const failedFile = `${__dirname}/failed.json`;
+const reportFile = `${__dirname}/failed.md`;
 const newFailedFile = `${__dirname}/failed.updated.json`;
 const newReportFile = `${__dirname}/failed.updated.md`;
 const defaultPercentage = 10;
+const DelayInMs = process.env.GITHUB_EVENT_INPUTS_DELAY || 100;
 
 const failedData = require(failedFile);
 const failedMap = new Map(Object.entries(failedData));
@@ -52,7 +54,7 @@ function yamlLine(yamlSpec, path) {
   const paths = path.split("/").slice(1);
   let num = 0;
   for (pathItem of paths) {
-    if (Number.isInteger(+pathItem) && num ) {
+    if (Number.isInteger(+pathItem) && num) {
       num = findArrayItem(lines, num, pathItem);
     } else {
       num = findItem(lines, num, pathItem);
@@ -62,7 +64,7 @@ function yamlLine(yamlSpec, path) {
 }
 
 function findArrayItem(lines, num, pathIdx) {
-  if (num > lines.length-2){
+  if (num > lines.length - 2) {
     return num;
   };
   const firstItem = lines[num + 1];
@@ -83,8 +85,8 @@ function findArrayItem(lines, num, pathIdx) {
 
 function findItem(lines, num, pathItem) {
   const token = new RegExp(`^\\s*"?${makeRexp(pathItem)}"?:`);
-  const maxNum = lines.length-1;
-  while (!lines[num].match(token) && num < maxNum ) {
+  const maxNum = lines.length - 1;
+  while (!lines[num].match(token) && num < maxNum) {
     num++;
   }
   return num;
@@ -92,12 +94,12 @@ function findItem(lines, num, pathItem) {
 
 function getInstanceValue(yamlSpec, path) {
   if (path === "") {
-    return [false,'content too large'];
+    return [false, 'content too large'];
   }
   const obj = JSYaml.load(yamlSpec, yamlOpts);
   const paths = path.split("/").slice(1);
   const result = paths.reduce((o, n) => o[unescapeJsonPointer(n)], obj);
-  return [true,result];
+  return [true, result];
 }
 
 function yamlToGitHub(url) {
@@ -140,8 +142,16 @@ async function fetchApiList(percentage, onlyFailed = false) {
   return apiMap;
 }
 
-async function fetchYaml(url) {
-  const response = await fetch(url);
+function timeout(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function fetchYaml(url, doDelay = false) {
+  const req = [fetch(url)];
+  if (doDelay) {
+    req.push(timeout(DelayInMs));
+  }
+  const [response] = await Promise.all(req);
 
   if (!response.ok) {
     throw new Error(`Unable to download ${url}`);
@@ -150,8 +160,8 @@ async function fetchYaml(url) {
   return await response.text();
 }
 
-async function testAPIs(percentage, onlyFailed) {
-  if (onlyFailed) {
+async function testAPIs(percentage, onlyFailed, ci) {
+  if (onlyFailed || ci) {
     percentage = 100;
   }
   const apiList = await fetchApiList(percentage, onlyFailed);
@@ -164,7 +174,7 @@ async function testAPIs(percentage, onlyFailed) {
     knownFailed: 0,
   };
   for (const [name, api] of apiList) {
-    const spec = await fetchYaml(api.yamlUrl);
+    const spec = await fetchYaml(api.yamlUrl, ci);
     results.current++;
     api.result = await validator.validate(spec);
     if (api.result.valid === true) {
@@ -172,7 +182,7 @@ async function testAPIs(percentage, onlyFailed) {
     } else {
       results.invalid++;
       api.result.errors.map((item) => {
-        const [res,value] = getInstanceValue(spec, item.instancePath);
+        const [res, value] = getInstanceValue(spec, item.instancePath);
         item.hasInstanceValue = res;
         item.instanceValue = value;
         item.gitHubUrl = `${api.gitHubUrl}#L${yamlLine(
@@ -201,30 +211,34 @@ async function testAPIs(percentage, onlyFailed) {
     results.knownFailed !== results.invalid ||
     (onlyFailed && results.invalid !== results.total)
   ) {
+    const exitCode = ci ? 0 : 1;
     if (percentage === 100) {
+      const jsonFile = ci ? failedFile : newFailedFile;
+      const mdFile = ci ? reportFile : newReportFile;
       const data = Object.fromEntries(failed);
+
       console.log(`new/updated failures found`);
-      console.log(`creating ${newFailedFile}`);
+      console.log(`creating ${jsonFile}`);
       writeFileSync(
-        newFailedFile,
+        jsonFile,
         JSON.stringify(data, null, 2),
         "utf8"
       );
-      console.log(`creating new report ${newReportFile}`);
+      console.log(`creating new report ${mdFile}`);
       writeFileSync(
-        newReportFile,
+        mdFile,
         createReport(data),
         "utf8"
       );
     }
-    process.exit(1);
+    process.exit(exitCode);
   }
 }
 
 function parseArgs() {
   const args = argv.slice(2);
   const params = new Set();
-  const opts = ["failedOnly", "all"];
+  const opts = ["failedOnly", "all", "ci"];
   args.forEach((arg) => {
     opts.forEach((opt) => {
       if (`--${opt}`.startsWith(arg)) {
@@ -238,6 +252,7 @@ function parseArgs() {
         where: 
         --failedOnly will only try all APIs that have previously been found failing
         --all will test all APIs on the list, by default only ${defaultPercentage}% of APIs will be tested.
+        --ci switch to ci mode
         `);
     exit(1);
   }
@@ -247,4 +262,7 @@ function parseArgs() {
 const params = parseArgs();
 const failedOnly = params.has("failedOnly");
 const percentage = params.has("all") ? 100 : defaultPercentage;
-testAPIs(percentage, failedOnly);
+if (params.has("ci")) {
+  console.log(`Working in CI mode, overwriting results if anything changed, using a delay of ${DelayInMs} ms`);
+}
+testAPIs(percentage, failedOnly, params.has("ci"));

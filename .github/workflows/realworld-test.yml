@@ -10,6 +10,12 @@ on:
   schedule:
     # once week on thursday 
     - cron: '19 16 * * 4'
+  workflow_dispatch:
+    inputs:
+      delay:
+        description: Delay in micro seconds between requests
+        required: false
+        default: 100
 
 jobs:
  realWorldTest:
@@ -20,4 +26,15 @@ jobs:
       uses: actions/setup-node@v1
     - run: npm ci --ignore-scripts --no-audit --no-progress --prefer-offline
     - run: npm run build --if-present
-    - run: npm run realWorldTestAll
+    - name: Start the test
+      run: npm run realWorldTestCI
+    - name: push changes to remote
+      run: |
+        git add test/realworld/failed*
+        git \
+        -c user.name="GitHub Actions" \
+        -c user.email="actions@github.com" \
+        commit -m "Updated Real World test report on `date +%F`" \
+        --author "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>" \
+        || echo "Nothing to commit, proceeding"
+        git push
