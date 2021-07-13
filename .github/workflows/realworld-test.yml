@@ -1,8 +1,9 @@
 # this workflow runs a check on the collection of APIs at https://apis.guru/
 # if more than one specification is present per API it will only check the lastest
 # about 2200 specifications are checked this way
-# The job failes if it finds specifications that do not match the relevant openApi JSON schema 
+# If it finds specifications that do not match the relevant openApi JSON schema 
 # and for which no previous failure is known in /test/realworld/failed.json
+# it will create a new report and commit this
 #
 name: "Real world API test"
 
@@ -12,27 +13,25 @@ on:
     - cron: '19 16 * * 4'
   workflow_dispatch:
     inputs:
-      delay:
-        description: Delay in micro seconds between requests
+      nodeVersion:
+        description: Node version to use
         required: false
-        default: "100"
+        default: "14"
 
 jobs:
  realWorldTest:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js latest version
+    - name: Use Node.js 
       uses: actions/setup-node@v2
       with:
-        node-version: "14"
+        node-version: ${{ github.event.inputs.nodeVersion }}
     - run: npm ci --ignore-scripts --no-audit --no-progress --prefer-offline
     - run: npm run build --if-present
     - name: Start the test
-      env: 
-        GITHUB_EVENT_INPUTS_DELAY: ${{ github.event.inputs.delay }}
       run: npm run realWorldTestCI
-    - name: push changes to remote
+    - name: Push changes to remote
       run: |
         git add test/realworld/failed*
         git \

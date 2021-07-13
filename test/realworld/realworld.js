@@ -12,7 +12,6 @@ const reportFile = `${__dirname}/failed.md`;
 const newFailedFile = `${__dirname}/failed.updated.json`;
 const newReportFile = `${__dirname}/failed.updated.md`;
 const defaultPercentage = 10;
-const DelayInMs = process.env.GITHUB_EVENT_INPUTS_DELAY || 100;
 
 const failedData = require(failedFile);
 const failedMap = new Map(Object.entries(failedData));
@@ -142,21 +141,12 @@ async function fetchApiList(percentage, onlyFailed = false) {
   return apiMap;
 }
 
-function timeout(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-async function fetchYaml(url, doDelay = false) {
-  const req = [fetch(url)];
-  if (doDelay) {
-    req.push(timeout(DelayInMs));
-  }
-  const [response] = await Promise.all(req);
+async function fetchYaml(url) {
+  const response = await fetch(url);
 
   if (!response.ok) {
     throw new Error(`Unable to download ${url}`);
   }
-
   return await response.text();
 }
 
@@ -174,7 +164,7 @@ async function testAPIs(percentage, onlyFailed, ci) {
     knownFailed: 0,
   };
   for (const [name, api] of apiList) {
-    const spec = await fetchYaml(api.yamlUrl, ci);
+    const spec = await fetchYaml(api.yamlUrl);
     results.current++;
     api.result = await validator.validate(spec);
     if (api.result.valid === true) {
@@ -263,6 +253,6 @@ const params = parseArgs();
 const failedOnly = params.has("failedOnly");
 const percentage = params.has("all") ? 100 : defaultPercentage;
 if (params.has("ci")) {
-  console.log(`Working in CI mode, overwriting results if anything changed, using a delay of ${DelayInMs} ms`);
+  console.log(`Working in CI mode, overwriting results if anything changed`);
 }
 testAPIs(percentage, failedOnly, params.has("ci"));
