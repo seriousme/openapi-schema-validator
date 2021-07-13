@@ -61,6 +61,7 @@ Number of APIs failing validation: ${Object.values(results).length}
 ${Object.values(results).map(item => `
 ## API: ${escapeMarkDown(item.name)} (version: ${item.apiVersion}) 
 ${item.openApiVersion === "2.0" ? "Swagger" : "OpenApi"}: [${item.openApiVersion}](https://spec.openapis.org/oas/v${item.openApiVersion})
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v${item.openApiVersion})
 
 API on Github: [link](${item.gitHubUrl})
 
