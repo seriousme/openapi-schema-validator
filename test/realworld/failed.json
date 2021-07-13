@@ -131,7 +131,8 @@
           "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/airport-web.appspot.com/v1/swagger.yaml#L24"
         }
       ]
-    }
+    },
+    "knownFailed": true
   },
   "ato.gov.au": {
     "name": "ato.gov.au",
@@ -247,89 +248,6 @@
     },
     "knownFailed": true
   },
-  "digitalocean.com": {
-    "name": "digitalocean.com",
-    "apiVersion": "2.0",
-    "openApiVersion": "3.0.0",
-    "yamlUrl": "https://api.apis.guru/v2/specs/digitalocean.com/2.0/openapi.yaml",
-    "jsonUrl": "https://api.apis.guru/v2/specs/digitalocean.com/2.0/openapi.json",
-    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/digitalocean.com/2.0/openapi.yaml",
-    "updated": "2021-07-05T15:07:17.927Z",
-    "result": {
-      "valid": false,
-      "errors": [
-        {
-          "instancePath": "/paths/~1v2~1account~1keys~1{ssh_key_identifier}/delete/parameters/0",
-          "schemaPath": "#/definitions/SchemaXORContent/oneOf/0/required",
-          "keyword": "required",
-          "params": {
-            "missingProperty": "schema"
-          },
-          "message": "must have required property 'schema'",
-          "hasInstanceValue": true,
-          "instanceValue": {
-            "$ref": "#/paths/~1v2~1account~1keys~1{ssh_key_identifier}/get/parameters/0"
-          },
-          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/digitalocean.com/2.0/openapi.yaml#L1189"
-        },
-        {
-          "instancePath": "/paths/~1v2~1account~1keys~1{ssh_key_identifier}/delete/parameters/0",
-          "schemaPath": "#/definitions/SchemaXORContent/oneOf/1/required",
-          "keyword": "required",
-          "params": {
-            "missingProperty": "content"
-          },
-          "message": "must have required property 'content'",
-          "hasInstanceValue": true,
-          "instanceValue": {
-            "$ref": "#/paths/~1v2~1account~1keys~1{ssh_key_identifier}/get/parameters/0"
-          },
-          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/digitalocean.com/2.0/openapi.yaml#L1189"
-        },
-        {
-          "instancePath": "/paths/~1v2~1account~1keys~1{ssh_key_identifier}/delete/parameters/0",
-          "schemaPath": "#/definitions/SchemaXORContent/oneOf",
-          "keyword": "oneOf",
-          "params": {
-            "passingSchemas": null
-          },
-          "message": "must match exactly one schema in oneOf",
-          "hasInstanceValue": true,
-          "instanceValue": {
-            "$ref": "#/paths/~1v2~1account~1keys~1{ssh_key_identifier}/get/parameters/0"
-          },
-          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/digitalocean.com/2.0/openapi.yaml#L1189"
-        },
-        {
-          "instancePath": "/paths/~1v2~1account~1keys~1{ssh_key_identifier}/delete/parameters/0/$ref",
-          "schemaPath": "#/definitions/Reference/patternProperties/%5E%5C%24ref%24/format",
-          "keyword": "format",
-          "params": {
-            "format": "uri-reference"
-          },
-          "message": "must match format \"uri-reference\"",
-          "hasInstanceValue": true,
-          "instanceValue": "#/paths/~1v2~1account~1keys~1{ssh_key_identifier}/get/parameters/0",
-          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/digitalocean.com/2.0/openapi.yaml#L1195"
-        },
-        {
-          "instancePath": "/paths/~1v2~1account~1keys~1{ssh_key_identifier}/delete/parameters/0",
-          "schemaPath": "#/properties/parameters/items/oneOf",
-          "keyword": "oneOf",
-          "params": {
-            "passingSchemas": null
-          },
-          "message": "must match exactly one schema in oneOf",
-          "hasInstanceValue": true,
-          "instanceValue": {
-            "$ref": "#/paths/~1v2~1account~1keys~1{ssh_key_identifier}/get/parameters/0"
-          },
-          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/digitalocean.com/2.0/openapi.yaml#L1189"
-        }
-      ]
-    },
-    "knownFailed": true
-  },
   "googleapis.com:datacatalog": {
     "name": "googleapis.com:datacatalog",
     "apiVersion": "v1beta1",
@@ -359,12 +277,12 @@
   },
   "openapi-generator.tech": {
     "name": "openapi-generator.tech",
-    "apiVersion": "5.1.1",
+    "apiVersion": "5.2.0",
     "openApiVersion": "2.0",
-    "yamlUrl": "https://api.apis.guru/v2/specs/openapi-generator.tech/5.1.1/swagger.yaml",
-    "jsonUrl": "https://api.apis.guru/v2/specs/openapi-generator.tech/5.1.1/swagger.json",
-    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml",
-    "updated": "2021-06-21T12:16:53.715Z",
+    "yamlUrl": "https://api.apis.guru/v2/specs/openapi-generator.tech/5.2.0/swagger.yaml",
+    "jsonUrl": "https://api.apis.guru/v2/specs/openapi-generator.tech/5.2.0/swagger.json",
+    "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.0/swagger.yaml",
+    "updated": "2021-07-12T10:31:14.269Z",
     "result": {
       "valid": false,
       "errors": [
@@ -381,7 +299,7 @@
             "$ref": "#/definitions/CliOption",
             "originalRef": "CliOption"
           },
-          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml#L61"
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.0/swagger.yaml#L61"
         },
         {
           "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200/schema/additionalProperties",
@@ -396,7 +314,7 @@
             "$ref": "#/definitions/CliOption",
             "originalRef": "CliOption"
           },
-          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml#L61"
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.0/swagger.yaml#L61"
         },
         {
           "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200/schema/additionalProperties",
@@ -409,7 +327,7 @@
             "$ref": "#/definitions/CliOption",
             "originalRef": "CliOption"
           },
-          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml#L61"
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.0/swagger.yaml#L61"
         },
         {
           "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200/schema",
@@ -427,7 +345,7 @@
             },
             "type": "object"
           },
-          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml#L60"
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.0/swagger.yaml#L60"
         },
         {
           "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200/schema",
@@ -445,7 +363,7 @@
             },
             "type": "object"
           },
-          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml#L60"
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.0/swagger.yaml#L60"
         },
         {
           "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200",
@@ -466,7 +384,7 @@
               "type": "object"
             }
           },
-          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml#L58"
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.0/swagger.yaml#L58"
         },
         {
           "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200",
@@ -487,11 +405,10 @@
               "type": "object"
             }
           },
-          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml#L58"
+          "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.0/swagger.yaml#L58"
         }
       ]
-    },
-    "knownFailed": true
+    }
   },
   "opensuse.org:obs": {
     "name": "opensuse.org:obs",

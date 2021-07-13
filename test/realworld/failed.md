@@ -1,7 +1,7 @@
 # Results of real world testing
-Report generated at: Sun Jul 11 2021 20:39:05 GMT+0200 (Central European Summer Time)
+Report generated at: Tue Jul 13 2021 17:44:27 GMT+0000 (Coordinated Universal Time)
 
-Number of APIs failing validation: 14
+Number of APIs failing validation: 13
 
 
 
@@ -125,47 +125,6 @@ AJV errors:
 
     
 
-## API: digitalocean\.com (version: 2.0) 
-OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/digitalocean.com/2.0/openapi.yaml)
-
-API updated: 2021-07-05T15:07:17.927Z
-
-### Path: /paths/\~1v2\~1account\~1keys\~1\{ssh_key_identifier\}/delete/parameters/0
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/digitalocean.com/2.0/openapi.yaml#L1189)
-
-Value: 
-```json
-{
-  "$ref": "#/paths/~1v2~1account~1keys~1{ssh_key_identifier}/get/parameters/0"
-}
-```
-
-AJV errors:
-
-   |Keyword |Params |Message |
-   |--------|-------|--------|
-   |required |{"missingProperty":"schema"}| must have required property 'schema'
-   |required |{"missingProperty":"content"}| must have required property 'content'
-   |oneOf |{"passingSchemas":null}| must match exactly one schema in oneOf
-
-### Path: /paths/\~1v2\~1account\~1keys\~1\{ssh_key_identifier\}/delete/parameters/0/\$ref
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/digitalocean.com/2.0/openapi.yaml#L1195)
-
-Value: 
-```json
-"#/paths/~1v2~1account~1keys~1{ssh_key_identifier}/get/parameters/0"
-```
-
-AJV errors:
-
-   |Keyword |Params |Message |
-   |--------|-------|--------|
-   |format |{"format":"uri-reference"}| must match format "uri-reference"
-
-    
-
 ## API: googleapis\.com:datacatalog (version: v1beta1) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 
@@ -186,15 +145,15 @@ AJV errors:
 
     
 
-## API: openapi-generator\.tech (version: 5.1.1) 
+## API: openapi-generator\.tech (version: 5.2.0) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml)
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.0/swagger.yaml)
 
-API updated: 2021-06-21T12:16:53.715Z
+API updated: 2021-07-12T10:31:14.269Z
 
 ### Path: /paths/\~1api\~1gen\~1clients\~1\{language\}/get/responses/200/schema/additionalProperties
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml#L61)
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.0/swagger.yaml#L61)
 
 Value: 
 ```json
@@ -213,7 +172,7 @@ AJV errors:
    |anyOf |{}| must match a schema in anyOf
 
 ### Path: /paths/\~1api\~1gen\~1clients\~1\{language\}/get/responses/200/schema
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml#L60)
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.0/swagger.yaml#L60)
 
 Value: 
 ```json
@@ -234,7 +193,7 @@ AJV errors:
    |oneOf |{"passingSchemas":null}| must match exactly one schema in oneOf
 
 ### Path: /paths/\~1api\~1gen\~1clients\~1\{language\}/get/responses/200
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.1.1/swagger.yaml#L58)
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.0/swagger.yaml#L58)
 
 Value: 
 ```json
