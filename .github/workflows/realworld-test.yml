@@ -25,13 +25,13 @@ jobs:
     - name: Use Node.js latest version
       uses: actions/setup-node@v2
       with:
-        node-version: "*"
+        node-version: "14"
     - run: npm ci --ignore-scripts --no-audit --no-progress --prefer-offline
     - run: npm run build --if-present
     - name: Start the test
       env: 
         GITHUB_EVENT_INPUTS_DELAY: ${{ github.event.inputs.delay }}
-      run: npm run realWorldTest
+      run: npm run realWorldTestCI
     - name: push changes to remote
       run: |
         git add test/realworld/failed*
