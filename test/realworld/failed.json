@@ -1,7 +1,7 @@
 {
-  "testDate": "2021-07-14T04:53:07.538Z",
+  "testDate": "2021-07-14T05:04:09.253Z",
   "totalApiCount": 2286,
-  "testedAPICount": 13,
+  "testedAPICount": 2286,
   "failedAPICount": 13,
   "knownFailedCount": 12,
   "failedTests": [
@@ -24,7 +24,7 @@
               "additionalProperty": "authorizationUrl"
             },
             "message": "must NOT have additional properties",
-            "hasInstanceValue": false,
+            "hasInstanceValue": true,
             "instanceValue": {
               "authorizationUrl": "",
               "flow": "implicit",

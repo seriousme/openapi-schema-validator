@@ -1,10 +1,10 @@
 # Results of real world testing
-Report generated at: Wed Jul 14 2021 06:53:07 GMT+0200 (Central European Summer Time)
+Report generated at: Wed Jul 14 2021 05:04:09 GMT+0000 (Coordinated Universal Time)
 
 | APIs at [apis.guru](https://apis.guru) | #
 |--------|-------|
 |Total |2286 
-|Tested |13
+|Tested |2286
 |Failed validation | 13
 
 
