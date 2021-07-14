@@ -24,7 +24,7 @@
               "additionalProperty": "authorizationUrl"
             },
             "message": "must NOT have additional properties",
-            "hasInstanceValue": true,
+            "hasInstanceValue": false,
             "instanceValue": {
               "authorizationUrl": "",
               "flow": "implicit",
