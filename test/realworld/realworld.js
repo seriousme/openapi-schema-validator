@@ -12,9 +12,21 @@ const reportFile = `${__dirname}/failed.md`;
 const newFailedFile = `${__dirname}/failed.updated.json`;
 const newReportFile = `${__dirname}/failed.updated.md`;
 const defaultPercentage = 10;
+const failedMap = loadFailedData(failedFile);
 
-const failedData = require(failedFile);
-const failedMap = new Map(Object.entries(failedData));
+
+function loadFailedData(fileName) {
+  const dataMap = new Map();
+  try {
+    const data = require(fileName);
+    data.failedTests = data.failedTests || [];
+    data.failedTests.forEach(item => dataMap.set(item.name, item));
+    return dataMap;
+  } catch (_) {
+    return dataMap;
+  }
+}
+
 
 function sample(fullMap, percentage) {
   const { floor, random } = Math;
@@ -115,6 +127,7 @@ async function fetchApiList(percentage, onlyFailed = false) {
     throw new Error("Unable to download real-world APIs from apis.guru");
   }
   const apiList = await response.json();
+  const apiListSize = Object.keys(apiList).length;
   const apiMap = new Map();
   for (const key in apiList) {
     if (!onlyFailed || failedMap.has(key)) {
@@ -135,10 +148,10 @@ async function fetchApiList(percentage, onlyFailed = false) {
     console.log(
       `testing a random set containing ${percentage}% of ${apiMap.size} available APIs`
     );
-    return sample(apiMap, percentage);
+    return [sample(apiMap, percentage), apiListSize, apiMap.size];
   }
-  console.log(`testing all ${apiMap.size} available APIs`);
-  return apiMap;
+  console.log(`testing ${apiMap.size} of ${apiListSize} available APIs`);
+  return [apiMap, apiListSize, apiMap.size];
 }
 
 async function fetchYaml(url) {
@@ -154,7 +167,7 @@ async function testAPIs(percentage, onlyFailed, ci) {
   if (onlyFailed || ci) {
     percentage = 100;
   }
-  const apiList = await fetchApiList(percentage, onlyFailed);
+  const [apiList, totalSize, latestSize] = await fetchApiList(percentage, onlyFailed);
   const failed = new Map();
   const results = {
     total: apiList.size,
@@ -205,8 +218,14 @@ async function testAPIs(percentage, onlyFailed, ci) {
     if (percentage === 100) {
       const jsonFile = ci ? failedFile : newFailedFile;
       const mdFile = ci ? reportFile : newReportFile;
-      const data = Object.fromEntries(failed);
-
+      const data = {
+        testDate: new Date().toISOString(),
+        totalApiCount: totalSize,
+        testedAPICount: results.total,
+        failedAPICount: results.invalid,
+        knownFailedCount: results.knownFailed,
+        failedTests: Array.from(failed.values())
+      }
       console.log(`new/updated failures found`);
       console.log(`creating ${jsonFile}`);
       writeFileSync(

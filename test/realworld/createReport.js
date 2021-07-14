@@ -53,12 +53,15 @@ ${item.errors.map(err => `   |${err.keyword} |${err.params}| ${err.message}`).jo
 
 function createReport(results) {
     return `# Results of real world testing
-Report generated at: ${new Date()}
+Report generated at: ${new Date(Date.parse(results.testDate))}
 
-Number of APIs failing validation: ${Object.values(results).length}
+| APIs at [apis.guru](https://apis.guru) | #
+|--------|-------|
+|Total |${results.totalApiCount} 
+|Tested |${results.testedAPICount}
+|Failed validation | ${results.failedAPICount}
 
-
-${Object.values(results).map(item => `
+${results.failedTests.map(item => `
 ## API: ${escapeMarkDown(item.name)} (version: ${item.apiVersion}) 
 ${item.openApiVersion === "2.0" ? "Swagger" : "OpenApi"}: [${item.openApiVersion}](https://spec.openapis.org/oas/v${item.openApiVersion})
 [JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v${item.openApiVersion})

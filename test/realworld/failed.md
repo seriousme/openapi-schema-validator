@@ -1,12 +1,16 @@
 # Results of real world testing
-Report generated at: Tue Jul 13 2021 17:44:27 GMT+0000 (Coordinated Universal Time)
+Report generated at: Wed Jul 14 2021 06:53:07 GMT+0200 (Central European Summer Time)
 
-Number of APIs failing validation: 13
-
+| APIs at [apis.guru](https://apis.guru) | #
+|--------|-------|
+|Total |2286 
+|Tested |13
+|Failed validation | 13
 
 
 ## API: airport-web\.appspot\.com (version: v1) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/airport-web.appspot.com/v1/swagger.yaml)
 
@@ -53,6 +57,7 @@ AJV errors:
 
 ## API: ato\.gov\.au (version: 0.0.6) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/ato.gov.au/0.0.6/swagger.yaml)
 
@@ -81,6 +86,7 @@ AJV errors:
 
 ## API: azure\.com:servicebus (version: 2017-04-01) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/servicebus/2017-04-01/swagger.yaml)
 
@@ -104,6 +110,7 @@ AJV errors:
 
 ## API: azure\.com:storageimportexport (version: 2016-11-01) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/storageimportexport/2016-11-01/swagger.yaml)
 
@@ -127,6 +134,7 @@ AJV errors:
 
 ## API: googleapis\.com:datacatalog (version: v1beta1) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/datacatalog/v1beta1/openapi.yaml)
 
@@ -147,6 +155,7 @@ AJV errors:
 
 ## API: openapi-generator\.tech (version: 5.2.0) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.0/swagger.yaml)
 
@@ -220,6 +229,7 @@ AJV errors:
 
 ## API: opensuse\.org:obs (version: 2.10.50) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml)
 
@@ -500,6 +510,7 @@ AJV errors:
 
 ## API: parliament\.uk:statutoryinstruments (version: v1) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/statutoryinstruments/v1/swagger.yaml)
 
@@ -523,6 +534,7 @@ AJV errors:
 
 ## API: parliament\.uk:treaties (version: v1) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/treaties/v1/swagger.yaml)
 
@@ -546,6 +558,7 @@ AJV errors:
 
 ## API: prss\.org (version: 2.0.0) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml)
 
@@ -614,6 +627,7 @@ AJV errors:
 
 ## API: trashnothing\.com (version: 1.2) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/trashnothing.com/1.2/openapi.yaml)
 
@@ -637,6 +651,7 @@ AJV errors:
 
 ## API: twinehealth\.com (version: v7.78.1) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml)
 
@@ -700,6 +715,7 @@ AJV errors:
 
 ## API: whapi\.com:numbers (version: 2.0) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/whapi.com/numbers/2.0/swagger.yaml)
 

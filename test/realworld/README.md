@@ -1,6 +1,8 @@
 # Real world tests
 
-This folder contains `readworld.js` that can test about 2300 real world API's from https://apis.guru/,
+This folder contains `readworld.js` that tests real world API's from https://apis.guru/.
+It only tests the latest versions of those API's hence the number of tests is lower than the full number of tests.
+
 The script errors on these into account via [`failed.json`](failed.json). The [`failed.md`](failed.md) contains a human readable report, including relevant links and snippets of the errors in `failed.json`.
 
 Once the script completes it creates a `failed.update.json` which you can diff with `failed.json`.
