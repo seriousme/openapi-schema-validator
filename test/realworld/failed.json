@@ -1,9 +1,9 @@
 {
-  "testDate": "2021-07-14T05:04:09.253Z",
-  "totalApiCount": 2286,
-  "testedAPICount": 2286,
-  "failedAPICount": 13,
-  "knownFailedCount": 12,
+  "testDate": "2021-07-29T16:55:09.751Z",
+  "totalApiCount": 2300,
+  "testedAPICount": 2300,
+  "failedAPICount": 15,
+  "knownFailedCount": 13,
   "failedTests": [
     {
       "name": "airport-web.appspot.com",
@@ -137,6 +137,33 @@
             "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/airport-web.appspot.com/v1/swagger.yaml#L24"
           }
         ]
+      },
+      "knownFailed": true
+    },
+    {
+      "name": "apideck.com:vault",
+      "apiVersion": "4.3.2",
+      "openApiVersion": "3.0.3",
+      "yamlUrl": "https://api.apis.guru/v2/specs/apideck.com/vault/4.3.2/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/apideck.com/vault/4.3.2/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/apideck.com/vault/4.3.2/openapi.yaml",
+      "updated": "2021-07-27T23:16:29.233Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/paths/~1vault~1authorize~1{service_id}~1{application_id}/get/security",
+            "schemaPath": "#/properties/security/type",
+            "keyword": "type",
+            "params": {
+              "type": "array"
+            },
+            "message": "must be array",
+            "hasInstanceValue": true,
+            "instanceValue": null,
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/apideck.com/vault/4.3.2/openapi.yaml#L227"
+          }
+        ]
       }
     },
     {
@@ -252,6 +279,126 @@
         ]
       },
       "knownFailed": true
+    },
+    {
+      "name": "gambitcomm.local:mimic",
+      "apiVersion": "21.00",
+      "openApiVersion": "3.0.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/gambitcomm.local/mimic/21.00/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/gambitcomm.local/mimic/21.00/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/gambitcomm.local/mimic/21.00/openapi.yaml",
+      "updated": "2021-07-27T15:26:52.216Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/paths/~1mimic~1agent~1{agentNum}~1get~1delay/get/responses/200/links/address/operationRef",
+            "schemaPath": "#/properties/operationRef/format",
+            "keyword": "format",
+            "params": {
+              "format": "uri-reference"
+            },
+            "message": "must match format \"uri-reference\"",
+            "hasInstanceValue": true,
+            "instanceValue": "#/mimic/agent/{agentNum}/get/start",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/gambitcomm.local/mimic/21.00/openapi.yaml#L480"
+          },
+          {
+            "instancePath": "/paths/~1mimic~1agent~1{agentNum}~1get~1delay/get/responses/200/links/address",
+            "schemaPath": "#/definitions/Reference/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "$ref"
+            },
+            "message": "must have required property '$ref'",
+            "hasInstanceValue": true,
+            "instanceValue": {
+              "operationRef": "#/mimic/agent/{agentNum}/get/start",
+              "parameters": {
+                "agentNum": "$request.body#/agentNum"
+              }
+            },
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/gambitcomm.local/mimic/21.00/openapi.yaml#L479"
+          },
+          {
+            "instancePath": "/paths/~1mimic~1agent~1{agentNum}~1get~1delay/get/responses/200/links/address",
+            "schemaPath": "#/properties/links/additionalProperties/oneOf",
+            "keyword": "oneOf",
+            "params": {
+              "passingSchemas": null
+            },
+            "message": "must match exactly one schema in oneOf",
+            "hasInstanceValue": true,
+            "instanceValue": {
+              "operationRef": "#/mimic/agent/{agentNum}/get/start",
+              "parameters": {
+                "agentNum": "$request.body#/agentNum"
+              }
+            },
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/gambitcomm.local/mimic/21.00/openapi.yaml#L479"
+          },
+          {
+            "instancePath": "/paths/~1mimic~1agent~1{agentNum}~1get~1delay/get/responses/200",
+            "schemaPath": "#/definitions/Reference/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "$ref"
+            },
+            "message": "must have required property '$ref'",
+            "hasInstanceValue": true,
+            "instanceValue": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "format": "int32",
+                    "type": "integer"
+                  }
+                }
+              },
+              "description": "successful operation",
+              "links": {
+                "address": {
+                  "operationRef": "#/mimic/agent/{agentNum}/get/start",
+                  "parameters": {
+                    "agentNum": "$request.body#/agentNum"
+                  }
+                }
+              }
+            },
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/gambitcomm.local/mimic/21.00/openapi.yaml#L471"
+          },
+          {
+            "instancePath": "/paths/~1mimic~1agent~1{agentNum}~1get~1delay/get/responses/200",
+            "schemaPath": "#/patternProperties/%5E%5B1-5%5D(%3F%3A%5Cd%7B2%7D%7CXX)%24/oneOf",
+            "keyword": "oneOf",
+            "params": {
+              "passingSchemas": null
+            },
+            "message": "must match exactly one schema in oneOf",
+            "hasInstanceValue": true,
+            "instanceValue": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "format": "int32",
+                    "type": "integer"
+                  }
+                }
+              },
+              "description": "successful operation",
+              "links": {
+                "address": {
+                  "operationRef": "#/mimic/agent/{agentNum}/get/start",
+                  "parameters": {
+                    "agentNum": "$request.body#/agentNum"
+                  }
+                }
+              }
+            },
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/gambitcomm.local/mimic/21.00/openapi.yaml#L471"
+          }
+        ]
+      }
     },
     {
       "name": "googleapis.com:datacatalog",
@@ -1102,7 +1249,7 @@
       "yamlUrl": "https://api.apis.guru/v2/specs/trashnothing.com/1.2/openapi.yaml",
       "jsonUrl": "https://api.apis.guru/v2/specs/trashnothing.com/1.2/openapi.json",
       "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/trashnothing.com/1.2/openapi.yaml",
-      "updated": "2021-06-21T12:16:53.715Z",
+      "updated": "2021-07-26T08:51:53.432Z",
       "result": {
         "valid": false,
         "errors": [

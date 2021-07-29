@@ -1,11 +1,11 @@
 # Results of real world testing
-Report generated at: Wed Jul 14 2021 05:04:09 GMT+0000 (Coordinated Universal Time)
+Report generated at: Thu Jul 29 2021 16:55:09 GMT+0000 (Coordinated Universal Time)
 
 | APIs at [apis.guru](https://apis.guru) | #
 |--------|-------|
-|Total |2286 
-|Tested |2286
-|Failed validation | 13
+|Total |2300 
+|Tested |2300
+|Failed validation | 15
 
 
 ## API: airport-web\.appspot\.com (version: v1) 
@@ -52,6 +52,30 @@ AJV errors:
    |Keyword |Params |Message |
    |--------|-------|--------|
    |format |{"format":"uri"}| must match format "uri"
+
+    
+
+## API: apideck\.com:vault (version: 4.3.2) 
+OpenApi: [3.0.3](https://spec.openapis.org/oas/v3.0.3)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.3)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/apideck.com/vault/4.3.2/openapi.yaml)
+
+API updated: 2021-07-27T23:16:29.233Z
+
+### Path: /paths/\~1vault\~1authorize\~1\{service_id\}\~1\{application_id\}/get/security
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/apideck.com/vault/4.3.2/openapi.yaml#L227)
+
+Value: 
+```json
+null
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |type |{"type":"array"}| must be array
 
     
 
@@ -129,6 +153,83 @@ AJV errors:
    |Keyword |Params |Message |
    |--------|-------|--------|
    |format |{"format":"uri"}| must match format "uri"
+
+    
+
+## API: gambitcomm\.local:mimic (version: 21.00) 
+OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/gambitcomm.local/mimic/21.00/openapi.yaml)
+
+API updated: 2021-07-27T15:26:52.216Z
+
+### Path: /paths/\~1mimic\~1agent\~1\{agentNum\}\~1get\~1delay/get/responses/200/links/address/operationRef
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/gambitcomm.local/mimic/21.00/openapi.yaml#L480)
+
+Value: 
+```json
+"#/mimic/agent/{agentNum}/get/start"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |format |{"format":"uri-reference"}| must match format "uri-reference"
+
+### Path: /paths/\~1mimic\~1agent\~1\{agentNum\}\~1get\~1delay/get/responses/200/links/address
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/gambitcomm.local/mimic/21.00/openapi.yaml#L479)
+
+Value: 
+```json
+{
+  "operationRef": "#/mimic/agent/{agentNum}/get/start",
+  "parameters": {
+    "agentNum": "$request.body#/agentNum"
+  }
+}
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |required |{"missingProperty":"$ref"}| must have required property '$ref'
+   |oneOf |{"passingSchemas":null}| must match exactly one schema in oneOf
+
+### Path: /paths/\~1mimic\~1agent\~1\{agentNum\}\~1get\~1delay/get/responses/200
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/gambitcomm.local/mimic/21.00/openapi.yaml#L471)
+
+Value: 
+```json
+{
+  "content": {
+    "application/json": {
+      "schema": {
+        "format": "int32",
+        "type": "integer"
+      }
+    }
+  },
+  "description": "successful operation",
+  "links": {
+    "address": {
+      "operationRef": "#/mimic/agent/{agentNum}/get/start",
+      "parameters": {
+        "agentNum": "$request.body#/agentNum"
+      }
+    }
+  }
+}
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |required |{"missingProperty":"$ref"}| must have required property '$ref'
+   |oneOf |{"passingSchemas":null}| must match exactly one schema in oneOf
 
     
 
@@ -631,7 +732,7 @@ OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/trashnothing.com/1.2/openapi.yaml)
 
-API updated: 2021-06-21T12:16:53.715Z
+API updated: 2021-07-26T08:51:53.432Z
 
 ### Path: /info/termsOfService
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/trashnothing.com/1.2/openapi.yaml#L15)
