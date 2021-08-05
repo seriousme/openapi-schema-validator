@@ -1,7 +1,7 @@
 {
-  "testDate": "2021-07-29T16:55:09.751Z",
-  "totalApiCount": 2300,
-  "testedAPICount": 2300,
+  "testDate": "2021-08-05T16:55:17.729Z",
+  "totalApiCount": 2303,
+  "testedAPICount": 2303,
   "failedAPICount": 15,
   "knownFailedCount": 13,
   "failedTests": [
@@ -142,12 +142,12 @@
     },
     {
       "name": "apideck.com:vault",
-      "apiVersion": "4.3.2",
+      "apiVersion": "5.0.0",
       "openApiVersion": "3.0.3",
-      "yamlUrl": "https://api.apis.guru/v2/specs/apideck.com/vault/4.3.2/openapi.yaml",
-      "jsonUrl": "https://api.apis.guru/v2/specs/apideck.com/vault/4.3.2/openapi.json",
-      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/apideck.com/vault/4.3.2/openapi.yaml",
-      "updated": "2021-07-27T23:16:29.233Z",
+      "yamlUrl": "https://api.apis.guru/v2/specs/apideck.com/vault/5.0.0/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/apideck.com/vault/5.0.0/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/apideck.com/vault/5.0.0/openapi.yaml",
+      "updated": "2021-08-02T23:15:21.265Z",
       "result": {
         "valid": false,
         "errors": [
@@ -161,7 +161,7 @@
             "message": "must be array",
             "hasInstanceValue": true,
             "instanceValue": null,
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/apideck.com/vault/4.3.2/openapi.yaml#L227"
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/apideck.com/vault/5.0.0/openapi.yaml#L235"
           }
         ]
       }
@@ -398,7 +398,8 @@
             "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/gambitcomm.local/mimic/21.00/openapi.yaml#L471"
           }
         ]
-      }
+      },
+      "knownFailed": true
     },
     {
       "name": "googleapis.com:datacatalog",
@@ -570,7 +571,7 @@
       "yamlUrl": "https://api.apis.guru/v2/specs/opensuse.org/obs/2.10.50/openapi.yaml",
       "jsonUrl": "https://api.apis.guru/v2/specs/opensuse.org/obs/2.10.50/openapi.json",
       "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml",
-      "updated": "2021-07-11T13:49:21.785Z",
+      "updated": "2021-08-02T08:20:08.766Z",
       "result": {
         "valid": false,
         "errors": [
@@ -587,7 +588,7 @@
               "attribute": true,
               "example": "http://opensuse.org/Standards/One_Click_Install"
             },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L4020"
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L4023"
           },
           {
             "instancePath": "/paths/~1published~1{project_name}~1{repository_name}~1{architecture_name}~1{binary_filename}?view=ymp/get/responses/200/content/application~1xml; charset=utf-8/schema/properties/xmlns",
@@ -605,7 +606,7 @@
                 "example": "http://opensuse.org/Standards/One_Click_Install"
               }
             },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L4018"
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L4021"
           },
           {
             "instancePath": "/paths/~1published~1{project_name}~1{repository_name}~1{architecture_name}~1{binary_filename}?view=ymp/get/responses/200/content/application~1xml; charset=utf-8/schema/properties/xmlns",
@@ -623,7 +624,7 @@
                 "example": "http://opensuse.org/Standards/One_Click_Install"
               }
             },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L4018"
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L4021"
           },
           {
             "instancePath": "/paths/~1published~1{project_name}~1{repository_name}~1{architecture_name}~1{binary_filename}?view=ymp/get/responses/200/content/application~1xml; charset=utf-8/schema",
@@ -717,7 +718,7 @@
                 "name": "metapackage"
               }
             },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L3977"
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L3980"
           },
           {
             "instancePath": "/paths/~1published~1{project_name}~1{repository_name}~1{architecture_name}~1{binary_filename}?view=ymp/get/responses/200/content/application~1xml; charset=utf-8/schema",
@@ -811,7 +812,7 @@
                 "name": "metapackage"
               }
             },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L3977"
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L3980"
           },
           {
             "instancePath": "/paths/~1published~1{project_name}~1{repository_name}~1{architecture_name}~1{binary_filename}?view=ymp/get/responses/200",
@@ -944,7 +945,7 @@
               },
               "description": "OK."
             },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L3952"
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L3955"
           },
           {
             "instancePath": "/paths/~1published~1{project_name}~1{repository_name}~1{architecture_name}~1{binary_filename}?view=ymp/get/responses/200",
@@ -1077,11 +1078,10 @@
               },
               "description": "OK."
             },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L3952"
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L3955"
           }
         ]
-      },
-      "knownFailed": true
+      }
     },
     {
       "name": "parliament.uk:statutoryinstruments",

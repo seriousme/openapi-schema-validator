@@ -1,10 +1,10 @@
 # Results of real world testing
-Report generated at: Thu Jul 29 2021 16:55:09 GMT+0000 (Coordinated Universal Time)
+Report generated at: Thu Aug 05 2021 16:55:17 GMT+0000 (Coordinated Universal Time)
 
 | APIs at [apis.guru](https://apis.guru) | #
 |--------|-------|
-|Total |2300 
-|Tested |2300
+|Total |2303 
+|Tested |2303
 |Failed validation | 15
 
 
@@ -55,16 +55,16 @@ AJV errors:
 
     
 
-## API: apideck\.com:vault (version: 4.3.2) 
+## API: apideck\.com:vault (version: 5.0.0) 
 OpenApi: [3.0.3](https://spec.openapis.org/oas/v3.0.3)
 [JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.3)
 
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/apideck.com/vault/4.3.2/openapi.yaml)
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/apideck.com/vault/5.0.0/openapi.yaml)
 
-API updated: 2021-07-27T23:16:29.233Z
+API updated: 2021-08-02T23:15:21.265Z
 
 ### Path: /paths/\~1vault\~1authorize\~1\{service_id\}\~1\{application_id\}/get/security
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/apideck.com/vault/4.3.2/openapi.yaml#L227)
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/apideck.com/vault/5.0.0/openapi.yaml#L235)
 
 Value: 
 ```json
@@ -334,10 +334,10 @@ OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml)
 
-API updated: 2021-07-11T13:49:21.785Z
+API updated: 2021-08-02T08:20:08.766Z
 
 ### Path: /paths/\~1published\~1\{project_name\}\~1\{repository_name\}\~1\{architecture_name\}\~1\{binary_filename\}\?view=ymp/get/responses/200/content/application\~1xml; charset=utf-8/schema/properties/xmlns/xml
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L4020)
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L4023)
 
 Value: 
 ```json
@@ -354,7 +354,7 @@ AJV errors:
    |additionalProperties |{"additionalProperty":"example"}| must NOT have additional properties
 
 ### Path: /paths/\~1published\~1\{project_name\}\~1\{repository_name\}\~1\{architecture_name\}\~1\{binary_filename\}\?view=ymp/get/responses/200/content/application\~1xml; charset=utf-8/schema/properties/xmlns
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L4018)
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L4021)
 
 Value: 
 ```json
@@ -375,7 +375,7 @@ AJV errors:
    |oneOf |{"passingSchemas":null}| must match exactly one schema in oneOf
 
 ### Path: /paths/\~1published\~1\{project_name\}\~1\{repository_name\}\~1\{architecture_name\}\~1\{binary_filename\}\?view=ymp/get/responses/200/content/application\~1xml; charset=utf-8/schema
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L3977)
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L3980)
 
 Value: 
 ```json
@@ -472,7 +472,7 @@ AJV errors:
    |oneOf |{"passingSchemas":null}| must match exactly one schema in oneOf
 
 ### Path: /paths/\~1published\~1\{project_name\}\~1\{repository_name\}\~1\{architecture_name\}\~1\{binary_filename\}\?view=ymp/get/responses/200
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L3952)
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L3955)
 
 Value: 
 ```json
