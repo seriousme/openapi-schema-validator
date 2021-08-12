@@ -1,10 +1,10 @@
 # Results of real world testing
-Report generated at: Thu Aug 05 2021 16:55:17 GMT+0000 (Coordinated Universal Time)
+Report generated at: Thu Aug 12 2021 16:54:10 GMT+0000 (Coordinated Universal Time)
 
 | APIs at [apis.guru](https://apis.guru) | #
 |--------|-------|
-|Total |2303 
-|Tested |2303
+|Total |2309 
+|Tested |2309
 |Failed validation | 15
 
 
@@ -55,16 +55,16 @@ AJV errors:
 
     
 
-## API: apideck\.com:vault (version: 5.0.0) 
+## API: apideck\.com:vault (version: 5.0.1) 
 OpenApi: [3.0.3](https://spec.openapis.org/oas/v3.0.3)
 [JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.3)
 
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/apideck.com/vault/5.0.0/openapi.yaml)
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/apideck.com/vault/5.0.1/openapi.yaml)
 
-API updated: 2021-08-02T23:15:21.265Z
+API updated: 2021-08-11T23:18:49.062Z
 
 ### Path: /paths/\~1vault\~1authorize\~1\{service_id\}\~1\{application_id\}/get/security
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/apideck.com/vault/5.0.0/openapi.yaml#L235)
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/apideck.com/vault/5.0.1/openapi.yaml#L235)
 
 Value: 
 ```json

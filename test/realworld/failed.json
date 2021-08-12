@@ -1,9 +1,9 @@
 {
-  "testDate": "2021-08-05T16:55:17.729Z",
-  "totalApiCount": 2303,
-  "testedAPICount": 2303,
+  "testDate": "2021-08-12T16:54:10.453Z",
+  "totalApiCount": 2309,
+  "testedAPICount": 2309,
   "failedAPICount": 15,
-  "knownFailedCount": 13,
+  "knownFailedCount": 14,
   "failedTests": [
     {
       "name": "airport-web.appspot.com",
@@ -142,12 +142,12 @@
     },
     {
       "name": "apideck.com:vault",
-      "apiVersion": "5.0.0",
+      "apiVersion": "5.0.1",
       "openApiVersion": "3.0.3",
-      "yamlUrl": "https://api.apis.guru/v2/specs/apideck.com/vault/5.0.0/openapi.yaml",
-      "jsonUrl": "https://api.apis.guru/v2/specs/apideck.com/vault/5.0.0/openapi.json",
-      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/apideck.com/vault/5.0.0/openapi.yaml",
-      "updated": "2021-08-02T23:15:21.265Z",
+      "yamlUrl": "https://api.apis.guru/v2/specs/apideck.com/vault/5.0.1/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/apideck.com/vault/5.0.1/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/apideck.com/vault/5.0.1/openapi.yaml",
+      "updated": "2021-08-11T23:18:49.062Z",
       "result": {
         "valid": false,
         "errors": [
@@ -161,7 +161,7 @@
             "message": "must be array",
             "hasInstanceValue": true,
             "instanceValue": null,
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/apideck.com/vault/5.0.0/openapi.yaml#L235"
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/apideck.com/vault/5.0.1/openapi.yaml#L235"
           }
         ]
       }
@@ -1081,7 +1081,8 @@
             "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml#L3955"
           }
         ]
-      }
+      },
+      "knownFailed": true
     },
     {
       "name": "parliament.uk:statutoryinstruments",
