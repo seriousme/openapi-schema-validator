@@ -1,9 +1,9 @@
 {
-  "testDate": "2021-08-12T16:54:10.453Z",
-  "totalApiCount": 2309,
-  "testedAPICount": 2309,
-  "failedAPICount": 15,
-  "knownFailedCount": 14,
+  "testDate": "2021-08-26T16:51:25.215Z",
+  "totalApiCount": 2317,
+  "testedAPICount": 2317,
+  "failedAPICount": 14,
+  "knownFailedCount": 13,
   "failedTests": [
     {
       "name": "airport-web.appspot.com",
@@ -139,32 +139,6 @@
         ]
       },
       "knownFailed": true
-    },
-    {
-      "name": "apideck.com:vault",
-      "apiVersion": "5.0.1",
-      "openApiVersion": "3.0.3",
-      "yamlUrl": "https://api.apis.guru/v2/specs/apideck.com/vault/5.0.1/openapi.yaml",
-      "jsonUrl": "https://api.apis.guru/v2/specs/apideck.com/vault/5.0.1/openapi.json",
-      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/apideck.com/vault/5.0.1/openapi.yaml",
-      "updated": "2021-08-11T23:18:49.062Z",
-      "result": {
-        "valid": false,
-        "errors": [
-          {
-            "instancePath": "/paths/~1vault~1authorize~1{service_id}~1{application_id}/get/security",
-            "schemaPath": "#/properties/security/type",
-            "keyword": "type",
-            "params": {
-              "type": "array"
-            },
-            "message": "must be array",
-            "hasInstanceValue": true,
-            "instanceValue": null,
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/apideck.com/vault/5.0.1/openapi.yaml#L235"
-          }
-        ]
-      }
     },
     {
       "name": "ato.gov.au",
@@ -408,7 +382,7 @@
       "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/datacatalog/v1beta1/openapi.yaml",
       "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/datacatalog/v1beta1/openapi.json",
       "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/datacatalog/v1beta1/openapi.yaml",
-      "updated": "2021-07-05T23:08:37.856Z",
+      "updated": "2021-08-23T23:09:37.165Z",
       "result": {
         "valid": false,
         "errors": [
@@ -430,12 +404,12 @@
     },
     {
       "name": "openapi-generator.tech",
-      "apiVersion": "5.2.0",
+      "apiVersion": "5.2.1",
       "openApiVersion": "2.0",
-      "yamlUrl": "https://api.apis.guru/v2/specs/openapi-generator.tech/5.2.0/swagger.yaml",
-      "jsonUrl": "https://api.apis.guru/v2/specs/openapi-generator.tech/5.2.0/swagger.json",
-      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.0/swagger.yaml",
-      "updated": "2021-07-12T10:31:14.269Z",
+      "yamlUrl": "https://api.apis.guru/v2/specs/openapi-generator.tech/5.2.1/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/openapi-generator.tech/5.2.1/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.1/swagger.yaml",
+      "updated": "2021-08-23T09:34:59.789Z",
       "result": {
         "valid": false,
         "errors": [
@@ -452,7 +426,7 @@
               "$ref": "#/definitions/CliOption",
               "originalRef": "CliOption"
             },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.0/swagger.yaml#L61"
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.1/swagger.yaml#L61"
           },
           {
             "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200/schema/additionalProperties",
@@ -467,7 +441,7 @@
               "$ref": "#/definitions/CliOption",
               "originalRef": "CliOption"
             },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.0/swagger.yaml#L61"
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.1/swagger.yaml#L61"
           },
           {
             "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200/schema/additionalProperties",
@@ -480,7 +454,7 @@
               "$ref": "#/definitions/CliOption",
               "originalRef": "CliOption"
             },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.0/swagger.yaml#L61"
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.1/swagger.yaml#L61"
           },
           {
             "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200/schema",
@@ -498,7 +472,7 @@
               },
               "type": "object"
             },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.0/swagger.yaml#L60"
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.1/swagger.yaml#L60"
           },
           {
             "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200/schema",
@@ -516,7 +490,7 @@
               },
               "type": "object"
             },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.0/swagger.yaml#L60"
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.1/swagger.yaml#L60"
           },
           {
             "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200",
@@ -537,7 +511,7 @@
                 "type": "object"
               }
             },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.0/swagger.yaml#L58"
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.1/swagger.yaml#L58"
           },
           {
             "instancePath": "/paths/~1api~1gen~1clients~1{language}/get/responses/200",
@@ -558,11 +532,10 @@
                 "type": "object"
               }
             },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.0/swagger.yaml#L58"
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.1/swagger.yaml#L58"
           }
         ]
-      },
-      "knownFailed": true
+      }
     },
     {
       "name": "opensuse.org:obs",

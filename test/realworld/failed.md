@@ -1,11 +1,11 @@
 # Results of real world testing
-Report generated at: Thu Aug 12 2021 16:54:10 GMT+0000 (Coordinated Universal Time)
+Report generated at: Thu Aug 26 2021 16:51:25 GMT+0000 (Coordinated Universal Time)
 
 | APIs at [apis.guru](https://apis.guru) | #
 |--------|-------|
-|Total |2309 
-|Tested |2309
-|Failed validation | 15
+|Total |2317 
+|Tested |2317
+|Failed validation | 14
 
 
 ## API: airport-web\.appspot\.com (version: v1) 
@@ -52,30 +52,6 @@ AJV errors:
    |Keyword |Params |Message |
    |--------|-------|--------|
    |format |{"format":"uri"}| must match format "uri"
-
-    
-
-## API: apideck\.com:vault (version: 5.0.1) 
-OpenApi: [3.0.3](https://spec.openapis.org/oas/v3.0.3)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.3)
-
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/apideck.com/vault/5.0.1/openapi.yaml)
-
-API updated: 2021-08-11T23:18:49.062Z
-
-### Path: /paths/\~1vault\~1authorize\~1\{service_id\}\~1\{application_id\}/get/security
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/apideck.com/vault/5.0.1/openapi.yaml#L235)
-
-Value: 
-```json
-null
-```
-
-AJV errors:
-
-   |Keyword |Params |Message |
-   |--------|-------|--------|
-   |type |{"type":"array"}| must be array
 
     
 
@@ -239,7 +215,7 @@ OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/datacatalog/v1beta1/openapi.yaml)
 
-API updated: 2021-07-05T23:08:37.856Z
+API updated: 2021-08-23T23:09:37.165Z
 
 ### Path: 
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/datacatalog/v1beta1/openapi.yaml#L1)
@@ -254,16 +230,16 @@ AJV errors:
 
     
 
-## API: openapi-generator\.tech (version: 5.2.0) 
+## API: openapi-generator\.tech (version: 5.2.1) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 [JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0)
 
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.0/swagger.yaml)
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.1/swagger.yaml)
 
-API updated: 2021-07-12T10:31:14.269Z
+API updated: 2021-08-23T09:34:59.789Z
 
 ### Path: /paths/\~1api\~1gen\~1clients\~1\{language\}/get/responses/200/schema/additionalProperties
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.0/swagger.yaml#L61)
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.1/swagger.yaml#L61)
 
 Value: 
 ```json
@@ -282,7 +258,7 @@ AJV errors:
    |anyOf |{}| must match a schema in anyOf
 
 ### Path: /paths/\~1api\~1gen\~1clients\~1\{language\}/get/responses/200/schema
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.0/swagger.yaml#L60)
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.1/swagger.yaml#L60)
 
 Value: 
 ```json
@@ -303,7 +279,7 @@ AJV errors:
    |oneOf |{"passingSchemas":null}| must match exactly one schema in oneOf
 
 ### Path: /paths/\~1api\~1gen\~1clients\~1\{language\}/get/responses/200
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.0/swagger.yaml#L58)
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.1/swagger.yaml#L58)
 
 Value: 
 ```json
