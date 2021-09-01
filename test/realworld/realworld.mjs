@@ -1,32 +1,33 @@
 // test the validator against the APIs of https://apis.guru
-const Validator = require("../../index.js");
+import { createRequire } from 'module';
+const importJSON = createRequire(import.meta.url);
+const localFile = (fileName) => (new URL(fileName, import.meta.url)).pathname
+import Validator from "../../index.js";
 const validator = new Validator();
-const { writeFileSync } = require("fs");
-const fetch = require("node-fetch");
-const { argv, exit } = require("process");
-const JSYaml = require("js-yaml");
-const { createReport } = require("./createReport.js");
-const yamlOpts = { schema: JSYaml.JSON_SCHEMA };
-const failedFile = `${__dirname}/failed.json`;
-const reportFile = `${__dirname}/failed.md`;
-const newFailedFile = `${__dirname}/failed.updated.json`;
-const newReportFile = `${__dirname}/failed.updated.md`;
+import { writeFileSync } from "fs";
+import fetch from "node-fetch";
+import { argv, exit } from "process";
+import { JSON_SCHEMA, load } from "js-yaml";
+import { createReport } from "./createReport.js";
+const yamlOpts = { schema: JSON_SCHEMA };
+const failedFile = localFile('/failed.json');
+const reportFile = localFile('/failed.md');
+const newFailedFile = localFile('/failed.updated.json');
+const newReportFile = localFile('/failed.updated.md');
 const defaultPercentage = 10;
 const failedMap = loadFailedData(failedFile);
-
 
 function loadFailedData(fileName) {
   const dataMap = new Map();
   try {
-    const data = require(fileName);
+    const data = importJSON(fileName);
     data.failedTests = data.failedTests || [];
-    data.failedTests.forEach(item => dataMap.set(item.name, item));
+    data.failedTests.forEach((item) => dataMap.set(item.name, item));
     return dataMap;
   } catch (_) {
     return dataMap;
   }
 }
-
 
 function sample(fullMap, percentage) {
   const { floor, random } = Math;
@@ -52,7 +53,7 @@ function unescapeJsonPointer(str) {
 }
 
 function escapeRegExp(string) {
-  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $& means the whole matched string
 }
 
 function makeRexp(pathItem) {
@@ -77,7 +78,7 @@ function yamlLine(yamlSpec, path) {
 function findArrayItem(lines, num, pathIdx) {
   if (num > lines.length - 2) {
     return num;
-  };
+  }
   const firstItem = lines[num + 1];
   const match = firstItem.match(/^\s*-/);
   if (match === null) {
@@ -105,9 +106,9 @@ function findItem(lines, num, pathItem) {
 
 function getInstanceValue(yamlSpec, path) {
   if (path === "") {
-    return [false, 'content too large'];
+    return [false, "content too large"];
   }
-  const obj = JSYaml.load(yamlSpec, yamlOpts);
+  const obj = load(yamlSpec, yamlOpts);
   const paths = path.split("/").slice(1);
   const result = paths.reduce((o, n) => o[unescapeJsonPointer(n)], obj);
   return [true, result];
@@ -116,7 +117,7 @@ function getInstanceValue(yamlSpec, path) {
 function yamlToGitHub(url) {
   return url.replace(
     "https://api.apis.guru/v2/specs/",
-    "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/"
+    "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/",
   );
 }
 
@@ -146,7 +147,7 @@ async function fetchApiList(percentage, onlyFailed = false) {
   }
   if (percentage !== 100) {
     console.log(
-      `testing a random set containing ${percentage}% of ${apiMap.size} available APIs`
+      `testing a random set containing ${percentage}% of ${apiMap.size} available APIs`,
     );
     return [sample(apiMap, percentage), apiListSize, apiMap.size];
   }
@@ -167,7 +168,10 @@ async function testAPIs(percentage, onlyFailed, ci) {
   if (onlyFailed || ci) {
     percentage = 100;
   }
-  const [apiList, totalSize, latestSize] = await fetchApiList(percentage, onlyFailed);
+  const [apiList, totalSize, latestSize] = await fetchApiList(
+    percentage,
+    onlyFailed,
+  );
   const failed = new Map();
   const results = {
     total: apiList.size,
@@ -188,14 +192,16 @@ async function testAPIs(percentage, onlyFailed, ci) {
         const [res, value] = getInstanceValue(spec, item.instancePath);
         item.hasInstanceValue = res;
         item.instanceValue = value;
-        item.gitHubUrl = `${api.gitHubUrl}#L${yamlLine(
-          spec,
-          item.instancePath
-        )}`;
+        item.gitHubUrl = `${api.gitHubUrl}#L${
+          yamlLine(
+            spec,
+            item.instancePath,
+          )
+        }`;
       });
       if (failedMap.has(name)) {
         const failedApiErrors = JSON.stringify(
-          failedMap.get(name).result.errors
+          failedMap.get(name).result.errors,
         );
         if (failedApiErrors === JSON.stringify(api.result.errors)) {
           results.knownFailed++;
@@ -208,7 +214,7 @@ async function testAPIs(percentage, onlyFailed, ci) {
   }
   console.log(
     `Finished testing ${results.total} APIs
-     ${results.invalid} tests failed of which ${results.knownFailed} were known failures`
+     ${results.invalid} tests failed of which ${results.knownFailed} were known failures`,
   );
   if (
     results.knownFailed !== results.invalid ||
@@ -224,20 +230,20 @@ async function testAPIs(percentage, onlyFailed, ci) {
         testedAPICount: results.total,
         failedAPICount: results.invalid,
         knownFailedCount: results.knownFailed,
-        failedTests: Array.from(failed.values())
-      }
+        failedTests: Array.from(failed.values()),
+      };
       console.log(`new/updated failures found`);
       console.log(`creating ${jsonFile}`);
       writeFileSync(
         jsonFile,
         JSON.stringify(data, null, 2),
-        "utf8"
+        "utf8",
       );
       console.log(`creating new report ${mdFile}`);
       writeFileSync(
         mdFile,
         createReport(data),
-        "utf8"
+        "utf8",
       );
     }
     process.exit(exitCode);
