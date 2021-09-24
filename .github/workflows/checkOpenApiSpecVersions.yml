@@ -2,6 +2,12 @@ name: "Check for changes in OpenApi specifications"
 on:
   schedule:
   - cron: "10 0 * * *"
+  workflow_dispatch:
+    inputs:
+      nodeVersion:
+        description: Node version to use
+        required: false
+        default: "14"
 
 jobs:
   CheckVersion:
@@ -10,6 +16,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Use Node.js latest version
       uses: actions/setup-node@v2
+      with:
+        node-version: ${{ github.event.inputs.nodeVersion }}
     - run: npm ci --ignore-scripts --no-audit --no-progress --prefer-offline
     - run: npm run build --if-present
     - run: npm run cloneOas
