@@ -2,11 +2,17 @@
 
 ## [Unreleased]
 ### Changed
+
+## [v1.4.0]
+### Changed
+ - Updated OAS v3.1 schema because of spec update
+   (https://github.com/OAI/OpenAPI-Specification/issues/2706)
  - Added URI decoding to refs
  - Updated dependencies
    - node-fetch   ^2.6.1  →  ^3.0.0     
-   - ajv          ^8.6.1  →  ^8.6.2     
+   - ajv          ^8.6.1  →  ^8.6.3    
    - ajv-formats  ^2.1.0  →  ^2.1.1     
+   - tap         ^15.0.9  →  ^15.0.10     
 
 ## [v1.3.0] 07-07-2021
 ### Changed
