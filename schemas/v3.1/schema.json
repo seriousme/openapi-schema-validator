@@ -316,6 +316,7 @@
     },
     "path-item-or-reference": {
       "if": {
+        "type": "object",
         "required": [
           "$ref"
         ]
@@ -534,9 +535,7 @@
                 "properties": {
                   "style": {
                     "default": "simple",
-                    "enum": [
-                      "simple"
-                    ]
+                    "const": "simple"
                   }
                 }
               }
@@ -581,9 +580,7 @@
                 "properties": {
                   "style": {
                     "default": "form",
-                    "enum": [
-                      "form"
-                    ]
+                    "const": "form"
                   }
                 }
               }
@@ -655,6 +652,7 @@
     },
     "request-body-or-reference": {
       "if": {
+        "type": "object",
         "required": [
           "$ref"
         ]
@@ -774,7 +772,7 @@
         }
       },
       "patternProperties": {
-        "^[1-5][0-9X]{2}$": {
+        "^[1-5](?:[0-9]{2}|XX)$": {
           "$ref": "#/$defs/response-or-reference"
         }
       },
@@ -811,6 +809,7 @@
     },
     "response-or-reference": {
       "if": {
+        "type": "object",
         "required": [
           "$ref"
         ]
@@ -831,6 +830,7 @@
     },
     "callbacks-or-reference": {
       "if": {
+        "type": "object",
         "required": [
           "$ref"
         ]
@@ -909,6 +909,7 @@
     },
     "link-or-reference": {
       "if": {
+        "type": "object",
         "required": [
           "$ref"
         ]
@@ -934,40 +935,38 @@
           "default": false,
           "type": "boolean"
         },
-        "allowEmptyValue": {
-          "default": false,
-          "type": "boolean"
+        "schema": {
+          "$ref": "#/$defs/schema"
+        },
+        "content": {
+          "$ref": "#/$defs/content"
         }
       },
+      "oneOf": [
+        {
+          "required": [
+            "schema"
+          ]
+        },
+        {
+          "required": [
+            "content"
+          ]
+        }
+      ],
       "dependentSchemas": {
         "schema": {
           "properties": {
             "style": {
               "default": "simple",
-              "enum": [
-                "simple"
-              ]
+              "const": "simple"
             },
             "explode": {
               "default": false,
               "type": "boolean"
-            },
-            "allowReserved": {
-              "default": false,
-              "type": "boolean"
-            },
-            "schema": {
-              "$ref": "#/$defs/schema"
             }
           },
           "$ref": "#/$defs/examples"
-        },
-        "content": {
-          "properties": {
-            "content": {
-              "$ref": "#/$defs/content"
-            }
-          }
         }
       },
       "$ref": "#/$defs/specification-extensions",
@@ -975,6 +974,7 @@
     },
     "header-or-reference": {
       "if": {
+        "type": "object",
         "required": [
           "$ref"
         ]
@@ -1196,6 +1196,7 @@
     },
     "security-scheme-or-reference": {
       "if": {
+        "type": "object",
         "required": [
           "$ref"
         ]
