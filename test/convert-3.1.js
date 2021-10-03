@@ -1,8 +1,20 @@
 const { Console } = require("console");
 const fs = require("fs");
 const openApiSrcDir = `${__dirname}/../schemas.orig`;
-const openApiSchemaDir = `${__dirname}/../schemas`;
-const filePath = "v3.1/schema.json";
+const openApiDestDir = `${__dirname}/../schemas`;
+const version = "3.1";
+const destFilePath = `${openApiDestDir}/v${version}/schema.json`;
+
+function readJSON(file) {
+  return JSON.parse(fs.readFileSync(file));
+}
+
+function getLatestSchema(version) {
+  const schemaList = (await readDir(`${openApiSrcDir}/${version}/schema/`));
+  const lastSchema = schemaList.pop();
+  const schema = readJSON(`${openApiDir}/${version}/schema/${lastSchema}`);
+  return schema;
+}
 
 function escapeJsonPointer(str) {
   return str.replace(/~/g, "~0").replace(/\//g, "~1");
@@ -33,7 +45,7 @@ function parse(obj, path, id) {
     parse(obj[prop], `${path}/${escapeJsonPointer(prop)}`, id);
   }
 }
-const schema = require(`${openApiSrcDir}/${filePath}`);
+const schema = getLatestSchema(version);
 // find all refs
 parse(schema, "#", "");
 const dynamicAnchors = {};
@@ -53,8 +65,8 @@ pointers.$dynamicRef.forEach((item) => {
 });
 
 fs.writeFileSync(
-  `${openApiSchemaDir}/${filePath}`,
-  JSON.stringify(schema, null, 2)
+  `${destFilePath}`,
+  JSON.stringify(schema, null, 2),
 );
-console.log(`Written converted schema to ${openApiSchemaDir}/${filePath}`);
+console.log(`Written converted schema to ${destFilePath}`);
 console.log(`$id: ${schema.$id}`);
