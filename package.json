@@ -16,7 +16,7 @@
   "scripts": {
     "test": "tap test/test-*.js",
     "covtest": "tap --coverage-report=html test/test-*.js",
-    "cloneOas": "rm -rf OpenAPI-Specification && git clone https://github.com/OAI/OpenAPI-Specification.git",
+    "cloneOas": "rm -rf OpenAPI-Specification && git clone --branch 'gh-pages' --single-branch https://github.com/OAI/OpenAPI-Specification.git",
     "checkOasVersions": "tap --no-coverage test/check-versions.js",
     "checkOasVersionsSnapshot": "tap --no-coverage --snapshot test/check-versions.js",
     "preconvert31": "npm run cloneOas",
