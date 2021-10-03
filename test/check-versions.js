@@ -10,6 +10,10 @@ const readDir = util.promisify(fs.readdir);
 const supportedVersions = Validator.supportedVersions;
 const openApiDir = `${__dirname}/../schemas.orig`;
 
+function readJSON(file) {
+  return JSON.parse(fs.readFileSync(file));
+}
+
 tap.formatSnapshot = (object) => {
   const hash = createHash("sha256");
   hash.update(JSON.stringify(object));
@@ -18,13 +22,15 @@ tap.formatSnapshot = (object) => {
 
 async function getOpenApiSchemasVersions(oasdir) {
   const dirs = (await readDir(oasdir)).filter((d) => !d.endsWith(".html"));
-  return dirs.map((dir) => dir.replace(/^v/, ""));
+  return dirs;
 }
 
 async function testVersion(version) {
   test(`Check if version ${version} is unchanged`, async (t) => {
     t.plan(1);
-    const schema = require(`${openApiDir}/${version}/schema.json`);
+    const schemaList = (await readDir(`${openApiDir}/${version}/schema/`));
+    const lastSchema = schemaList.pop();
+    const schema = readJSON(`${openApiDir}/${version}/schema/${lastSchema}`);
     t.matchSnapshot(schema, `schema v${version} is unchanged`);
   });
 }
@@ -36,9 +42,9 @@ test(`no new versions should be present`, async (t) => {
   t.same(difference, [], "all versions are known");
 });
 
-async function testAvailableVersions(){
+async function testAvailableVersions() {
   const versions = await getOpenApiSchemasVersions(openApiDir);
   versions.filter((x) => supportedVersions.has(x)).forEach(testVersion);
 }
 // supportedVersions.forEach(testVersion);
-// testAvailableVersions();
+testAvailableVersions();
