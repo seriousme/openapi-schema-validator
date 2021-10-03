@@ -4,7 +4,7 @@
 ### Changed
 
 ## [v1.4.0]
-### Changed
+### Changed 25-09-2021
  - Updated OAS v3.1 schema because of spec update
    (https://github.com/OAI/OpenAPI-Specification/issues/2706)
  - Added URI decoding to refs
