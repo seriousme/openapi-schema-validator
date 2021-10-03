@@ -10,9 +10,10 @@ function readJSON(file) {
 }
 
 function getLatestSchema(version) {
-  const schemaList = (await readDir(`${openApiSrcDir}/${version}/schema/`));
+  const srcPath = `${openApiSrcDir}/${version}/schema/`
+  const schemaList =  fs.readdirSync(srcPath);
   const lastSchema = schemaList.pop();
-  const schema = readJSON(`${openApiDir}/${version}/schema/${lastSchema}`);
+  const schema = readJSON(`${srcPath}/${lastSchema}`);
   return schema;
 }
 
