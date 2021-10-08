@@ -5,6 +5,10 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
+exports[`test/check-versions.js TAP Check if version 3.0 is unchanged > schema v3.0 is unchanged 1`] = `
+9e76ee7e5df7b4a54a4090ca4907397f626a64787aaa88b82170ad7695444b11
+`
+
 exports[`test/check-versions.js TAP Check if version 3.1 is unchanged > schema v3.1 is unchanged 1`] = `
-a8e15b9431ff3b93f8ec7f6f2d1ea144b7a1361d2b6bf46db8e8327ce6ffa7a7
+65b3516b6a12e4017f363f2767451d88f4b233971aa2c3cef92545de5bc3a7fc
 `

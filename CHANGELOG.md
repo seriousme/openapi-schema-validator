@@ -3,6 +3,11 @@
 ## [Unreleased]
 ### Changed
 
+## [v1.5.0]
+### Changed 25-09-2021
+- Updated OAS v3.0 to 2021-09-28 schema
+- Updated OAS v3.1 to 2021-09-28 schema
+
 ## [v1.4.0]
 ### Changed 25-09-2021
  - Updated OAS v3.1 schema because of spec update
