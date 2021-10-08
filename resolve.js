@@ -28,9 +28,9 @@ const filtered = (raw) =>
 
 function resolveUri(uri, anchors) {
   const [prefix, path] = uri.split("#", 2);
-  const err = new Error(`Can't resolve ${uri}`);
+  const err = new Error(`Can't resolve ${uri}, only internal refs are supported.`);
 
-  if (path.length && path[0] !== "/") {
+  if (path && path.length && path[0] !== "/") {
     if (anchors[uri]) {
       return anchors[uri];
     }
