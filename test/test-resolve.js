@@ -170,6 +170,24 @@ test(`non-existing uri throws error`, async (t) => {
   );
 });
 
+
+test(`non-existing uri without path throws error`, async (t) => {
+  const schema = {
+    $id: "http://www.example.com/",
+    $schema: "http://json-schema.org/draft-07/schema#",
+    definitions: {
+      req: { required: ["billing_address"] },
+    },
+    $ref: "http://www.example.com/failed",
+  };
+  t.plan(1);
+  t.throws(
+    () => resolve(schema),
+    new Error("Can't resolve http://www.example.com/failed"),
+    "got expected error"
+  );
+});
+
 test(`non-existing $anchor throws error`, async (t) => {
   const schema = {
     $id: "http://www.example.com/",
