@@ -23,3 +23,5 @@ paths:
           description: Invalid input
       requestBody:
         $ref: 'http://www.example.com/subspec#/components/requestBodies/Pet'
+  /pet/findByStatus:
+    $ref: 'subspec2'

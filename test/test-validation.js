@@ -13,7 +13,9 @@ const invalidSpec = require(`./validation/invalid-spec.json`);
 const yamlFileName = localFile(`./validation/petstore-openapi.v3.yaml`);
 const mainSpecYamlFileName = localFile(`./validation/main-spec.v3.yaml`);
 const subSpecYamlFileName = localFile(`./validation/sub-spec.v3.yaml`);
+const subSpec2YamlFileName = localFile(`./validation/sub-spec2.v3.yaml`);
 const subSpecUri = "http://www.example.com/subspec";
+const subSpecUri2 = "subspec2";
 const inlinedRefs = "x-inlined-refs";
 
 async function testVersion(version) {
@@ -198,9 +200,10 @@ test(`addSpecRef: Invalid filename returns an error`, (t) => {
 });
 
 test(`addSpecRef works`, async (t) => {
-  t.plan(3);
+  t.plan(5);
   const validator = new Validator();
   await validator.addSpecRef(subSpecUri, subSpecYamlFileName);
+  await validator.addSpecRef(subSpecUri2, subSpec2YamlFileName);
   const res = await validator.validate(mainSpecYamlFileName);
   t.equal(res.valid, true, "main spec + subspec is valid");
   t.equal(
@@ -208,10 +211,19 @@ test(`addSpecRef works`, async (t) => {
       .Pet.required,
     true,
   );
+  t.equal(
+    validator.specification[inlinedRefs][subSpecUri2].get.summary,
+    "Finds Pets by status",
+  );
   const resolvedSpec = validator.resolveRefs();
   t.equal(
     resolvedSpec.paths["/pet"].post.requestBody.required,
     true,
     "$refs from main spec to sub spec are correctly resolved",
+  );
+  t.equal(
+    resolvedSpec.paths["/pet/findByStatus"].get.summary,
+    "Finds Pets by status",
+    "$refs from main spec to sub2 spec are correctly resolved",
   );
 });
