@@ -119,16 +119,14 @@ The result is an `object` where all references have been resolved.
 Resolution of references is `shallow` This should normally not be a problem for this use case.
 
 <a name="addSpecRef"></a>
-### `<instance>.addSpecRef(uri,subSpecification)`
-
-`uri` must be a string (e.g. `http://www.example.com/subspec`)
-
+### `<instance>.addSpecRef(subSpecification, uri)`
 `subSpecification` can be one of:
 
 - a JSON object
 - a JSON object encoded as string
 - a YAML string
 - a filename
+`uri` must be a string (e.g. `http://www.example.com/subspec`), but is not required if the subSpecification holds a `$id` attribute at top level. If you specify a value for `uri` it will overwrite the definition in the `$id` attribute at top level.
 
 Sometimes a specification is composed of multiple files that each contain parts of the specification. The specification refers to these sub specifications using `external references`. Since references are based on URI's (so Identifier and Location as in URL's!) there needs to be a way to tell the validator how to resolve those references. This is where this function comes in:
 

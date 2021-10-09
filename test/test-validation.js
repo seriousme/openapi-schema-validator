@@ -182,9 +182,9 @@ test(`addSpecRef: non string URI returns an error`, (t) => {
   t.plan(1);
   const validator = new Validator();
   t.rejects(
-    validator.addSpecRef(null, "nonExistingFilename"),
+    validator.addSpecRef(subSpecUri, null),
     Error,
-    "uri parameter must be a string",
+    "uri parameter or $id attribute must be a string",
   );
 });
 
@@ -192,9 +192,20 @@ test(`addSpecRef: Invalid filename returns an error`, (t) => {
   t.plan(1);
   const validator = new Validator();
   t.rejects(
-    validator.addSpecRef("extraUri", "nonExistingFilename"),
+    validator.addSpecRef("nonExistingFilename", "extraUri"),
     Error,
     "Cannot find JSON, YAML or filename in data",
+    "error message matches expection",
+  );
+});
+
+test(`addSpecRef: no uri and no $id attrubute returns an error`, (t) => {
+  t.plan(1);
+  const validator = new Validator();
+  t.rejects(
+    validator.addSpecRef(subSpecUri),
+    Error,
+    "uri parameter or $id attribute must be present",
     "error message matches expection",
   );
 });
@@ -202,8 +213,8 @@ test(`addSpecRef: Invalid filename returns an error`, (t) => {
 test(`addSpecRef works`, async (t) => {
   t.plan(5);
   const validator = new Validator();
-  await validator.addSpecRef(subSpecUri, subSpecYamlFileName);
-  await validator.addSpecRef(subSpecUri2, subSpec2YamlFileName);
+  await validator.addSpecRef(subSpecYamlFileName, subSpecUri);
+  await validator.addSpecRef(subSpec2YamlFileName);
   const res = await validator.validate(mainSpecYamlFileName);
   t.equal(res.valid, true, "main spec + subspec is valid");
   t.equal(

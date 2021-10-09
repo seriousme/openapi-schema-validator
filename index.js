@@ -7,6 +7,7 @@ const fs = require("fs");
 const readFile = util.promisify(fs.readFile);
 
 const { resolve } = require("./resolve.js");
+const { type } = require("os");
 
 const openApiVersions = new Set(["2.0", "3.0", "3.1"]);
 const ajvVersions = {
@@ -65,15 +66,22 @@ class Validator {
     return resolve(this.specification || opts.specification);
   }
 
-  async addSpecRef(uri, data) {
-    if (typeof uri !== "string") {
-      throw new Error("uri parameter must be a string");
-    }
+  async addSpecRef(data, uri) {
     const spec = await getSpecFromData(data);
     if (spec === undefined) {
       throw new Error("Cannot find JSON, YAML or filename in data");
     }
-    spec['$id'] = uri;
+    if (uri === undefined){
+      if (spec['$id'] === undefined){
+        throw new Error("uri parameter or $id attribute must be present");
+      }
+      uri = spec['$id'];
+    }
+
+    if (typeof uri !== "string") {
+      throw new Error("uri parameter or $id attribute must be a string");
+    }
+    spec["$id"] = uri;
     this.externalRefs[uri] = spec;
   }
 
@@ -86,8 +94,8 @@ class Validator {
         errors: "Cannot find JSON, YAML or filename in data",
       };
     }
-    if (Object.keys(this.externalRefs).length >0) {
-        specification[inlinedRefs] = this.externalRefs;
+    if (Object.keys(this.externalRefs).length > 0) {
+      specification[inlinedRefs] = this.externalRefs;
     }
     const version = getOpenApiVersion(specification);
     this.version = version;
