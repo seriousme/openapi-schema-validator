@@ -71,6 +71,7 @@ Where `<filename>` refers to a YAML or JSON file containing the specification.
 - [`<instance>.specification`](#specification)
 - [`<instance>.version`](#version)
 - [`<instance>.resolveRefs(options)`](#resolveRefs)
+- [`<instance>.addSpecRef(uri, subSpecification)`](#addSpecRef)
 - [`Validator.supportedVersions`](#supportedVersions)
 
 <a name="newValidator"></a>
@@ -89,7 +90,7 @@ This function tries to validata a specification against the OpenApi schemas. `sp
 - a YAML string
 - a filename
 
-External references are *not* automatically resolved so you need to inline them yourself if required.
+External references are *not* automatically resolved so you need to inline them yourself if required e.g by using `<instance>.addSpecRef()`
 The result is an object:
 ```
 {
@@ -112,10 +113,69 @@ The openApi specification only specifies major/minor versions as separate schema
 <a name="resolveRefs"></a>
 ### `<instance>.resolveRefs(options)`
 
-This function tries to resolve all internal references. External references are *not* automatically resolved so you need to inline them yourself if required. By default it will use the last specification passed to `<instance>.validate()`
+This function tries to resolve all internal references. External references are *not* automatically resolved so you need to inline them yourself if required e.g by using `<instance>.addSpecRef()`. By default it will use the last specification passed to `<instance>.validate()`
 but you can explicity pass a specification by passing `{specification:<object>}` as options.
 The result is an `object` where all references have been resolved.
 Resolution of references is `shallow` This should normally not be a problem for this use case.
+
+<a name="addSpecRef"></a>
+### `<instance>.addSpecRef(uri,subSpecification)`
+
+`uri` must be a string (e.g. `http://www.example.com/subspec`)
+`subSpecification` can be one of:
+
+- a JSON object
+- a JSON object encoded as string
+- a YAML string
+- a filename
+
+Sometimes a specification is composed of multiple files that each contain parts of the specification. The specification refers to these sub specifications using `external references`. Since references are based on URI's (so Identifier and Location as in URL's!) there needs to be a way to tell the validator how to resolve those references. This is where this function comes in:
+
+E.g.: we have a main specification in `main-spec.yaml`
+```yaml
+paths:
+  /pet:
+    post:
+      tags:
+        - pet
+      summary: Add a new pet to the store
+      description: ''
+      operationId: addPet
+      responses:
+        '405':
+          description: Invalid input
+      requestBody:
+        $ref: 'http://www.example.com/subspec#/components/requestBodies/Pet'
+```
+
+And the reference is in `sub-spec.yaml`:
+```yaml
+components:
+  requestBodies:
+    Pet:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Pet'
+        application/xml:
+          schema:
+            $ref: '#/components/schemas/Pet'
+      description: Pet object that needs to be added to the store
+      required: true
+  ...
+```
+
+Then the validation can be performed as follows:
+
+```javascript
+const validator = new Validator();
+await validator.addSpecRef('http://www.example.com/subspec','./sub-spec.yaml');
+const res = await validator.validate("./main-spec.yaml");
+// res now contains the results of the validation across main-spec and sub-spec
+const specification = validator.specification;
+// specification now contains a Javascript object containing the specification with the subspec inlined
+
+```
 
 <a name="supportedVersions"></a>
 ### `Validator.supportedVersions`

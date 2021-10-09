@@ -13,6 +13,7 @@ const ajvVersions = {
   "http://json-schema.org/draft-04/schema#": Ajv04,
   "https://json-schema.org/draft/2020-12/schema": Ajv2020,
 };
+const inlinedRefs = "x-inlined-refs";
 
 function getOpenApiVersion(specification) {
   for (const version of openApiVersions) {
@@ -56,11 +57,24 @@ class Validator {
     }
     this.ajvOptions = ajvOptions;
     this.ajvValidators = {};
+    this.externalRefs = {};
     return this;
   }
 
   resolveRefs(opts = {}) {
     return resolve(this.specification || opts.specification);
+  }
+
+  async addSpecRef(uri, data) {
+    if (typeof uri !== "string") {
+      throw new Error("uri parameter must be a string");
+    }
+    const spec = await getSpecFromData(data);
+    if (spec === undefined) {
+      throw new Error("Cannot find JSON, YAML or filename in data");
+    }
+    spec['$id'] = uri;
+    this.externalRefs[uri] = spec;
   }
 
   async validate(data) {
@@ -71,6 +85,9 @@ class Validator {
         valid: false,
         errors: "Cannot find JSON, YAML or filename in data",
       };
+    }
+    if (Object.keys(this.externalRefs).length >0) {
+        specification[inlinedRefs] = this.externalRefs;
     }
     const version = getOpenApiVersion(specification);
     this.version = version;
@@ -92,13 +109,13 @@ class Validator {
   }
 
   getAjvValidator(version) {
-    if (!this.ajvValidators[version]){
+    if (!this.ajvValidators[version]) {
       const schema = require(`./schemas/v${version}/schema.json`);
       const schemaVersion = schema.$schema;
       const AjvClass = ajvVersions[schemaVersion];
       const ajv = new AjvClass(this.ajvOptions);
       addFormats(ajv);
-      ajv.addFormat('media-range',true); // used in 3.1
+      ajv.addFormat("media-range", true); // used in 3.1
       this.ajvValidators[version] = ajv.compile(schema);
     }
     return this.ajvValidators[version];

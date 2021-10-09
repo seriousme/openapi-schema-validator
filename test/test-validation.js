@@ -11,6 +11,10 @@ const localFile = (fileName) =>
 const emptySpec = require(`./validation/empty.json`);
 const invalidSpec = require(`./validation/invalid-spec.json`);
 const yamlFileName = localFile(`./validation/petstore-openapi.v3.yaml`);
+const mainSpecYamlFileName = localFile(`./validation/main-spec.v3.yaml`);
+const subSpecYamlFileName = localFile(`./validation/sub-spec.v3.yaml`);
+const subSpecUri = "http://www.example.com/subspec";
+const inlinedRefs = "x-inlined-refs";
 
 async function testVersion(version) {
   test(`version ${version} works`, async (t) => {
@@ -40,7 +44,7 @@ test(`empty specification should fail`, async (t) => {
   t.equal(
     res.errors,
     "Cannot find supported swagger/openapi version in specification, version must be a string.",
-    "correct error message"
+    "correct error message",
   );
 });
 
@@ -60,7 +64,7 @@ test(`undefined specification should fail`, async (t) => {
   t.equal(
     res.errors,
     "Cannot find JSON, YAML or filename in data",
-    "correct error message"
+    "correct error message",
   );
 });
 
@@ -101,7 +105,7 @@ test(`Invalid yaml specification as string gives an error`, async (t) => {
   t.equal(
     res.errors,
     "Cannot find JSON, YAML or filename in data",
-    "error message matches expection"
+    "error message matches expection",
   );
 });
 
@@ -125,13 +129,13 @@ test(`original petstore spec works`, async (t) => {
   t.equal(
     ver,
     "2.0",
-    "original petstore spec version matches expected version"
+    "original petstore spec version matches expected version",
   );
   const resolvedSpec = validator.resolveRefs();
   t.equal(
     resolvedSpec.paths["/pet"].post.parameters[0].schema.required[0],
     "name",
-    "$refs are correctly resolved"
+    "$refs are correctly resolved",
   );
 });
 
@@ -148,13 +152,13 @@ test(`original petstore spec works with AJV strict:"log" option`, async (t) => {
   t.equal(
     ver,
     "2.0",
-    "original petstore spec version matches expected version"
+    "original petstore spec version matches expected version",
   );
   const resolvedSpec = validator.resolveRefs();
   t.equal(
     resolvedSpec.paths["/pet"].post.parameters[0].schema.required[0],
     "name",
-    "$refs are correctly resolved"
+    "$refs are correctly resolved",
   );
   t.equal(logcount > 0, true, "warnings are being logged");
 });
@@ -168,6 +172,46 @@ test(`Invalid filename returns an error`, async (t) => {
   t.equal(
     res.errors,
     "Cannot find JSON, YAML or filename in data",
-    "error message matches expection"
+    "error message matches expection",
+  );
+});
+
+test(`addSpecRef: non string URI returns an error`, (t) => {
+  t.plan(1);
+  const validator = new Validator();
+  t.rejects(
+    validator.addSpecRef(null, "nonExistingFilename"),
+    Error,
+    "uri parameter must be a string",
+  );
+});
+
+test(`addSpecRef: Invalid filename returns an error`, (t) => {
+  t.plan(1);
+  const validator = new Validator();
+  t.rejects(
+    validator.addSpecRef("extraUri", "nonExistingFilename"),
+    Error,
+    "Cannot find JSON, YAML or filename in data",
+    "error message matches expection",
+  );
+});
+
+test(`addSpecRef works`, async (t) => {
+  t.plan(3);
+  const validator = new Validator();
+  await validator.addSpecRef(subSpecUri, subSpecYamlFileName);
+  const res = await validator.validate(mainSpecYamlFileName);
+  t.equal(res.valid, true, "main spec + subspec is valid");
+  t.equal(
+    validator.specification[inlinedRefs][subSpecUri].components.requestBodies
+      .Pet.required,
+    true,
+  );
+  const resolvedSpec = validator.resolveRefs();
+  t.equal(
+    resolvedSpec.paths["/pet"].post.requestBody.required,
+    true,
+    "$refs from main spec to sub spec are correctly resolved",
   );
 });
