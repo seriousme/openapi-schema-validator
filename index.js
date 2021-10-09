@@ -5,9 +5,7 @@ const JSYaml = require("js-yaml");
 const util = require("util");
 const fs = require("fs");
 const readFile = util.promisify(fs.readFile);
-
 const { resolve } = require("./resolve.js");
-const { type } = require("os");
 
 const openApiVersions = new Set(["2.0", "3.0", "3.1"]);
 const ajvVersions = {
