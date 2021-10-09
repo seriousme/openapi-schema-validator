@@ -122,6 +122,7 @@ Resolution of references is `shallow` This should normally not be a problem for 
 ### `<instance>.addSpecRef(uri,subSpecification)`
 
 `uri` must be a string (e.g. `http://www.example.com/subspec`)
+
 `subSpecification` can be one of:
 
 - a JSON object
@@ -131,8 +132,9 @@ Resolution of references is `shallow` This should normally not be a problem for 
 
 Sometimes a specification is composed of multiple files that each contain parts of the specification. The specification refers to these sub specifications using `external references`. Since references are based on URI's (so Identifier and Location as in URL's!) there needs to be a way to tell the validator how to resolve those references. This is where this function comes in:
 
-E.g.: we have a main specification in `main-spec.yaml`
+E.g.: we have a main specification in `main-spec.yaml` containing:
 ```yaml
+...
 paths:
   /pet:
     post:
@@ -148,7 +150,7 @@ paths:
         $ref: 'http://www.example.com/subspec#/components/requestBodies/Pet'
 ```
 
-And the reference is in `sub-spec.yaml`:
+And the reference is in `sub-spec.yaml`, containing:
 ```yaml
 components:
   requestBodies:
@@ -173,7 +175,8 @@ await validator.addSpecRef('http://www.example.com/subspec','./sub-spec.yaml');
 const res = await validator.validate("./main-spec.yaml");
 // res now contains the results of the validation across main-spec and sub-spec
 const specification = validator.specification;
-// specification now contains a Javascript object containing the specification with the subspec inlined
+// specification now contains a Javascript object containing the specification 
+// with the subspec inlined
 
 ```
 
