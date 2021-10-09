@@ -1,0 +1,27 @@
+openapi: 3.0.0
+servers:
+  - url: 'http://petstore.swagger.io/v2'
+info:
+  description: >-
+    This is a sample server Petstore server. For this sample, you can use the api key
+    `special-key` to test the authorization filters.
+  version: 1.0.0
+  title: OpenAPI Petstore
+  license:
+    name: Apache-2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+paths:
+  /pet:
+    post:
+      tags:
+        - pet
+      summary: Add a new pet to the store
+      description: ''
+      operationId: addPet
+      responses:
+        '405':
+          description: Invalid input
+      requestBody:
+        $ref: 'http://www.example.com/subspec#/components/requestBodies/Pet'
+  /pet/findByStatus:
+    $ref: 'subspec2'

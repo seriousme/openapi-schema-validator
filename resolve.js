@@ -40,6 +40,11 @@ function resolveUri(uri, anchors) {
   if (!anchors[prefix]) {
     throw err;
   }
+
+  if (path === undefined){
+    return anchors[prefix];
+  }
+
   const paths = path.split("/").slice(1);
   try {
     const result = paths.reduce(
@@ -53,6 +58,8 @@ function resolveUri(uri, anchors) {
   } catch (_) {
     throw err;
   }
+
+
 }
 
 function resolve(tree) {
