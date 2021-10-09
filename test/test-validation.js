@@ -182,9 +182,10 @@ test(`addSpecRef: non string URI returns an error`, (t) => {
   t.plan(1);
   const validator = new Validator();
   t.rejects(
-    validator.addSpecRef(subSpecUri, null),
-    Error,
+    validator.addSpecRef(subSpecYamlFileName, null),
     "uri parameter or $id attribute must be a string",
+    "error message matches expection",
+    {}
   );
 });
 
@@ -193,20 +194,20 @@ test(`addSpecRef: Invalid filename returns an error`, (t) => {
   const validator = new Validator();
   t.rejects(
     validator.addSpecRef("nonExistingFilename", "extraUri"),
-    Error,
     "Cannot find JSON, YAML or filename in data",
     "error message matches expection",
+    {}
   );
 });
 
-test(`addSpecRef: no uri and no $id attrubute returns an error`, (t) => {
+test(`addSpecRef: no uri and no $id attribute returns an error`, (t) => {
   t.plan(1);
   const validator = new Validator();
   t.rejects(
-    validator.addSpecRef(subSpecUri),
-    Error,
+    validator.addSpecRef(subSpecYamlFileName),
     "uri parameter or $id attribute must be present",
     "error message matches expection",
+    {}
   );
 });
 
