@@ -3,6 +3,10 @@
 ## [Unreleased]
 ### Changed
 
+## [v1.6.0]
+### Changed 09-10-2021
+ - New feature, now supports external refs, see addSpecRef in the README.
+
 ## [v1.5.1]
 ### Changed 08-10-2021
  - Fixed error message on URI ref without a path 
