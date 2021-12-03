@@ -24,7 +24,7 @@ jobs:
     - run: npm run covtest
     # test typescript definitions
     - run: npm install @types/node
-    - run: npx typescript index.d.ts --lib ES2019
+    - run: npx --package typescript tsc index.d.ts --lib ES2019
     - name: Coveralls Parallel
       uses: coverallsapp/github-action@master
       with:
