@@ -65,7 +65,7 @@ function yamlLine(yamlSpec, path) {
   const lines = yamlSpec.split("\n");
   const paths = path.split("/").slice(1);
   let num = 0;
-  for (pathItem of paths) {
+  for (const pathItem of paths) {
     if (Number.isInteger(+pathItem) && num) {
       num = findArrayItem(lines, num, pathItem);
     } else {
