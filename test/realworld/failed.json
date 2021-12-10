@@ -1,10 +1,114 @@
 {
-  "testDate": "2021-08-26T16:51:25.215Z",
-  "totalApiCount": 2317,
-  "testedAPICount": 2317,
-  "failedAPICount": 14,
+  "testDate": "2021-12-10T15:06:48.971Z",
+  "totalApiCount": 2337,
+  "testedAPICount": 2337,
+  "failedAPICount": 41,
   "knownFailedCount": 13,
   "failedTests": [
+    {
+      "name": "adyen.com:CheckoutService",
+      "apiVersion": "68",
+      "openApiVersion": "3.1.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/adyen.com/CheckoutService/68/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/adyen.com/CheckoutService/68/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/CheckoutService/68/openapi.yaml",
+      "updated": "2021-11-12T23:18:19.544Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/unevaluatedProperties",
+            "keyword": "unevaluatedProperties",
+            "params": {
+              "unevaluatedProperty": "source"
+            },
+            "message": "must NOT have unevaluated properties",
+            "hasInstanceValue": false,
+            "instanceValue": "content too large",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/CheckoutService/68/openapi.yaml#L1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "adyen.com:PaymentService",
+      "apiVersion": "68",
+      "openApiVersion": "3.1.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/adyen.com/PaymentService/68/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/adyen.com/PaymentService/68/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/PaymentService/68/openapi.yaml",
+      "updated": "2021-11-12T23:18:19.544Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/unevaluatedProperties",
+            "keyword": "unevaluatedProperties",
+            "params": {
+              "unevaluatedProperty": "source"
+            },
+            "message": "must NOT have unevaluated properties",
+            "hasInstanceValue": false,
+            "instanceValue": "content too large",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/PaymentService/68/openapi.yaml#L1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "adyen.com:PayoutService",
+      "apiVersion": "68",
+      "openApiVersion": "3.1.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/adyen.com/PayoutService/68/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/adyen.com/PayoutService/68/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/PayoutService/68/openapi.yaml",
+      "updated": "2021-11-12T23:18:19.544Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/unevaluatedProperties",
+            "keyword": "unevaluatedProperties",
+            "params": {
+              "unevaluatedProperty": "source"
+            },
+            "message": "must NOT have unevaluated properties",
+            "hasInstanceValue": false,
+            "instanceValue": "content too large",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/PayoutService/68/openapi.yaml#L1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "adyen.com:RecurringService",
+      "apiVersion": "68",
+      "openApiVersion": "3.1.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/adyen.com/RecurringService/68/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/adyen.com/RecurringService/68/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/RecurringService/68/openapi.yaml",
+      "updated": "2021-11-02T23:15:52.596Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/unevaluatedProperties",
+            "keyword": "unevaluatedProperties",
+            "params": {
+              "unevaluatedProperty": "source"
+            },
+            "message": "must NOT have unevaluated properties",
+            "hasInstanceValue": false,
+            "instanceValue": "content too large",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/RecurringService/68/openapi.yaml#L1"
+          }
+        ]
+      }
+    },
     {
       "name": "airport-web.appspot.com",
       "apiVersion": "v1",
@@ -376,13 +480,13 @@
       "knownFailed": true
     },
     {
-      "name": "googleapis.com:datacatalog",
-      "apiVersion": "v1beta1",
+      "name": "googleapis.com:accessapproval",
+      "apiVersion": "v1",
       "openApiVersion": "3.0.0",
-      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/datacatalog/v1beta1/openapi.yaml",
-      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/datacatalog/v1beta1/openapi.json",
-      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/datacatalog/v1beta1/openapi.yaml",
-      "updated": "2021-08-23T23:09:37.165Z",
+      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/accessapproval/v1/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/accessapproval/v1/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/accessapproval/v1/openapi.yaml",
+      "updated": "2021-12-02T23:09:14.128Z",
       "result": {
         "valid": false,
         "errors": [
@@ -396,11 +500,608 @@
             "message": "must NOT have additional properties",
             "hasInstanceValue": false,
             "instanceValue": "content too large",
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/datacatalog/v1beta1/openapi.yaml#L1"
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/accessapproval/v1/openapi.yaml#L1"
           }
         ]
-      },
-      "knownFailed": true
+      }
+    },
+    {
+      "name": "googleapis.com:admin",
+      "apiVersion": "reports_v1",
+      "openApiVersion": "3.0.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/admin/reports_v1/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/admin/reports_v1/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/admin/reports_v1/openapi.yaml",
+      "updated": "2021-12-08T23:09:48.755Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
+            "params": {
+              "additionalProperty": "source"
+            },
+            "message": "must NOT have additional properties",
+            "hasInstanceValue": false,
+            "instanceValue": "content too large",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/admin/reports_v1/openapi.yaml#L1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "googleapis.com:adsense",
+      "apiVersion": "v2",
+      "openApiVersion": "3.0.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/adsense/v2/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/adsense/v2/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/adsense/v2/openapi.yaml",
+      "updated": "2021-11-30T23:09:24.445Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
+            "params": {
+              "additionalProperty": "source"
+            },
+            "message": "must NOT have additional properties",
+            "hasInstanceValue": false,
+            "instanceValue": "content too large",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/adsense/v2/openapi.yaml#L1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "googleapis.com:bigqueryreservation",
+      "apiVersion": "v1",
+      "openApiVersion": "3.0.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/bigqueryreservation/v1/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/bigqueryreservation/v1/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/bigqueryreservation/v1/openapi.yaml",
+      "updated": "2021-10-20T23:09:08.031Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
+            "params": {
+              "additionalProperty": "source"
+            },
+            "message": "must NOT have additional properties",
+            "hasInstanceValue": false,
+            "instanceValue": "content too large",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/bigqueryreservation/v1/openapi.yaml#L1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "googleapis.com:cloudbuild",
+      "apiVersion": "v1beta1",
+      "openApiVersion": "3.0.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/cloudbuild/v1beta1/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/cloudbuild/v1beta1/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/cloudbuild/v1beta1/openapi.yaml",
+      "updated": "2021-11-17T23:09:31.794Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
+            "params": {
+              "additionalProperty": "source"
+            },
+            "message": "must NOT have additional properties",
+            "hasInstanceValue": false,
+            "instanceValue": "content too large",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/cloudbuild/v1beta1/openapi.yaml#L1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "googleapis.com:cloudfunctions",
+      "apiVersion": "v1",
+      "openApiVersion": "3.0.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/cloudfunctions/v1/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/cloudfunctions/v1/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/cloudfunctions/v1/openapi.yaml",
+      "updated": "2021-12-06T23:09:47.493Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
+            "params": {
+              "additionalProperty": "source"
+            },
+            "message": "must NOT have additional properties",
+            "hasInstanceValue": false,
+            "instanceValue": "content too large",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/cloudfunctions/v1/openapi.yaml#L1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "googleapis.com:cloudshell",
+      "apiVersion": "v1",
+      "openApiVersion": "3.0.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/cloudshell/v1/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/cloudshell/v1/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/cloudshell/v1/openapi.yaml",
+      "updated": "2021-09-22T23:08:53.736Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
+            "params": {
+              "additionalProperty": "source"
+            },
+            "message": "must NOT have additional properties",
+            "hasInstanceValue": false,
+            "instanceValue": "content too large",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/cloudshell/v1/openapi.yaml#L1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "googleapis.com:container",
+      "apiVersion": "v1beta1",
+      "openApiVersion": "3.0.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/container/v1beta1/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/container/v1beta1/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/container/v1beta1/openapi.yaml",
+      "updated": "2021-11-17T23:09:31.794Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
+            "params": {
+              "additionalProperty": "source"
+            },
+            "message": "must NOT have additional properties",
+            "hasInstanceValue": false,
+            "instanceValue": "content too large",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/container/v1beta1/openapi.yaml#L1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "googleapis.com:displayvideo",
+      "apiVersion": "v1dev",
+      "openApiVersion": "3.0.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/displayvideo/v1dev/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/displayvideo/v1dev/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/displayvideo/v1dev/openapi.yaml",
+      "updated": "2021-09-30T23:08:37.582Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
+            "params": {
+              "additionalProperty": "source"
+            },
+            "message": "must NOT have additional properties",
+            "hasInstanceValue": false,
+            "instanceValue": "content too large",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/displayvideo/v1dev/openapi.yaml#L1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "googleapis.com:dns",
+      "apiVersion": "v1beta2",
+      "openApiVersion": "3.0.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/dns/v1beta2/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/dns/v1beta2/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/dns/v1beta2/openapi.yaml",
+      "updated": "2021-11-08T23:09:31.058Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
+            "params": {
+              "additionalProperty": "source"
+            },
+            "message": "must NOT have additional properties",
+            "hasInstanceValue": false,
+            "instanceValue": "content too large",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/dns/v1beta2/openapi.yaml#L1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "googleapis.com:file",
+      "apiVersion": "v1beta1",
+      "openApiVersion": "3.0.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/file/v1beta1/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/file/v1beta1/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/file/v1beta1/openapi.yaml",
+      "updated": "2021-10-25T23:09:21.761Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
+            "params": {
+              "additionalProperty": "source"
+            },
+            "message": "must NOT have additional properties",
+            "hasInstanceValue": false,
+            "instanceValue": "content too large",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/file/v1beta1/openapi.yaml#L1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "googleapis.com:firestore",
+      "apiVersion": "v1beta2",
+      "openApiVersion": "3.0.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/firestore/v1beta2/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/firestore/v1beta2/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/firestore/v1beta2/openapi.yaml",
+      "updated": "2021-11-08T23:09:31.058Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
+            "params": {
+              "additionalProperty": "source"
+            },
+            "message": "must NOT have additional properties",
+            "hasInstanceValue": false,
+            "instanceValue": "content too large",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/firestore/v1beta2/openapi.yaml#L1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "googleapis.com:gameservices",
+      "apiVersion": "v1beta",
+      "openApiVersion": "3.0.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/gameservices/v1beta/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/gameservices/v1beta/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/gameservices/v1beta/openapi.yaml",
+      "updated": "2021-11-19T23:09:15.948Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
+            "params": {
+              "additionalProperty": "source"
+            },
+            "message": "must NOT have additional properties",
+            "hasInstanceValue": false,
+            "instanceValue": "content too large",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/gameservices/v1beta/openapi.yaml#L1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "googleapis.com:genomics",
+      "apiVersion": "v2alpha1",
+      "openApiVersion": "3.0.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/genomics/v2alpha1/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/genomics/v2alpha1/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/genomics/v2alpha1/openapi.yaml",
+      "updated": "2021-09-22T23:08:53.736Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
+            "params": {
+              "additionalProperty": "source"
+            },
+            "message": "must NOT have additional properties",
+            "hasInstanceValue": false,
+            "instanceValue": "content too large",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/genomics/v2alpha1/openapi.yaml#L1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "googleapis.com:jobs",
+      "apiVersion": "v4",
+      "openApiVersion": "3.0.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/jobs/v4/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/jobs/v4/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/jobs/v4/openapi.yaml",
+      "updated": "2021-11-04T23:09:19.244Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
+            "params": {
+              "additionalProperty": "source"
+            },
+            "message": "must NOT have additional properties",
+            "hasInstanceValue": false,
+            "instanceValue": "content too large",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/jobs/v4/openapi.yaml#L1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "googleapis.com:managedidentities",
+      "apiVersion": "v1beta1",
+      "openApiVersion": "3.0.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/managedidentities/v1beta1/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/managedidentities/v1beta1/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/managedidentities/v1beta1/openapi.yaml",
+      "updated": "2021-11-15T23:09:33.136Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
+            "params": {
+              "additionalProperty": "source"
+            },
+            "message": "must NOT have additional properties",
+            "hasInstanceValue": false,
+            "instanceValue": "content too large",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/managedidentities/v1beta1/openapi.yaml#L1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "googleapis.com:monitoring",
+      "apiVersion": "v1",
+      "openApiVersion": "3.0.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/monitoring/v1/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/monitoring/v1/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/monitoring/v1/openapi.yaml",
+      "updated": "2021-11-11T23:09:19.072Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
+            "params": {
+              "additionalProperty": "source"
+            },
+            "message": "must NOT have additional properties",
+            "hasInstanceValue": false,
+            "instanceValue": "content too large",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/monitoring/v1/openapi.yaml#L1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "googleapis.com:policytroubleshooter",
+      "apiVersion": "v1beta",
+      "openApiVersion": "3.0.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/policytroubleshooter/v1beta/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/policytroubleshooter/v1beta/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/policytroubleshooter/v1beta/openapi.yaml",
+      "updated": "2021-10-12T23:08:51.158Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
+            "params": {
+              "additionalProperty": "source"
+            },
+            "message": "must NOT have additional properties",
+            "hasInstanceValue": false,
+            "instanceValue": "content too large",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/policytroubleshooter/v1beta/openapi.yaml#L1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "googleapis.com:redis",
+      "apiVersion": "v1beta1",
+      "openApiVersion": "3.0.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/redis/v1beta1/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/redis/v1beta1/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/redis/v1beta1/openapi.yaml",
+      "updated": "2021-11-15T23:09:33.136Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
+            "params": {
+              "additionalProperty": "source"
+            },
+            "message": "must NOT have additional properties",
+            "hasInstanceValue": false,
+            "instanceValue": "content too large",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/redis/v1beta1/openapi.yaml#L1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "googleapis.com:run",
+      "apiVersion": "v1",
+      "openApiVersion": "3.0.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/run/v1/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/run/v1/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/run/v1/openapi.yaml",
+      "updated": "2021-11-18T23:09:30.533Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
+            "params": {
+              "additionalProperty": "source"
+            },
+            "message": "must NOT have additional properties",
+            "hasInstanceValue": false,
+            "instanceValue": "content too large",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/run/v1/openapi.yaml#L1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "googleapis.com:securitycenter",
+      "apiVersion": "v1p1alpha1",
+      "openApiVersion": "3.0.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/securitycenter/v1p1alpha1/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/securitycenter/v1p1alpha1/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/securitycenter/v1p1alpha1/openapi.yaml",
+      "updated": "2021-12-09T23:09:29.706Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
+            "params": {
+              "additionalProperty": "source"
+            },
+            "message": "must NOT have additional properties",
+            "hasInstanceValue": false,
+            "instanceValue": "content too large",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/securitycenter/v1p1alpha1/openapi.yaml#L1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "googleapis.com:servicecontrol",
+      "apiVersion": "v2",
+      "openApiVersion": "3.0.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/servicecontrol/v2/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/servicecontrol/v2/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/servicecontrol/v2/openapi.yaml",
+      "updated": "2021-11-02T23:08:55.935Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
+            "params": {
+              "additionalProperty": "source"
+            },
+            "message": "must NOT have additional properties",
+            "hasInstanceValue": false,
+            "instanceValue": "content too large",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/servicecontrol/v2/openapi.yaml#L1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "googleapis.com:tpu",
+      "apiVersion": "v2alpha1",
+      "openApiVersion": "3.0.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/tpu/v2alpha1/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/tpu/v2alpha1/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/tpu/v2alpha1/openapi.yaml",
+      "updated": "2021-11-12T23:09:14.204Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
+            "params": {
+              "additionalProperty": "source"
+            },
+            "message": "must NOT have additional properties",
+            "hasInstanceValue": false,
+            "instanceValue": "content too large",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/tpu/v2alpha1/openapi.yaml#L1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "googleapis.com:vision",
+      "apiVersion": "v1p2beta1",
+      "openApiVersion": "3.0.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/vision/v1p2beta1/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/vision/v1p2beta1/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/vision/v1p2beta1/openapi.yaml",
+      "updated": "2021-09-23T23:08:15.596Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
+            "params": {
+              "additionalProperty": "source"
+            },
+            "message": "must NOT have additional properties",
+            "hasInstanceValue": false,
+            "instanceValue": "content too large",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/vision/v1p2beta1/openapi.yaml#L1"
+          }
+        ]
+      }
     },
     {
       "name": "openapi-generator.tech",
@@ -535,7 +1236,8 @@
             "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.1/swagger.yaml#L58"
           }
         ]
-      }
+      },
+      "knownFailed": true
     },
     {
       "name": "opensuse.org:obs",
