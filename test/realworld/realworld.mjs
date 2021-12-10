@@ -10,10 +10,10 @@ import { argv, exit } from "process";
 import { JSON_SCHEMA, load } from "js-yaml";
 import { createReport } from "./createReport.js";
 const yamlOpts = { schema: JSON_SCHEMA };
-const failedFile = localFile('/failed.json');
-const reportFile = localFile('/failed.md');
-const newFailedFile = localFile('/failed.updated.json');
-const newReportFile = localFile('/failed.updated.md');
+const failedFile = localFile('./failed.json');
+const reportFile = localFile('./failed.md');
+const newFailedFile = localFile('./failed.updated.json');
+const newReportFile = localFile('./failed.updated.md');
 const defaultPercentage = 10;
 const failedMap = loadFailedData(failedFile);
 
@@ -164,14 +164,33 @@ async function fetchYaml(url) {
   return await response.text();
 }
 
-async function testAPIs(percentage, onlyFailed, ci) {
-  if (onlyFailed || ci) {
-    percentage = 100;
-  }
-  const [apiList, totalSize, latestSize] = await fetchApiList(
-    percentage,
-    onlyFailed,
+function writeReport(ci, totalSize, results, failed) {
+  const jsonFile = ci ? failedFile : newFailedFile;
+  const mdFile = ci ? reportFile : newReportFile;
+  const data = {
+    testDate: new Date().toISOString(),
+    totalApiCount: totalSize,
+    testedAPICount: results.total,
+    failedAPICount: results.invalid,
+    knownFailedCount: results.knownFailed,
+    failedTests: Array.from(failed.values()),
+  };
+  console.log(`new/updated failures found`);
+  console.log(`creating ${jsonFile}`);
+  writeFileSync(
+    jsonFile,
+    JSON.stringify(data, null, 2),
+    "utf8"
   );
+  console.log(`creating new report ${mdFile}`);
+  writeFileSync(
+    mdFile,
+    createReport(data),
+    "utf8"
+  );
+}
+
+async function doTest(apiList) {
   const failed = new Map();
   const results = {
     total: apiList.size,
@@ -192,16 +211,14 @@ async function testAPIs(percentage, onlyFailed, ci) {
         const [res, value] = getInstanceValue(spec, item.instancePath);
         item.hasInstanceValue = res;
         item.instanceValue = value;
-        item.gitHubUrl = `${api.gitHubUrl}#L${
-          yamlLine(
-            spec,
-            item.instancePath,
-          )
-        }`;
+        item.gitHubUrl = `${api.gitHubUrl}#L${yamlLine(
+          spec,
+          item.instancePath
+        )}`;
       });
       if (failedMap.has(name)) {
         const failedApiErrors = JSON.stringify(
-          failedMap.get(name).result.errors,
+          failedMap.get(name).result.errors
         );
         if (failedApiErrors === JSON.stringify(api.result.errors)) {
           results.knownFailed++;
@@ -212,6 +229,18 @@ async function testAPIs(percentage, onlyFailed, ci) {
     }
     console.log(JSON.stringify(results), name);
   }
+  return { results, failed };
+}
+
+async function testAPIs(percentage, onlyFailed, ci) {
+  if (onlyFailed || ci) {
+    percentage = 100;
+  }
+  const [apiList, totalSize, latestSize] = await fetchApiList(
+    percentage,
+    onlyFailed,
+  );
+  const { results, failed } = await doTest(apiList);
   console.log(
     `Finished testing ${results.total} APIs
      ${results.invalid} tests failed of which ${results.knownFailed} were known failures`,
@@ -222,29 +251,7 @@ async function testAPIs(percentage, onlyFailed, ci) {
   ) {
     const exitCode = ci ? 0 : 1;
     if (percentage === 100) {
-      const jsonFile = ci ? failedFile : newFailedFile;
-      const mdFile = ci ? reportFile : newReportFile;
-      const data = {
-        testDate: new Date().toISOString(),
-        totalApiCount: totalSize,
-        testedAPICount: results.total,
-        failedAPICount: results.invalid,
-        knownFailedCount: results.knownFailed,
-        failedTests: Array.from(failed.values()),
-      };
-      console.log(`new/updated failures found`);
-      console.log(`creating ${jsonFile}`);
-      writeFileSync(
-        jsonFile,
-        JSON.stringify(data, null, 2),
-        "utf8",
-      );
-      console.log(`creating new report ${mdFile}`);
-      writeFileSync(
-        mdFile,
-        createReport(data),
-        "utf8",
-      );
+      writeReport(ci, totalSize, results, failed);
     }
     process.exit(exitCode);
   }
