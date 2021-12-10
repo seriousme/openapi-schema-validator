@@ -2,6 +2,11 @@ function escapeMarkDown(string){
     return string.replace(/[.*+?^~${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
 }
 
+function minorVersion(version){
+    const [major,minor, _] = version.split('.');
+    return `${major}.${minor}`;
+}
+
 function processErrors(errors) {
     const data = {};
     for (const item of errors) {
@@ -64,7 +69,7 @@ Report generated at: ${new Date(Date.parse(results.testDate))}
 ${results.failedTests.map(item => `
 ## API: ${escapeMarkDown(item.name)} (version: ${item.apiVersion}) 
 ${item.openApiVersion === "2.0" ? "Swagger" : "OpenApi"}: [${item.openApiVersion}](https://spec.openapis.org/oas/v${item.openApiVersion})
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v${item.openApiVersion})
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v${minorVersion(item.openApiVersion)})
 
 API on Github: [link](${item.gitHubUrl})
 
