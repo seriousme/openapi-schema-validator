@@ -83,7 +83,7 @@ function findArrayItem(lines, num, pathIdx) {
   const match = firstItem.match(/^\s*-/);
   if (match === null) {
     // it was not an array index, but a key
-    return findItem(lines, num, pathItem);
+    return findItem(lines, num, pathIdx);
   }
   const prefix = match[0];
   while (pathIdx > 0) {
