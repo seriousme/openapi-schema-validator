@@ -1,16 +1,16 @@
 # Results of real world testing
-Report generated at: Fri Dec 10 2021 15:06:48 GMT+0000 (Coordinated Universal Time)
+Report generated at: Thu Dec 23 2021 16:54:23 GMT+0000 (Coordinated Universal Time)
 
 | APIs at [apis.guru](https://apis.guru) | #
 |--------|-------|
 |Total |2337 
 |Tested |2337
-|Failed validation | 41
+|Failed validation | 42
 
 
 ## API: adyen\.com:CheckoutService (version: 68) 
 OpenApi: [3.1.0](https://spec.openapis.org/oas/v3.1.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.1.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.1/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/CheckoutService/68/openapi.yaml)
 
@@ -31,7 +31,7 @@ AJV errors:
 
 ## API: adyen\.com:PaymentService (version: 68) 
 OpenApi: [3.1.0](https://spec.openapis.org/oas/v3.1.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.1.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.1/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/PaymentService/68/openapi.yaml)
 
@@ -52,7 +52,7 @@ AJV errors:
 
 ## API: adyen\.com:PayoutService (version: 68) 
 OpenApi: [3.1.0](https://spec.openapis.org/oas/v3.1.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.1.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.1/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/PayoutService/68/openapi.yaml)
 
@@ -73,7 +73,7 @@ AJV errors:
 
 ## API: adyen\.com:RecurringService (version: 68) 
 OpenApi: [3.1.0](https://spec.openapis.org/oas/v3.1.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.1.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.1/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/adyen.com/RecurringService/68/openapi.yaml)
 
@@ -94,7 +94,7 @@ AJV errors:
 
 ## API: airport-web\.appspot\.com (version: v1) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/airport-web.appspot.com/v1/swagger.yaml)
 
@@ -141,7 +141,7 @@ AJV errors:
 
 ## API: ato\.gov\.au (version: 0.0.6) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/ato.gov.au/0.0.6/swagger.yaml)
 
@@ -170,7 +170,7 @@ AJV errors:
 
 ## API: azure\.com:servicebus (version: 2017-04-01) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/servicebus/2017-04-01/swagger.yaml)
 
@@ -194,7 +194,7 @@ AJV errors:
 
 ## API: azure\.com:storageimportexport (version: 2016-11-01) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/storageimportexport/2016-11-01/swagger.yaml)
 
@@ -218,7 +218,7 @@ AJV errors:
 
 ## API: gambitcomm\.local:mimic (version: 21.00) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/gambitcomm.local/mimic/21.00/openapi.yaml)
 
@@ -295,7 +295,7 @@ AJV errors:
 
 ## API: googleapis\.com:accessapproval (version: v1) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/accessapproval/v1/openapi.yaml)
 
@@ -316,7 +316,7 @@ AJV errors:
 
 ## API: googleapis\.com:admin (version: reports_v1) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/admin/reports_v1/openapi.yaml)
 
@@ -337,7 +337,7 @@ AJV errors:
 
 ## API: googleapis\.com:adsense (version: v2) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/adsense/v2/openapi.yaml)
 
@@ -358,7 +358,7 @@ AJV errors:
 
 ## API: googleapis\.com:bigqueryreservation (version: v1) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/bigqueryreservation/v1/openapi.yaml)
 
@@ -379,7 +379,7 @@ AJV errors:
 
 ## API: googleapis\.com:cloudbuild (version: v1beta1) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/cloudbuild/v1beta1/openapi.yaml)
 
@@ -400,7 +400,7 @@ AJV errors:
 
 ## API: googleapis\.com:cloudfunctions (version: v1) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/cloudfunctions/v1/openapi.yaml)
 
@@ -421,7 +421,7 @@ AJV errors:
 
 ## API: googleapis\.com:cloudshell (version: v1) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/cloudshell/v1/openapi.yaml)
 
@@ -442,11 +442,11 @@ AJV errors:
 
 ## API: googleapis\.com:container (version: v1beta1) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/container/v1beta1/openapi.yaml)
 
-API updated: 2021-11-17T23:09:31.794Z
+API updated: 2021-12-16T23:09:43.633Z
 
 ### Path: 
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/container/v1beta1/openapi.yaml#L1)
@@ -461,9 +461,30 @@ AJV errors:
 
     
 
+## API: googleapis\.com:datastore (version: v1beta1) 
+OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/datastore/v1beta1/openapi.yaml)
+
+API updated: 2021-12-21T23:09:48.585Z
+
+### Path: 
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/datastore/v1beta1/openapi.yaml#L1)
+
+Value: content too large
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |additionalProperties |{"additionalProperty":"source"}| must NOT have additional properties
+
+    
+
 ## API: googleapis\.com:displayvideo (version: v1dev) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/displayvideo/v1dev/openapi.yaml)
 
@@ -484,7 +505,7 @@ AJV errors:
 
 ## API: googleapis\.com:dns (version: v1beta2) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/dns/v1beta2/openapi.yaml)
 
@@ -505,7 +526,7 @@ AJV errors:
 
 ## API: googleapis\.com:file (version: v1beta1) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/file/v1beta1/openapi.yaml)
 
@@ -526,7 +547,7 @@ AJV errors:
 
 ## API: googleapis\.com:firestore (version: v1beta2) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/firestore/v1beta2/openapi.yaml)
 
@@ -547,7 +568,7 @@ AJV errors:
 
 ## API: googleapis\.com:gameservices (version: v1beta) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/gameservices/v1beta/openapi.yaml)
 
@@ -568,7 +589,7 @@ AJV errors:
 
 ## API: googleapis\.com:genomics (version: v2alpha1) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/genomics/v2alpha1/openapi.yaml)
 
@@ -589,7 +610,7 @@ AJV errors:
 
 ## API: googleapis\.com:jobs (version: v4) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/jobs/v4/openapi.yaml)
 
@@ -610,7 +631,7 @@ AJV errors:
 
 ## API: googleapis\.com:managedidentities (version: v1beta1) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/managedidentities/v1beta1/openapi.yaml)
 
@@ -631,7 +652,7 @@ AJV errors:
 
 ## API: googleapis\.com:monitoring (version: v1) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/monitoring/v1/openapi.yaml)
 
@@ -652,7 +673,7 @@ AJV errors:
 
 ## API: googleapis\.com:policytroubleshooter (version: v1beta) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/policytroubleshooter/v1beta/openapi.yaml)
 
@@ -673,11 +694,11 @@ AJV errors:
 
 ## API: googleapis\.com:redis (version: v1beta1) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/redis/v1beta1/openapi.yaml)
 
-API updated: 2021-11-15T23:09:33.136Z
+API updated: 2021-12-13T23:09:42.532Z
 
 ### Path: 
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/redis/v1beta1/openapi.yaml#L1)
@@ -694,7 +715,7 @@ AJV errors:
 
 ## API: googleapis\.com:run (version: v1) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/run/v1/openapi.yaml)
 
@@ -715,7 +736,7 @@ AJV errors:
 
 ## API: googleapis\.com:securitycenter (version: v1p1alpha1) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/securitycenter/v1p1alpha1/openapi.yaml)
 
@@ -736,7 +757,7 @@ AJV errors:
 
 ## API: googleapis\.com:servicecontrol (version: v2) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/servicecontrol/v2/openapi.yaml)
 
@@ -757,7 +778,7 @@ AJV errors:
 
 ## API: googleapis\.com:tpu (version: v2alpha1) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/tpu/v2alpha1/openapi.yaml)
 
@@ -778,7 +799,7 @@ AJV errors:
 
 ## API: googleapis\.com:vision (version: v1p2beta1) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/vision/v1p2beta1/openapi.yaml)
 
@@ -799,7 +820,7 @@ AJV errors:
 
 ## API: openapi-generator\.tech (version: 5.2.1) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/openapi-generator.tech/5.2.1/swagger.yaml)
 
@@ -873,7 +894,7 @@ AJV errors:
 
 ## API: opensuse\.org:obs (version: 2.10.50) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml)
 
@@ -1154,7 +1175,7 @@ AJV errors:
 
 ## API: parliament\.uk:statutoryinstruments (version: v1) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/statutoryinstruments/v1/swagger.yaml)
 
@@ -1178,7 +1199,7 @@ AJV errors:
 
 ## API: parliament\.uk:treaties (version: v1) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/treaties/v1/swagger.yaml)
 
@@ -1202,7 +1223,7 @@ AJV errors:
 
 ## API: prss\.org (version: 2.0.0) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml)
 
@@ -1271,7 +1292,7 @@ AJV errors:
 
 ## API: trashnothing\.com (version: 1.2) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/trashnothing.com/1.2/openapi.yaml)
 
@@ -1295,7 +1316,7 @@ AJV errors:
 
 ## API: twinehealth\.com (version: v7.78.1) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml)
 
@@ -1359,7 +1380,7 @@ AJV errors:
 
 ## API: whapi\.com:numbers (version: 2.0) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/whapi.com/numbers/2.0/swagger.yaml)
 
