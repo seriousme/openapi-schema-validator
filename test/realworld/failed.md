@@ -1,10 +1,10 @@
 # Results of real world testing
-Report generated at: Thu Feb 10 2022 16:45:44 GMT+0000 (Coordinated Universal Time)
+Report generated at: Thu Feb 17 2022 16:46:21 GMT+0000 (Coordinated Universal Time)
 
 | APIs at [apis.guru](https://apis.guru) | #
 |--------|-------|
-|Total |2340 
-|Tested |2340
+|Total |2343 
+|Tested |2343
 |Failed validation | 44
 
 
@@ -299,7 +299,7 @@ OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/accessapproval/v1/openapi.yaml)
 
-API updated: 2021-12-02T23:09:14.128Z
+API updated: 2022-02-16T23:09:15.117Z
 
 ### Path: 
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/accessapproval/v1/openapi.yaml#L1)
@@ -398,16 +398,16 @@ AJV errors:
 
     
 
-## API: googleapis\.com:cloudfunctions (version: v1) 
+## API: googleapis\.com:cloudfunctions (version: v2alpha) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 [JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/cloudfunctions/v1/openapi.yaml)
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/cloudfunctions/v2alpha/openapi.yaml)
 
-API updated: 2022-02-09T23:08:50.396Z
+API updated: 2022-02-16T23:09:15.117Z
 
 ### Path: 
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/cloudfunctions/v1/openapi.yaml#L1)
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/cloudfunctions/v2alpha/openapi.yaml#L1)
 
 Value: content too large
 
@@ -467,7 +467,7 @@ OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/datastore/v1beta1/openapi.yaml)
 
-API updated: 2022-01-19T23:09:08.561Z
+API updated: 2022-02-14T23:08:57.692Z
 
 ### Path: 
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/datastore/v1beta1/openapi.yaml#L1)
@@ -551,7 +551,7 @@ OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/firebasehosting/v1beta1/openapi.yaml)
 
-API updated: 2022-02-09T23:08:50.396Z
+API updated: 2022-02-10T23:09:30.803Z
 
 ### Path: 
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/firebasehosting/v1beta1/openapi.yaml#L1)
@@ -740,7 +740,7 @@ OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/redis/v1beta1/openapi.yaml)
 
-API updated: 2022-02-03T23:07:59.259Z
+API updated: 2022-02-11T23:08:48.228Z
 
 ### Path: 
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/redis/v1beta1/openapi.yaml#L1)
@@ -761,7 +761,7 @@ OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/run/v2/openapi.yaml)
 
-API updated: 2022-01-27T23:09:15.267Z
+API updated: 2022-02-11T23:08:48.228Z
 
 ### Path: 
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/run/v2/openapi.yaml#L1)
@@ -782,7 +782,7 @@ OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/securitycenter/v1p1alpha1/openapi.yaml)
 
-API updated: 2022-01-31T23:09:29.486Z
+API updated: 2022-02-15T23:09:29.916Z
 
 ### Path: 
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/securitycenter/v1p1alpha1/openapi.yaml#L1)
