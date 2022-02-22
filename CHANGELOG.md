@@ -3,6 +3,10 @@
 ## [Unreleased]
 ### Changed
 
+## [v1.6.1]
+### Changed 22-2-2022
+ - Fixed error in addSpecRef example in the README
+
 ## [v1.6.0]
 ### Changed 09-10-2021
  - New feature, now supports external refs, see addSpecRef in the README.
