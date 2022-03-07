@@ -33,7 +33,7 @@
   "license": "MIT",
   "devDependencies": {
     "node-fetch": "^3.0.0",
-    "tap": "^15.0.10"
+    "tap": "^16.0.0"
   },
   "directories": {
     "test": "test"
