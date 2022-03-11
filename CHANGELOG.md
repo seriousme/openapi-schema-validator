@@ -3,6 +3,11 @@
 ## [Unreleased]
 ### Changed
 
+## [v1.7.0]
+### Changed 11-03-2022
+ - Updated OAS v3.0 to the updated 2021-09-28 schema (only descriptions changed)
+ - Updated OAS v3.1 to 2022-02-27 schema
+
 ## [v1.6.1]
 ### Changed 22-2-2022
  - Fixed error in addSpecRef example in the README
