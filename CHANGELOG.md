@@ -3,6 +3,13 @@
 ## [Unreleased]
 ### Changed
 
+## [v1.7.1]
+### Changed 22-04-2022
+ - Updated dependencies
+    ajv          ^8.6.3  →  ^8.11.0     
+    node-fetch   ^3.0.0  →   ^3.2.3     
+    tap         ^16.0.0  →  ^16.0.1     
+
 ## [v1.7.0]
 ### Changed 11-03-2022
  - Updated OAS v3.0 to the updated 2021-09-28 schema (only descriptions changed)
