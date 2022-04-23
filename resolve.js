@@ -7,6 +7,7 @@ function unescapeJsonPointer(str) {
 }
 
 const isObject = (obj) => typeof obj === "object" && obj !== null;
+
 const pointerWords = new Set([
   "$ref",
   "$id",
@@ -16,21 +17,17 @@ const pointerWords = new Set([
   "$schema",
 ]);
 
-function fromEntries(iterable) {
-  return [...iterable].reduce((obj, [key, val]) => {
-    obj[key] = val;
-    return obj;
-  }, {});
+// remove pointerWords from object
+function filtered(obj) {
+  return Object.fromEntries(Object.entries(obj).filter(([key, _]) => !pointerWords.has(key)));
 }
-
-const filtered = (raw) =>
-  fromEntries(Object.entries(raw).filter(([key, _]) => !pointerWords.has(key)));
 
 function resolveUri(uri, anchors) {
   const [prefix, path] = uri.split("#", 2);
+  const hashPresent = !!path;
   const err = new Error(`Can't resolve ${uri}, only internal refs are supported.`);
 
-  if (path && path.length && path[0] !== "/") {
+  if (hashPresent && (path[0]!=='/')) {
     if (anchors[uri]) {
       return anchors[uri];
     }
@@ -41,7 +38,7 @@ function resolveUri(uri, anchors) {
     throw err;
   }
 
-  if (path === undefined){
+  if (!hashPresent){
     return anchors[prefix];
   }
 
