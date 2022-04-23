@@ -59,7 +59,7 @@ function resolveUri(uri, anchors) {
 
 }
 
-function resolve(tree) {
+export function resolve(tree) {
   if (!isObject(tree)) {
     return undefined;
   }
@@ -133,5 +133,3 @@ function resolve(tree) {
 
   return tree;
 }
-
-module.exports = { resolve };

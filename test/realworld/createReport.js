@@ -55,8 +55,7 @@ ${item.errors.map(err => `   |${err.keyword} |${err.params}| ${err.message}`).jo
 
 }
 
-
-function createReport(results) {
+export function createReport(results) {
     return `# Results of real world testing
 Report generated at: ${new Date(Date.parse(results.testDate))}
 
@@ -78,6 +77,4 @@ ${processErrors(item.result.errors)}
     ` ).join("\n")}`;
 }
 
-
-module.exports = { createReport };
 

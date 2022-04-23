@@ -1,28 +1,27 @@
-const { Console } = require("console");
-const fs = require("fs");
-const openApiSrcDir = `${__dirname}/../schemas.orig`;
-const openApiDestDir = `${__dirname}/../schemas`;
+import { readFileSync, readdirSync, writeFileSync } from "fs";
+
+function localPath(path){
+  return new URL(path, import.meta.url).pathname;
+}
+const openApiSrcDir = localPath('../schemas.orig');
+const openApiDestDir = localPath('../schemas');
 const version = "3.1";
 const destFilePath = `${openApiDestDir}/v${version}/schema.json`;
 
-function readJSON(file) {
-  return JSON.parse(fs.readFileSync(file));
+function importJSON(file) {
+  return JSON.parse(readFileSync(file));
 }
 
 function getLatestSchema(version) {
   const srcPath = `${openApiSrcDir}/${version}/schema/`
-  const schemaList =  fs.readdirSync(srcPath);
+  const schemaList =  readdirSync(srcPath);
   const lastSchema = schemaList.pop();
-  const schema = readJSON(`${srcPath}/${lastSchema}`);
+  const schema = importJSON(`${srcPath}/${lastSchema}`);
   return schema;
 }
 
 function escapeJsonPointer(str) {
   return str.replace(/~/g, "~0").replace(/\//g, "~1");
-}
-
-function unescapeJsonPointer(str) {
-  return str.replace(/~1/g, "/").replace(/~0/g, "~");
 }
 
 const isObject = (obj) => typeof obj === "object" && obj !== null;
@@ -65,7 +64,7 @@ pointers.$dynamicRef.forEach((item) => {
   obj.$ref = dynamicAnchors[ref];
 });
 
-fs.writeFileSync(
+writeFileSync(
   `${destFilePath}`,
   JSON.stringify(schema, null, 2),
 );

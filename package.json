@@ -3,7 +3,7 @@
   "version": "1.7.1",
   "description": "Validate OpenApi specifications against their JSON schema",
   "main": "index.js",
-  "type": "commonjs",
+  "type": "module",
   "bin": {
     "validate-api": "./bin/validate-api-cli.js"
   },
@@ -24,10 +24,10 @@
     "postconvert31": "npm run checkOasVersionsSnapshot",
     "preversion": "npm test",
     "postversion": "git push && git push --tags",
-    "realWorldTest": "node test/realworld/realworld.mjs",
-    "realWorldTestAll": "node test/realworld/realworld.mjs --all",
-    "realWorldTestFailed": "node test/realworld/realworld.mjs --failedOnly",
-    "realWorldTestCI": "node test/realworld/realworld.mjs --ci"
+    "realWorldTest": "node test/realworld/realworld.js",
+    "realWorldTestAll": "node test/realworld/realworld.js --all",
+    "realWorldTestFailed": "node test/realworld/realworld.js --failedOnly",
+    "realWorldTestCI": "node test/realworld/realworld.js --ci"
   },
   "author": "Hans Klunder",
   "license": "MIT",
