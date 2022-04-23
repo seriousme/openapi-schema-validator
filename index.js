@@ -2,9 +2,7 @@ const Ajv04 = require("ajv-draft-04");
 const Ajv2020 = require("ajv/dist/2020.js");
 const addFormats = require("ajv-formats");
 const JSYaml = require("js-yaml");
-const util = require("util");
-const fs = require("fs");
-const readFile = util.promisify(fs.readFile);
+const { readFile } = require("fs/promises")
 const { resolve } = require("./resolve.js");
 
 const openApiVersions = new Set(["2.0", "3.0", "3.1"]);
@@ -47,7 +45,7 @@ async function getSpecFromData(data) {
   return undefined;
 }
 
-class Validator {
+module.exports = class Validator {
   constructor(ajvOptions = {}) {
     // AJV is a bit too strict in its strict validation of openAPI schemas
     // so switch strict mode and validateFormats off
@@ -60,6 +58,8 @@ class Validator {
     return this;
   }
 
+  static supportedVersions = openApiVersions;
+
   resolveRefs(opts = {}) {
     return resolve(this.specification || opts.specification);
   }
@@ -69,8 +69,8 @@ class Validator {
     if (spec === undefined) {
       throw new Error("Cannot find JSON, YAML or filename in data");
     }
-    if (uri === undefined){
-      if (spec['$id'] === undefined){
+    if (uri === undefined) {
+      if (spec['$id'] === undefined) {
         throw new Error("uri parameter or $id attribute must be present");
       }
       uri = spec['$id'];
@@ -127,6 +127,3 @@ class Validator {
     return this.ajvValidators[version];
   }
 }
-
-Validator.supportedVersions = openApiVersions;
-module.exports = Validator;
