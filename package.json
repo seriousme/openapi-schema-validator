@@ -14,8 +14,9 @@
     "js-yaml": "^4.1.0"
   },
   "scripts": {
-    "test": "tap test/test-*.js",
-    "covtest": "tap --coverage-report=html test/test-*.js",
+    "test": "c8 tap test/test-*.js",
+    "posttest": "c8 check-coverage --lines 100 --functions 100 --branches 100",
+    "covtest": "c8 --reporter=lcov npm test",
     "cloneOas": "rm -rf OpenAPI-Specification && git clone --branch 'gh-pages' --single-branch https://github.com/OAI/OpenAPI-Specification.git",
     "checkOasVersions": "tap --no-coverage test/check-versions.js",
     "checkOasVersionsSnapshot": "tap --no-coverage --snapshot test/check-versions.js",
@@ -32,6 +33,7 @@
   "author": "Hans Klunder",
   "license": "MIT",
   "devDependencies": {
+    "c8": "^7.11.2",
     "node-fetch": "^3.2.3",
     "tap": "^16.0.1"
   },
