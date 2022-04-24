@@ -58,6 +58,9 @@ This module can be used in CommonJS code via:
 // CommonJS
 const { Validator } = await (import("@seriousme/openapi-schema-validator"));
 ```
+
+See also the [upgrading guide](UPGRADING.md) if you come from a previous major version.
+
 <a name="CLI"></a>
 
 ### CLI
