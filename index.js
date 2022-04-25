@@ -1,9 +1,10 @@
-const Ajv04 = require("ajv-draft-04");
-const Ajv2020 = require("ajv/dist/2020.js");
-const addFormats = require("ajv-formats");
-const JSYaml = require("js-yaml");
-const { readFile } = require("fs/promises")
-const { resolve } = require("./resolve.js");
+import Ajv04 from "ajv-draft-04";
+import Ajv2020 from "ajv/dist/2020.js";
+import addFormats from "ajv-formats";
+import { JSON_SCHEMA, load } from "js-yaml";
+import { readFileSync } from "fs";
+import { readFile } from "fs/promises";
+import { resolve } from "./resolve.js";
 
 const openApiVersions = new Set(["2.0", "3.0", "3.1"]);
 const ajvVersions = {
@@ -11,6 +12,14 @@ const ajvVersions = {
   "https://json-schema.org/draft/2020-12/schema": Ajv2020,
 };
 const inlinedRefs = "x-inlined-refs";
+
+function localFile(fileName) {
+  return new URL(fileName, import.meta.url).pathname;
+}
+
+function importJSON(file) {
+  return JSON.parse(readFileSync(localFile(file)));
+}
 
 function getOpenApiVersion(specification) {
   for (const version of openApiVersions) {
@@ -23,21 +32,21 @@ function getOpenApiVersion(specification) {
 }
 
 async function getSpecFromData(data) {
-  const yamlOpts = { schema: JSYaml.JSON_SCHEMA };
+  const yamlOpts = { schema: JSON_SCHEMA };
   if (typeof data === "object") {
     return data;
   }
   if (typeof data === "string") {
     if (data.match(/\n/)) {
       try {
-        return JSYaml.load(data, yamlOpts);
+        return load(data, yamlOpts);
       } catch (_) {
         return undefined;
       }
     }
     try {
       const fileData = await readFile(data, "utf-8");
-      return JSYaml.load(fileData, yamlOpts);
+      return load(fileData, yamlOpts);
     } catch (_) {
       return undefined;
     }
@@ -45,7 +54,7 @@ async function getSpecFromData(data) {
   return undefined;
 }
 
-module.exports = class Validator {
+export class Validator {
   constructor(ajvOptions = {}) {
     // AJV is a bit too strict in its strict validation of openAPI schemas
     // so switch strict mode and validateFormats off
@@ -116,7 +125,7 @@ module.exports = class Validator {
 
   getAjvValidator(version) {
     if (!this.ajvValidators[version]) {
-      const schema = require(`./schemas/v${version}/schema.json`);
+      const schema = importJSON(`./schemas/v${version}/schema.json`);
       const schemaVersion = schema.$schema;
       const AjvClass = ajvVersions[schemaVersion];
       const ajv = new AjvClass(this.ajvOptions);

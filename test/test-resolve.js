@@ -1,6 +1,5 @@
-const { test } = require("tap");
-
-const Validator = require("../index.js");
+import { test } from "tap";
+import { Validator } from "../index.js";
 const validator = new Validator();
 const resolve = (specification) => validator.resolveRefs({ specification });
 

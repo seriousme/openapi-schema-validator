@@ -1,5 +1,5 @@
 import {Options, ErrorObject} from "ajv"
-export default class Validator {
+export class Validator {
     static supportedVersions: Set<string>;
     constructor(ajvOptions?: Options);
     resolveRefs(opts?: {

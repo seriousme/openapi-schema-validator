@@ -29,11 +29,11 @@ npm install @seriousme/openapi-schema-validator
 
 ## Usage
 
+This module is ESM only, if you need to use commonJS please see below.
+
 ```javascript
 // ESM
-import Validator from "@seriousme/openapi-schema-validator";
-// CommonJS
-const Validator = require("@seriousme/openapi-schema-validator");
+import { Validator } from "@seriousme/openapi-schema-validator";
 
 console.log(Validator.supportedVersions.has("3.1"));
 // prints true
@@ -51,6 +51,15 @@ if (res.valid) {
   console.log(res.errors);
 }
 ```
+
+This module can be used in CommonJS code via:
+
+```javascript
+// CommonJS
+const { Validator } = await (import("@seriousme/openapi-schema-validator"));
+```
+
+See also the [upgrading guide](UPGRADING.md) if you come from a previous major version.
 
 <a name="CLI"></a>
 

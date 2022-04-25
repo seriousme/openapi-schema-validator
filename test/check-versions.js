@@ -1,34 +1,37 @@
-const tap = require("tap");
-const test = tap.test;
-
-const util = require("util");
-const fs = require("fs");
-const { createHash } = require("crypto");
-const Validator = require("../index.js");
-const readDir = util.promisify(fs.readdir);
+import tap from "tap";
+import { URL } from 'url';
+import { readdir } from "fs/promises";
+import { readFileSync } from "fs";
+import { Validator } from "../index.js";
+import { createHash } from "crypto";
 
 const supportedVersions = Validator.supportedVersions;
-const openApiDir = `${__dirname}/../schemas.orig`;
 
-function readJSON(file) {
-  return JSON.parse(fs.readFileSync(file));
+function localPath(path){
+  return new URL(path, import.meta.url).pathname;
 }
 
+const openApiDir = localPath('../schemas.orig');
+const test = tap.test;
 tap.formatSnapshot = (object) => {
   const hash = createHash("sha256");
   hash.update(JSON.stringify(object));
   return hash.digest("hex");
 };
 
+function readJSON(file) {
+  return JSON.parse(readFileSync(file));
+}
+
 async function getOpenApiSchemasVersions(oasdir) {
-  const dirs = (await readDir(oasdir)).filter((d) => !d.endsWith(".html"));
+  const dirs = (await readdir(oasdir)).filter((d) => !d.endsWith(".html"));
   return dirs;
 }
 
 async function testVersion(version) {
   test(`Check if version ${version} is unchanged`, async (t) => {
     t.plan(1);
-    const schemaList = (await readDir(`${openApiDir}/${version}/schema/`));
+    const schemaList = (await readdir(`${openApiDir}/${version}/schema/`));
     const lastSchema = schemaList.pop();
     const schema = readJSON(`${openApiDir}/${version}/schema/${lastSchema}`);
     t.matchSnapshot(schema, `schema v${version} is unchanged`);

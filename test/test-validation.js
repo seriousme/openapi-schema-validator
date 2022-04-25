@@ -1,15 +1,18 @@
-const { test } = require("tap");
+import { test } from "tap";
+import { Validator } from "../index.js";
+import { readFileSync } from "fs";
+import { readFile } from "fs/promises";
 
-const Validator = require("../index.js");
+function localFile(fileName) {
+  return new URL(fileName, import.meta.url).pathname;
+}
 
-const util = require("util");
-const fs = require("fs");
-const readFile = util.promisify(fs.readFile);
+function importJSON(file) {
+  return JSON.parse(readFileSync(localFile(file)));
+}
 
-const localFile = (fileName) =>
-  new URL(fileName, `file://${__dirname}/`).pathname;
-const emptySpec = require(`./validation/empty.json`);
-const invalidSpec = require(`./validation/invalid-spec.json`);
+const emptySpec = importJSON(`./validation/empty.json`);
+const invalidSpec = importJSON(`./validation/invalid-spec.json`);
 const yamlFileName = localFile(`./validation/petstore-openapi.v3.yaml`);
 const mainSpecYamlFileName = localFile(`./validation/main-spec.v3.yaml`);
 const subSpecYamlFileName = localFile(`./validation/sub-spec.v3.yaml`);
@@ -21,7 +24,7 @@ const inlinedRefs = "x-inlined-refs";
 async function testVersion(version) {
   test(`version ${version} works`, async (t) => {
     t.plan(2);
-    const petStoreSpec = require(`./v${version}/petstore.json`);
+    const petStoreSpec = importJSON(`./v${version}/petstore.json`);
     const validator = new Validator();
 
     const res = await validator.validate(petStoreSpec);
@@ -124,7 +127,7 @@ test(`yaml specification as filename works`, async (t) => {
 test(`original petstore spec works`, async (t) => {
   t.plan(3);
   const validator = new Validator();
-  const petStoreSpec = require(`./validation/petstore-swagger.v2.json`);
+  const petStoreSpec = importJSON(`./validation/petstore-swagger.v2.json`);
   const res = await validator.validate(petStoreSpec);
   t.equal(res.valid, true, "original petstore spec is valid");
   const ver = validator.version;
@@ -144,10 +147,10 @@ test(`original petstore spec works`, async (t) => {
 test(`original petstore spec works with AJV strict:"log" option`, async (t) => {
   t.plan(4);
   let logcount = 0;
-  const log = warn = error = () => logcount++;
-  const logger = { log, warn, error };
+  const log = () => logcount++;
+  const logger = { log, warn: log, error: log };
   const validator = new Validator({ strict: "log", logger });
-  const petStoreSpec = require(`./validation/petstore-swagger.v2.json`);
+  const petStoreSpec = importJSON(`./validation/petstore-swagger.v2.json`);
   const res = await validator.validate(petStoreSpec);
   t.equal(res.valid, true, "original petstore spec is valid");
   const ver = validator.version;

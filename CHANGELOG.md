@@ -3,6 +3,7 @@
 ## [Unreleased]
 ### Changed
  - Removed Node 10/12 support from code
+ - Migrated to ESM
 
 ## [v1.7.1]
 ### Changed 22-04-2022

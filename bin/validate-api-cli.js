@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const Validator = require("../index.js");
+import Validator from "../index.js";
 const validator = new Validator();
-const { argv, exit } = require("process");
+import { argv, exit } from "process";
 
 const filename = argv[2];
 if (!filename) {
