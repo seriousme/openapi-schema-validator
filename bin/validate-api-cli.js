@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import Validator from "../index.js";
+import { Validator } from "../index.js";
 const validator = new Validator();
 import { argv, exit } from "process";
 

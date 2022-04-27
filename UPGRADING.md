@@ -17,7 +17,7 @@ So where you previously had:
 
 ```javascript
 // ESM
-import Validator from "@seriousme/openapi-schema-validator";
+import { Validator } from "@seriousme/openapi-schema-validator";
 // CJS
 const Validator = require("@seriousme/openapi-schema-validator");
 ```
