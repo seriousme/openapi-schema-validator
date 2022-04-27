@@ -3,42 +3,46 @@
 ## [Unreleased]
 ### Changed
 
-## [v2.0.0]
-### Changed 25-04-2022
+## [v2.0.1] 26-04-2022
+### Changed 
+ - Fix CLI issue and doc issue (@tbcarver)
+
+## [v2.0.0] 25-04-2022
+### Changed 
  - Removed Node 10/12 support from code
  - Migrated to ESM, see UPGRADING.md for details
 
-## [v1.7.1]
-### Changed 22-04-2022
+## [v1.7.1] 22-04-2022
+### Changed 
  - Updated dependencies
     ajv          ^8.6.3  →  ^8.11.0     
     node-fetch   ^3.0.0  →   ^3.2.3     
     tap         ^16.0.0  →  ^16.0.1     
 
-## [v1.7.0]
-### Changed 11-03-2022
+## [v1.7.0] 11-03-2022
+### Changed 
  - Updated OAS v3.0 to the updated 2021-09-28 schema (only descriptions changed)
  - Updated OAS v3.1 to 2022-02-27 schema
 
-## [v1.6.1]
-### Changed 22-2-2022
+## [v1.6.1] 22-2-2022
+### Changed 
  - Fixed error in addSpecRef example in the README
 
-## [v1.6.0]
-### Changed 09-10-2021
+## [v1.6.0] 09-10-2021
+### Changed 
  - New feature, now supports external refs, see addSpecRef in the README.
 
-## [v1.5.1]
-### Changed 08-10-2021
+## [v1.5.1] 08-10-2021
+### Changed 
  - Fixed error message on URI ref without a path 
  
-## [v1.5.0]
-### Changed 08-10-2021
+## [v1.5.0] 08-10-2021
+### Changed 
  - Updated OAS v3.0 to 2021-09-28 schema
  - Updated OAS v3.1 to 2021-09-28 schema
 
-## [v1.4.0]
-### Changed 25-09-2021
+## [v1.4.0] 25-09-2021
+### Changed 
  - Updated OAS v3.1 schema because of spec update
    (https://github.com/OAI/OpenAPI-Specification/issues/2706)
  - Added URI decoding to refs
