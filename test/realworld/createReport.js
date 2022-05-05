@@ -34,7 +34,7 @@ function processErrors(errors) {
     }
     let output = "";
     for (const key in data) {
-        item = data[key];
+        const item = data[key];
         output += `
 ### Path: ${escapeMarkDown(item.path)}
 Path on Github: [link](${item.gitHubUrl})
