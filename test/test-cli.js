@@ -1,9 +1,10 @@
+import { fileURLToPath, URL } from "url";
 import { test } from "tap";
 import { execSync } from "child_process"
 
 
 function localFile(fileName) {
-    return new URL(fileName, import.meta.url).pathname;
+    return fileURLToPath(new URL(fileName, import.meta.url));
 }
 
 test("cli does not error", (t) => {
@@ -15,15 +16,15 @@ test("cli does not error", (t) => {
 });
 
 
-test("cli fails on empty spec",  (t) => {
+test("cli fails on empty spec", (t) => {
     t.plan(1);
     const cli = localFile("../bin/validate-api-cli.js");
     const yamlFileName = localFile(`./validation/empty.json`);
-    t.throws(()=> execSync(`node ${cli} ${yamlFileName}`));
+    t.throws(() => execSync(`node ${cli} ${yamlFileName}`));
 });
 
-test("cli fails on no spec",  (t) => {
+test("cli fails on no spec", (t) => {
     t.plan(1);
     const cli = localFile("../bin/validate-api-cli.js");
-    t.throws(()=> execSync(`node ${cli}`));
+    t.throws(() => execSync(`node ${cli}`));
 });

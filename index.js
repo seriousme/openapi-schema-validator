@@ -1,3 +1,4 @@
+import { fileURLToPath, URL } from "url";
 import Ajv04 from "ajv-draft-04";
 import Ajv2020 from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
@@ -14,7 +15,7 @@ const ajvVersions = {
 const inlinedRefs = "x-inlined-refs";
 
 function localFile(fileName) {
-  return new URL(fileName, import.meta.url).pathname;
+  return fileURLToPath(new URL(fileName, import.meta.url));
 }
 
 function importJSON(file) {

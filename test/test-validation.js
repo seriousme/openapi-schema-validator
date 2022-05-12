@@ -1,10 +1,11 @@
+import { fileURLToPath, URL } from "url";
 import { test } from "tap";
 import { Validator } from "../index.js";
 import { readFileSync } from "fs";
 import { readFile } from "fs/promises";
 
 function localFile(fileName) {
-  return new URL(fileName, import.meta.url).pathname;
+  return fileURLToPath(new URL(fileName, import.meta.url));
 }
 
 function importJSON(file) {
