@@ -3,6 +3,10 @@
 ## [Unreleased]
 ### Changed
 
+## [v2.0.2] 12-05-2022
+### Changed 
+ - Fix file handling on Windows
+
 ## [v2.0.1] 26-04-2022
 ### Changed 
  - Fix CLI issue and doc issue (@tbcarver)
