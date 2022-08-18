@@ -1,11 +1,11 @@
 # Results of real world testing
-Report generated at: Thu Jul 28 2022 16:52:57 GMT+0000 (Coordinated Universal Time)
+Report generated at: Thu Aug 18 2022 17:09:24 GMT+0000 (Coordinated Universal Time)
 
 | APIs at [apis.guru](https://apis.guru) | #
 |--------|-------|
-|Total |2354 
-|Tested |2354
-|Failed validation | 50
+|Total |2356 
+|Tested |2356
+|Failed validation | 52
 
 
 ## API: adyen\.com:CheckoutService (version: 68) 
@@ -341,7 +341,7 @@ OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/adsense/v2/openapi.yaml)
 
-API updated: 2022-07-27T23:10:33.709Z
+API updated: 2022-08-17T23:12:11.899Z
 
 ### Path: 
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/adsense/v2/openapi.yaml#L1)
@@ -404,7 +404,7 @@ OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/cloudfunctions/v2/openapi.yaml)
 
-API updated: 2022-07-15T23:11:23.765Z
+API updated: 2022-08-11T23:10:55.258Z
 
 ### Path: 
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/cloudfunctions/v2/openapi.yaml#L1)
@@ -446,7 +446,7 @@ OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/container/v1beta1/openapi.yaml)
 
-API updated: 2022-07-01T23:09:56.725Z
+API updated: 2022-08-10T23:10:44.507Z
 
 ### Path: 
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/container/v1beta1/openapi.yaml#L1)
@@ -530,7 +530,7 @@ OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/dns/v2/openapi.yaml)
 
-API updated: 2022-05-25T23:10:54.779Z
+API updated: 2022-08-09T23:10:32.114Z
 
 ### Path: 
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/dns/v2/openapi.yaml#L1)
@@ -551,7 +551,7 @@ OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/file/v1beta1/openapi.yaml)
 
-API updated: 2022-07-22T23:10:34.156Z
+API updated: 2022-08-12T23:10:40.199Z
 
 ### Path: 
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/file/v1beta1/openapi.yaml#L1)
@@ -635,7 +635,7 @@ OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/gameservices/v1beta/openapi.yaml)
 
-API updated: 2022-05-13T23:11:30.075Z
+API updated: 2022-08-12T23:10:40.199Z
 
 ### Path: 
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/gameservices/v1beta/openapi.yaml#L1)
@@ -677,7 +677,7 @@ OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/healthcare/v1beta1/openapi.yaml)
 
-API updated: 2022-07-05T23:12:01.489Z
+API updated: 2022-08-17T23:12:11.899Z
 
 ### Path: 
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/healthcare/v1beta1/openapi.yaml#L1)
@@ -702,6 +702,27 @@ API updated: 2022-07-20T23:12:06.710Z
 
 ### Path: 
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/iam/v2beta/openapi.yaml#L1)
+
+Value: content too large
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |additionalProperties |{"additionalProperty":"source"}| must NOT have additional properties
+
+    
+
+## API: googleapis\.com:identitytoolkit (version: v2) 
+OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/identitytoolkit/v2/openapi.yaml)
+
+API updated: 2022-08-17T23:12:11.899Z
+
+### Path: 
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/identitytoolkit/v2/openapi.yaml#L1)
 
 Value: content too large
 
@@ -803,7 +824,7 @@ OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/policytroubleshooter/v1beta/openapi.yaml)
 
-API updated: 2022-05-02T23:10:55.054Z
+API updated: 2022-08-08T23:10:36.507Z
 
 ### Path: 
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/policytroubleshooter/v1beta/openapi.yaml#L1)
@@ -824,7 +845,7 @@ OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/pubsub/v1beta2/openapi.yaml)
 
-API updated: 2022-05-12T23:11:44.814Z
+API updated: 2022-08-16T23:09:53.182Z
 
 ### Path: 
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/pubsub/v1beta2/openapi.yaml#L1)
@@ -866,7 +887,7 @@ OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/run/v2/openapi.yaml)
 
-API updated: 2022-07-15T23:11:23.765Z
+API updated: 2022-08-11T23:10:55.258Z
 
 ### Path: 
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/run/v2/openapi.yaml#L1)
@@ -887,7 +908,7 @@ OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/securitycenter/v1p1alpha1/openapi.yaml)
 
-API updated: 2022-07-25T23:10:23.683Z
+API updated: 2022-08-10T23:10:44.507Z
 
 ### Path: 
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/securitycenter/v1p1alpha1/openapi.yaml#L1)
@@ -912,6 +933,27 @@ API updated: 2022-04-15T23:10:59.877Z
 
 ### Path: 
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/servicecontrol/v2/openapi.yaml#L1)
+
+Value: content too large
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |additionalProperties |{"additionalProperty":"source"}| must NOT have additional properties
+
+    
+
+## API: googleapis\.com:speech (version: v2beta1) 
+OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/speech/v2beta1/openapi.yaml)
+
+API updated: undefined
+
+### Path: 
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/speech/v2beta1/openapi.yaml#L1)
 
 Value: content too large
 
@@ -971,7 +1013,7 @@ OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/vision/v1p2beta1/openapi.yaml)
 
-API updated: 2021-09-23T23:08:15.596Z
+API updated: 2022-08-10T23:10:44.507Z
 
 ### Path: 
 Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/vision/v1p2beta1/openapi.yaml#L1)

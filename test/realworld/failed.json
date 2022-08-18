@@ -1,9 +1,9 @@
 {
-  "testDate": "2022-07-28T16:52:57.265Z",
-  "totalApiCount": 2354,
-  "testedAPICount": 2354,
-  "failedAPICount": 50,
-  "knownFailedCount": 49,
+  "testDate": "2022-08-18T17:09:24.233Z",
+  "totalApiCount": 2356,
+  "testedAPICount": 2356,
+  "failedAPICount": 52,
+  "knownFailedCount": 50,
   "failedTests": [
     {
       "name": "adyen.com:CheckoutService",
@@ -544,7 +544,7 @@
       "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/adsense/v2/openapi.yaml",
       "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/adsense/v2/openapi.json",
       "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/adsense/v2/openapi.yaml",
-      "updated": "2022-07-27T23:10:33.709Z",
+      "updated": "2022-08-17T23:12:11.899Z",
       "result": {
         "valid": false,
         "errors": [
@@ -625,7 +625,7 @@
       "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/cloudfunctions/v2/openapi.yaml",
       "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/cloudfunctions/v2/openapi.json",
       "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/cloudfunctions/v2/openapi.yaml",
-      "updated": "2022-07-15T23:11:23.765Z",
+      "updated": "2022-08-11T23:10:55.258Z",
       "result": {
         "valid": false,
         "errors": [
@@ -679,7 +679,7 @@
       "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/container/v1beta1/openapi.yaml",
       "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/container/v1beta1/openapi.json",
       "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/container/v1beta1/openapi.yaml",
-      "updated": "2022-07-01T23:09:56.725Z",
+      "updated": "2022-08-10T23:10:44.507Z",
       "result": {
         "valid": false,
         "errors": [
@@ -786,7 +786,7 @@
       "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/dns/v2/openapi.yaml",
       "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/dns/v2/openapi.json",
       "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/dns/v2/openapi.yaml",
-      "updated": "2022-05-25T23:10:54.779Z",
+      "updated": "2022-08-09T23:10:32.114Z",
       "result": {
         "valid": false,
         "errors": [
@@ -813,7 +813,7 @@
       "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/file/v1beta1/openapi.yaml",
       "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/file/v1beta1/openapi.json",
       "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/file/v1beta1/openapi.yaml",
-      "updated": "2022-07-22T23:10:34.156Z",
+      "updated": "2022-08-12T23:10:40.199Z",
       "result": {
         "valid": false,
         "errors": [
@@ -921,7 +921,7 @@
       "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/gameservices/v1beta/openapi.yaml",
       "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/gameservices/v1beta/openapi.json",
       "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/gameservices/v1beta/openapi.yaml",
-      "updated": "2022-05-13T23:11:30.075Z",
+      "updated": "2022-08-12T23:10:40.199Z",
       "result": {
         "valid": false,
         "errors": [
@@ -975,7 +975,7 @@
       "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/healthcare/v1beta1/openapi.yaml",
       "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/healthcare/v1beta1/openapi.json",
       "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/healthcare/v1beta1/openapi.yaml",
-      "updated": "2022-07-05T23:12:01.489Z",
+      "updated": "2022-08-17T23:12:11.899Z",
       "result": {
         "valid": false,
         "errors": [
@@ -1021,6 +1021,32 @@
         ]
       },
       "knownFailed": true
+    },
+    {
+      "name": "googleapis.com:identitytoolkit",
+      "apiVersion": "v2",
+      "openApiVersion": "3.0.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/identitytoolkit/v2/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/identitytoolkit/v2/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/identitytoolkit/v2/openapi.yaml",
+      "updated": "2022-08-17T23:12:11.899Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
+            "params": {
+              "additionalProperty": "source"
+            },
+            "message": "must NOT have additional properties",
+            "hasInstanceValue": false,
+            "instanceValue": "content too large",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/identitytoolkit/v2/openapi.yaml#L1"
+          }
+        ]
+      }
     },
     {
       "name": "googleapis.com:jobs",
@@ -1127,7 +1153,8 @@
             "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/osconfig/v1beta/openapi.yaml#L1"
           }
         ]
-      }
+      },
+      "knownFailed": true
     },
     {
       "name": "googleapis.com:policytroubleshooter",
@@ -1136,7 +1163,7 @@
       "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/policytroubleshooter/v1beta/openapi.yaml",
       "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/policytroubleshooter/v1beta/openapi.json",
       "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/policytroubleshooter/v1beta/openapi.yaml",
-      "updated": "2022-05-02T23:10:55.054Z",
+      "updated": "2022-08-08T23:10:36.507Z",
       "result": {
         "valid": false,
         "errors": [
@@ -1163,7 +1190,7 @@
       "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/pubsub/v1beta2/openapi.yaml",
       "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/pubsub/v1beta2/openapi.json",
       "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/pubsub/v1beta2/openapi.yaml",
-      "updated": "2022-05-12T23:11:44.814Z",
+      "updated": "2022-08-16T23:09:53.182Z",
       "result": {
         "valid": false,
         "errors": [
@@ -1217,7 +1244,7 @@
       "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/run/v2/openapi.yaml",
       "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/run/v2/openapi.json",
       "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/run/v2/openapi.yaml",
-      "updated": "2022-07-15T23:11:23.765Z",
+      "updated": "2022-08-11T23:10:55.258Z",
       "result": {
         "valid": false,
         "errors": [
@@ -1244,7 +1271,7 @@
       "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/securitycenter/v1p1alpha1/openapi.yaml",
       "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/securitycenter/v1p1alpha1/openapi.json",
       "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/securitycenter/v1p1alpha1/openapi.yaml",
-      "updated": "2022-07-25T23:10:23.683Z",
+      "updated": "2022-08-10T23:10:44.507Z",
       "result": {
         "valid": false,
         "errors": [
@@ -1290,6 +1317,31 @@
         ]
       },
       "knownFailed": true
+    },
+    {
+      "name": "googleapis.com:speech",
+      "apiVersion": "v2beta1",
+      "openApiVersion": "3.0.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/speech/v2beta1/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/speech/v2beta1/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/speech/v2beta1/openapi.yaml",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
+            "params": {
+              "additionalProperty": "source"
+            },
+            "message": "must NOT have additional properties",
+            "hasInstanceValue": false,
+            "instanceValue": "content too large",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/speech/v2beta1/openapi.yaml#L1"
+          }
+        ]
+      }
     },
     {
       "name": "googleapis.com:tpu",
@@ -1352,7 +1404,7 @@
       "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/vision/v1p2beta1/openapi.yaml",
       "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/vision/v1p2beta1/openapi.json",
       "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/vision/v1p2beta1/openapi.yaml",
-      "updated": "2021-09-23T23:08:15.596Z",
+      "updated": "2022-08-10T23:10:44.507Z",
       "result": {
         "valid": false,
         "errors": [
