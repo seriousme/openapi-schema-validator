@@ -31,10 +31,9 @@ test(`Local $refs`, async (t) => {
     properties: {
       billing_address: { $ref: "#/definitions/address" },
       shipping_address: { $ref: "#/definitions/address" },
-    },
-    $ref: "#/definitions/req",
+    }
   };
-  t.plan(3);
+  t.plan(2);
   const res = resolve(schema);
   const ptr = res.properties.billing_address.properties;
   t.equal(ptr.city.type, "string", "followed $ref without neigbor properties");
@@ -43,11 +42,6 @@ test(`Local $refs`, async (t) => {
     circular.city.type,
     "string",
     "followed circular $ref without neigbor properties"
-  );
-  t.equal(
-    res.required[0],
-    "billing_address",
-    "followed $ref *with* neigbor properties"
   );
 });
 
