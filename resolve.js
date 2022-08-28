@@ -17,17 +17,13 @@ const pointerWords = new Set([
   "$schema",
 ]);
 
-// remove pointerWords from object
-function filtered(obj) {
-  return Object.fromEntries(Object.entries(obj).filter(([key, _]) => !pointerWords.has(key)));
-}
 
 function resolveUri(uri, anchors) {
   const [prefix, path] = uri.split("#", 2);
   const hashPresent = !!path;
   const err = new Error(`Can't resolve ${uri}, only internal refs are supported.`);
 
-  if (hashPresent && (path[0]!=='/')) {
+  if (hashPresent && (path[0] !== '/')) {
     if (anchors[uri]) {
       return anchors[uri];
     }
@@ -38,7 +34,7 @@ function resolveUri(uri, anchors) {
     throw err;
   }
 
-  if (!hashPresent){
+  if (!hashPresent) {
     return anchors[prefix];
   }
 
@@ -55,9 +51,9 @@ function resolveUri(uri, anchors) {
   } catch (_) {
     throw err;
   }
-
-
 }
+
+
 
 export function resolve(tree) {
   if (!isObject(tree)) {
@@ -66,6 +62,19 @@ export function resolve(tree) {
 
   const pointers = {};
   pointerWords.forEach((word) => (pointers[word] = []));
+
+  function applyRef(path, target) {
+    let root = tree;
+    const paths = path.split("/").slice(1);
+    const prop = paths.pop();
+    paths.forEach(p => root = root[unescapeJsonPointer(p)]);
+    if (typeof prop !== 'undefined') {
+      root[unescapeJsonPointer(prop)] = target;
+    }
+    else {
+      tree = target;
+    }
+  }
 
   function parse(obj, path, id) {
     if (!isObject(obj)) {
@@ -77,6 +86,7 @@ export function resolve(tree) {
     for (const prop in obj) {
       if (pointerWords.has(prop)) {
         pointers[prop].push({ ref: obj[prop], obj, prop, path, id });
+        delete obj[prop];
       }
       parse(obj[prop], `${path}/${escapeJsonPointer(prop)}`, id);
     }
@@ -87,6 +97,7 @@ export function resolve(tree) {
   // resolve them
   const anchors = { "": tree };
   const dynamicAnchors = {};
+
   pointers.$id.forEach((item) => {
     const { ref, obj, path } = item;
     if (anchors[ref]) {
@@ -115,20 +126,18 @@ export function resolve(tree) {
   });
 
   pointers.$ref.forEach((item) => {
-    const { ref, obj, prop, id } = item;
-    delete obj[prop];
+    const { ref, id, path } = item;
     const decodedRef = decodeURIComponent(ref);
     const fullRef = decodedRef[0] !== "#" ? decodedRef : `${id}${decodedRef}`;
-    Object.assign(obj, filtered(resolveUri(fullRef, anchors)));
+    applyRef(path, resolveUri(fullRef, anchors));
   });
 
   pointers.$dynamicRef.forEach((item) => {
-    const { ref, obj, prop } = item;
+    const { ref, path } = item;
     if (!dynamicAnchors[ref]) {
       throw new Error(`Can't resolve $dynamicAnchor : '${ref}'`);
     }
-    delete obj[prop];
-    Object.assign(obj, filtered(dynamicAnchors[ref]));
+    applyRef(path, dynamicAnchors[ref]);
   });
 
   return tree;

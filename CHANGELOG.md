@@ -3,6 +3,14 @@
 ## [Unreleased]
 ### Changed
 
+## [v2.0.3] 28-09-2022
+### Changed 
+ - Fix ref handing in resolveRefs
+ - Updated dependencies
+   - c8          ^7.11.2  →  ^7.12.0     
+   - node-fetch   ^3.2.3  →  ^3.2.10     
+   - tap         ^16.0.1  →  ^16.3.0    
+
 ## [v2.0.2] 12-05-2022
 ### Changed 
  - Fix file handling on Windows
@@ -19,9 +27,9 @@
 ## [v1.7.1] 22-04-2022
 ### Changed 
  - Updated dependencies
-    ajv          ^8.6.3  →  ^8.11.0     
-    node-fetch   ^3.0.0  →   ^3.2.3     
-    tap         ^16.0.0  →  ^16.0.1     
+   - ajv          ^8.6.3  →  ^8.11.0     
+   - node-fetch   ^3.0.0  →   ^3.2.3     
+   - tap         ^16.0.0  →  ^16.0.1     
 
 ## [v1.7.0] 11-03-2022
 ### Changed 
