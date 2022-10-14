@@ -3,6 +3,10 @@
 ## [Unreleased]
 ### Changed
 
+## [v2.1.0] 14-10-2022
+### Changed 
+ - Update OAS v3.1 to the updated 2022-10-07 schema
+
 ## [v2.0.3] 28-09-2022
 ### Changed 
  - Fix ref handing in resolveRefs
