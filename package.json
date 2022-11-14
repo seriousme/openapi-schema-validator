@@ -15,6 +15,8 @@
   },
   "scripts": {
     "test": "c8 tap test/test-*.js",
+    "format": "rome format --write .",
+    "lint": "rome ci .",
     "posttest": "c8 check-coverage --lines 100 --functions 100 --branches 100",
     "covtest": "c8 --reporter=lcov npm test",
     "cloneOas": "rm -rf OpenAPI-Specification && git clone --branch 'gh-pages' --single-branch https://github.com/OAI/OpenAPI-Specification.git",
@@ -35,6 +37,7 @@
   "devDependencies": {
     "c8": "^7.12.0",
     "node-fetch": "^3.2.10",
+    "rome": "^10.0.1",
     "tap": "^16.3.0"
   },
   "directories": {
