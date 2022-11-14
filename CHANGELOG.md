@@ -2,6 +2,7 @@
 
 ## [Unreleased]
 ### Changed
+ - chore: added Rome for formatting and linting
 
 ## [v2.1.0] 14-10-2022
 ### Changed 
