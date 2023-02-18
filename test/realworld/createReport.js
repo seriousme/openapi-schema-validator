@@ -45,7 +45,7 @@ Value: ${
 \`\`\`json
 ${item.value}
 \`\`\``
-				: "content too large"
+				: "content too large to display here"
 		}
 
 AJV errors:
