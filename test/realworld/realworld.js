@@ -238,6 +238,7 @@ async function testAPIs(percentage, onlyFailed, ci) {
      ${results.invalid} tests failed of which ${results.knownFailed} were known failures`,
 	);
 	if (
+		failedMap.size !== results.knownFailed ||
 		results.knownFailed !== results.invalid ||
 		(onlyFailed && results.invalid !== results.total)
 	) {
