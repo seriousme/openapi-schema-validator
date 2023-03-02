@@ -1,9 +1,9 @@
 {
-  "testDate": "2023-02-18T08:39:33.186Z",
-  "totalApiCount": 2453,
-  "testedAPICount": 2453,
-  "failedAPICount": 16,
-  "knownFailedCount": 16,
+  "testDate": "2023-03-02T16:43:51.680Z",
+  "totalApiCount": 2392,
+  "testedAPICount": 2392,
+  "failedAPICount": 11,
+  "knownFailedCount": 11,
   "failedTests": [
     {
       "name": "airport-web.appspot.com",
@@ -310,141 +310,6 @@
               }
             },
             "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/gambitcomm.local/mimic/21.00/openapi.yaml#L471"
-          }
-        ]
-      },
-      "knownFailed": true
-    },
-    {
-      "name": "googleapis.com:bigqueryreservation",
-      "apiVersion": "v1beta1",
-      "openApiVersion": "3.0.0",
-      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/bigqueryreservation/v1beta1/openapi.yaml",
-      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/bigqueryreservation/v1beta1/openapi.json",
-      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/bigqueryreservation/v1beta1/openapi.yaml",
-      "updated": "2022-10-20T23:15:56.864Z",
-      "result": {
-        "valid": false,
-        "errors": [
-          {
-            "instancePath": "",
-            "schemaPath": "#/additionalProperties",
-            "keyword": "additionalProperties",
-            "params": {
-              "additionalProperty": "source"
-            },
-            "message": "must NOT have additional properties",
-            "hasInstanceValue": false,
-            "instanceValue": "content too large",
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/bigqueryreservation/v1beta1/openapi.yaml#L1"
-          }
-        ]
-      },
-      "knownFailed": true
-    },
-    {
-      "name": "googleapis.com:cloudbuild",
-      "apiVersion": "v1beta1",
-      "openApiVersion": "3.0.0",
-      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/cloudbuild/v1beta1/openapi.yaml",
-      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/cloudbuild/v1beta1/openapi.json",
-      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/cloudbuild/v1beta1/openapi.yaml",
-      "updated": "2022-12-05T23:10:17.791Z",
-      "result": {
-        "valid": false,
-        "errors": [
-          {
-            "instancePath": "",
-            "schemaPath": "#/additionalProperties",
-            "keyword": "additionalProperties",
-            "params": {
-              "additionalProperty": "source"
-            },
-            "message": "must NOT have additional properties",
-            "hasInstanceValue": false,
-            "instanceValue": "content too large",
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/cloudbuild/v1beta1/openapi.yaml#L1"
-          }
-        ]
-      },
-      "knownFailed": true
-    },
-    {
-      "name": "googleapis.com:dfareporting",
-      "apiVersion": "v3.4",
-      "openApiVersion": "3.0.0",
-      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/dfareporting/v3.4/openapi.yaml",
-      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/dfareporting/v3.4/openapi.json",
-      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/dfareporting/v3.4/openapi.yaml",
-      "updated": "2023-02-18T00:52:27.674Z",
-      "result": {
-        "valid": false,
-        "errors": [
-          {
-            "instancePath": "",
-            "schemaPath": "#/additionalProperties",
-            "keyword": "additionalProperties",
-            "params": {
-              "additionalProperty": "source"
-            },
-            "message": "must NOT have additional properties",
-            "hasInstanceValue": false,
-            "instanceValue": "content too large",
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/dfareporting/v3.4/openapi.yaml#L1"
-          }
-        ]
-      },
-      "knownFailed": true
-    },
-    {
-      "name": "googleapis.com:ideahub",
-      "apiVersion": "v1beta",
-      "openApiVersion": "3.0.0",
-      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/ideahub/v1beta/openapi.yaml",
-      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/ideahub/v1beta/openapi.json",
-      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/ideahub/v1beta/openapi.yaml",
-      "updated": "2022-11-01T23:13:37.990Z",
-      "result": {
-        "valid": false,
-        "errors": [
-          {
-            "instancePath": "",
-            "schemaPath": "#/additionalProperties",
-            "keyword": "additionalProperties",
-            "params": {
-              "additionalProperty": "source"
-            },
-            "message": "must NOT have additional properties",
-            "hasInstanceValue": false,
-            "instanceValue": "content too large",
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/ideahub/v1beta/openapi.yaml#L1"
-          }
-        ]
-      },
-      "knownFailed": true
-    },
-    {
-      "name": "googleapis.com:speech",
-      "apiVersion": "v2beta1",
-      "openApiVersion": "3.0.0",
-      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/speech/v2beta1/openapi.yaml",
-      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/speech/v2beta1/openapi.json",
-      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/speech/v2beta1/openapi.yaml",
-      "updated": "2023-02-18T00:52:27.674Z",
-      "result": {
-        "valid": false,
-        "errors": [
-          {
-            "instancePath": "",
-            "schemaPath": "#/additionalProperties",
-            "keyword": "additionalProperties",
-            "params": {
-              "additionalProperty": "source"
-            },
-            "message": "must NOT have additional properties",
-            "hasInstanceValue": false,
-            "instanceValue": "content too large",
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/speech/v2beta1/openapi.yaml#L1"
           }
         ]
       },

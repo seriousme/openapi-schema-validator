@@ -1,11 +1,11 @@
 # Results of real world testing
-Report generated at: Sat Feb 18 2023 08:39:33 GMT+0000 (Coordinated Universal Time)
+Report generated at: Thu Mar 02 2023 16:43:51 GMT+0000 (Coordinated Universal Time)
 
 | APIs at [apis.guru](https://apis.guru) | #
 |--------|-------|
-|Total |2453 
-|Tested |2453
-|Failed validation | 16
+|Total |2392 
+|Tested |2392
+|Failed validation | 11
 
 
 ## API: airport-web\.appspot\.com (version: v1) 
@@ -177,111 +177,6 @@ AJV errors:
    |--------|-------|--------|
    |required |{"missingProperty":"$ref"}| must have required property '$ref'
    |oneOf |{"passingSchemas":null}| must match exactly one schema in oneOf
-
-    
-
-## API: googleapis\.com:bigqueryreservation (version: v1beta1) 
-OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
-
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/bigqueryreservation/v1beta1/openapi.yaml)
-
-API updated: 2022-10-20T23:15:56.864Z
-
-### Path: 
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/bigqueryreservation/v1beta1/openapi.yaml#L1)
-
-Value: content too large
-
-AJV errors:
-
-   |Keyword |Params |Message |
-   |--------|-------|--------|
-   |additionalProperties |{"additionalProperty":"source"}| must NOT have additional properties
-
-    
-
-## API: googleapis\.com:cloudbuild (version: v1beta1) 
-OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
-
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/cloudbuild/v1beta1/openapi.yaml)
-
-API updated: 2022-12-05T23:10:17.791Z
-
-### Path: 
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/cloudbuild/v1beta1/openapi.yaml#L1)
-
-Value: content too large
-
-AJV errors:
-
-   |Keyword |Params |Message |
-   |--------|-------|--------|
-   |additionalProperties |{"additionalProperty":"source"}| must NOT have additional properties
-
-    
-
-## API: googleapis\.com:dfareporting (version: v3.4) 
-OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
-
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/dfareporting/v3.4/openapi.yaml)
-
-API updated: 2023-02-18T00:52:27.674Z
-
-### Path: 
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/dfareporting/v3.4/openapi.yaml#L1)
-
-Value: content too large
-
-AJV errors:
-
-   |Keyword |Params |Message |
-   |--------|-------|--------|
-   |additionalProperties |{"additionalProperty":"source"}| must NOT have additional properties
-
-    
-
-## API: googleapis\.com:ideahub (version: v1beta) 
-OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
-
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/ideahub/v1beta/openapi.yaml)
-
-API updated: 2022-11-01T23:13:37.990Z
-
-### Path: 
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/ideahub/v1beta/openapi.yaml#L1)
-
-Value: content too large
-
-AJV errors:
-
-   |Keyword |Params |Message |
-   |--------|-------|--------|
-   |additionalProperties |{"additionalProperty":"source"}| must NOT have additional properties
-
-    
-
-## API: googleapis\.com:speech (version: v2beta1) 
-OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
-
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/speech/v2beta1/openapi.yaml)
-
-API updated: 2023-02-18T00:52:27.674Z
-
-### Path: 
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/speech/v2beta1/openapi.yaml#L1)
-
-Value: content too large
-
-AJV errors:
-
-   |Keyword |Params |Message |
-   |--------|-------|--------|
-   |additionalProperties |{"additionalProperty":"source"}| must NOT have additional properties
 
     
 
