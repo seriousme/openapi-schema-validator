@@ -1,9 +1,9 @@
 {
-  "testDate": "2023-03-02T16:43:51.680Z",
-  "totalApiCount": 2392,
-  "testedAPICount": 2392,
-  "failedAPICount": 11,
-  "knownFailedCount": 11,
+  "testDate": "2023-03-09T16:44:48.207Z",
+  "totalApiCount": 2503,
+  "testedAPICount": 2503,
+  "failedAPICount": 35,
+  "knownFailedCount": 5,
   "failedTests": [
     {
       "name": "airport-web.appspot.com",
@@ -141,6 +141,708 @@
       "knownFailed": true
     },
     {
+      "name": "amadeus.com:amadeus-hotel-name-autocomplete",
+      "apiVersion": "1.0.3",
+      "openApiVersion": "2.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-hotel-name-autocomplete/1.0.3/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-hotel-name-autocomplete/1.0.3/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-hotel-name-autocomplete/1.0.3/swagger.yaml",
+      "updated": "2023-03-05T12:15:20.931Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/host",
+            "schemaPath": "#/properties/host/pattern",
+            "keyword": "pattern",
+            "params": {
+              "pattern": "^[^{}/ :\\\\]+(?::\\d+)?$"
+            },
+            "message": "must match pattern \"^[^{}/ :\\\\]+(?::\\d+)?$\"",
+            "hasInstanceValue": true,
+            "instanceValue": "https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-hotel-name-autocomplete/1.0.3/swagger.yaml#L4"
+          }
+        ]
+      }
+    },
+    {
+      "name": "amadeus.com:amadeus-flight-inspiration-search",
+      "apiVersion": "1.0.6",
+      "openApiVersion": "2.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-flight-inspiration-search/1.0.6/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-flight-inspiration-search/1.0.6/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-inspiration-search/1.0.6/swagger.yaml",
+      "updated": "2023-03-05T12:15:36.706Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/host",
+            "schemaPath": "#/properties/host/pattern",
+            "keyword": "pattern",
+            "params": {
+              "pattern": "^[^{}/ :\\\\]+(?::\\d+)?$"
+            },
+            "message": "must match pattern \"^[^{}/ :\\\\]+(?::\\d+)?$\"",
+            "hasInstanceValue": true,
+            "instanceValue": "https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-inspiration-search/1.0.6/swagger.yaml#L4"
+          }
+        ]
+      }
+    },
+    {
+      "name": "amadeus.com:amadeus-flight-choice-prediction",
+      "apiVersion": "2.0.2",
+      "openApiVersion": "2.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-flight-choice-prediction/2.0.2/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-flight-choice-prediction/2.0.2/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-choice-prediction/2.0.2/swagger.yaml",
+      "updated": "2023-03-05T12:15:52.364Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/host",
+            "schemaPath": "#/properties/host/pattern",
+            "keyword": "pattern",
+            "params": {
+              "pattern": "^[^{}/ :\\\\]+(?::\\d+)?$"
+            },
+            "message": "must match pattern \"^[^{}/ :\\\\]+(?::\\d+)?$\"",
+            "hasInstanceValue": true,
+            "instanceValue": "https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-choice-prediction/2.0.2/swagger.yaml#L4"
+          }
+        ]
+      }
+    },
+    {
+      "name": "amadeus.com:amadeus-flight-delay-prediction",
+      "apiVersion": "1.0.6",
+      "openApiVersion": "2.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-flight-delay-prediction/1.0.6/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-flight-delay-prediction/1.0.6/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-delay-prediction/1.0.6/swagger.yaml",
+      "updated": "2023-03-05T12:16:08.146Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/host",
+            "schemaPath": "#/properties/host/pattern",
+            "keyword": "pattern",
+            "params": {
+              "pattern": "^[^{}/ :\\\\]+(?::\\d+)?$"
+            },
+            "message": "must match pattern \"^[^{}/ :\\\\]+(?::\\d+)?$\"",
+            "hasInstanceValue": true,
+            "instanceValue": "https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-delay-prediction/1.0.6/swagger.yaml#L4"
+          }
+        ]
+      }
+    },
+    {
+      "name": "amadeus.com:amadeus-flight-most-booked-destinations",
+      "apiVersion": "1.1.1",
+      "openApiVersion": "2.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-flight-most-booked-destinations/1.1.1/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-flight-most-booked-destinations/1.1.1/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-most-booked-destinations/1.1.1/swagger.yaml",
+      "updated": "2023-03-05T12:16:23.796Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/host",
+            "schemaPath": "#/properties/host/pattern",
+            "keyword": "pattern",
+            "params": {
+              "pattern": "^[^{}/ :\\\\]+(?::\\d+)?$"
+            },
+            "message": "must match pattern \"^[^{}/ :\\\\]+(?::\\d+)?$\"",
+            "hasInstanceValue": true,
+            "instanceValue": "https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-most-booked-destinations/1.1.1/swagger.yaml#L4"
+          }
+        ]
+      }
+    },
+    {
+      "name": "amadeus.com:amadeus-flight-busiest-traveling-period",
+      "apiVersion": "1.0.2",
+      "openApiVersion": "2.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-flight-busiest-traveling-period/1.0.2/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-flight-busiest-traveling-period/1.0.2/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-busiest-traveling-period/1.0.2/swagger.yaml",
+      "updated": "2023-03-05T12:16:39.476Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/host",
+            "schemaPath": "#/properties/host/pattern",
+            "keyword": "pattern",
+            "params": {
+              "pattern": "^[^{}/ :\\\\]+(?::\\d+)?$"
+            },
+            "message": "must match pattern \"^[^{}/ :\\\\]+(?::\\d+)?$\"",
+            "hasInstanceValue": true,
+            "instanceValue": "https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-busiest-traveling-period/1.0.2/swagger.yaml#L4"
+          }
+        ]
+      }
+    },
+    {
+      "name": "amadeus.com:amadeus-flight-cheapest-date-search",
+      "apiVersion": "1.0.6",
+      "openApiVersion": "2.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-flight-cheapest-date-search/1.0.6/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-flight-cheapest-date-search/1.0.6/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-cheapest-date-search/1.0.6/swagger.yaml",
+      "updated": "2023-03-05T12:16:54.840Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/host",
+            "schemaPath": "#/properties/host/pattern",
+            "keyword": "pattern",
+            "params": {
+              "pattern": "^[^{}/ :\\\\]+(?::\\d+)?$"
+            },
+            "message": "must match pattern \"^[^{}/ :\\\\]+(?::\\d+)?$\"",
+            "hasInstanceValue": true,
+            "instanceValue": "https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-cheapest-date-search/1.0.6/swagger.yaml#L4"
+          }
+        ]
+      }
+    },
+    {
+      "name": "amadeus.com:amadeus-flight-check-in-links",
+      "apiVersion": "2.1.2",
+      "openApiVersion": "2.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-flight-check-in-links/2.1.2/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-flight-check-in-links/2.1.2/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-check-in-links/2.1.2/swagger.yaml",
+      "updated": "2023-03-05T12:17:10.821Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/host",
+            "schemaPath": "#/properties/host/pattern",
+            "keyword": "pattern",
+            "params": {
+              "pattern": "^[^{}/ :\\\\]+(?::\\d+)?$"
+            },
+            "message": "must match pattern \"^[^{}/ :\\\\]+(?::\\d+)?$\"",
+            "hasInstanceValue": true,
+            "instanceValue": "https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-check-in-links/2.1.2/swagger.yaml#L4"
+          }
+        ]
+      }
+    },
+    {
+      "name": "amadeus.com:amadeus-trip-purpose-prediction",
+      "apiVersion": "1.1.4",
+      "openApiVersion": "2.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-trip-purpose-prediction/1.1.4/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-trip-purpose-prediction/1.1.4/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-trip-purpose-prediction/1.1.4/swagger.yaml",
+      "updated": "2023-03-05T12:17:26.380Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/host",
+            "schemaPath": "#/properties/host/pattern",
+            "keyword": "pattern",
+            "params": {
+              "pattern": "^[^{}/ :\\\\]+(?::\\d+)?$"
+            },
+            "message": "must match pattern \"^[^{}/ :\\\\]+(?::\\d+)?$\"",
+            "hasInstanceValue": true,
+            "instanceValue": "https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-trip-purpose-prediction/1.1.4/swagger.yaml#L4"
+          }
+        ]
+      }
+    },
+    {
+      "name": "amadeus.com:amadeus-flight-order-management",
+      "apiVersion": "1.9.0",
+      "openApiVersion": "2.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-flight-order-management/1.9.0/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-flight-order-management/1.9.0/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-order-management/1.9.0/swagger.yaml",
+      "updated": "2023-03-05T12:17:58.150Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/host",
+            "schemaPath": "#/properties/host/pattern",
+            "keyword": "pattern",
+            "params": {
+              "pattern": "^[^{}/ :\\\\]+(?::\\d+)?$"
+            },
+            "message": "must match pattern \"^[^{}/ :\\\\]+(?::\\d+)?$\"",
+            "hasInstanceValue": true,
+            "instanceValue": "https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-order-management/1.9.0/swagger.yaml#L4"
+          }
+        ]
+      }
+    },
+    {
+      "name": "amadeus.com:amadeus-airline-code-lookup",
+      "apiVersion": "1.1.1",
+      "openApiVersion": "2.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-airline-code-lookup/1.1.1/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-airline-code-lookup/1.1.1/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-airline-code-lookup/1.1.1/swagger.yaml",
+      "updated": "2023-03-05T12:18:14.544Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/host",
+            "schemaPath": "#/properties/host/pattern",
+            "keyword": "pattern",
+            "params": {
+              "pattern": "^[^{}/ :\\\\]+(?::\\d+)?$"
+            },
+            "message": "must match pattern \"^[^{}/ :\\\\]+(?::\\d+)?$\"",
+            "hasInstanceValue": true,
+            "instanceValue": "https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-airline-code-lookup/1.1.1/swagger.yaml#L4"
+          }
+        ]
+      }
+    },
+    {
+      "name": "amadeus.com:amadeus-hotel-ratings",
+      "apiVersion": "1.0.2",
+      "openApiVersion": "2.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-hotel-ratings/1.0.2/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-hotel-ratings/1.0.2/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-hotel-ratings/1.0.2/swagger.yaml",
+      "updated": "2023-03-05T12:18:30.297Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/host",
+            "schemaPath": "#/properties/host/pattern",
+            "keyword": "pattern",
+            "params": {
+              "pattern": "^[^{}/ :\\\\]+(?::\\d+)?$"
+            },
+            "message": "must match pattern \"^[^{}/ :\\\\]+(?::\\d+)?$\"",
+            "hasInstanceValue": true,
+            "instanceValue": "https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-hotel-ratings/1.0.2/swagger.yaml#L4"
+          }
+        ]
+      }
+    },
+    {
+      "name": "amadeus.com:amadeus-on-demand-flight-status",
+      "apiVersion": "2.0.2",
+      "openApiVersion": "2.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-on-demand-flight-status/2.0.2/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-on-demand-flight-status/2.0.2/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-on-demand-flight-status/2.0.2/swagger.yaml",
+      "updated": "2023-03-05T12:18:46.047Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/host",
+            "schemaPath": "#/properties/host/pattern",
+            "keyword": "pattern",
+            "params": {
+              "pattern": "^[^{}/ :\\\\]+(?::\\d+)?$"
+            },
+            "message": "must match pattern \"^[^{}/ :\\\\]+(?::\\d+)?$\"",
+            "hasInstanceValue": true,
+            "instanceValue": "https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-on-demand-flight-status/2.0.2/swagger.yaml#L4"
+          }
+        ]
+      }
+    },
+    {
+      "name": "amadeus.com:amadeus-seatmap-display",
+      "apiVersion": "1.9.2",
+      "openApiVersion": "2.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-seatmap-display/1.9.2/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-seatmap-display/1.9.2/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-seatmap-display/1.9.2/swagger.yaml",
+      "updated": "2023-03-05T12:19:17.647Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/host",
+            "schemaPath": "#/properties/host/pattern",
+            "keyword": "pattern",
+            "params": {
+              "pattern": "^[^{}/ :\\\\]+(?::\\d+)?$"
+            },
+            "message": "must match pattern \"^[^{}/ :\\\\]+(?::\\d+)?$\"",
+            "hasInstanceValue": true,
+            "instanceValue": "https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-seatmap-display/1.9.2/swagger.yaml#L4"
+          }
+        ]
+      }
+    },
+    {
+      "name": "amadeus.com:amadeus-points-of-interest",
+      "apiVersion": "1.1.1",
+      "openApiVersion": "2.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-points-of-interest/1.1.1/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-points-of-interest/1.1.1/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-points-of-interest/1.1.1/swagger.yaml",
+      "updated": "2023-03-05T12:19:33.676Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/host",
+            "schemaPath": "#/properties/host/pattern",
+            "keyword": "pattern",
+            "params": {
+              "pattern": "^[^{}/ :\\\\]+(?::\\d+)?$"
+            },
+            "message": "must match pattern \"^[^{}/ :\\\\]+(?::\\d+)?$\"",
+            "hasInstanceValue": true,
+            "instanceValue": "https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-points-of-interest/1.1.1/swagger.yaml#L4"
+          }
+        ]
+      }
+    },
+    {
+      "name": "amadeus.com:amadeus-safe-place-",
+      "apiVersion": "1.0.0",
+      "openApiVersion": "2.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-safe-place-/1.0.0/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-safe-place-/1.0.0/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-safe-place-/1.0.0/swagger.yaml",
+      "updated": "2023-03-05T12:19:49.370Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/host",
+            "schemaPath": "#/properties/host/pattern",
+            "keyword": "pattern",
+            "params": {
+              "pattern": "^[^{}/ :\\\\]+(?::\\d+)?$"
+            },
+            "message": "must match pattern \"^[^{}/ :\\\\]+(?::\\d+)?$\"",
+            "hasInstanceValue": true,
+            "instanceValue": "https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-safe-place-/1.0.0/swagger.yaml#L4"
+          }
+        ]
+      }
+    },
+    {
+      "name": "amadeus.com:amadeus-hotel-search",
+      "apiVersion": "3.0.8",
+      "openApiVersion": "2.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-hotel-search/3.0.8/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-hotel-search/3.0.8/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-hotel-search/3.0.8/swagger.yaml",
+      "updated": "2023-03-05T12:20:21.228Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/host",
+            "schemaPath": "#/properties/host/pattern",
+            "keyword": "pattern",
+            "params": {
+              "pattern": "^[^{}/ :\\\\]+(?::\\d+)?$"
+            },
+            "message": "must match pattern \"^[^{}/ :\\\\]+(?::\\d+)?$\"",
+            "hasInstanceValue": true,
+            "instanceValue": "https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-hotel-search/3.0.8/swagger.yaml#L4"
+          }
+        ]
+      }
+    },
+    {
+      "name": "amadeus.com:amadeus-hotel-booking",
+      "apiVersion": "1.1.2",
+      "openApiVersion": "2.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-hotel-booking/1.1.2/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-hotel-booking/1.1.2/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-hotel-booking/1.1.2/swagger.yaml",
+      "updated": "2023-03-05T12:20:37.042Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/host",
+            "schemaPath": "#/properties/host/pattern",
+            "keyword": "pattern",
+            "params": {
+              "pattern": "^[^{}/ :\\\\]+(?::\\d+)?$"
+            },
+            "message": "must match pattern \"^[^{}/ :\\\\]+(?::\\d+)?$\"",
+            "hasInstanceValue": true,
+            "instanceValue": "https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-hotel-booking/1.1.2/swagger.yaml#L4"
+          }
+        ]
+      }
+    },
+    {
+      "name": "amadeus.com:amadeus-flight-offers-price",
+      "apiVersion": "1.2.2",
+      "openApiVersion": "2.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-flight-offers-price/1.2.2/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-flight-offers-price/1.2.2/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-offers-price/1.2.2/swagger.yaml",
+      "updated": "2023-03-05T12:20:53.525Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/host",
+            "schemaPath": "#/properties/host/pattern",
+            "keyword": "pattern",
+            "params": {
+              "pattern": "^[^{}/ :\\\\]+(?::\\d+)?$"
+            },
+            "message": "must match pattern \"^[^{}/ :\\\\]+(?::\\d+)?$\"",
+            "hasInstanceValue": true,
+            "instanceValue": "https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-offers-price/1.2.2/swagger.yaml#L4"
+          }
+        ]
+      }
+    },
+    {
+      "name": "amadeus.com:amadeus-tours-and-activities",
+      "apiVersion": "1.0.2",
+      "openApiVersion": "2.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-tours-and-activities/1.0.2/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-tours-and-activities/1.0.2/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-tours-and-activities/1.0.2/swagger.yaml",
+      "updated": "2023-03-05T12:21:08.974Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/host",
+            "schemaPath": "#/properties/host/pattern",
+            "keyword": "pattern",
+            "params": {
+              "pattern": "^[^{}/ :\\\\]+(?::\\d+)?$"
+            },
+            "message": "must match pattern \"^[^{}/ :\\\\]+(?::\\d+)?$\"",
+            "hasInstanceValue": true,
+            "instanceValue": "https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-tours-and-activities/1.0.2/swagger.yaml#L4"
+          }
+        ]
+      }
+    },
+    {
+      "name": "amadeus.com:amadeus-airport-&-city-search",
+      "apiVersion": "1.2.3",
+      "openApiVersion": "2.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-airport-&-city-search/1.2.3/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-airport-&-city-search/1.2.3/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-airport-&-city-search/1.2.3/swagger.yaml",
+      "updated": "2023-03-05T12:21:24.642Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/host",
+            "schemaPath": "#/properties/host/pattern",
+            "keyword": "pattern",
+            "params": {
+              "pattern": "^[^{}/ :\\\\]+(?::\\d+)?$"
+            },
+            "message": "must match pattern \"^[^{}/ :\\\\]+(?::\\d+)?$\"",
+            "hasInstanceValue": true,
+            "instanceValue": "https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-airport-&-city-search/1.2.3/swagger.yaml#L4"
+          }
+        ]
+      }
+    },
+    {
+      "name": "amadeus.com:amadeus-flight-create-orders",
+      "apiVersion": "1.9.0",
+      "openApiVersion": "2.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-flight-create-orders/1.9.0/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-flight-create-orders/1.9.0/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-create-orders/1.9.0/swagger.yaml",
+      "updated": "2023-03-05T12:21:40.303Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/host",
+            "schemaPath": "#/properties/host/pattern",
+            "keyword": "pattern",
+            "params": {
+              "pattern": "^[^{}/ :\\\\]+(?::\\d+)?$"
+            },
+            "message": "must match pattern \"^[^{}/ :\\\\]+(?::\\d+)?$\"",
+            "hasInstanceValue": true,
+            "instanceValue": "https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-create-orders/1.9.0/swagger.yaml#L4"
+          }
+        ]
+      }
+    },
+    {
+      "name": "amadeus.com:amadeus-flight-availabilities-search",
+      "apiVersion": "1.0.2",
+      "openApiVersion": "2.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-flight-availabilities-search/1.0.2/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-flight-availabilities-search/1.0.2/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-availabilities-search/1.0.2/swagger.yaml",
+      "updated": "2023-03-05T12:21:56.087Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/host",
+            "schemaPath": "#/properties/host/pattern",
+            "keyword": "pattern",
+            "params": {
+              "pattern": "^[^{}/ :\\\\]+(?::\\d+)?$"
+            },
+            "message": "must match pattern \"^[^{}/ :\\\\]+(?::\\d+)?$\"",
+            "hasInstanceValue": true,
+            "instanceValue": "https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-availabilities-search/1.0.2/swagger.yaml#L4"
+          }
+        ]
+      }
+    },
+    {
+      "name": "amadeus.com:amadeus-branded-fares-upsell",
+      "apiVersion": "1.0.1",
+      "openApiVersion": "2.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-branded-fares-upsell/1.0.1/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-branded-fares-upsell/1.0.1/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-branded-fares-upsell/1.0.1/swagger.yaml",
+      "updated": "2023-03-05T12:22:11.638Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/host",
+            "schemaPath": "#/properties/host/pattern",
+            "keyword": "pattern",
+            "params": {
+              "pattern": "^[^{}/ :\\\\]+(?::\\d+)?$"
+            },
+            "message": "must match pattern \"^[^{}/ :\\\\]+(?::\\d+)?$\"",
+            "hasInstanceValue": true,
+            "instanceValue": "https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-branded-fares-upsell/1.0.1/swagger.yaml#L4"
+          }
+        ]
+      }
+    },
+    {
+      "name": "amadeus.com:amadeus-airport-on-time-performance",
+      "apiVersion": "1.0.4",
+      "openApiVersion": "2.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-airport-on-time-performance/1.0.4/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-airport-on-time-performance/1.0.4/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-airport-on-time-performance/1.0.4/swagger.yaml",
+      "updated": "2023-03-05T12:22:27.409Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/host",
+            "schemaPath": "#/properties/host/pattern",
+            "keyword": "pattern",
+            "params": {
+              "pattern": "^[^{}/ :\\\\]+(?::\\d+)?$"
+            },
+            "message": "must match pattern \"^[^{}/ :\\\\]+(?::\\d+)?$\"",
+            "hasInstanceValue": true,
+            "instanceValue": "https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-airport-on-time-performance/1.0.4/swagger.yaml#L4"
+          }
+        ]
+      }
+    },
+    {
+      "name": "amadeus.com:amadeus-airport-nearest-relevant",
+      "apiVersion": "1.1.2",
+      "openApiVersion": "2.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-airport-nearest-relevant/1.1.2/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-airport-nearest-relevant/1.1.2/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-airport-nearest-relevant/1.1.2/swagger.yaml",
+      "updated": "2023-03-05T12:22:42.950Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/host",
+            "schemaPath": "#/properties/host/pattern",
+            "keyword": "pattern",
+            "params": {
+              "pattern": "^[^{}/ :\\\\]+(?::\\d+)?$"
+            },
+            "message": "must match pattern \"^[^{}/ :\\\\]+(?::\\d+)?$\"",
+            "hasInstanceValue": true,
+            "instanceValue": "https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-airport-nearest-relevant/1.1.2/swagger.yaml#L4"
+          }
+        ]
+      }
+    },
+    {
+      "name": "amadeus.com:amadeus-flight-most-traveled-destinations",
+      "apiVersion": "1.1.1",
+      "openApiVersion": "2.0",
+      "yamlUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-flight-most-traveled-destinations/1.1.1/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/amadeus.com/amadeus-flight-most-traveled-destinations/1.1.1/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-most-traveled-destinations/1.1.1/swagger.yaml",
+      "updated": "2023-03-05T16:52:06.509Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/host",
+            "schemaPath": "#/properties/host/pattern",
+            "keyword": "pattern",
+            "params": {
+              "pattern": "^[^{}/ :\\\\]+(?::\\d+)?$"
+            },
+            "message": "must match pattern \"^[^{}/ :\\\\]+(?::\\d+)?$\"",
+            "hasInstanceValue": true,
+            "instanceValue": "https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-most-traveled-destinations/1.1.1/swagger.yaml#L4"
+          }
+        ]
+      }
+    },
+    {
       "name": "azure.com:servicebus",
       "apiVersion": "2017-04-01",
       "openApiVersion": "2.0",
@@ -193,6 +895,32 @@
         ]
       },
       "knownFailed": true
+    },
+    {
+      "name": "discourse.local",
+      "apiVersion": "latest",
+      "openApiVersion": "3.0.3",
+      "yamlUrl": "https://api.apis.guru/v2/specs/discourse.local/latest/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/discourse.local/latest/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/discourse.local/latest/openapi.yaml",
+      "updated": "2023-03-06T07:12:59.965Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/servers/1/url",
+            "schemaPath": "#/properties/url/format",
+            "keyword": "format",
+            "params": {
+              "format": "uri-reference"
+            },
+            "message": "must match format \"uri-reference\"",
+            "hasInstanceValue": true,
+            "instanceValue": "https://{defaultHost}",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/discourse.local/latest/openapi.yaml#L68"
+          }
+        ]
+      }
     },
     {
       "name": "gambitcomm.local:mimic",
@@ -314,6 +1042,200 @@
         ]
       },
       "knownFailed": true
+    },
+    {
+      "name": "linode.com",
+      "apiVersion": "4.145.0",
+      "openApiVersion": "3.0.1",
+      "yamlUrl": "https://api.apis.guru/v2/specs/linode.com/4.145.0/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/linode.com/4.145.0/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml",
+      "updated": "2023-03-06T09:58:04.581Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/paths/~1domains~1{domainId}~1clone/post/requestBody/content/application~1json/schema/properties/domain/pattern",
+            "schemaPath": "#/properties/pattern/format",
+            "keyword": "format",
+            "params": {
+              "format": "regex"
+            },
+            "message": "must match format \"regex\"",
+            "hasInstanceValue": true,
+            "instanceValue": "\\A(\\*\\.)?([a-zA-Z0-9-_]{1,63}\\.)+([a-zA-Z]{2,3}\\.)?([a-zA-Z]{2,16}|xn--[a-zA-Z0-9]+)\\Z",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml#L5848"
+          },
+          {
+            "instancePath": "/paths/~1domains~1{domainId}~1clone/post/requestBody/content/application~1json/schema/properties/domain",
+            "schemaPath": "#/definitions/Reference/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "$ref"
+            },
+            "message": "must have required property '$ref'",
+            "hasInstanceValue": true,
+            "instanceValue": {
+              "description": "The new domain for the clone. Domain labels cannot be longer than 63 characters and must conform to [RFC1035](https://tools.ietf.org/html/rfc1035). Domains must be unique on Linode's platform, including across different Linode accounts; there cannot be two Domains representing the same domain.\n",
+              "example": "example.org",
+              "maxLength": 253,
+              "minLength": 1,
+              "pattern": "\\A(\\*\\.)?([a-zA-Z0-9-_]{1,63}\\.)+([a-zA-Z]{2,3}\\.)?([a-zA-Z]{2,16}|xn--[a-zA-Z0-9]+)\\Z",
+              "type": "string",
+              "x-linode-filterable": true
+            },
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml#L5842"
+          },
+          {
+            "instancePath": "/paths/~1domains~1{domainId}~1clone/post/requestBody/content/application~1json/schema/properties/domain",
+            "schemaPath": "#/properties/properties/additionalProperties/oneOf",
+            "keyword": "oneOf",
+            "params": {
+              "passingSchemas": null
+            },
+            "message": "must match exactly one schema in oneOf",
+            "hasInstanceValue": true,
+            "instanceValue": {
+              "description": "The new domain for the clone. Domain labels cannot be longer than 63 characters and must conform to [RFC1035](https://tools.ietf.org/html/rfc1035). Domains must be unique on Linode's platform, including across different Linode accounts; there cannot be two Domains representing the same domain.\n",
+              "example": "example.org",
+              "maxLength": 253,
+              "minLength": 1,
+              "pattern": "\\A(\\*\\.)?([a-zA-Z0-9-_]{1,63}\\.)+([a-zA-Z]{2,3}\\.)?([a-zA-Z]{2,16}|xn--[a-zA-Z0-9]+)\\Z",
+              "type": "string",
+              "x-linode-filterable": true
+            },
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml#L5842"
+          },
+          {
+            "instancePath": "/paths/~1domains~1{domainId}~1clone/post/requestBody/content/application~1json/schema",
+            "schemaPath": "#/definitions/Reference/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "$ref"
+            },
+            "message": "must have required property '$ref'",
+            "hasInstanceValue": true,
+            "instanceValue": {
+              "properties": {
+                "domain": {
+                  "description": "The new domain for the clone. Domain labels cannot be longer than 63 characters and must conform to [RFC1035](https://tools.ietf.org/html/rfc1035). Domains must be unique on Linode's platform, including across different Linode accounts; there cannot be two Domains representing the same domain.\n",
+                  "example": "example.org",
+                  "maxLength": 253,
+                  "minLength": 1,
+                  "pattern": "\\A(\\*\\.)?([a-zA-Z0-9-_]{1,63}\\.)+([a-zA-Z]{2,3}\\.)?([a-zA-Z]{2,16}|xn--[a-zA-Z0-9]+)\\Z",
+                  "type": "string",
+                  "x-linode-filterable": true
+                }
+              },
+              "required": [
+                "domain"
+              ],
+              "type": "object"
+            },
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml#L5840"
+          },
+          {
+            "instancePath": "/paths/~1domains~1{domainId}~1clone/post/requestBody/content/application~1json/schema",
+            "schemaPath": "#/properties/schema/oneOf",
+            "keyword": "oneOf",
+            "params": {
+              "passingSchemas": null
+            },
+            "message": "must match exactly one schema in oneOf",
+            "hasInstanceValue": true,
+            "instanceValue": {
+              "properties": {
+                "domain": {
+                  "description": "The new domain for the clone. Domain labels cannot be longer than 63 characters and must conform to [RFC1035](https://tools.ietf.org/html/rfc1035). Domains must be unique on Linode's platform, including across different Linode accounts; there cannot be two Domains representing the same domain.\n",
+                  "example": "example.org",
+                  "maxLength": 253,
+                  "minLength": 1,
+                  "pattern": "\\A(\\*\\.)?([a-zA-Z0-9-_]{1,63}\\.)+([a-zA-Z]{2,3}\\.)?([a-zA-Z]{2,16}|xn--[a-zA-Z0-9]+)\\Z",
+                  "type": "string",
+                  "x-linode-filterable": true
+                }
+              },
+              "required": [
+                "domain"
+              ],
+              "type": "object"
+            },
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml#L5840"
+          },
+          {
+            "instancePath": "/paths/~1domains~1{domainId}~1clone/post/requestBody",
+            "schemaPath": "#/definitions/Reference/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "$ref"
+            },
+            "message": "must have required property '$ref'",
+            "hasInstanceValue": true,
+            "instanceValue": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "properties": {
+                      "domain": {
+                        "description": "The new domain for the clone. Domain labels cannot be longer than 63 characters and must conform to [RFC1035](https://tools.ietf.org/html/rfc1035). Domains must be unique on Linode's platform, including across different Linode accounts; there cannot be two Domains representing the same domain.\n",
+                        "example": "example.org",
+                        "maxLength": 253,
+                        "minLength": 1,
+                        "pattern": "\\A(\\*\\.)?([a-zA-Z0-9-_]{1,63}\\.)+([a-zA-Z]{2,3}\\.)?([a-zA-Z]{2,16}|xn--[a-zA-Z0-9]+)\\Z",
+                        "type": "string",
+                        "x-linode-filterable": true
+                      }
+                    },
+                    "required": [
+                      "domain"
+                    ],
+                    "type": "object"
+                  }
+                }
+              },
+              "description": "Information about the Domain to clone.",
+              "required": true
+            },
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml#L5837"
+          },
+          {
+            "instancePath": "/paths/~1domains~1{domainId}~1clone/post/requestBody",
+            "schemaPath": "#/properties/requestBody/oneOf",
+            "keyword": "oneOf",
+            "params": {
+              "passingSchemas": null
+            },
+            "message": "must match exactly one schema in oneOf",
+            "hasInstanceValue": true,
+            "instanceValue": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "properties": {
+                      "domain": {
+                        "description": "The new domain for the clone. Domain labels cannot be longer than 63 characters and must conform to [RFC1035](https://tools.ietf.org/html/rfc1035). Domains must be unique on Linode's platform, including across different Linode accounts; there cannot be two Domains representing the same domain.\n",
+                        "example": "example.org",
+                        "maxLength": 253,
+                        "minLength": 1,
+                        "pattern": "\\A(\\*\\.)?([a-zA-Z0-9-_]{1,63}\\.)+([a-zA-Z]{2,3}\\.)?([a-zA-Z]{2,16}|xn--[a-zA-Z0-9]+)\\Z",
+                        "type": "string",
+                        "x-linode-filterable": true
+                      }
+                    },
+                    "required": [
+                      "domain"
+                    ],
+                    "type": "object"
+                  }
+                }
+              },
+              "description": "Information about the Domain to clone.",
+              "required": true
+            },
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml#L5837"
+          }
+        ]
+      }
     },
     {
       "name": "opensuse.org:obs",
@@ -836,141 +1758,113 @@
       "knownFailed": true
     },
     {
-      "name": "parliament.uk:statutoryinstruments",
-      "apiVersion": "v1",
+      "name": "royalmail.com:click-and-drop",
+      "apiVersion": "1.0.0",
       "openApiVersion": "2.0",
-      "yamlUrl": "https://api.apis.guru/v2/specs/parliament.uk/statutoryinstruments/v1/swagger.yaml",
-      "jsonUrl": "https://api.apis.guru/v2/specs/parliament.uk/statutoryinstruments/v1/swagger.json",
-      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/statutoryinstruments/v1/swagger.yaml",
-      "updated": "2021-06-21T12:16:53.715Z",
+      "yamlUrl": "https://api.apis.guru/v2/specs/royalmail.com/click-and-drop/1.0.0/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/royalmail.com/click-and-drop/1.0.0/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/royalmail.com/click-and-drop/1.0.0/swagger.yaml",
+      "updated": "2023-03-06T07:12:59.965Z",
       "result": {
         "valid": false,
         "errors": [
           {
-            "instancePath": "/info/contact/url",
-            "schemaPath": "#/properties/url/format",
-            "keyword": "format",
-            "params": {
-              "format": "uri"
-            },
-            "message": "must match format \"uri\"",
-            "hasInstanceValue": true,
-            "instanceValue": "",
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/statutoryinstruments/v1/swagger.yaml#L6"
-          }
-        ]
-      },
-      "knownFailed": true
-    },
-    {
-      "name": "parliament.uk:treaties",
-      "apiVersion": "v1",
-      "openApiVersion": "2.0",
-      "yamlUrl": "https://api.apis.guru/v2/specs/parliament.uk/treaties/v1/swagger.yaml",
-      "jsonUrl": "https://api.apis.guru/v2/specs/parliament.uk/treaties/v1/swagger.json",
-      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/treaties/v1/swagger.yaml",
-      "updated": "2021-05-24T10:27:51.952Z",
-      "result": {
-        "valid": false,
-        "errors": [
-          {
-            "instancePath": "/info/contact/url",
-            "schemaPath": "#/properties/url/format",
-            "keyword": "format",
-            "params": {
-              "format": "uri"
-            },
-            "message": "must match format \"uri\"",
-            "hasInstanceValue": true,
-            "instanceValue": "",
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/treaties/v1/swagger.yaml#L6"
-          }
-        ]
-      },
-      "knownFailed": true
-    },
-    {
-      "name": "prss.org",
-      "apiVersion": "2.0.0",
-      "openApiVersion": "2.0",
-      "yamlUrl": "https://api.apis.guru/v2/specs/prss.org/2.0.0/swagger.yaml",
-      "jsonUrl": "https://api.apis.guru/v2/specs/prss.org/2.0.0/swagger.json",
-      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml",
-      "updated": "2021-06-21T12:16:53.715Z",
-      "result": {
-        "valid": false,
-        "errors": [
-          {
-            "instancePath": "/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202/schema/externalDocs/url",
-            "schemaPath": "#/properties/url/format",
-            "keyword": "format",
-            "params": {
-              "format": "uri"
-            },
-            "message": "must match format \"uri\"",
-            "hasInstanceValue": true,
-            "instanceValue": "/api/epg-cd-mapping.html",
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L417"
-          },
-          {
-            "instancePath": "/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202/schema",
+            "instancePath": "/parameters/orderIdentifiers",
             "schemaPath": "#/required",
             "keyword": "required",
             "params": {
-              "missingProperty": "type"
+              "missingProperty": "schema"
             },
-            "message": "must have required property 'type'",
+            "message": "must have required property 'schema'",
             "hasInstanceValue": true,
             "instanceValue": {
-              "$ref": "#/definitions/ProgramInformationBatch",
-              "externalDocs": {
-                "description": "Find RadioDns to ContentDepot Mapping here",
-                "url": "/api/epg-cd-mapping.html"
-              }
+              "description": "One or several Order Identifiers or Order References separated by semicolon. Order Identifiers are integer numbers. Order References are strings - each must be percent-encoded and surrounded by double quotation marks.",
+              "example": "/orders/\"ref\";1001;\"Reference%3BWith%3BSpecial%3BSymbols!\";2345/",
+              "in": "path",
+              "name": "orderIdentifiers",
+              "required": true,
+              "type": "string"
             },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L413"
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/royalmail.com/click-and-drop/1.0.0/swagger.yaml#L79"
           },
           {
-            "instancePath": "/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202/schema",
-            "schemaPath": "#/properties/schema/oneOf",
-            "keyword": "oneOf",
+            "instancePath": "/parameters/orderIdentifiers",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
             "params": {
-              "passingSchemas": null
+              "additionalProperty": "example"
             },
-            "message": "must match exactly one schema in oneOf",
+            "message": "must NOT have additional properties",
             "hasInstanceValue": true,
             "instanceValue": {
-              "$ref": "#/definitions/ProgramInformationBatch",
-              "externalDocs": {
-                "description": "Find RadioDns to ContentDepot Mapping here",
-                "url": "/api/epg-cd-mapping.html"
-              }
+              "description": "One or several Order Identifiers or Order References separated by semicolon. Order Identifiers are integer numbers. Order References are strings - each must be percent-encoded and surrounded by double quotation marks.",
+              "example": "/orders/\"ref\";1001;\"Reference%3BWith%3BSpecial%3BSymbols!\";2345/",
+              "in": "path",
+              "name": "orderIdentifiers",
+              "required": true,
+              "type": "string"
             },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L413"
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/royalmail.com/click-and-drop/1.0.0/swagger.yaml#L79"
           },
           {
-            "instancePath": "/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202",
-            "schemaPath": "#/required",
-            "keyword": "required",
+            "instancePath": "/parameters/orderIdentifiers",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
             "params": {
-              "missingProperty": "$ref"
+              "additionalProperty": "example"
             },
-            "message": "must have required property '$ref'",
+            "message": "must NOT have additional properties",
             "hasInstanceValue": true,
             "instanceValue": {
-              "description": "The accepted batch information that is queued for processing.",
-              "schema": {
-                "$ref": "#/definitions/ProgramInformationBatch",
-                "externalDocs": {
-                  "description": "Find RadioDns to ContentDepot Mapping here",
-                  "url": "/api/epg-cd-mapping.html"
-                }
-              }
+              "description": "One or several Order Identifiers or Order References separated by semicolon. Order Identifiers are integer numbers. Order References are strings - each must be percent-encoded and surrounded by double quotation marks.",
+              "example": "/orders/\"ref\";1001;\"Reference%3BWith%3BSpecial%3BSymbols!\";2345/",
+              "in": "path",
+              "name": "orderIdentifiers",
+              "required": true,
+              "type": "string"
             },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L411"
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/royalmail.com/click-and-drop/1.0.0/swagger.yaml#L79"
           },
           {
-            "instancePath": "/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202",
+            "instancePath": "/parameters/orderIdentifiers",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
+            "params": {
+              "additionalProperty": "example"
+            },
+            "message": "must NOT have additional properties",
+            "hasInstanceValue": true,
+            "instanceValue": {
+              "description": "One or several Order Identifiers or Order References separated by semicolon. Order Identifiers are integer numbers. Order References are strings - each must be percent-encoded and surrounded by double quotation marks.",
+              "example": "/orders/\"ref\";1001;\"Reference%3BWith%3BSpecial%3BSymbols!\";2345/",
+              "in": "path",
+              "name": "orderIdentifiers",
+              "required": true,
+              "type": "string"
+            },
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/royalmail.com/click-and-drop/1.0.0/swagger.yaml#L79"
+          },
+          {
+            "instancePath": "/parameters/orderIdentifiers",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
+            "params": {
+              "additionalProperty": "example"
+            },
+            "message": "must NOT have additional properties",
+            "hasInstanceValue": true,
+            "instanceValue": {
+              "description": "One or several Order Identifiers or Order References separated by semicolon. Order Identifiers are integer numbers. Order References are strings - each must be percent-encoded and surrounded by double quotation marks.",
+              "example": "/orders/\"ref\";1001;\"Reference%3BWith%3BSpecial%3BSymbols!\";2345/",
+              "in": "path",
+              "name": "orderIdentifiers",
+              "required": true,
+              "type": "string"
+            },
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/royalmail.com/click-and-drop/1.0.0/swagger.yaml#L79"
+          },
+          {
+            "instancePath": "/parameters/orderIdentifiers",
             "schemaPath": "#/oneOf",
             "keyword": "oneOf",
             "params": {
@@ -979,172 +1873,18 @@
             "message": "must match exactly one schema in oneOf",
             "hasInstanceValue": true,
             "instanceValue": {
-              "description": "The accepted batch information that is queued for processing.",
-              "schema": {
-                "$ref": "#/definitions/ProgramInformationBatch",
-                "externalDocs": {
-                  "description": "Find RadioDns to ContentDepot Mapping here",
-                  "url": "/api/epg-cd-mapping.html"
-                }
-              }
+              "description": "One or several Order Identifiers or Order References separated by semicolon. Order Identifiers are integer numbers. Order References are strings - each must be percent-encoded and surrounded by double quotation marks.",
+              "example": "/orders/\"ref\";1001;\"Reference%3BWith%3BSpecial%3BSymbols!\";2345/",
+              "in": "path",
+              "name": "orderIdentifiers",
+              "required": true,
+              "type": "string"
             },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L411"
-          }
-        ]
-      },
-      "knownFailed": true
-    },
-    {
-      "name": "trashnothing.com",
-      "apiVersion": "1.2",
-      "openApiVersion": "3.0.0",
-      "yamlUrl": "https://api.apis.guru/v2/specs/trashnothing.com/1.2/openapi.yaml",
-      "jsonUrl": "https://api.apis.guru/v2/specs/trashnothing.com/1.2/openapi.json",
-      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/trashnothing.com/1.2/openapi.yaml",
-      "updated": "2021-07-26T08:51:53.432Z",
-      "result": {
-        "valid": false,
-        "errors": [
-          {
-            "instancePath": "/info/termsOfService",
-            "schemaPath": "#/properties/termsOfService/format",
-            "keyword": "format",
-            "params": {
-              "format": "uri-reference"
-            },
-            "message": "must match format \"uri-reference\"",
-            "hasInstanceValue": true,
-            "instanceValue": "https://trashnothing.com/tos\n",
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/trashnothing.com/1.2/openapi.yaml#L15"
-          }
-        ]
-      },
-      "knownFailed": true
-    },
-    {
-      "name": "twinehealth.com",
-      "apiVersion": "v7.78.1",
-      "openApiVersion": "2.0",
-      "yamlUrl": "https://api.apis.guru/v2/specs/twinehealth.com/v7.78.1/swagger.yaml",
-      "jsonUrl": "https://api.apis.guru/v2/specs/twinehealth.com/v7.78.1/swagger.json",
-      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml",
-      "updated": "2021-06-21T12:16:53.715Z",
-      "result": {
-        "valid": false,
-        "errors": [
-          {
-            "instancePath": "/securityDefinitions/OAuth2",
-            "schemaPath": "#/additionalProperties",
-            "keyword": "additionalProperties",
-            "params": {
-              "additionalProperty": "flow"
-            },
-            "message": "must NOT have additional properties",
-            "hasInstanceValue": true,
-            "instanceValue": {
-              "description": "Fitbit Plus allows customers to access data for their organization using client credentials.\nOAuth2 is a safe and secure way to give you access.\n",
-              "flow": "application",
-              "scopes": {
-                "group": "access patients and data within a group",
-                "organization": "access patients and data within an organization"
-              },
-              "tokenUrl": "/oauth/token",
-              "type": "oauth2"
-            },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L77"
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/royalmail.com/click-and-drop/1.0.0/swagger.yaml#L79"
           },
           {
-            "instancePath": "/securityDefinitions/OAuth2",
-            "schemaPath": "#/required",
-            "keyword": "required",
-            "params": {
-              "missingProperty": "name"
-            },
-            "message": "must have required property 'name'",
-            "hasInstanceValue": true,
-            "instanceValue": {
-              "description": "Fitbit Plus allows customers to access data for their organization using client credentials.\nOAuth2 is a safe and secure way to give you access.\n",
-              "flow": "application",
-              "scopes": {
-                "group": "access patients and data within a group",
-                "organization": "access patients and data within an organization"
-              },
-              "tokenUrl": "/oauth/token",
-              "type": "oauth2"
-            },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L77"
-          },
-          {
-            "instancePath": "/securityDefinitions/OAuth2",
-            "schemaPath": "#/required",
-            "keyword": "required",
-            "params": {
-              "missingProperty": "authorizationUrl"
-            },
-            "message": "must have required property 'authorizationUrl'",
-            "hasInstanceValue": true,
-            "instanceValue": {
-              "description": "Fitbit Plus allows customers to access data for their organization using client credentials.\nOAuth2 is a safe and secure way to give you access.\n",
-              "flow": "application",
-              "scopes": {
-                "group": "access patients and data within a group",
-                "organization": "access patients and data within an organization"
-              },
-              "tokenUrl": "/oauth/token",
-              "type": "oauth2"
-            },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L77"
-          },
-          {
-            "instancePath": "/securityDefinitions/OAuth2/flow",
-            "schemaPath": "#/properties/flow/enum",
-            "keyword": "enum",
-            "params": {
-              "allowedValues": [
-                "password"
-              ]
-            },
-            "message": "must be equal to one of the allowed values",
-            "hasInstanceValue": true,
-            "instanceValue": "application",
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L81"
-          },
-          {
-            "instancePath": "/securityDefinitions/OAuth2/tokenUrl",
-            "schemaPath": "#/properties/tokenUrl/format",
-            "keyword": "format",
-            "params": {
-              "format": "uri"
-            },
-            "message": "must match format \"uri\"",
-            "hasInstanceValue": true,
-            "instanceValue": "/oauth/token",
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L85"
-          },
-          {
-            "instancePath": "/securityDefinitions/OAuth2",
-            "schemaPath": "#/required",
-            "keyword": "required",
-            "params": {
-              "missingProperty": "authorizationUrl"
-            },
-            "message": "must have required property 'authorizationUrl'",
-            "hasInstanceValue": true,
-            "instanceValue": {
-              "description": "Fitbit Plus allows customers to access data for their organization using client credentials.\nOAuth2 is a safe and secure way to give you access.\n",
-              "flow": "application",
-              "scopes": {
-                "group": "access patients and data within a group",
-                "organization": "access patients and data within an organization"
-              },
-              "tokenUrl": "/oauth/token",
-              "type": "oauth2"
-            },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L77"
-          },
-          {
-            "instancePath": "/securityDefinitions/OAuth2",
-            "schemaPath": "#/additionalProperties/oneOf",
+            "instancePath": "/parameters/orderIdentifiers",
+            "schemaPath": "#/oneOf",
             "keyword": "oneOf",
             "params": {
               "passingSchemas": null
@@ -1152,47 +1892,17 @@
             "message": "must match exactly one schema in oneOf",
             "hasInstanceValue": true,
             "instanceValue": {
-              "description": "Fitbit Plus allows customers to access data for their organization using client credentials.\nOAuth2 is a safe and secure way to give you access.\n",
-              "flow": "application",
-              "scopes": {
-                "group": "access patients and data within a group",
-                "organization": "access patients and data within an organization"
-              },
-              "tokenUrl": "/oauth/token",
-              "type": "oauth2"
+              "description": "One or several Order Identifiers or Order References separated by semicolon. Order Identifiers are integer numbers. Order References are strings - each must be percent-encoded and surrounded by double quotation marks.",
+              "example": "/orders/\"ref\";1001;\"Reference%3BWith%3BSpecial%3BSymbols!\";2345/",
+              "in": "path",
+              "name": "orderIdentifiers",
+              "required": true,
+              "type": "string"
             },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L77"
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/royalmail.com/click-and-drop/1.0.0/swagger.yaml#L79"
           }
         ]
-      },
-      "knownFailed": true
-    },
-    {
-      "name": "whapi.com:numbers",
-      "apiVersion": "2.0",
-      "openApiVersion": "2.0",
-      "yamlUrl": "https://api.apis.guru/v2/specs/whapi.com/numbers/2.0/swagger.yaml",
-      "jsonUrl": "https://api.apis.guru/v2/specs/whapi.com/numbers/2.0/swagger.json",
-      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/whapi.com/numbers/2.0/swagger.yaml",
-      "updated": "2021-06-21T12:16:53.715Z",
-      "result": {
-        "valid": false,
-        "errors": [
-          {
-            "instancePath": "/info/license/url",
-            "schemaPath": "#/properties/url/format",
-            "keyword": "format",
-            "params": {
-              "format": "uri"
-            },
-            "message": "must match format \"uri\"",
-            "hasInstanceValue": true,
-            "instanceValue": "www.williamhill.com",
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/whapi.com/numbers/2.0/swagger.yaml#L12"
-          }
-        ]
-      },
-      "knownFailed": true
+      }
     }
   ]
 }

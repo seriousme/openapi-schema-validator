@@ -1,11 +1,11 @@
 # Results of real world testing
-Report generated at: Thu Mar 02 2023 16:43:51 GMT+0000 (Coordinated Universal Time)
+Report generated at: Thu Mar 09 2023 16:44:48 GMT+0000 (Coordinated Universal Time)
 
 | APIs at [apis.guru](https://apis.guru) | #
 |--------|-------|
-|Total |2392 
-|Tested |2392
-|Failed validation | 11
+|Total |2503 
+|Tested |2503
+|Failed validation | 35
 
 
 ## API: airport-web\.appspot\.com (version: v1) 
@@ -55,6 +55,654 @@ AJV errors:
 
     
 
+## API: amadeus\.com:amadeus-hotel-name-autocomplete (version: 1.0.3) 
+Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-hotel-name-autocomplete/1.0.3/swagger.yaml)
+
+API updated: 2023-03-05T12:15:20.931Z
+
+### Path: /host
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-hotel-name-autocomplete/1.0.3/swagger.yaml#L4)
+
+Value: 
+```json
+"https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |pattern |{"pattern":"^[^{}/ :\\\\]+(?::\\d+)?$"}| must match pattern "^[^{}/ :\\]+(?::\d+)?$"
+
+    
+
+## API: amadeus\.com:amadeus-flight-inspiration-search (version: 1.0.6) 
+Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-inspiration-search/1.0.6/swagger.yaml)
+
+API updated: 2023-03-05T12:15:36.706Z
+
+### Path: /host
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-inspiration-search/1.0.6/swagger.yaml#L4)
+
+Value: 
+```json
+"https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |pattern |{"pattern":"^[^{}/ :\\\\]+(?::\\d+)?$"}| must match pattern "^[^{}/ :\\]+(?::\d+)?$"
+
+    
+
+## API: amadeus\.com:amadeus-flight-choice-prediction (version: 2.0.2) 
+Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-choice-prediction/2.0.2/swagger.yaml)
+
+API updated: 2023-03-05T12:15:52.364Z
+
+### Path: /host
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-choice-prediction/2.0.2/swagger.yaml#L4)
+
+Value: 
+```json
+"https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |pattern |{"pattern":"^[^{}/ :\\\\]+(?::\\d+)?$"}| must match pattern "^[^{}/ :\\]+(?::\d+)?$"
+
+    
+
+## API: amadeus\.com:amadeus-flight-delay-prediction (version: 1.0.6) 
+Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-delay-prediction/1.0.6/swagger.yaml)
+
+API updated: 2023-03-05T12:16:08.146Z
+
+### Path: /host
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-delay-prediction/1.0.6/swagger.yaml#L4)
+
+Value: 
+```json
+"https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |pattern |{"pattern":"^[^{}/ :\\\\]+(?::\\d+)?$"}| must match pattern "^[^{}/ :\\]+(?::\d+)?$"
+
+    
+
+## API: amadeus\.com:amadeus-flight-most-booked-destinations (version: 1.1.1) 
+Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-most-booked-destinations/1.1.1/swagger.yaml)
+
+API updated: 2023-03-05T12:16:23.796Z
+
+### Path: /host
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-most-booked-destinations/1.1.1/swagger.yaml#L4)
+
+Value: 
+```json
+"https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |pattern |{"pattern":"^[^{}/ :\\\\]+(?::\\d+)?$"}| must match pattern "^[^{}/ :\\]+(?::\d+)?$"
+
+    
+
+## API: amadeus\.com:amadeus-flight-busiest-traveling-period (version: 1.0.2) 
+Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-busiest-traveling-period/1.0.2/swagger.yaml)
+
+API updated: 2023-03-05T12:16:39.476Z
+
+### Path: /host
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-busiest-traveling-period/1.0.2/swagger.yaml#L4)
+
+Value: 
+```json
+"https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |pattern |{"pattern":"^[^{}/ :\\\\]+(?::\\d+)?$"}| must match pattern "^[^{}/ :\\]+(?::\d+)?$"
+
+    
+
+## API: amadeus\.com:amadeus-flight-cheapest-date-search (version: 1.0.6) 
+Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-cheapest-date-search/1.0.6/swagger.yaml)
+
+API updated: 2023-03-05T12:16:54.840Z
+
+### Path: /host
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-cheapest-date-search/1.0.6/swagger.yaml#L4)
+
+Value: 
+```json
+"https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |pattern |{"pattern":"^[^{}/ :\\\\]+(?::\\d+)?$"}| must match pattern "^[^{}/ :\\]+(?::\d+)?$"
+
+    
+
+## API: amadeus\.com:amadeus-flight-check-in-links (version: 2.1.2) 
+Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-check-in-links/2.1.2/swagger.yaml)
+
+API updated: 2023-03-05T12:17:10.821Z
+
+### Path: /host
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-check-in-links/2.1.2/swagger.yaml#L4)
+
+Value: 
+```json
+"https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |pattern |{"pattern":"^[^{}/ :\\\\]+(?::\\d+)?$"}| must match pattern "^[^{}/ :\\]+(?::\d+)?$"
+
+    
+
+## API: amadeus\.com:amadeus-trip-purpose-prediction (version: 1.1.4) 
+Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-trip-purpose-prediction/1.1.4/swagger.yaml)
+
+API updated: 2023-03-05T12:17:26.380Z
+
+### Path: /host
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-trip-purpose-prediction/1.1.4/swagger.yaml#L4)
+
+Value: 
+```json
+"https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |pattern |{"pattern":"^[^{}/ :\\\\]+(?::\\d+)?$"}| must match pattern "^[^{}/ :\\]+(?::\d+)?$"
+
+    
+
+## API: amadeus\.com:amadeus-flight-order-management (version: 1.9.0) 
+Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-order-management/1.9.0/swagger.yaml)
+
+API updated: 2023-03-05T12:17:58.150Z
+
+### Path: /host
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-order-management/1.9.0/swagger.yaml#L4)
+
+Value: 
+```json
+"https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |pattern |{"pattern":"^[^{}/ :\\\\]+(?::\\d+)?$"}| must match pattern "^[^{}/ :\\]+(?::\d+)?$"
+
+    
+
+## API: amadeus\.com:amadeus-airline-code-lookup (version: 1.1.1) 
+Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-airline-code-lookup/1.1.1/swagger.yaml)
+
+API updated: 2023-03-05T12:18:14.544Z
+
+### Path: /host
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-airline-code-lookup/1.1.1/swagger.yaml#L4)
+
+Value: 
+```json
+"https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |pattern |{"pattern":"^[^{}/ :\\\\]+(?::\\d+)?$"}| must match pattern "^[^{}/ :\\]+(?::\d+)?$"
+
+    
+
+## API: amadeus\.com:amadeus-hotel-ratings (version: 1.0.2) 
+Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-hotel-ratings/1.0.2/swagger.yaml)
+
+API updated: 2023-03-05T12:18:30.297Z
+
+### Path: /host
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-hotel-ratings/1.0.2/swagger.yaml#L4)
+
+Value: 
+```json
+"https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |pattern |{"pattern":"^[^{}/ :\\\\]+(?::\\d+)?$"}| must match pattern "^[^{}/ :\\]+(?::\d+)?$"
+
+    
+
+## API: amadeus\.com:amadeus-on-demand-flight-status (version: 2.0.2) 
+Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-on-demand-flight-status/2.0.2/swagger.yaml)
+
+API updated: 2023-03-05T12:18:46.047Z
+
+### Path: /host
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-on-demand-flight-status/2.0.2/swagger.yaml#L4)
+
+Value: 
+```json
+"https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |pattern |{"pattern":"^[^{}/ :\\\\]+(?::\\d+)?$"}| must match pattern "^[^{}/ :\\]+(?::\d+)?$"
+
+    
+
+## API: amadeus\.com:amadeus-seatmap-display (version: 1.9.2) 
+Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-seatmap-display/1.9.2/swagger.yaml)
+
+API updated: 2023-03-05T12:19:17.647Z
+
+### Path: /host
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-seatmap-display/1.9.2/swagger.yaml#L4)
+
+Value: 
+```json
+"https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |pattern |{"pattern":"^[^{}/ :\\\\]+(?::\\d+)?$"}| must match pattern "^[^{}/ :\\]+(?::\d+)?$"
+
+    
+
+## API: amadeus\.com:amadeus-points-of-interest (version: 1.1.1) 
+Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-points-of-interest/1.1.1/swagger.yaml)
+
+API updated: 2023-03-05T12:19:33.676Z
+
+### Path: /host
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-points-of-interest/1.1.1/swagger.yaml#L4)
+
+Value: 
+```json
+"https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |pattern |{"pattern":"^[^{}/ :\\\\]+(?::\\d+)?$"}| must match pattern "^[^{}/ :\\]+(?::\d+)?$"
+
+    
+
+## API: amadeus\.com:amadeus-safe-place- (version: 1.0.0) 
+Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-safe-place-/1.0.0/swagger.yaml)
+
+API updated: 2023-03-05T12:19:49.370Z
+
+### Path: /host
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-safe-place-/1.0.0/swagger.yaml#L4)
+
+Value: 
+```json
+"https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |pattern |{"pattern":"^[^{}/ :\\\\]+(?::\\d+)?$"}| must match pattern "^[^{}/ :\\]+(?::\d+)?$"
+
+    
+
+## API: amadeus\.com:amadeus-hotel-search (version: 3.0.8) 
+Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-hotel-search/3.0.8/swagger.yaml)
+
+API updated: 2023-03-05T12:20:21.228Z
+
+### Path: /host
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-hotel-search/3.0.8/swagger.yaml#L4)
+
+Value: 
+```json
+"https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |pattern |{"pattern":"^[^{}/ :\\\\]+(?::\\d+)?$"}| must match pattern "^[^{}/ :\\]+(?::\d+)?$"
+
+    
+
+## API: amadeus\.com:amadeus-hotel-booking (version: 1.1.2) 
+Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-hotel-booking/1.1.2/swagger.yaml)
+
+API updated: 2023-03-05T12:20:37.042Z
+
+### Path: /host
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-hotel-booking/1.1.2/swagger.yaml#L4)
+
+Value: 
+```json
+"https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |pattern |{"pattern":"^[^{}/ :\\\\]+(?::\\d+)?$"}| must match pattern "^[^{}/ :\\]+(?::\d+)?$"
+
+    
+
+## API: amadeus\.com:amadeus-flight-offers-price (version: 1.2.2) 
+Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-offers-price/1.2.2/swagger.yaml)
+
+API updated: 2023-03-05T12:20:53.525Z
+
+### Path: /host
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-offers-price/1.2.2/swagger.yaml#L4)
+
+Value: 
+```json
+"https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |pattern |{"pattern":"^[^{}/ :\\\\]+(?::\\d+)?$"}| must match pattern "^[^{}/ :\\]+(?::\d+)?$"
+
+    
+
+## API: amadeus\.com:amadeus-tours-and-activities (version: 1.0.2) 
+Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-tours-and-activities/1.0.2/swagger.yaml)
+
+API updated: 2023-03-05T12:21:08.974Z
+
+### Path: /host
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-tours-and-activities/1.0.2/swagger.yaml#L4)
+
+Value: 
+```json
+"https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |pattern |{"pattern":"^[^{}/ :\\\\]+(?::\\d+)?$"}| must match pattern "^[^{}/ :\\]+(?::\d+)?$"
+
+    
+
+## API: amadeus\.com:amadeus-airport-&-city-search (version: 1.2.3) 
+Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-airport-&-city-search/1.2.3/swagger.yaml)
+
+API updated: 2023-03-05T12:21:24.642Z
+
+### Path: /host
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-airport-&-city-search/1.2.3/swagger.yaml#L4)
+
+Value: 
+```json
+"https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |pattern |{"pattern":"^[^{}/ :\\\\]+(?::\\d+)?$"}| must match pattern "^[^{}/ :\\]+(?::\d+)?$"
+
+    
+
+## API: amadeus\.com:amadeus-flight-create-orders (version: 1.9.0) 
+Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-create-orders/1.9.0/swagger.yaml)
+
+API updated: 2023-03-05T12:21:40.303Z
+
+### Path: /host
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-create-orders/1.9.0/swagger.yaml#L4)
+
+Value: 
+```json
+"https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |pattern |{"pattern":"^[^{}/ :\\\\]+(?::\\d+)?$"}| must match pattern "^[^{}/ :\\]+(?::\d+)?$"
+
+    
+
+## API: amadeus\.com:amadeus-flight-availabilities-search (version: 1.0.2) 
+Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-availabilities-search/1.0.2/swagger.yaml)
+
+API updated: 2023-03-05T12:21:56.087Z
+
+### Path: /host
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-availabilities-search/1.0.2/swagger.yaml#L4)
+
+Value: 
+```json
+"https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |pattern |{"pattern":"^[^{}/ :\\\\]+(?::\\d+)?$"}| must match pattern "^[^{}/ :\\]+(?::\d+)?$"
+
+    
+
+## API: amadeus\.com:amadeus-branded-fares-upsell (version: 1.0.1) 
+Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-branded-fares-upsell/1.0.1/swagger.yaml)
+
+API updated: 2023-03-05T12:22:11.638Z
+
+### Path: /host
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-branded-fares-upsell/1.0.1/swagger.yaml#L4)
+
+Value: 
+```json
+"https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |pattern |{"pattern":"^[^{}/ :\\\\]+(?::\\d+)?$"}| must match pattern "^[^{}/ :\\]+(?::\d+)?$"
+
+    
+
+## API: amadeus\.com:amadeus-airport-on-time-performance (version: 1.0.4) 
+Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-airport-on-time-performance/1.0.4/swagger.yaml)
+
+API updated: 2023-03-05T12:22:27.409Z
+
+### Path: /host
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-airport-on-time-performance/1.0.4/swagger.yaml#L4)
+
+Value: 
+```json
+"https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |pattern |{"pattern":"^[^{}/ :\\\\]+(?::\\d+)?$"}| must match pattern "^[^{}/ :\\]+(?::\d+)?$"
+
+    
+
+## API: amadeus\.com:amadeus-airport-nearest-relevant (version: 1.1.2) 
+Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-airport-nearest-relevant/1.1.2/swagger.yaml)
+
+API updated: 2023-03-05T12:22:42.950Z
+
+### Path: /host
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-airport-nearest-relevant/1.1.2/swagger.yaml#L4)
+
+Value: 
+```json
+"https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |pattern |{"pattern":"^[^{}/ :\\\\]+(?::\\d+)?$"}| must match pattern "^[^{}/ :\\]+(?::\d+)?$"
+
+    
+
+## API: amadeus\.com:amadeus-flight-most-traveled-destinations (version: 1.1.1) 
+Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-most-traveled-destinations/1.1.1/swagger.yaml)
+
+API updated: 2023-03-05T16:52:06.509Z
+
+### Path: /host
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/amadeus.com/amadeus-flight-most-traveled-destinations/1.1.1/swagger.yaml#L4)
+
+Value: 
+```json
+"https://developers.amadeus.com/PAS-EAS/api/v1/cms-gateway/sites/default/files/2019-09/logo-portal.png"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |pattern |{"pattern":"^[^{}/ :\\\\]+(?::\\d+)?$"}| must match pattern "^[^{}/ :\\]+(?::\d+)?$"
+
+    
+
 ## API: azure\.com:servicebus (version: 2017-04-01) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 [JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
@@ -100,6 +748,30 @@ AJV errors:
    |Keyword |Params |Message |
    |--------|-------|--------|
    |format |{"format":"uri"}| must match format "uri"
+
+    
+
+## API: discourse\.local (version: latest) 
+OpenApi: [3.0.3](https://spec.openapis.org/oas/v3.0.3)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/discourse.local/latest/openapi.yaml)
+
+API updated: 2023-03-06T07:12:59.965Z
+
+### Path: /servers/1/url
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/discourse.local/latest/openapi.yaml#L68)
+
+Value: 
+```json
+"https://{defaultHost}"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |format |{"format":"uri-reference"}| must match format "uri-reference"
 
     
 
@@ -168,6 +840,123 @@ Value:
       }
     }
   }
+}
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |required |{"missingProperty":"$ref"}| must have required property '$ref'
+   |oneOf |{"passingSchemas":null}| must match exactly one schema in oneOf
+
+    
+
+## API: linode\.com (version: 4.145.0) 
+OpenApi: [3.0.1](https://spec.openapis.org/oas/v3.0.1)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml)
+
+API updated: 2023-03-06T09:58:04.581Z
+
+### Path: /paths/\~1domains\~1\{domainId\}\~1clone/post/requestBody/content/application\~1json/schema/properties/domain/pattern
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml#L5848)
+
+Value: 
+```json
+"\\A(\\*\\.)?([a-zA-Z0-9-_]{1,63}\\.)+([a-zA-Z]{2,3}\\.)?([a-zA-Z]{2,16}|xn--[a-zA-Z0-9]+)\\Z"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |format |{"format":"regex"}| must match format "regex"
+
+### Path: /paths/\~1domains\~1\{domainId\}\~1clone/post/requestBody/content/application\~1json/schema/properties/domain
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml#L5842)
+
+Value: 
+```json
+{
+  "description": "The new domain for the clone. Domain labels cannot be longer than 63 characters and must conform to [RFC1035](https://tools.ietf.org/html/rfc1035). Domains must be unique on Linode's platform, including across different Linode accounts; there cannot be two Domains representing the same domain.\n",
+  "example": "example.org",
+  "maxLength": 253,
+  "minLength": 1,
+  "pattern": "\\A(\\*\\.)?([a-zA-Z0-9-_]{1,63}\\.)+([a-zA-Z]{2,3}\\.)?([a-zA-Z]{2,16}|xn--[a-zA-Z0-9]+)\\Z",
+  "type": "string",
+  "x-linode-filterable": true
+}
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |required |{"missingProperty":"$ref"}| must have required property '$ref'
+   |oneOf |{"passingSchemas":null}| must match exactly one schema in oneOf
+
+### Path: /paths/\~1domains\~1\{domainId\}\~1clone/post/requestBody/content/application\~1json/schema
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml#L5840)
+
+Value: 
+```json
+{
+  "properties": {
+    "domain": {
+      "description": "The new domain for the clone. Domain labels cannot be longer than 63 characters and must conform to [RFC1035](https://tools.ietf.org/html/rfc1035). Domains must be unique on Linode's platform, including across different Linode accounts; there cannot be two Domains representing the same domain.\n",
+      "example": "example.org",
+      "maxLength": 253,
+      "minLength": 1,
+      "pattern": "\\A(\\*\\.)?([a-zA-Z0-9-_]{1,63}\\.)+([a-zA-Z]{2,3}\\.)?([a-zA-Z]{2,16}|xn--[a-zA-Z0-9]+)\\Z",
+      "type": "string",
+      "x-linode-filterable": true
+    }
+  },
+  "required": [
+    "domain"
+  ],
+  "type": "object"
+}
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |required |{"missingProperty":"$ref"}| must have required property '$ref'
+   |oneOf |{"passingSchemas":null}| must match exactly one schema in oneOf
+
+### Path: /paths/\~1domains\~1\{domainId\}\~1clone/post/requestBody
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml#L5837)
+
+Value: 
+```json
+{
+  "content": {
+    "application/json": {
+      "schema": {
+        "properties": {
+          "domain": {
+            "description": "The new domain for the clone. Domain labels cannot be longer than 63 characters and must conform to [RFC1035](https://tools.ietf.org/html/rfc1035). Domains must be unique on Linode's platform, including across different Linode accounts; there cannot be two Domains representing the same domain.\n",
+            "example": "example.org",
+            "maxLength": 253,
+            "minLength": 1,
+            "pattern": "\\A(\\*\\.)?([a-zA-Z0-9-_]{1,63}\\.)+([a-zA-Z]{2,3}\\.)?([a-zA-Z]{2,16}|xn--[a-zA-Z0-9]+)\\Z",
+            "type": "string",
+            "x-linode-filterable": true
+          }
+        },
+        "required": [
+          "domain"
+        ],
+        "type": "object"
+      }
+    }
+  },
+  "description": "Information about the Domain to clone.",
+  "required": true
 }
 ```
 
@@ -461,87 +1250,26 @@ AJV errors:
 
     
 
-## API: parliament\.uk:statutoryinstruments (version: v1) 
+## API: royalmail\.com:click-and-drop (version: 1.0.0) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 [JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
 
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/statutoryinstruments/v1/swagger.yaml)
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/royalmail.com/click-and-drop/1.0.0/swagger.yaml)
 
-API updated: 2021-06-21T12:16:53.715Z
+API updated: 2023-03-06T07:12:59.965Z
 
-### Path: /info/contact/url
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/statutoryinstruments/v1/swagger.yaml#L6)
-
-Value: 
-```json
-""
-```
-
-AJV errors:
-
-   |Keyword |Params |Message |
-   |--------|-------|--------|
-   |format |{"format":"uri"}| must match format "uri"
-
-    
-
-## API: parliament\.uk:treaties (version: v1) 
-Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
-
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/treaties/v1/swagger.yaml)
-
-API updated: 2021-05-24T10:27:51.952Z
-
-### Path: /info/contact/url
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/treaties/v1/swagger.yaml#L6)
-
-Value: 
-```json
-""
-```
-
-AJV errors:
-
-   |Keyword |Params |Message |
-   |--------|-------|--------|
-   |format |{"format":"uri"}| must match format "uri"
-
-    
-
-## API: prss\.org (version: 2.0.0) 
-Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
-
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml)
-
-API updated: 2021-06-21T12:16:53.715Z
-
-### Path: /paths/\~1api\~1v2\~1metapub\~1program-information\~1batch/post/responses/202/schema/externalDocs/url
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L417)
-
-Value: 
-```json
-"/api/epg-cd-mapping.html"
-```
-
-AJV errors:
-
-   |Keyword |Params |Message |
-   |--------|-------|--------|
-   |format |{"format":"uri"}| must match format "uri"
-
-### Path: /paths/\~1api\~1v2\~1metapub\~1program-information\~1batch/post/responses/202/schema
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L413)
+### Path: /parameters/orderIdentifiers
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/royalmail.com/click-and-drop/1.0.0/swagger.yaml#L79)
 
 Value: 
 ```json
 {
-  "$ref": "#/definitions/ProgramInformationBatch",
-  "externalDocs": {
-    "description": "Find RadioDns to ContentDepot Mapping here",
-    "url": "/api/epg-cd-mapping.html"
-  }
+  "description": "One or several Order Identifiers or Order References separated by semicolon. Order Identifiers are integer numbers. Order References are strings - each must be percent-encoded and surrounded by double quotation marks.",
+  "example": "/orders/\"ref\";1001;\"Reference%3BWith%3BSpecial%3BSymbols!\";2345/",
+  "in": "path",
+  "name": "orderIdentifiers",
+  "required": true,
+  "type": "string"
 }
 ```
 
@@ -549,143 +1277,8 @@ AJV errors:
 
    |Keyword |Params |Message |
    |--------|-------|--------|
-   |required |{"missingProperty":"type"}| must have required property 'type'
+   |required |{"missingProperty":"schema"}| must have required property 'schema'
+   |additionalProperties |{"additionalProperty":"example"}| must NOT have additional properties
    |oneOf |{"passingSchemas":null}| must match exactly one schema in oneOf
-
-### Path: /paths/\~1api\~1v2\~1metapub\~1program-information\~1batch/post/responses/202
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L411)
-
-Value: 
-```json
-{
-  "description": "The accepted batch information that is queued for processing.",
-  "schema": {
-    "$ref": "#/definitions/ProgramInformationBatch",
-    "externalDocs": {
-      "description": "Find RadioDns to ContentDepot Mapping here",
-      "url": "/api/epg-cd-mapping.html"
-    }
-  }
-}
-```
-
-AJV errors:
-
-   |Keyword |Params |Message |
-   |--------|-------|--------|
-   |required |{"missingProperty":"$ref"}| must have required property '$ref'
-   |oneOf |{"passingSchemas":null}| must match exactly one schema in oneOf
-
-    
-
-## API: trashnothing\.com (version: 1.2) 
-OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
-
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/trashnothing.com/1.2/openapi.yaml)
-
-API updated: 2021-07-26T08:51:53.432Z
-
-### Path: /info/termsOfService
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/trashnothing.com/1.2/openapi.yaml#L15)
-
-Value: 
-```json
-"https://trashnothing.com/tos\n"
-```
-
-AJV errors:
-
-   |Keyword |Params |Message |
-   |--------|-------|--------|
-   |format |{"format":"uri-reference"}| must match format "uri-reference"
-
-    
-
-## API: twinehealth\.com (version: v7.78.1) 
-Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
-
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml)
-
-API updated: 2021-06-21T12:16:53.715Z
-
-### Path: /securityDefinitions/OAuth2
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L77)
-
-Value: 
-```json
-{
-  "description": "Fitbit Plus allows customers to access data for their organization using client credentials.\nOAuth2 is a safe and secure way to give you access.\n",
-  "flow": "application",
-  "scopes": {
-    "group": "access patients and data within a group",
-    "organization": "access patients and data within an organization"
-  },
-  "tokenUrl": "/oauth/token",
-  "type": "oauth2"
-}
-```
-
-AJV errors:
-
-   |Keyword |Params |Message |
-   |--------|-------|--------|
-   |additionalProperties |{"additionalProperty":"flow"}| must NOT have additional properties
-   |required |{"missingProperty":"name"}| must have required property 'name'
-   |required |{"missingProperty":"authorizationUrl"}| must have required property 'authorizationUrl'
-   |oneOf |{"passingSchemas":null}| must match exactly one schema in oneOf
-
-### Path: /securityDefinitions/OAuth2/flow
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L81)
-
-Value: 
-```json
-"application"
-```
-
-AJV errors:
-
-   |Keyword |Params |Message |
-   |--------|-------|--------|
-   |enum |{"allowedValues":["password"]}| must be equal to one of the allowed values
-
-### Path: /securityDefinitions/OAuth2/tokenUrl
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L85)
-
-Value: 
-```json
-"/oauth/token"
-```
-
-AJV errors:
-
-   |Keyword |Params |Message |
-   |--------|-------|--------|
-   |format |{"format":"uri"}| must match format "uri"
-
-    
-
-## API: whapi\.com:numbers (version: 2.0) 
-Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
-
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/whapi.com/numbers/2.0/swagger.yaml)
-
-API updated: 2021-06-21T12:16:53.715Z
-
-### Path: /info/license/url
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/whapi.com/numbers/2.0/swagger.yaml#L12)
-
-Value: 
-```json
-"www.williamhill.com"
-```
-
-AJV errors:
-
-   |Keyword |Params |Message |
-   |--------|-------|--------|
-   |format |{"format":"uri"}| must match format "uri"
 
     
