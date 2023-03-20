@@ -1,11 +1,11 @@
 # Results of real world testing
-Report generated at: Sat Feb 18 2023 08:39:33 GMT+0000 (Coordinated Universal Time)
+Report generated at: Thu Mar 16 2023 16:42:15 GMT+0000 (Coordinated Universal Time)
 
 | APIs at [apis.guru](https://apis.guru) | #
 |--------|-------|
-|Total |2453 
-|Tested |2453
-|Failed validation | 16
+|Total |2505 
+|Tested |2505
+|Failed validation | 8
 
 
 ## API: airport-web\.appspot\.com (version: v1) 
@@ -103,6 +103,30 @@ AJV errors:
 
     
 
+## API: discourse\.local (version: latest) 
+OpenApi: [3.0.3](https://spec.openapis.org/oas/v3.0.3)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/discourse.local/latest/openapi.yaml)
+
+API updated: 2023-03-06T07:12:59.965Z
+
+### Path: /servers/1/url
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/discourse.local/latest/openapi.yaml#L68)
+
+Value: 
+```json
+"https://{defaultHost}"
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |format |{"format":"uri-reference"}| must match format "uri-reference"
+
+    
+
 ## API: gambitcomm\.local:mimic (version: 21.00) 
 OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 [JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
@@ -180,108 +204,120 @@ AJV errors:
 
     
 
-## API: googleapis\.com:bigqueryreservation (version: v1beta1) 
-OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
+## API: linode\.com (version: 4.145.0) 
+OpenApi: [3.0.1](https://spec.openapis.org/oas/v3.0.1)
 [JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/bigqueryreservation/v1beta1/openapi.yaml)
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml)
 
-API updated: 2022-10-20T23:15:56.864Z
+API updated: 2023-03-06T09:58:04.581Z
 
-### Path: 
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/bigqueryreservation/v1beta1/openapi.yaml#L1)
+### Path: /paths/\~1domains\~1\{domainId\}\~1clone/post/requestBody/content/application\~1json/schema/properties/domain/pattern
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml#L5848)
 
-Value: content too large
+Value: 
+```json
+"\\A(\\*\\.)?([a-zA-Z0-9-_]{1,63}\\.)+([a-zA-Z]{2,3}\\.)?([a-zA-Z]{2,16}|xn--[a-zA-Z0-9]+)\\Z"
+```
 
 AJV errors:
 
    |Keyword |Params |Message |
    |--------|-------|--------|
-   |additionalProperties |{"additionalProperty":"source"}| must NOT have additional properties
+   |format |{"format":"regex"}| must match format "regex"
 
-    
+### Path: /paths/\~1domains\~1\{domainId\}\~1clone/post/requestBody/content/application\~1json/schema/properties/domain
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml#L5842)
 
-## API: googleapis\.com:cloudbuild (version: v1beta1) 
-OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
-
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/cloudbuild/v1beta1/openapi.yaml)
-
-API updated: 2022-12-05T23:10:17.791Z
-
-### Path: 
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/cloudbuild/v1beta1/openapi.yaml#L1)
-
-Value: content too large
-
-AJV errors:
-
-   |Keyword |Params |Message |
-   |--------|-------|--------|
-   |additionalProperties |{"additionalProperty":"source"}| must NOT have additional properties
-
-    
-
-## API: googleapis\.com:dfareporting (version: v3.4) 
-OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
-
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/dfareporting/v3.4/openapi.yaml)
-
-API updated: 2023-02-18T00:52:27.674Z
-
-### Path: 
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/dfareporting/v3.4/openapi.yaml#L1)
-
-Value: content too large
+Value: 
+```json
+{
+  "description": "The new domain for the clone. Domain labels cannot be longer than 63 characters and must conform to [RFC1035](https://tools.ietf.org/html/rfc1035). Domains must be unique on Linode's platform, including across different Linode accounts; there cannot be two Domains representing the same domain.\n",
+  "example": "example.org",
+  "maxLength": 253,
+  "minLength": 1,
+  "pattern": "\\A(\\*\\.)?([a-zA-Z0-9-_]{1,63}\\.)+([a-zA-Z]{2,3}\\.)?([a-zA-Z]{2,16}|xn--[a-zA-Z0-9]+)\\Z",
+  "type": "string",
+  "x-linode-filterable": true
+}
+```
 
 AJV errors:
 
    |Keyword |Params |Message |
    |--------|-------|--------|
-   |additionalProperties |{"additionalProperty":"source"}| must NOT have additional properties
+   |required |{"missingProperty":"$ref"}| must have required property '$ref'
+   |oneOf |{"passingSchemas":null}| must match exactly one schema in oneOf
 
-    
+### Path: /paths/\~1domains\~1\{domainId\}\~1clone/post/requestBody/content/application\~1json/schema
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml#L5840)
 
-## API: googleapis\.com:ideahub (version: v1beta) 
-OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
-
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/ideahub/v1beta/openapi.yaml)
-
-API updated: 2022-11-01T23:13:37.990Z
-
-### Path: 
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/ideahub/v1beta/openapi.yaml#L1)
-
-Value: content too large
-
-AJV errors:
-
-   |Keyword |Params |Message |
-   |--------|-------|--------|
-   |additionalProperties |{"additionalProperty":"source"}| must NOT have additional properties
-
-    
-
-## API: googleapis\.com:speech (version: v2beta1) 
-OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
-
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/speech/v2beta1/openapi.yaml)
-
-API updated: 2023-02-18T00:52:27.674Z
-
-### Path: 
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/speech/v2beta1/openapi.yaml#L1)
-
-Value: content too large
+Value: 
+```json
+{
+  "properties": {
+    "domain": {
+      "description": "The new domain for the clone. Domain labels cannot be longer than 63 characters and must conform to [RFC1035](https://tools.ietf.org/html/rfc1035). Domains must be unique on Linode's platform, including across different Linode accounts; there cannot be two Domains representing the same domain.\n",
+      "example": "example.org",
+      "maxLength": 253,
+      "minLength": 1,
+      "pattern": "\\A(\\*\\.)?([a-zA-Z0-9-_]{1,63}\\.)+([a-zA-Z]{2,3}\\.)?([a-zA-Z]{2,16}|xn--[a-zA-Z0-9]+)\\Z",
+      "type": "string",
+      "x-linode-filterable": true
+    }
+  },
+  "required": [
+    "domain"
+  ],
+  "type": "object"
+}
+```
 
 AJV errors:
 
    |Keyword |Params |Message |
    |--------|-------|--------|
-   |additionalProperties |{"additionalProperty":"source"}| must NOT have additional properties
+   |required |{"missingProperty":"$ref"}| must have required property '$ref'
+   |oneOf |{"passingSchemas":null}| must match exactly one schema in oneOf
+
+### Path: /paths/\~1domains\~1\{domainId\}\~1clone/post/requestBody
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml#L5837)
+
+Value: 
+```json
+{
+  "content": {
+    "application/json": {
+      "schema": {
+        "properties": {
+          "domain": {
+            "description": "The new domain for the clone. Domain labels cannot be longer than 63 characters and must conform to [RFC1035](https://tools.ietf.org/html/rfc1035). Domains must be unique on Linode's platform, including across different Linode accounts; there cannot be two Domains representing the same domain.\n",
+            "example": "example.org",
+            "maxLength": 253,
+            "minLength": 1,
+            "pattern": "\\A(\\*\\.)?([a-zA-Z0-9-_]{1,63}\\.)+([a-zA-Z]{2,3}\\.)?([a-zA-Z]{2,16}|xn--[a-zA-Z0-9]+)\\Z",
+            "type": "string",
+            "x-linode-filterable": true
+          }
+        },
+        "required": [
+          "domain"
+        ],
+        "type": "object"
+      }
+    }
+  },
+  "description": "Information about the Domain to clone.",
+  "required": true
+}
+```
+
+AJV errors:
+
+   |Keyword |Params |Message |
+   |--------|-------|--------|
+   |required |{"missingProperty":"$ref"}| must have required property '$ref'
+   |oneOf |{"passingSchemas":null}| must match exactly one schema in oneOf
 
     
 
@@ -566,87 +602,26 @@ AJV errors:
 
     
 
-## API: parliament\.uk:statutoryinstruments (version: v1) 
+## API: royalmail\.com:click-and-drop (version: 1.0.0) 
 Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 [JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
 
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/statutoryinstruments/v1/swagger.yaml)
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/royalmail.com/click-and-drop/1.0.0/swagger.yaml)
 
-API updated: 2021-06-21T12:16:53.715Z
+API updated: 2023-03-06T07:12:59.965Z
 
-### Path: /info/contact/url
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/statutoryinstruments/v1/swagger.yaml#L6)
-
-Value: 
-```json
-""
-```
-
-AJV errors:
-
-   |Keyword |Params |Message |
-   |--------|-------|--------|
-   |format |{"format":"uri"}| must match format "uri"
-
-    
-
-## API: parliament\.uk:treaties (version: v1) 
-Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
-
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/treaties/v1/swagger.yaml)
-
-API updated: 2021-05-24T10:27:51.952Z
-
-### Path: /info/contact/url
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/treaties/v1/swagger.yaml#L6)
-
-Value: 
-```json
-""
-```
-
-AJV errors:
-
-   |Keyword |Params |Message |
-   |--------|-------|--------|
-   |format |{"format":"uri"}| must match format "uri"
-
-    
-
-## API: prss\.org (version: 2.0.0) 
-Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
-
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml)
-
-API updated: 2021-06-21T12:16:53.715Z
-
-### Path: /paths/\~1api\~1v2\~1metapub\~1program-information\~1batch/post/responses/202/schema/externalDocs/url
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L417)
-
-Value: 
-```json
-"/api/epg-cd-mapping.html"
-```
-
-AJV errors:
-
-   |Keyword |Params |Message |
-   |--------|-------|--------|
-   |format |{"format":"uri"}| must match format "uri"
-
-### Path: /paths/\~1api\~1v2\~1metapub\~1program-information\~1batch/post/responses/202/schema
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L413)
+### Path: /parameters/orderIdentifiers
+Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/royalmail.com/click-and-drop/1.0.0/swagger.yaml#L79)
 
 Value: 
 ```json
 {
-  "$ref": "#/definitions/ProgramInformationBatch",
-  "externalDocs": {
-    "description": "Find RadioDns to ContentDepot Mapping here",
-    "url": "/api/epg-cd-mapping.html"
-  }
+  "description": "One or several Order Identifiers or Order References separated by semicolon. Order Identifiers are integer numbers. Order References are strings - each must be percent-encoded and surrounded by double quotation marks.",
+  "example": "/orders/\"ref\";1001;\"Reference%3BWith%3BSpecial%3BSymbols!\";2345/",
+  "in": "path",
+  "name": "orderIdentifiers",
+  "required": true,
+  "type": "string"
 }
 ```
 
@@ -654,143 +629,8 @@ AJV errors:
 
    |Keyword |Params |Message |
    |--------|-------|--------|
-   |required |{"missingProperty":"type"}| must have required property 'type'
+   |required |{"missingProperty":"schema"}| must have required property 'schema'
+   |additionalProperties |{"additionalProperty":"example"}| must NOT have additional properties
    |oneOf |{"passingSchemas":null}| must match exactly one schema in oneOf
-
-### Path: /paths/\~1api\~1v2\~1metapub\~1program-information\~1batch/post/responses/202
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L411)
-
-Value: 
-```json
-{
-  "description": "The accepted batch information that is queued for processing.",
-  "schema": {
-    "$ref": "#/definitions/ProgramInformationBatch",
-    "externalDocs": {
-      "description": "Find RadioDns to ContentDepot Mapping here",
-      "url": "/api/epg-cd-mapping.html"
-    }
-  }
-}
-```
-
-AJV errors:
-
-   |Keyword |Params |Message |
-   |--------|-------|--------|
-   |required |{"missingProperty":"$ref"}| must have required property '$ref'
-   |oneOf |{"passingSchemas":null}| must match exactly one schema in oneOf
-
-    
-
-## API: trashnothing\.com (version: 1.2) 
-OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
-
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/trashnothing.com/1.2/openapi.yaml)
-
-API updated: 2021-07-26T08:51:53.432Z
-
-### Path: /info/termsOfService
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/trashnothing.com/1.2/openapi.yaml#L15)
-
-Value: 
-```json
-"https://trashnothing.com/tos\n"
-```
-
-AJV errors:
-
-   |Keyword |Params |Message |
-   |--------|-------|--------|
-   |format |{"format":"uri-reference"}| must match format "uri-reference"
-
-    
-
-## API: twinehealth\.com (version: v7.78.1) 
-Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
-
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml)
-
-API updated: 2021-06-21T12:16:53.715Z
-
-### Path: /securityDefinitions/OAuth2
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L77)
-
-Value: 
-```json
-{
-  "description": "Fitbit Plus allows customers to access data for their organization using client credentials.\nOAuth2 is a safe and secure way to give you access.\n",
-  "flow": "application",
-  "scopes": {
-    "group": "access patients and data within a group",
-    "organization": "access patients and data within an organization"
-  },
-  "tokenUrl": "/oauth/token",
-  "type": "oauth2"
-}
-```
-
-AJV errors:
-
-   |Keyword |Params |Message |
-   |--------|-------|--------|
-   |additionalProperties |{"additionalProperty":"flow"}| must NOT have additional properties
-   |required |{"missingProperty":"name"}| must have required property 'name'
-   |required |{"missingProperty":"authorizationUrl"}| must have required property 'authorizationUrl'
-   |oneOf |{"passingSchemas":null}| must match exactly one schema in oneOf
-
-### Path: /securityDefinitions/OAuth2/flow
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L81)
-
-Value: 
-```json
-"application"
-```
-
-AJV errors:
-
-   |Keyword |Params |Message |
-   |--------|-------|--------|
-   |enum |{"allowedValues":["password"]}| must be equal to one of the allowed values
-
-### Path: /securityDefinitions/OAuth2/tokenUrl
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L85)
-
-Value: 
-```json
-"/oauth/token"
-```
-
-AJV errors:
-
-   |Keyword |Params |Message |
-   |--------|-------|--------|
-   |format |{"format":"uri"}| must match format "uri"
-
-    
-
-## API: whapi\.com:numbers (version: 2.0) 
-Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
-
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/whapi.com/numbers/2.0/swagger.yaml)
-
-API updated: 2021-06-21T12:16:53.715Z
-
-### Path: /info/license/url
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/whapi.com/numbers/2.0/swagger.yaml#L12)
-
-Value: 
-```json
-"www.williamhill.com"
-```
-
-AJV errors:
-
-   |Keyword |Params |Message |
-   |--------|-------|--------|
-   |format |{"format":"uri"}| must match format "uri"
 
     

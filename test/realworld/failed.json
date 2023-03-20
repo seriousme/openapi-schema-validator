@@ -1,9 +1,9 @@
 {
-  "testDate": "2023-02-18T08:39:33.186Z",
-  "totalApiCount": 2453,
-  "testedAPICount": 2453,
-  "failedAPICount": 16,
-  "knownFailedCount": 16,
+  "testDate": "2023-03-16T16:42:15.102Z",
+  "totalApiCount": 2505,
+  "testedAPICount": 2505,
+  "failedAPICount": 8,
+  "knownFailedCount": 8,
   "failedTests": [
     {
       "name": "airport-web.appspot.com",
@@ -195,6 +195,33 @@
       "knownFailed": true
     },
     {
+      "name": "discourse.local",
+      "apiVersion": "latest",
+      "openApiVersion": "3.0.3",
+      "yamlUrl": "https://api.apis.guru/v2/specs/discourse.local/latest/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/discourse.local/latest/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/discourse.local/latest/openapi.yaml",
+      "updated": "2023-03-06T07:12:59.965Z",
+      "result": {
+        "valid": false,
+        "errors": [
+          {
+            "instancePath": "/servers/1/url",
+            "schemaPath": "#/properties/url/format",
+            "keyword": "format",
+            "params": {
+              "format": "uri-reference"
+            },
+            "message": "must match format \"uri-reference\"",
+            "hasInstanceValue": true,
+            "instanceValue": "https://{defaultHost}",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/discourse.local/latest/openapi.yaml#L68"
+          }
+        ]
+      },
+      "knownFailed": true
+    },
+    {
       "name": "gambitcomm.local:mimic",
       "apiVersion": "21.00",
       "openApiVersion": "3.0.0",
@@ -316,135 +343,195 @@
       "knownFailed": true
     },
     {
-      "name": "googleapis.com:bigqueryreservation",
-      "apiVersion": "v1beta1",
-      "openApiVersion": "3.0.0",
-      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/bigqueryreservation/v1beta1/openapi.yaml",
-      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/bigqueryreservation/v1beta1/openapi.json",
-      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/bigqueryreservation/v1beta1/openapi.yaml",
-      "updated": "2022-10-20T23:15:56.864Z",
+      "name": "linode.com",
+      "apiVersion": "4.145.0",
+      "openApiVersion": "3.0.1",
+      "yamlUrl": "https://api.apis.guru/v2/specs/linode.com/4.145.0/openapi.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/linode.com/4.145.0/openapi.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml",
+      "updated": "2023-03-06T09:58:04.581Z",
       "result": {
         "valid": false,
         "errors": [
           {
-            "instancePath": "",
-            "schemaPath": "#/additionalProperties",
-            "keyword": "additionalProperties",
+            "instancePath": "/paths/~1domains~1{domainId}~1clone/post/requestBody/content/application~1json/schema/properties/domain/pattern",
+            "schemaPath": "#/properties/pattern/format",
+            "keyword": "format",
             "params": {
-              "additionalProperty": "source"
+              "format": "regex"
             },
-            "message": "must NOT have additional properties",
-            "hasInstanceValue": false,
-            "instanceValue": "content too large",
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/bigqueryreservation/v1beta1/openapi.yaml#L1"
-          }
-        ]
-      },
-      "knownFailed": true
-    },
-    {
-      "name": "googleapis.com:cloudbuild",
-      "apiVersion": "v1beta1",
-      "openApiVersion": "3.0.0",
-      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/cloudbuild/v1beta1/openapi.yaml",
-      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/cloudbuild/v1beta1/openapi.json",
-      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/cloudbuild/v1beta1/openapi.yaml",
-      "updated": "2022-12-05T23:10:17.791Z",
-      "result": {
-        "valid": false,
-        "errors": [
+            "message": "must match format \"regex\"",
+            "hasInstanceValue": true,
+            "instanceValue": "\\A(\\*\\.)?([a-zA-Z0-9-_]{1,63}\\.)+([a-zA-Z]{2,3}\\.)?([a-zA-Z]{2,16}|xn--[a-zA-Z0-9]+)\\Z",
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml#L5848"
+          },
           {
-            "instancePath": "",
-            "schemaPath": "#/additionalProperties",
-            "keyword": "additionalProperties",
+            "instancePath": "/paths/~1domains~1{domainId}~1clone/post/requestBody/content/application~1json/schema/properties/domain",
+            "schemaPath": "#/definitions/Reference/required",
+            "keyword": "required",
             "params": {
-              "additionalProperty": "source"
+              "missingProperty": "$ref"
             },
-            "message": "must NOT have additional properties",
-            "hasInstanceValue": false,
-            "instanceValue": "content too large",
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/cloudbuild/v1beta1/openapi.yaml#L1"
-          }
-        ]
-      },
-      "knownFailed": true
-    },
-    {
-      "name": "googleapis.com:dfareporting",
-      "apiVersion": "v3.4",
-      "openApiVersion": "3.0.0",
-      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/dfareporting/v3.4/openapi.yaml",
-      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/dfareporting/v3.4/openapi.json",
-      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/dfareporting/v3.4/openapi.yaml",
-      "updated": "2023-02-18T00:52:27.674Z",
-      "result": {
-        "valid": false,
-        "errors": [
+            "message": "must have required property '$ref'",
+            "hasInstanceValue": true,
+            "instanceValue": {
+              "description": "The new domain for the clone. Domain labels cannot be longer than 63 characters and must conform to [RFC1035](https://tools.ietf.org/html/rfc1035). Domains must be unique on Linode's platform, including across different Linode accounts; there cannot be two Domains representing the same domain.\n",
+              "example": "example.org",
+              "maxLength": 253,
+              "minLength": 1,
+              "pattern": "\\A(\\*\\.)?([a-zA-Z0-9-_]{1,63}\\.)+([a-zA-Z]{2,3}\\.)?([a-zA-Z]{2,16}|xn--[a-zA-Z0-9]+)\\Z",
+              "type": "string",
+              "x-linode-filterable": true
+            },
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml#L5842"
+          },
           {
-            "instancePath": "",
-            "schemaPath": "#/additionalProperties",
-            "keyword": "additionalProperties",
+            "instancePath": "/paths/~1domains~1{domainId}~1clone/post/requestBody/content/application~1json/schema/properties/domain",
+            "schemaPath": "#/properties/properties/additionalProperties/oneOf",
+            "keyword": "oneOf",
             "params": {
-              "additionalProperty": "source"
+              "passingSchemas": null
             },
-            "message": "must NOT have additional properties",
-            "hasInstanceValue": false,
-            "instanceValue": "content too large",
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/dfareporting/v3.4/openapi.yaml#L1"
-          }
-        ]
-      },
-      "knownFailed": true
-    },
-    {
-      "name": "googleapis.com:ideahub",
-      "apiVersion": "v1beta",
-      "openApiVersion": "3.0.0",
-      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/ideahub/v1beta/openapi.yaml",
-      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/ideahub/v1beta/openapi.json",
-      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/ideahub/v1beta/openapi.yaml",
-      "updated": "2022-11-01T23:13:37.990Z",
-      "result": {
-        "valid": false,
-        "errors": [
+            "message": "must match exactly one schema in oneOf",
+            "hasInstanceValue": true,
+            "instanceValue": {
+              "description": "The new domain for the clone. Domain labels cannot be longer than 63 characters and must conform to [RFC1035](https://tools.ietf.org/html/rfc1035). Domains must be unique on Linode's platform, including across different Linode accounts; there cannot be two Domains representing the same domain.\n",
+              "example": "example.org",
+              "maxLength": 253,
+              "minLength": 1,
+              "pattern": "\\A(\\*\\.)?([a-zA-Z0-9-_]{1,63}\\.)+([a-zA-Z]{2,3}\\.)?([a-zA-Z]{2,16}|xn--[a-zA-Z0-9]+)\\Z",
+              "type": "string",
+              "x-linode-filterable": true
+            },
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml#L5842"
+          },
           {
-            "instancePath": "",
-            "schemaPath": "#/additionalProperties",
-            "keyword": "additionalProperties",
+            "instancePath": "/paths/~1domains~1{domainId}~1clone/post/requestBody/content/application~1json/schema",
+            "schemaPath": "#/definitions/Reference/required",
+            "keyword": "required",
             "params": {
-              "additionalProperty": "source"
+              "missingProperty": "$ref"
             },
-            "message": "must NOT have additional properties",
-            "hasInstanceValue": false,
-            "instanceValue": "content too large",
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/ideahub/v1beta/openapi.yaml#L1"
-          }
-        ]
-      },
-      "knownFailed": true
-    },
-    {
-      "name": "googleapis.com:speech",
-      "apiVersion": "v2beta1",
-      "openApiVersion": "3.0.0",
-      "yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/speech/v2beta1/openapi.yaml",
-      "jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/speech/v2beta1/openapi.json",
-      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/speech/v2beta1/openapi.yaml",
-      "updated": "2023-02-18T00:52:27.674Z",
-      "result": {
-        "valid": false,
-        "errors": [
+            "message": "must have required property '$ref'",
+            "hasInstanceValue": true,
+            "instanceValue": {
+              "properties": {
+                "domain": {
+                  "description": "The new domain for the clone. Domain labels cannot be longer than 63 characters and must conform to [RFC1035](https://tools.ietf.org/html/rfc1035). Domains must be unique on Linode's platform, including across different Linode accounts; there cannot be two Domains representing the same domain.\n",
+                  "example": "example.org",
+                  "maxLength": 253,
+                  "minLength": 1,
+                  "pattern": "\\A(\\*\\.)?([a-zA-Z0-9-_]{1,63}\\.)+([a-zA-Z]{2,3}\\.)?([a-zA-Z]{2,16}|xn--[a-zA-Z0-9]+)\\Z",
+                  "type": "string",
+                  "x-linode-filterable": true
+                }
+              },
+              "required": [
+                "domain"
+              ],
+              "type": "object"
+            },
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml#L5840"
+          },
           {
-            "instancePath": "",
-            "schemaPath": "#/additionalProperties",
-            "keyword": "additionalProperties",
+            "instancePath": "/paths/~1domains~1{domainId}~1clone/post/requestBody/content/application~1json/schema",
+            "schemaPath": "#/properties/schema/oneOf",
+            "keyword": "oneOf",
             "params": {
-              "additionalProperty": "source"
+              "passingSchemas": null
             },
-            "message": "must NOT have additional properties",
-            "hasInstanceValue": false,
-            "instanceValue": "content too large",
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/speech/v2beta1/openapi.yaml#L1"
+            "message": "must match exactly one schema in oneOf",
+            "hasInstanceValue": true,
+            "instanceValue": {
+              "properties": {
+                "domain": {
+                  "description": "The new domain for the clone. Domain labels cannot be longer than 63 characters and must conform to [RFC1035](https://tools.ietf.org/html/rfc1035). Domains must be unique on Linode's platform, including across different Linode accounts; there cannot be two Domains representing the same domain.\n",
+                  "example": "example.org",
+                  "maxLength": 253,
+                  "minLength": 1,
+                  "pattern": "\\A(\\*\\.)?([a-zA-Z0-9-_]{1,63}\\.)+([a-zA-Z]{2,3}\\.)?([a-zA-Z]{2,16}|xn--[a-zA-Z0-9]+)\\Z",
+                  "type": "string",
+                  "x-linode-filterable": true
+                }
+              },
+              "required": [
+                "domain"
+              ],
+              "type": "object"
+            },
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml#L5840"
+          },
+          {
+            "instancePath": "/paths/~1domains~1{domainId}~1clone/post/requestBody",
+            "schemaPath": "#/definitions/Reference/required",
+            "keyword": "required",
+            "params": {
+              "missingProperty": "$ref"
+            },
+            "message": "must have required property '$ref'",
+            "hasInstanceValue": true,
+            "instanceValue": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "properties": {
+                      "domain": {
+                        "description": "The new domain for the clone. Domain labels cannot be longer than 63 characters and must conform to [RFC1035](https://tools.ietf.org/html/rfc1035). Domains must be unique on Linode's platform, including across different Linode accounts; there cannot be two Domains representing the same domain.\n",
+                        "example": "example.org",
+                        "maxLength": 253,
+                        "minLength": 1,
+                        "pattern": "\\A(\\*\\.)?([a-zA-Z0-9-_]{1,63}\\.)+([a-zA-Z]{2,3}\\.)?([a-zA-Z]{2,16}|xn--[a-zA-Z0-9]+)\\Z",
+                        "type": "string",
+                        "x-linode-filterable": true
+                      }
+                    },
+                    "required": [
+                      "domain"
+                    ],
+                    "type": "object"
+                  }
+                }
+              },
+              "description": "Information about the Domain to clone.",
+              "required": true
+            },
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml#L5837"
+          },
+          {
+            "instancePath": "/paths/~1domains~1{domainId}~1clone/post/requestBody",
+            "schemaPath": "#/properties/requestBody/oneOf",
+            "keyword": "oneOf",
+            "params": {
+              "passingSchemas": null
+            },
+            "message": "must match exactly one schema in oneOf",
+            "hasInstanceValue": true,
+            "instanceValue": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "properties": {
+                      "domain": {
+                        "description": "The new domain for the clone. Domain labels cannot be longer than 63 characters and must conform to [RFC1035](https://tools.ietf.org/html/rfc1035). Domains must be unique on Linode's platform, including across different Linode accounts; there cannot be two Domains representing the same domain.\n",
+                        "example": "example.org",
+                        "maxLength": 253,
+                        "minLength": 1,
+                        "pattern": "\\A(\\*\\.)?([a-zA-Z0-9-_]{1,63}\\.)+([a-zA-Z]{2,3}\\.)?([a-zA-Z]{2,16}|xn--[a-zA-Z0-9]+)\\Z",
+                        "type": "string",
+                        "x-linode-filterable": true
+                      }
+                    },
+                    "required": [
+                      "domain"
+                    ],
+                    "type": "object"
+                  }
+                }
+              },
+              "description": "Information about the Domain to clone.",
+              "required": true
+            },
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml#L5837"
           }
         ]
       },
@@ -971,141 +1058,113 @@
       "knownFailed": true
     },
     {
-      "name": "parliament.uk:statutoryinstruments",
-      "apiVersion": "v1",
+      "name": "royalmail.com:click-and-drop",
+      "apiVersion": "1.0.0",
       "openApiVersion": "2.0",
-      "yamlUrl": "https://api.apis.guru/v2/specs/parliament.uk/statutoryinstruments/v1/swagger.yaml",
-      "jsonUrl": "https://api.apis.guru/v2/specs/parliament.uk/statutoryinstruments/v1/swagger.json",
-      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/statutoryinstruments/v1/swagger.yaml",
-      "updated": "2021-06-21T12:16:53.715Z",
+      "yamlUrl": "https://api.apis.guru/v2/specs/royalmail.com/click-and-drop/1.0.0/swagger.yaml",
+      "jsonUrl": "https://api.apis.guru/v2/specs/royalmail.com/click-and-drop/1.0.0/swagger.json",
+      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/royalmail.com/click-and-drop/1.0.0/swagger.yaml",
+      "updated": "2023-03-06T07:12:59.965Z",
       "result": {
         "valid": false,
         "errors": [
           {
-            "instancePath": "/info/contact/url",
-            "schemaPath": "#/properties/url/format",
-            "keyword": "format",
-            "params": {
-              "format": "uri"
-            },
-            "message": "must match format \"uri\"",
-            "hasInstanceValue": true,
-            "instanceValue": "",
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/statutoryinstruments/v1/swagger.yaml#L6"
-          }
-        ]
-      },
-      "knownFailed": true
-    },
-    {
-      "name": "parliament.uk:treaties",
-      "apiVersion": "v1",
-      "openApiVersion": "2.0",
-      "yamlUrl": "https://api.apis.guru/v2/specs/parliament.uk/treaties/v1/swagger.yaml",
-      "jsonUrl": "https://api.apis.guru/v2/specs/parliament.uk/treaties/v1/swagger.json",
-      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/treaties/v1/swagger.yaml",
-      "updated": "2021-05-24T10:27:51.952Z",
-      "result": {
-        "valid": false,
-        "errors": [
-          {
-            "instancePath": "/info/contact/url",
-            "schemaPath": "#/properties/url/format",
-            "keyword": "format",
-            "params": {
-              "format": "uri"
-            },
-            "message": "must match format \"uri\"",
-            "hasInstanceValue": true,
-            "instanceValue": "",
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/parliament.uk/treaties/v1/swagger.yaml#L6"
-          }
-        ]
-      },
-      "knownFailed": true
-    },
-    {
-      "name": "prss.org",
-      "apiVersion": "2.0.0",
-      "openApiVersion": "2.0",
-      "yamlUrl": "https://api.apis.guru/v2/specs/prss.org/2.0.0/swagger.yaml",
-      "jsonUrl": "https://api.apis.guru/v2/specs/prss.org/2.0.0/swagger.json",
-      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml",
-      "updated": "2021-06-21T12:16:53.715Z",
-      "result": {
-        "valid": false,
-        "errors": [
-          {
-            "instancePath": "/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202/schema/externalDocs/url",
-            "schemaPath": "#/properties/url/format",
-            "keyword": "format",
-            "params": {
-              "format": "uri"
-            },
-            "message": "must match format \"uri\"",
-            "hasInstanceValue": true,
-            "instanceValue": "/api/epg-cd-mapping.html",
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L417"
-          },
-          {
-            "instancePath": "/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202/schema",
+            "instancePath": "/parameters/orderIdentifiers",
             "schemaPath": "#/required",
             "keyword": "required",
             "params": {
-              "missingProperty": "type"
+              "missingProperty": "schema"
             },
-            "message": "must have required property 'type'",
+            "message": "must have required property 'schema'",
             "hasInstanceValue": true,
             "instanceValue": {
-              "$ref": "#/definitions/ProgramInformationBatch",
-              "externalDocs": {
-                "description": "Find RadioDns to ContentDepot Mapping here",
-                "url": "/api/epg-cd-mapping.html"
-              }
+              "description": "One or several Order Identifiers or Order References separated by semicolon. Order Identifiers are integer numbers. Order References are strings - each must be percent-encoded and surrounded by double quotation marks.",
+              "example": "/orders/\"ref\";1001;\"Reference%3BWith%3BSpecial%3BSymbols!\";2345/",
+              "in": "path",
+              "name": "orderIdentifiers",
+              "required": true,
+              "type": "string"
             },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L413"
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/royalmail.com/click-and-drop/1.0.0/swagger.yaml#L79"
           },
           {
-            "instancePath": "/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202/schema",
-            "schemaPath": "#/properties/schema/oneOf",
-            "keyword": "oneOf",
+            "instancePath": "/parameters/orderIdentifiers",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
             "params": {
-              "passingSchemas": null
+              "additionalProperty": "example"
             },
-            "message": "must match exactly one schema in oneOf",
+            "message": "must NOT have additional properties",
             "hasInstanceValue": true,
             "instanceValue": {
-              "$ref": "#/definitions/ProgramInformationBatch",
-              "externalDocs": {
-                "description": "Find RadioDns to ContentDepot Mapping here",
-                "url": "/api/epg-cd-mapping.html"
-              }
+              "description": "One or several Order Identifiers or Order References separated by semicolon. Order Identifiers are integer numbers. Order References are strings - each must be percent-encoded and surrounded by double quotation marks.",
+              "example": "/orders/\"ref\";1001;\"Reference%3BWith%3BSpecial%3BSymbols!\";2345/",
+              "in": "path",
+              "name": "orderIdentifiers",
+              "required": true,
+              "type": "string"
             },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L413"
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/royalmail.com/click-and-drop/1.0.0/swagger.yaml#L79"
           },
           {
-            "instancePath": "/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202",
-            "schemaPath": "#/required",
-            "keyword": "required",
+            "instancePath": "/parameters/orderIdentifiers",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
             "params": {
-              "missingProperty": "$ref"
+              "additionalProperty": "example"
             },
-            "message": "must have required property '$ref'",
+            "message": "must NOT have additional properties",
             "hasInstanceValue": true,
             "instanceValue": {
-              "description": "The accepted batch information that is queued for processing.",
-              "schema": {
-                "$ref": "#/definitions/ProgramInformationBatch",
-                "externalDocs": {
-                  "description": "Find RadioDns to ContentDepot Mapping here",
-                  "url": "/api/epg-cd-mapping.html"
-                }
-              }
+              "description": "One or several Order Identifiers or Order References separated by semicolon. Order Identifiers are integer numbers. Order References are strings - each must be percent-encoded and surrounded by double quotation marks.",
+              "example": "/orders/\"ref\";1001;\"Reference%3BWith%3BSpecial%3BSymbols!\";2345/",
+              "in": "path",
+              "name": "orderIdentifiers",
+              "required": true,
+              "type": "string"
             },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L411"
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/royalmail.com/click-and-drop/1.0.0/swagger.yaml#L79"
           },
           {
-            "instancePath": "/paths/~1api~1v2~1metapub~1program-information~1batch/post/responses/202",
+            "instancePath": "/parameters/orderIdentifiers",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
+            "params": {
+              "additionalProperty": "example"
+            },
+            "message": "must NOT have additional properties",
+            "hasInstanceValue": true,
+            "instanceValue": {
+              "description": "One or several Order Identifiers or Order References separated by semicolon. Order Identifiers are integer numbers. Order References are strings - each must be percent-encoded and surrounded by double quotation marks.",
+              "example": "/orders/\"ref\";1001;\"Reference%3BWith%3BSpecial%3BSymbols!\";2345/",
+              "in": "path",
+              "name": "orderIdentifiers",
+              "required": true,
+              "type": "string"
+            },
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/royalmail.com/click-and-drop/1.0.0/swagger.yaml#L79"
+          },
+          {
+            "instancePath": "/parameters/orderIdentifiers",
+            "schemaPath": "#/additionalProperties",
+            "keyword": "additionalProperties",
+            "params": {
+              "additionalProperty": "example"
+            },
+            "message": "must NOT have additional properties",
+            "hasInstanceValue": true,
+            "instanceValue": {
+              "description": "One or several Order Identifiers or Order References separated by semicolon. Order Identifiers are integer numbers. Order References are strings - each must be percent-encoded and surrounded by double quotation marks.",
+              "example": "/orders/\"ref\";1001;\"Reference%3BWith%3BSpecial%3BSymbols!\";2345/",
+              "in": "path",
+              "name": "orderIdentifiers",
+              "required": true,
+              "type": "string"
+            },
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/royalmail.com/click-and-drop/1.0.0/swagger.yaml#L79"
+          },
+          {
+            "instancePath": "/parameters/orderIdentifiers",
             "schemaPath": "#/oneOf",
             "keyword": "oneOf",
             "params": {
@@ -1114,172 +1173,18 @@
             "message": "must match exactly one schema in oneOf",
             "hasInstanceValue": true,
             "instanceValue": {
-              "description": "The accepted batch information that is queued for processing.",
-              "schema": {
-                "$ref": "#/definitions/ProgramInformationBatch",
-                "externalDocs": {
-                  "description": "Find RadioDns to ContentDepot Mapping here",
-                  "url": "/api/epg-cd-mapping.html"
-                }
-              }
+              "description": "One or several Order Identifiers or Order References separated by semicolon. Order Identifiers are integer numbers. Order References are strings - each must be percent-encoded and surrounded by double quotation marks.",
+              "example": "/orders/\"ref\";1001;\"Reference%3BWith%3BSpecial%3BSymbols!\";2345/",
+              "in": "path",
+              "name": "orderIdentifiers",
+              "required": true,
+              "type": "string"
             },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/prss.org/2.0.0/swagger.yaml#L411"
-          }
-        ]
-      },
-      "knownFailed": true
-    },
-    {
-      "name": "trashnothing.com",
-      "apiVersion": "1.2",
-      "openApiVersion": "3.0.0",
-      "yamlUrl": "https://api.apis.guru/v2/specs/trashnothing.com/1.2/openapi.yaml",
-      "jsonUrl": "https://api.apis.guru/v2/specs/trashnothing.com/1.2/openapi.json",
-      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/trashnothing.com/1.2/openapi.yaml",
-      "updated": "2021-07-26T08:51:53.432Z",
-      "result": {
-        "valid": false,
-        "errors": [
-          {
-            "instancePath": "/info/termsOfService",
-            "schemaPath": "#/properties/termsOfService/format",
-            "keyword": "format",
-            "params": {
-              "format": "uri-reference"
-            },
-            "message": "must match format \"uri-reference\"",
-            "hasInstanceValue": true,
-            "instanceValue": "https://trashnothing.com/tos\n",
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/trashnothing.com/1.2/openapi.yaml#L15"
-          }
-        ]
-      },
-      "knownFailed": true
-    },
-    {
-      "name": "twinehealth.com",
-      "apiVersion": "v7.78.1",
-      "openApiVersion": "2.0",
-      "yamlUrl": "https://api.apis.guru/v2/specs/twinehealth.com/v7.78.1/swagger.yaml",
-      "jsonUrl": "https://api.apis.guru/v2/specs/twinehealth.com/v7.78.1/swagger.json",
-      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml",
-      "updated": "2021-06-21T12:16:53.715Z",
-      "result": {
-        "valid": false,
-        "errors": [
-          {
-            "instancePath": "/securityDefinitions/OAuth2",
-            "schemaPath": "#/additionalProperties",
-            "keyword": "additionalProperties",
-            "params": {
-              "additionalProperty": "flow"
-            },
-            "message": "must NOT have additional properties",
-            "hasInstanceValue": true,
-            "instanceValue": {
-              "description": "Fitbit Plus allows customers to access data for their organization using client credentials.\nOAuth2 is a safe and secure way to give you access.\n",
-              "flow": "application",
-              "scopes": {
-                "group": "access patients and data within a group",
-                "organization": "access patients and data within an organization"
-              },
-              "tokenUrl": "/oauth/token",
-              "type": "oauth2"
-            },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L77"
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/royalmail.com/click-and-drop/1.0.0/swagger.yaml#L79"
           },
           {
-            "instancePath": "/securityDefinitions/OAuth2",
-            "schemaPath": "#/required",
-            "keyword": "required",
-            "params": {
-              "missingProperty": "name"
-            },
-            "message": "must have required property 'name'",
-            "hasInstanceValue": true,
-            "instanceValue": {
-              "description": "Fitbit Plus allows customers to access data for their organization using client credentials.\nOAuth2 is a safe and secure way to give you access.\n",
-              "flow": "application",
-              "scopes": {
-                "group": "access patients and data within a group",
-                "organization": "access patients and data within an organization"
-              },
-              "tokenUrl": "/oauth/token",
-              "type": "oauth2"
-            },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L77"
-          },
-          {
-            "instancePath": "/securityDefinitions/OAuth2",
-            "schemaPath": "#/required",
-            "keyword": "required",
-            "params": {
-              "missingProperty": "authorizationUrl"
-            },
-            "message": "must have required property 'authorizationUrl'",
-            "hasInstanceValue": true,
-            "instanceValue": {
-              "description": "Fitbit Plus allows customers to access data for their organization using client credentials.\nOAuth2 is a safe and secure way to give you access.\n",
-              "flow": "application",
-              "scopes": {
-                "group": "access patients and data within a group",
-                "organization": "access patients and data within an organization"
-              },
-              "tokenUrl": "/oauth/token",
-              "type": "oauth2"
-            },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L77"
-          },
-          {
-            "instancePath": "/securityDefinitions/OAuth2/flow",
-            "schemaPath": "#/properties/flow/enum",
-            "keyword": "enum",
-            "params": {
-              "allowedValues": [
-                "password"
-              ]
-            },
-            "message": "must be equal to one of the allowed values",
-            "hasInstanceValue": true,
-            "instanceValue": "application",
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L81"
-          },
-          {
-            "instancePath": "/securityDefinitions/OAuth2/tokenUrl",
-            "schemaPath": "#/properties/tokenUrl/format",
-            "keyword": "format",
-            "params": {
-              "format": "uri"
-            },
-            "message": "must match format \"uri\"",
-            "hasInstanceValue": true,
-            "instanceValue": "/oauth/token",
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L85"
-          },
-          {
-            "instancePath": "/securityDefinitions/OAuth2",
-            "schemaPath": "#/required",
-            "keyword": "required",
-            "params": {
-              "missingProperty": "authorizationUrl"
-            },
-            "message": "must have required property 'authorizationUrl'",
-            "hasInstanceValue": true,
-            "instanceValue": {
-              "description": "Fitbit Plus allows customers to access data for their organization using client credentials.\nOAuth2 is a safe and secure way to give you access.\n",
-              "flow": "application",
-              "scopes": {
-                "group": "access patients and data within a group",
-                "organization": "access patients and data within an organization"
-              },
-              "tokenUrl": "/oauth/token",
-              "type": "oauth2"
-            },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L77"
-          },
-          {
-            "instancePath": "/securityDefinitions/OAuth2",
-            "schemaPath": "#/additionalProperties/oneOf",
+            "instancePath": "/parameters/orderIdentifiers",
+            "schemaPath": "#/oneOf",
             "keyword": "oneOf",
             "params": {
               "passingSchemas": null
@@ -1287,43 +1192,14 @@
             "message": "must match exactly one schema in oneOf",
             "hasInstanceValue": true,
             "instanceValue": {
-              "description": "Fitbit Plus allows customers to access data for their organization using client credentials.\nOAuth2 is a safe and secure way to give you access.\n",
-              "flow": "application",
-              "scopes": {
-                "group": "access patients and data within a group",
-                "organization": "access patients and data within an organization"
-              },
-              "tokenUrl": "/oauth/token",
-              "type": "oauth2"
+              "description": "One or several Order Identifiers or Order References separated by semicolon. Order Identifiers are integer numbers. Order References are strings - each must be percent-encoded and surrounded by double quotation marks.",
+              "example": "/orders/\"ref\";1001;\"Reference%3BWith%3BSpecial%3BSymbols!\";2345/",
+              "in": "path",
+              "name": "orderIdentifiers",
+              "required": true,
+              "type": "string"
             },
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/twinehealth.com/v7.78.1/swagger.yaml#L77"
-          }
-        ]
-      },
-      "knownFailed": true
-    },
-    {
-      "name": "whapi.com:numbers",
-      "apiVersion": "2.0",
-      "openApiVersion": "2.0",
-      "yamlUrl": "https://api.apis.guru/v2/specs/whapi.com/numbers/2.0/swagger.yaml",
-      "jsonUrl": "https://api.apis.guru/v2/specs/whapi.com/numbers/2.0/swagger.json",
-      "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/whapi.com/numbers/2.0/swagger.yaml",
-      "updated": "2021-06-21T12:16:53.715Z",
-      "result": {
-        "valid": false,
-        "errors": [
-          {
-            "instancePath": "/info/license/url",
-            "schemaPath": "#/properties/url/format",
-            "keyword": "format",
-            "params": {
-              "format": "uri"
-            },
-            "message": "must match format \"uri\"",
-            "hasInstanceValue": true,
-            "instanceValue": "www.williamhill.com",
-            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/whapi.com/numbers/2.0/swagger.yaml#L12"
+            "gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/royalmail.com/click-and-drop/1.0.0/swagger.yaml#L79"
           }
         ]
       },
