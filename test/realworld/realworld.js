@@ -106,7 +106,7 @@ function findItem(lines, num, pathItem) {
 
 function getInstanceValue(yamlSpec, path) {
 	if (path === "") {
-		return [false, "content too large"];
+		return [false, "content too large to display here"];
 	}
 	const obj = load(yamlSpec, yamlOpts);
 	const paths = path.split("/").slice(1);
