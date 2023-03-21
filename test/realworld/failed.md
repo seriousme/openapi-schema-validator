@@ -1,15 +1,15 @@
 # Results of real world testing
-Report generated at: Thu Mar 16 2023 16:42:15 GMT+0000 (Coordinated Universal Time)
+Report generated at: Tue Mar 21 2023 18:54:53 GMT+0100 (Central European Standard Time)
 
 | APIs at [apis.guru](https://apis.guru) | #
 |--------|-------|
-|Total |2505 
-|Tested |2505
+|Total |2508 
+|Tested |8
 |Failed validation | 8
 
 
 ## API: airport-web\.appspot\.com (version: v1) 
-Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 [JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/airport-web.appspot.com/v1/swagger.yaml)
@@ -56,7 +56,7 @@ AJV errors:
     
 
 ## API: azure\.com:servicebus (version: 2017-04-01) 
-Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 [JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/servicebus/2017-04-01/swagger.yaml)
@@ -80,7 +80,7 @@ AJV errors:
     
 
 ## API: azure\.com:storageimportexport (version: 2016-11-01) 
-Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 [JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/storageimportexport/2016-11-01/swagger.yaml)
@@ -104,8 +104,8 @@ AJV errors:
     
 
 ## API: discourse\.local (version: latest) 
-OpenApi: [3.0.3](https://spec.openapis.org/oas/v3.0.3)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
+openapi: [3.1.0](https://spec.openapis.org/oas/v3.1.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.1/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/discourse.local/latest/openapi.yaml)
 
@@ -128,7 +128,7 @@ AJV errors:
     
 
 ## API: gambitcomm\.local:mimic (version: 21.00) 
-OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
+openapi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 [JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/gambitcomm.local/mimic/21.00/openapi.yaml)
@@ -205,7 +205,7 @@ AJV errors:
     
 
 ## API: linode\.com (version: 4.145.0) 
-OpenApi: [3.0.1](https://spec.openapis.org/oas/v3.0.1)
+openapi: [3.0.1](https://spec.openapis.org/oas/v3.0.1)
 [JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml)
@@ -322,7 +322,7 @@ AJV errors:
     
 
 ## API: opensuse\.org:obs (version: 2.10.50) 
-OpenApi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
+openapi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 [JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/opensuse.org/obs/2.10.50/openapi.yaml)
@@ -603,7 +603,7 @@ AJV errors:
     
 
 ## API: royalmail\.com:click-and-drop (version: 1.0.0) 
-Swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 [JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
 
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/royalmail.com/click-and-drop/1.0.0/swagger.yaml)

@@ -195,6 +195,9 @@ async function doTest(apiList) {
 		const spec = await fetchYaml(api.yamlUrl);
 		results.current++;
 		api.result = await validator.validate(spec);
+		api.validatorVersion = validator.version;
+		api.specificationType = validator.specificationType;
+		api.specificationVersion = validator.specificationVersion;
 		if (api.result.valid === true) {
 			results.valid++;
 		} else {

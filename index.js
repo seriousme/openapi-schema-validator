@@ -24,12 +24,21 @@ function importJSON(file) {
 
 function getOpenApiVersion(specification) {
 	for (const version of openApiVersions) {
-		const prop = specification[version === "2.0" ? "swagger" : "openapi"];
+		const specificationType = version === "2.0" ? "swagger" : "openapi";
+		const prop = specification[specificationType];
 		if (typeof prop === "string" && prop.startsWith(version)) {
-			return version;
+			return {
+				version,
+				specificationType,
+				specificationVersion: prop,
+			};
 		}
 	}
-	return undefined;
+	return {
+		version: undefined,
+		specificationType: undefined,
+		specificationVersion: undefined,
+	};
 }
 
 async function getSpecFromData(data) {
@@ -105,8 +114,11 @@ export class Validator {
 		if (Object.keys(this.externalRefs).length > 0) {
 			specification[inlinedRefs] = this.externalRefs;
 		}
-		const version = getOpenApiVersion(specification);
+		const { version, specificationType, specificationVersion } =
+			getOpenApiVersion(specification);
 		this.version = version;
+		this.specificationVersion = specificationVersion;
+		this.specificationType = specificationType;
 		if (!version) {
 			return {
 				valid: false,

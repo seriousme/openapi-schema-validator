@@ -1,9 +1,9 @@
 {
-  "testDate": "2023-03-16T16:42:15.102Z",
-  "totalApiCount": 2505,
-  "testedAPICount": 2505,
+  "testDate": "2023-03-21T17:54:53.939Z",
+  "totalApiCount": 2508,
+  "testedAPICount": 8,
   "failedAPICount": 8,
-  "knownFailedCount": 8,
+  "knownFailedCount": 7,
   "failedTests": [
     {
       "name": "airport-web.appspot.com",
@@ -138,6 +138,9 @@
           }
         ]
       },
+      "validatorVersion": "2.0",
+      "specificationType": "swagger",
+      "specificationVersion": "2.0",
       "knownFailed": true
     },
     {
@@ -165,6 +168,9 @@
           }
         ]
       },
+      "validatorVersion": "2.0",
+      "specificationType": "swagger",
+      "specificationVersion": "2.0",
       "knownFailed": true
     },
     {
@@ -192,6 +198,9 @@
           }
         ]
       },
+      "validatorVersion": "2.0",
+      "specificationType": "swagger",
+      "specificationVersion": "2.0",
       "knownFailed": true
     },
     {
@@ -219,7 +228,9 @@
           }
         ]
       },
-      "knownFailed": true
+      "validatorVersion": "3.1",
+      "specificationType": "openapi",
+      "specificationVersion": "3.1.0"
     },
     {
       "name": "gambitcomm.local:mimic",
@@ -340,6 +351,9 @@
           }
         ]
       },
+      "validatorVersion": "3.0",
+      "specificationType": "openapi",
+      "specificationVersion": "3.0.0",
       "knownFailed": true
     },
     {
@@ -535,6 +549,9 @@
           }
         ]
       },
+      "validatorVersion": "3.0",
+      "specificationType": "openapi",
+      "specificationVersion": "3.0.1",
       "knownFailed": true
     },
     {
@@ -1055,6 +1072,9 @@
           }
         ]
       },
+      "validatorVersion": "3.0",
+      "specificationType": "openapi",
+      "specificationVersion": "3.0.0",
       "knownFailed": true
     },
     {
@@ -1203,6 +1223,9 @@
           }
         ]
       },
+      "validatorVersion": "2.0",
+      "specificationType": "swagger",
+      "specificationVersion": "2.0",
       "knownFailed": true
     }
   ]

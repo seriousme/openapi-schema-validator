@@ -74,12 +74,12 @@ ${results.failedTests
 	.map(
 		(item) => `
 ## API: ${escapeMarkDown(item.name)} (version: ${item.apiVersion}) 
-${item.openApiVersion === "2.0" ? "Swagger" : "OpenApi"}: [${
-			item.openApiVersion
-		}](https://spec.openapis.org/oas/v${item.openApiVersion})
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v${minorVersion(
-			item.openApiVersion,
-		)}/schema.json)
+${item.specificationType}: [${
+			item.specificationVersion
+		}](https://spec.openapis.org/oas/v${item.specificationVersion})
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v${
+			item.validatorVersion
+		}/schema.json)
 
 API on Github: [link](${item.gitHubUrl})
 
