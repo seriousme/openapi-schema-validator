@@ -75,14 +75,18 @@ test("undefined specification should fail", async (t) => {
 });
 
 test("yaml specification as string works", async (t) => {
-	t.plan(2);
+	t.plan(4);
 	const yamlSpec = await readFile(yamlFileName, "utf-8");
 	const validator = new Validator();
 
 	const res = await validator.validate(yamlSpec);
 	t.equal(res.valid, true, "yaml spec as string is valid");
-	const ver = validator.version;
-	t.equal(ver, "3.0", "yaml spec version matches expected version");
+	const valVer = validator.version;
+	t.equal(valVer, "3.0", "yaml validator version matches expected version");
+	const specType = validator.specificationType;
+	t.equal(specType, "openapi", "yaml spec type matches expected version");
+	const specVersion = validator.specificationVersion;
+	t.equal(specVersion, "3.0.0", "yaml spec type matches expected version");
 });
 
 test("multiple consecutive validations work", async (t) => {
