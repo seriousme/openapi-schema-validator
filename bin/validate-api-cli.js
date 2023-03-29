@@ -14,7 +14,7 @@ if (!filename) {
 }
 
 validator.validate(filename).then((result) => {
-	console.log(JSON.stringify(result, null, 2));
+	console.log(JSON.stringify(result, null, "\t"));
 	if (!result.valid) {
 		exit(1);
 	}

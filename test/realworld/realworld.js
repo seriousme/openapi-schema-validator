@@ -177,7 +177,7 @@ function writeReport(ci, totalSize, results, failed) {
 	};
 	console.log("new/updated failures found");
 	console.log(`creating ${jsonFile}`);
-	writeFileSync(jsonFile, JSON.stringify(data, null, 2), "utf8");
+	writeFileSync(jsonFile, JSON.stringify(data, null, "\t"), "utf8");
 	console.log(`creating new report ${mdFile}`);
 	writeFileSync(mdFile, createReport(data), "utf8");
 }

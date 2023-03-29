@@ -1,12 +1,12 @@
 {
-  "linter": {
-    "enabled": true,
-    "ignore": ["coverage","schemas","schemas.orig"],
-    "rules": {
-      "recommended": true
-    }
-  },
-  "formatter": {
-    "ignore": ["coverage","schemas","schemas.orig"]
-  }
+	"linter": {
+		"enabled": true,
+		"ignore": ["coverage", "schemas", "schemas.orig", "dummy.json"],
+		"rules": {
+			"recommended": true
+		}
+	},
+	"formatter": {
+		"ignore": ["coverage", "schemas", "schemas.orig", "dummy.json"]
+	}
 }
