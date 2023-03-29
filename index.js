@@ -74,7 +74,6 @@ export class Validator {
 		this.ajvOptions = ajvOptions;
 		this.ajvValidators = {};
 		this.externalRefs = {};
-		return this;
 	}
 
 	static supportedVersions = openApiVersions;

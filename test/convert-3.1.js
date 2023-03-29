@@ -64,6 +64,6 @@ pointers.$dynamicRef.forEach((item) => {
 	obj.$ref = dynamicAnchors[ref];
 });
 
-writeFileSync(`${destFilePath}`, JSON.stringify(schema, null, 2));
+writeFileSync(`${destFilePath}`, JSON.stringify(schema, null, "\t"));
 console.log(`Written converted schema to ${destFilePath}`);
 console.log(`$id: ${schema.$id}`);
