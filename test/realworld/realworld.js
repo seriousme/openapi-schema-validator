@@ -86,22 +86,25 @@ function findArrayItem(lines, num, pathIdx) {
 		return findItem(lines, num, pathIdx);
 	}
 	const prefix = match[0];
-	while (pathIdx > 0) {
-		num++;
-		if (lines[num].startsWith(prefix)) {
-			pathIdx--;
+	let lineNum = num;
+	let pathIdxCtr = pathIdx;
+	while (pathIdxCtr > 0) {
+		lineNum++;
+		if (lines[lineNum].startsWith(prefix)) {
+			pathIdxCtr--;
 		}
 	}
-	return num + 1;
+	return lineNum + 1;
 }
 
 function findItem(lines, num, pathItem) {
+	let lineNum = num;
 	const token = new RegExp(`^\\s*"?${makeRexp(pathItem)}"?:`);
 	const maxNum = lines.length - 1;
-	while (!lines[num].match(token) && num < maxNum) {
-		num++;
+	while (!lines[lineNum].match(token) && lineNum < maxNum) {
+		lineNum++;
 	}
-	return num;
+	return lineNum;
 }
 
 function getInstanceValue(yamlSpec, path) {
@@ -227,7 +230,8 @@ async function doTest(apiList) {
 	return { results, failed };
 }
 
-async function testAPIs(percentage, onlyFailed, ci) {
+async function testAPIs(testPercentage, onlyFailed, ci) {
+	let percentage = testPercentage;
 	if (onlyFailed || ci) {
 		percentage = 100;
 	}

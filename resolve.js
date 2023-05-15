@@ -55,22 +55,27 @@ function resolveUri(uri, anchors) {
 }
 
 export function resolve(tree) {
-	if (!isObject(tree)) {
+	let treeObj = tree;
+	if (!isObject(treeObj)) {
 		return undefined;
 	}
 
 	const pointers = {};
-	pointerWords.forEach((word) => (pointers[word] = []));
+	for (const word of pointerWords) {
+		pointers[word] = [];
+	}
 
 	function applyRef(path, target) {
-		let root = tree;
+		let root = treeObj;
 		const paths = path.split("/").slice(1);
 		const prop = paths.pop();
-		paths.forEach((p) => (root = root[unescapeJsonPointer(p)]));
+		for (const p of paths) {
+			root = root[unescapeJsonPointer(p)];
+		}
 		if (typeof prop !== "undefined") {
 			root[unescapeJsonPointer(prop)] = target;
 		} else {
-			tree = target;
+			treeObj = target;
 		}
 	}
 
@@ -78,22 +83,20 @@ export function resolve(tree) {
 		if (!isObject(obj)) {
 			return;
 		}
-		if (obj.$id) {
-			id = obj.$id;
-		}
+		const objId = obj.$id || id;
 		for (const prop in obj) {
 			if (pointerWords.has(prop)) {
-				pointers[prop].push({ ref: obj[prop], obj, prop, path, id });
+				pointers[prop].push({ ref: obj[prop], obj, prop, path, id: objId });
 				obj[prop] = undefined;
 			}
-			parse(obj[prop], `${path}/${escapeJsonPointer(prop)}`, id);
+			parse(obj[prop], `${path}/${escapeJsonPointer(prop)}`, objId);
 		}
 	}
 	// find all refs
-	parse(tree, "#", "");
+	parse(treeObj, "#", "");
 
 	// resolve them
-	const anchors = { "": tree };
+	const anchors = { "": treeObj };
 	const dynamicAnchors = {};
 
 	pointers.$id.forEach((item) => {
@@ -138,5 +141,5 @@ export function resolve(tree) {
 		applyRef(path, dynamicAnchors[ref]);
 	});
 
-	return tree;
+	return treeObj;
 }

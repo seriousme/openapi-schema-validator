@@ -29,20 +29,21 @@ const isObject = (obj) => typeof obj === "object" && obj !== null;
 const pointerWords = new Set(["$dynamicRef", "$dynamicAnchor"]);
 
 const pointers = {};
-pointerWords.forEach((word) => (pointers[word] = []));
+for (const word of pointerWords) {
+	pointers[word] = [];
+}
 
 function parse(obj, path, id) {
 	if (!isObject(obj)) {
 		return;
 	}
-	if (obj.$id) {
-		id = obj.$id;
-	}
+	const objId = obj.$id || id;
+
 	for (const prop in obj) {
 		if (pointerWords.has(prop)) {
-			pointers[prop].push({ ref: obj[prop], obj, prop, path, id });
+			pointers[prop].push({ ref: obj[prop], obj, prop, path, objId });
 		}
-		parse(obj[prop], `${path}/${escapeJsonPointer(prop)}`, id);
+		parse(obj[prop], `${path}/${escapeJsonPointer(prop)}`, objId);
 	}
 }
 const schema = getLatestSchema(version);
