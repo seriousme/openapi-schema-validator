@@ -87,18 +87,14 @@ export class Validator {
 		if (spec === undefined) {
 			throw new Error("Cannot find JSON, YAML or filename in data");
 		}
-		if (uri === undefined) {
-			if (spec["$id"] === undefined) {
-				throw new Error("uri parameter or $id attribute must be present");
-			}
-			uri = spec["$id"];
-		}
 
-		if (typeof uri !== "string") {
+		const newUri = uri || spec["$id"];
+		if (typeof newUri !== "string") {
 			throw new Error("uri parameter or $id attribute must be a string");
 		}
-		spec["$id"] = uri;
-		this.externalRefs[uri] = spec;
+
+		spec["$id"] = newUri;
+		this.externalRefs[newUri] = spec;
 	}
 
 	async validate(data) {
