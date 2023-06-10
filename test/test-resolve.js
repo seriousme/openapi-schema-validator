@@ -1,13 +1,14 @@
-import { test } from "tap";
+import { test } from "node:test";
+import { strict as assert } from "node:assert/strict";
 import { Validator } from "../index.js";
+
 const validator = new Validator();
 const resolve = (specification) => validator.resolveRefs({ specification });
 
 test("non object returns undefined", async (t) => {
 	const schema = "schema";
-	t.plan(1);
 	const res = resolve(schema);
-	t.equal(res, undefined);
+	assert.equal(res, undefined);
 });
 
 test("Local $refs", async (t) => {
@@ -33,12 +34,15 @@ test("Local $refs", async (t) => {
 			shipping_address: { $ref: "#/definitions/address" },
 		},
 	};
-	t.plan(2);
 	const res = resolve(schema);
 	const ptr = res.properties.billing_address.properties;
-	t.equal(ptr.city.type, "string", "followed $ref without neigbor properties");
+	assert.equal(
+		ptr.city.type,
+		"string",
+		"followed $ref without neigbor properties",
+	);
 	const circular = ptr.subAddress.properties;
-	t.equal(
+	assert.equal(
 		circular.city.type,
 		"string",
 		"followed circular $ref without neigbor properties",
@@ -57,9 +61,8 @@ test("number in path", async (t) => {
 		},
 		$ref: "#/definitions/2",
 	};
-	t.plan(1);
 	const res = resolve(schema);
-	t.equal(res.required[0], "billing_address", "followed number in path");
+	assert.equal(res.required[0], "billing_address", "followed number in path");
 });
 
 test("ref to #", async (t) => {
@@ -74,9 +77,8 @@ test("ref to #", async (t) => {
 		},
 		$ref: "#",
 	};
-	t.plan(1);
 	const res = resolve(schema);
-	t.equal(
+	assert.equal(
 		res.definitions[2].required[0],
 		"billing_address",
 		"followed # in path",
@@ -96,9 +98,8 @@ test("$ref to $anchor", async (t) => {
 		},
 		$ref: "#myAnchor",
 	};
-	t.plan(1);
 	const res = resolve(schema);
-	t.equal(res.required[0], "billing_address", "followed $ref to $anchor");
+	assert.equal(res.required[0], "billing_address", "followed $ref to $anchor");
 });
 
 test("$dynamicRef to $dynamicAnchor", async (t) => {
@@ -114,9 +115,8 @@ test("$dynamicRef to $dynamicAnchor", async (t) => {
 		},
 		$dynamicRef: "#myAnchor",
 	};
-	t.plan(1);
 	const res = resolve(schema);
-	t.equal(res.required[0], "billing_address", "followed $ref to $anchor");
+	assert.equal(res.required[0], "billing_address", "followed $ref to $anchor");
 });
 
 test("non-existing path throws error", async (t) => {
@@ -125,10 +125,11 @@ test("non-existing path throws error", async (t) => {
 		$schema: "http://json-schema.org/draft-07/schema#",
 		$ref: "#/definitions/req",
 	};
-	t.plan(1);
-	t.throws(
+	assert.throws(
 		() => resolve(schema),
-		"Error: Can't resolve http://www.example.com/#/definitions/req",
+		new Error(
+			"Can't resolve http://www.example.com/#/definitions/req, only internal refs are supported.",
+		),
 		"got expected error",
 	);
 });
@@ -142,10 +143,11 @@ test("non-existing leaf path throws error", async (t) => {
 		},
 		$ref: "#/definitions/non-existing",
 	};
-	t.plan(1);
-	t.throws(
+	assert.throws(
 		() => resolve(schema),
-		"Error: Can't resolve http://www.example.com/#/definitions/req",
+		new Error(
+			"Can't resolve http://www.example.com/#/definitions/non-existing, only internal refs are supported.",
+		),
 		"got expected error",
 	);
 });
@@ -159,10 +161,11 @@ test("non-existing uri throws error", async (t) => {
 		},
 		$ref: "http://www.example.com/failed#/definitions/req",
 	};
-	t.plan(1);
-	t.throws(
+	assert.throws(
 		() => resolve(schema),
-		new Error("Can't resolve http://www.example.com/failed#/definitions/req"),
+		new Error(
+			"Can't resolve http://www.example.com/failed#/definitions/req, only internal refs are supported.",
+		),
 		"got expected error",
 	);
 });
@@ -176,10 +179,11 @@ test("non-existing uri without path throws error", async (t) => {
 		},
 		$ref: "http://www.example.com/failed",
 	};
-	t.plan(1);
-	t.throws(
+	assert.throws(
 		() => resolve(schema),
-		new Error("Can't resolve http://www.example.com/failed"),
+		new Error(
+			"Can't resolve http://www.example.com/failed, only internal refs are supported.",
+		),
 		"got expected error",
 	);
 });
@@ -190,10 +194,11 @@ test("non-existing $anchor throws error", async (t) => {
 		$schema: "http://json-schema.org/draft-07/schema#",
 		$ref: "#undefinedAnchor",
 	};
-	t.plan(1);
-	t.throws(
+	assert.throws(
 		() => resolve(schema),
-		new Error("Can't resolve http://www.example.com/#undefinedAnchor"),
+		new Error(
+			"Can't resolve http://www.example.com/#undefinedAnchor, only internal refs are supported.",
+		),
 		"got expected error",
 	);
 });
@@ -204,8 +209,7 @@ test("non-existing $dynamicAnchor throws error", async (t) => {
 		$schema: "http://json-schema.org/draft-07/schema#",
 		$dynamicRef: "#undefinedAnchor",
 	};
-	t.plan(1);
-	t.throws(
+	assert.throws(
 		() => resolve(schema),
 		new Error("Can't resolve $dynamicAnchor : '#undefinedAnchor'"),
 		"got expected error",
@@ -220,8 +224,7 @@ test("non-unique $id throws error", async (t) => {
 			$id: "http://www.example.com/",
 		},
 	};
-	t.plan(1);
-	t.throws(
+	assert.throws(
 		() => resolve(schema),
 		new Error(
 			"$id : 'http://www.example.com/' defined more than once at #/definitions",
@@ -239,8 +242,7 @@ test("non-unique $anchor throws error", async (t) => {
 			anchor_B: { $anchor: "#myAnchor" },
 		},
 	};
-	t.plan(1);
-	t.throws(
+	assert.throws(
 		() => resolve(schema),
 		new Error(
 			"$anchor : '#myAnchor' defined more than once at '#/definitions/anchor_B'",
@@ -258,8 +260,7 @@ test("non-unique $dynamicAnchor throws error", async (t) => {
 			anchor_B: { $dynamicAnchor: "#myAnchor" },
 		},
 	};
-	t.plan(1);
-	t.throws(
+	assert.throws(
 		() => resolve(schema),
 		new Error(
 			"$dynamicAnchor : '#myAnchor' defined more than once at '#/definitions/anchor_B'",
@@ -280,9 +281,8 @@ test("correctly URL encoded URI", async (t) => {
 		},
 		$ref: "%23%2Fdefinitions%2F~1path%7Bid%7D", // "#/definitions/~1path{id}"
 	};
-	t.plan(1);
 	const res = resolve(schema);
-	t.equal(
+	assert.equal(
 		res.required[0],
 		"billing_address",
 		"followed $ref to URL encoded path",
@@ -301,9 +301,8 @@ test("incorrectly URL encoded URI also works (normally blocked by schema format)
 		},
 		$ref: "#/definitions/~1path{id}",
 	};
-	t.plan(1);
 	const res = resolve(schema);
-	t.equal(
+	assert.equal(
 		res.required[0],
 		"billing_address",
 		"followed $ref to URL encoded path",

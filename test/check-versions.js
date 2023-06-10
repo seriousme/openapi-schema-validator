@@ -1,9 +1,11 @@
-import tap from "tap";
+import { test } from "node:test";
+import { strict as assert } from "node:assert/strict";
 import { URL } from "url";
 import { readdir } from "fs/promises";
 import { readFileSync } from "fs";
 import { Validator } from "../index.js";
 import { createHash } from "crypto";
+import { Snapshot } from "./snapshot.js";
 
 const supportedVersions = Validator.supportedVersions;
 
@@ -11,14 +13,18 @@ function localPath(path) {
 	return new URL(path, import.meta.url).pathname;
 }
 
-const openApiDir = localPath("../schemas.orig");
-const test = tap.test;
-tap.formatSnapshot = (object) => {
-	const hash = createHash("sha256");
-	hash.update(JSON.stringify(object));
-	return hash.digest("hex");
-};
+const snapShotFile = localPath("snapshots-check-versions.json");
+const updateSnapShot = process.argv[2] !== undefined;
+const snapshot = new Snapshot(snapShotFile, updateSnapShot);
 
+function matchSnapshot(obj, name) {
+	const hash = createHash("sha256");
+	hash.update(JSON.stringify(obj));
+	const hashValue = hash.digest("hex");
+	return snapshot.match(hashValue, name);
+}
+
+const openApiDir = localPath("../schemas.orig");
 function readJSON(file) {
 	return JSON.parse(readFileSync(file));
 }
@@ -30,19 +36,20 @@ async function getOpenApiSchemasVersions(oasdir) {
 
 async function testVersion(version) {
 	test(`Check if version ${version} is unchanged`, async (t) => {
-		t.plan(1);
 		const schemaList = await readdir(`${openApiDir}/${version}/schema/`);
 		const lastSchema = schemaList.pop();
 		const schema = readJSON(`${openApiDir}/${version}/schema/${lastSchema}`);
-		t.matchSnapshot(schema, `schema v${version} is unchanged`);
+		assert.equal(
+			matchSnapshot(schema, `schema v${version} is unchanged`),
+			true,
+		);
 	});
 }
 
 test("no new versions should be present", async (t) => {
-	t.plan(1);
 	const versions = await getOpenApiSchemasVersions(openApiDir);
 	const difference = versions.filter((x) => !supportedVersions.has(x));
-	t.same(difference, [], "all versions are known");
+	assert.equal(difference.length, 0, "all versions are known");
 });
 
 async function testAvailableVersions() {
