@@ -7,15 +7,15 @@ on:
       nodeVersion:
         description: Node version to use
         required: false
-        default: "14"
+        default: "lts/*"
 
 jobs:
   CheckVersion:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Use Node.js latest version
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3
       with:
         node-version: ${{ github.event.inputs.nodeVersion }}
     - run: npm ci --ignore-scripts --no-audit --no-progress --prefer-offline
