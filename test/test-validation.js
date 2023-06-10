@@ -195,8 +195,11 @@ test("addSpecRef: non string URI throws an error", async (t) => {
 	} catch (error) {
 		message = error.message;
 	}
-	assert.equal(message, 'uri parameter or $id attribute must be a string', "error message matches expection");
-
+	assert.equal(
+		message,
+		"uri parameter or $id attribute must be a string",
+		"error message matches expection",
+	);
 });
 
 test("addSpecRef: Invalid filename returns an error", async (t) => {
@@ -204,12 +207,14 @@ test("addSpecRef: Invalid filename returns an error", async (t) => {
 	let message;
 	try {
 		await validator.addSpecRef("nonExistingFilename", "extraUri");
-	}
-	catch (error) {
+	} catch (error) {
 		message = error.message;
-		}
-	assert.equal(message, 'Cannot find JSON, YAML or filename in data', "error message matches expection");
-	
+	}
+	assert.equal(
+		message,
+		"Cannot find JSON, YAML or filename in data",
+		"error message matches expection",
+	);
 });
 
 test("addSpecRef: no uri and no $id attribute returns an error", (t) => {
