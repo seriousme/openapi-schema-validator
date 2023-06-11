@@ -5,7 +5,6 @@ const localFile = (fileName) => new URL(fileName, import.meta.url).pathname;
 import { Validator } from "../../index.js";
 const validator = new Validator();
 import { writeFileSync } from "fs";
-import fetch from "node-fetch";
 import { argv, exit } from "process";
 import { JSON_SCHEMA, load } from "js-yaml";
 import { createReport } from "./createReport.js";

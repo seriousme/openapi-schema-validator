@@ -16,7 +16,7 @@ on:
       nodeVersion:
         description: Node version to use
         required: false
-        default: "14"
+        default: "lts/*"
 
 jobs:
  realWorldTest:
