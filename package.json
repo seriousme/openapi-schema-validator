@@ -20,8 +20,8 @@
     "posttest": "c8 check-coverage --lines 100 --functions 100 --branches 100",
     "covtest": "c8 --reporter=lcov npm test",
     "cloneOas": "rm -rf OpenAPI-Specification && git clone --branch 'gh-pages' --single-branch https://github.com/OAI/OpenAPI-Specification.git",
-    "checkOasVersions": "tap --no-coverage test/check-versions.js",
-    "checkOasVersionsSnapshot": "tap --no-coverage --snapshot test/check-versions.js",
+    "checkOasVersions": "node test/check-versions.js",
+    "checkOasVersionsSnapshot": "node test/check-versions.js --updateSnapshot",
     "preconvert31": "npm run cloneOas",
     "convert31": "node test/convert-3.1.js ",
     "postconvert31": "npm run checkOasVersionsSnapshot",
@@ -38,7 +38,7 @@
     "c8": "^7.12.0",
     "node-fetch": "^3.2.10",
     "rome": "^12.0.0",
-    "tap": "^16.3.0"
+    "tap": "^16.3.6"
   },
   "directories": {
     "test": "test"

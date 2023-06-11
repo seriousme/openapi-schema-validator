@@ -1,6 +1,7 @@
 // sniff test to see of the dynamic ref bug is still present in ajv
 import Ajv2020 from "ajv/dist/2020.js";
-import { test } from "tap";
+import { test } from "node:test";
+import { strict as assert } from "node:assert/strict";
 
 const schema = {
 	$schema: "https://json-schema.org/draft/2020-12/schema",
@@ -27,6 +28,5 @@ test("dynamic ref bug", (t) => {
 	const ajv = new Ajv2020();
 	const validate = ajv.compile(schema);
 	const result = validate(data);
-	t.notOk(result);
-	t.end();
+	assert.equal(result, false);
 });

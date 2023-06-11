@@ -1,7 +1,7 @@
-const { test } = require("tap");
+const { test } = require("node:test");
+const { strict: assert } = require("node:assert/strict");
 
 test("test common JS", async (t) => {
-	t.plan(1);
 	const { Validator } = await import("../index.js");
-	t.type(Validator.supportedVersions, Set);
+	assert.equal(Validator.supportedVersions instanceof Set, true);
 });
