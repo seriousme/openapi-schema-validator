@@ -3,6 +3,12 @@
 ## [Unreleased]
 ### Changed
  - chore: added Rome for formatting and linting
+ - chore: replaced Tap by Node test
+ - Updated dependencies
+   - ajv         ^8.11.0  →  ^8.12.0
+   - c8          ^7.12.0  →  ^7.14.0
+   - node-fetch  ^3.2.10  →   ^3.3.1
+   - rome        ^12.0.0  →  ^12.1.3
 
 ## [v2.1.0] 14-10-2022
 ### Changed 
