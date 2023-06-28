@@ -18,6 +18,9 @@ on:
         required: false
         default: "lts/*"
 
+permissions: 
+  contents: write
+
 jobs:
  realWorldTest:
     runs-on: ubuntu-latest

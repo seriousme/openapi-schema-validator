@@ -9,6 +9,8 @@ on:
         required: false
         default: "lts/*"
 
+permissions: {}
+
 jobs:
   CheckVersion:
     runs-on: ubuntu-latest
