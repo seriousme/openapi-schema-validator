@@ -1,4 +1,4 @@
-import { Options, ErrorObject } from "ajv";
+import { ErrorObject, Options } from "ajv";
 export class Validator {
 	static supportedVersions: Set<string>;
 	constructor(ajvOptions?: Options);

@@ -1,10 +1,10 @@
-import { fileURLToPath, URL } from "url";
-import Ajv04 from "ajv-draft-04";
-import Ajv2020 from "ajv/dist/2020.js";
-import addFormats from "ajv-formats";
-import { JSON_SCHEMA, load } from "js-yaml";
 import { readFileSync } from "fs";
+import { URL, fileURLToPath } from "url";
+import Ajv04 from "ajv-draft-04";
+import addFormats from "ajv-formats";
+import Ajv2020 from "ajv/dist/2020.js";
 import { readFile } from "fs/promises";
+import { JSON_SCHEMA, load } from "js-yaml";
 import { resolve } from "./resolve.js";
 
 const openApiVersions = new Set(["2.0", "3.0", "3.1"]);
