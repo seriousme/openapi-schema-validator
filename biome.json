@@ -3,7 +3,8 @@
 		"enabled": true,
 		"ignore": ["coverage", "schemas", "schemas.orig", "dummy.json"],
 		"rules": {
-			"recommended": true
+			"recommended": true,
+			"complexity": { "useLiteralKeys": "off" }
 		}
 	},
 	"formatter": {
