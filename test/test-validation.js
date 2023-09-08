@@ -1,9 +1,9 @@
-import { fileURLToPath, URL } from "url";
-import { test } from "node:test";
-import { strict as assert } from "node:assert/strict";
-import { Validator } from "../index.js";
 import { readFileSync } from "fs";
+import { strict as assert } from "node:assert/strict";
+import { test } from "node:test";
+import { URL, fileURLToPath } from "url";
 import { readFile } from "fs/promises";
+import { Validator } from "../index.js";
 
 function localFile(fileName) {
 	return fileURLToPath(new URL(fileName, import.meta.url));

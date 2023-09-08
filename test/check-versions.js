@@ -1,10 +1,10 @@
-import { test } from "node:test";
+import { createHash } from "crypto";
+import { readFileSync } from "fs";
 import { strict as assert } from "node:assert/strict";
+import { test } from "node:test";
 import { URL } from "url";
 import { readdir } from "fs/promises";
-import { readFileSync } from "fs";
 import { Validator } from "../index.js";
-import { createHash } from "crypto";
 import { Snapshot } from "./snapshot.js";
 
 const supportedVersions = Validator.supportedVersions;

@@ -1,7 +1,7 @@
-import { fileURLToPath, URL } from "url";
-import { test } from "node:test";
-import { strict as assert } from "node:assert/strict";
 import { execSync } from "child_process";
+import { strict as assert } from "node:assert/strict";
+import { test } from "node:test";
+import { URL, fileURLToPath } from "url";
 
 function localFile(fileName) {
 	return fileURLToPath(new URL(fileName, import.meta.url));
