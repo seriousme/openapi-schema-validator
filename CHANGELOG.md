@@ -2,12 +2,15 @@
 
 ## [Unreleased]
 ### Changed
+
+## [v2.1.1] 13-09-2023
+### Changed 
  - chore: added Biome for formatting and linting
- - chore: replaced Tap by Node test
+ - chore: removed tap
  - chore: removed node-fetch
  - Updated dependencies
    - ajv         ^8.11.0  →  ^8.12.0
-   - c8          ^7.12.0  →  ^7.14.0
+   - c8          ^7.12.0  →  ^8.0.1
 
 ## [v2.1.0] 14-10-2022
 ### Changed 
