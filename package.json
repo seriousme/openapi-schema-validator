@@ -14,7 +14,7 @@
     "js-yaml": "^4.1.0"
   },
   "scripts": {
-    "test": "c8 tap test/test-*.js",
+    "test": "c8 node --test test/test-*.js",
     "format": "biome format --write .",
     "lint": "biome ci .",
     "posttest": "c8 check-coverage --lines 100 --functions 100 --branches 100",
@@ -35,9 +35,8 @@
   "author": "Hans Klunder",
   "license": "MIT",
   "devDependencies": {
-    "c8": "^8.0.0",
     "@biomejs/biome": "^1.0.0",
-    "tap": "^16.3.6"
+    "c8": "^8.0.0"
   },
   "directories": {
     "test": "test"
