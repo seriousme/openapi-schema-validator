@@ -3,6 +3,12 @@
 ## [Unreleased]
 ### Changed
 
+## [v2.1.2] 27-09-2023
+### Changed 
+ - fix: added addSpecRef() to index.d.ts
+ - Updated dependencies
+   - @biomejs/biome  ^1.1.2  →  ^1.2.2
+
 ## [v2.1.1] 13-09-2023
 ### Changed 
  - chore: added Biome for formatting and linting
