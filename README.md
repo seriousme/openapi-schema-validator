@@ -88,7 +88,7 @@ Where `<filename>` refers to a YAML or JSON file containing the specification.
 - [`<instance>.specification`](#specification)
 - [`<instance>.version`](#version)
 - [`<instance>.resolveRefs(options)`](#resolveRefs)
-- [`<instance>.addSpecRef(uri, subSpecification)`](#addSpecRef)
+- [`<instance>.addSpecRef(subSpecification, uri)`](#addSpecRef)
 - [`Validator.supportedVersions`](#supportedVersions)
 
 <a name="newValidator"></a>
