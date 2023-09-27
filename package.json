@@ -17,6 +17,7 @@
     "test": "c8 node --test test/test-*.js",
     "format": "biome format --write .",
     "lint": "biome ci .",
+    "pretest": "npm run format",
     "posttest": "c8 check-coverage --lines 100 --functions 100 --branches 100",
     "covtest": "c8 --reporter=lcov npm test",
     "cloneOas": "rm -rf OpenAPI-Specification && git clone --branch 'gh-pages' --single-branch https://github.com/OAI/OpenAPI-Specification.git",
