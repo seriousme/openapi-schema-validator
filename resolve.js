@@ -99,24 +99,24 @@ export function resolve(tree) {
 	const anchors = { "": treeObj };
 	const dynamicAnchors = {};
 
-	pointers.$id.forEach((item) => {
+	for (const item of pointers.$id) {
 		const { ref, obj, path } = item;
 		if (anchors[ref]) {
 			throw new Error(`$id : '${ref}' defined more than once at ${path}`);
 		}
 		anchors[ref] = obj;
-	});
+	}
 
-	pointers.$anchor.forEach((item) => {
+	for (const item of pointers.$anchor) {
 		const { ref, obj, path, id } = item;
 		const fullRef = `${id}#${ref}`;
 		if (anchors[fullRef]) {
 			throw new Error(`$anchor : '${ref}' defined more than once at '${path}'`);
 		}
 		anchors[fullRef] = obj;
-	});
+	}
 
-	pointers.$dynamicAnchor.forEach((item) => {
+	for (const item of pointers.$dynamicAnchor) {
 		const { ref, obj, path } = item;
 		if (dynamicAnchors[`#${ref}`]) {
 			throw new Error(
@@ -124,22 +124,22 @@ export function resolve(tree) {
 			);
 		}
 		dynamicAnchors[`#${ref}`] = obj;
-	});
+	}
 
-	pointers.$ref.forEach((item) => {
+	for (const item of pointers.$ref) {
 		const { ref, id, path } = item;
 		const decodedRef = decodeURIComponent(ref);
 		const fullRef = decodedRef[0] !== "#" ? decodedRef : `${id}${decodedRef}`;
 		applyRef(path, resolveUri(fullRef, anchors));
-	});
+	}
 
-	pointers.$dynamicRef.forEach((item) => {
+	for (const item of pointers.$dynamicRef) {
 		const { ref, path } = item;
 		if (!dynamicAnchors[ref]) {
 			throw new Error(`Can't resolve $dynamicAnchor : '${ref}'`);
 		}
 		applyRef(path, dynamicAnchors[ref]);
-	});
+	}
 
 	return treeObj;
 }

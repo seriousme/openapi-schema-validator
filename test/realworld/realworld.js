@@ -21,7 +21,9 @@ function loadFailedData(fileName) {
 	try {
 		const data = importJSON(fileName);
 		data.failedTests = data.failedTests || [];
-		data.failedTests.forEach((item) => dataMap.set(item.name, item));
+		for (const item of data.failedTests) {
+			dataMap.set(item.name, item);
+		}
 		return dataMap;
 	} catch (_) {
 		return dataMap;
@@ -260,13 +262,14 @@ function parseArgs() {
 	const args = argv.slice(2);
 	const params = new Set();
 	const opts = ["failedOnly", "all", "ci"];
-	args.forEach((arg) => {
-		opts.forEach((opt) => {
+	for (const arg of args) {
+		for (const opt of opts) {
 			if (`--${opt}`.startsWith(arg)) {
 				params.add(opt);
 			}
-		});
-	});
+		}
+	}
+
 	if (params.size !== args.length) {
 		console.log(`
         usage: ${argv[1].split("/").pop()} [--failedOnly] [--all]

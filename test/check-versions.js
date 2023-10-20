@@ -54,7 +54,9 @@ test("no new versions should be present", async (t) => {
 
 async function testAvailableVersions() {
 	const versions = await getOpenApiSchemasVersions(openApiDir);
-	versions.filter((x) => supportedVersions.has(x)).forEach(testVersion);
+	for (const version of versions) {
+		testVersion(version);
+	}
 }
-// supportedVersions.forEach(testVersion);
+
 testAvailableVersions();
