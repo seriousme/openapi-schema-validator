@@ -50,12 +50,13 @@ const schema = getLatestSchema(version);
 // find all refs
 parse(schema, "#", "");
 const dynamicAnchors = {};
-pointers.$dynamicAnchor.forEach((item) => {
+for (const item of pointers.$dynamicAnchor) {
 	const { ref, prop, path } = item;
 	console.log({ ref, prop, path });
 	dynamicAnchors[`#${ref}`] = path;
-});
-pointers.$dynamicRef.forEach((item) => {
+}
+
+for (const item of pointers.$dynamicRef) {
 	const { ref, obj, prop, path } = item;
 	if (!dynamicAnchors[ref]) {
 		throw `Can't find $dynamicAnchor for '${ref}'`;
@@ -63,7 +64,7 @@ pointers.$dynamicRef.forEach((item) => {
 	console.log({ ref, prop, path, newRef: dynamicAnchors[ref] });
 	obj[prop] = undefined;
 	obj.$ref = dynamicAnchors[ref];
-});
+}
 
 writeFileSync(`${destFilePath}`, JSON.stringify(schema, null, "\t"));
 console.log(`Written converted schema to ${destFilePath}`);

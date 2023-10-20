@@ -47,7 +47,9 @@ test("Validator.supportedVersions should be a Set", (t) => {
 	);
 });
 
-Validator.supportedVersions.forEach(testVersion);
+for (const version of Validator.supportedVersions) {
+	testVersion(version);
+}
 
 test("empty specification should fail", async (t) => {
 	const validator = new Validator();
