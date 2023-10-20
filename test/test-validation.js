@@ -66,7 +66,7 @@ test("defect specification should fail", async (t) => {
 	const validator = new Validator();
 	const res = await validator.validate(invalidSpec);
 	assert.equal(res.valid, false, "defect specification is invalid");
-	assert.equal(res.errors instanceof Array, true, "got array with errors");
+	assert.equal(Array.isArray(res.errors), true, "got array with errors");
 });
 
 test("undefined specification should fail", async (t) => {
