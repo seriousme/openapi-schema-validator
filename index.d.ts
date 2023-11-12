@@ -7,7 +7,7 @@ export class Validator {
 	}): object;
 	validate(schema: object | string): Promise<{
 		valid: boolean;
-		errors?: ErrorObject[];
+		errors?: ErrorObject[] | string;
 	}>;
 	addSpecRef(schema: object | string, uri: string): void;
 	specification: object;
