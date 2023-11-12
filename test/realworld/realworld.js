@@ -206,15 +206,17 @@ async function doTest(apiList) {
 			results.valid++;
 		} else {
 			results.invalid++;
-			api.result.errors.map((item) => {
-				const [res, value] = getInstanceValue(spec, item.instancePath);
-				item.hasInstanceValue = res;
-				item.instanceValue = value;
-				item.gitHubUrl = `${api.gitHubUrl}#L${yamlLine(
-					spec,
-					item.instancePath,
-				)}`;
-			});
+			if (typeof api.result.errors === "object") {
+				api.result.errors.map((item) => {
+					const [res, value] = getInstanceValue(spec, item.instancePath);
+					item.hasInstanceValue = res;
+					item.instanceValue = value;
+					item.gitHubUrl = `${api.gitHubUrl}#L${yamlLine(
+						spec,
+						item.instancePath,
+					)}`;
+				});
+			}
 			if (failedMap.has(name)) {
 				const failedApiErrors = JSON.stringify(
 					failedMap.get(name).result.errors,
