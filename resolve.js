@@ -21,7 +21,9 @@ function resolveUri(uri, anchors) {
 	const [prefix, path] = uri.split("#", 2);
 	const hashPresent = !!path;
 	const err = new Error(
-		`Can't resolve ${uri}, only internal refs are supported.`,
+		`Can't resolve ${uri}${
+			prefix ? ", only internal refs are supported." : ""
+		}`,
 	);
 
 	if (hashPresent && path[0] !== "/") {

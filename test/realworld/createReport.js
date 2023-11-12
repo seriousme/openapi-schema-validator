@@ -7,6 +7,10 @@ function minorVersion(version) {
 	return `${major}.${minor}`;
 }
 
+function processSingleError(error) {
+	return `Validation error: ${error}`;
+}
+
 function processErrors(errors) {
 	const data = {};
 	for (const item of errors) {
@@ -84,7 +88,11 @@ ${item.specificationType}: [${
 API on Github: [link](${item.gitHubUrl})
 
 API updated: ${item.updated}
-${processErrors(item.result.errors)}
+${
+	typeof item.result.errors === "string"
+		? processSingleError(item.result.errors)
+		: processErrors(item.result.errors)
+}
     `,
 	)
 	.join("\n")}`;

@@ -15,7 +15,7 @@ test("invalid refs in YAML fail validation", async (t) => {
 	assert.equal(res.valid, false, "validation fails");
 	assert.equal(
 		res.errors,
-		"Can't resolve #/components/schemas/nonExisting1, only internal refs are supported.",
+		"Can't resolve #/components/schemas/nonExisting1",
 		"correct error message",
 	);
 });
