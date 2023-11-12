@@ -54,7 +54,20 @@ function resolveUri(uri, anchors) {
 	}
 }
 
-export function resolve(tree) {
+export function replaceRefs(tree) {
+	return resolve(tree, true);
+}
+
+export function checkRefs(tree) {
+	try {
+		resolve(tree, false);
+		return { valid: true };
+	} catch (err) {
+		return { valid: false, errors: err.message };
+	}
+}
+
+function resolve(tree, replace) {
 	let treeObj = tree;
 	if (!isObject(treeObj)) {
 		return undefined;
@@ -87,7 +100,9 @@ export function resolve(tree) {
 		for (const prop in obj) {
 			if (pointerWords.has(prop)) {
 				pointers[prop].push({ ref: obj[prop], obj, prop, path, id: objId });
-				obj[prop] = undefined;
+				if (replace) {
+					obj[prop] = undefined;
+				}
 			}
 			parse(obj[prop], `${path}/${escapeJsonPointer(prop)}`, objId);
 		}
@@ -130,7 +145,10 @@ export function resolve(tree) {
 		const { ref, id, path } = item;
 		const decodedRef = decodeURIComponent(ref);
 		const fullRef = decodedRef[0] !== "#" ? decodedRef : `${id}${decodedRef}`;
-		applyRef(path, resolveUri(fullRef, anchors));
+		const uri = resolveUri(fullRef, anchors);
+		if (replace) {
+			applyRef(path, uri);
+		}
 	}
 
 	for (const item of pointers.$dynamicRef) {
@@ -138,7 +156,9 @@ export function resolve(tree) {
 		if (!dynamicAnchors[ref]) {
 			throw new Error(`Can't resolve $dynamicAnchor : '${ref}'`);
 		}
-		applyRef(path, dynamicAnchors[ref]);
+		if (replace) {
+			applyRef(path, dynamicAnchors[ref]);
+		}
 	}
 
 	return treeObj;
