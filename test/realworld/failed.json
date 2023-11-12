@@ -761,9 +761,7 @@
 									"x-linode-filterable": true
 								}
 							},
-							"required": [
-								"domain"
-							],
+							"required": ["domain"],
 							"type": "object"
 						},
 						"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml#L5840"
@@ -789,9 +787,7 @@
 									"x-linode-filterable": true
 								}
 							},
-							"required": [
-								"domain"
-							],
+							"required": ["domain"],
 							"type": "object"
 						},
 						"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml#L5840"
@@ -820,9 +816,7 @@
 												"x-linode-filterable": true
 											}
 										},
-										"required": [
-											"domain"
-										],
+										"required": ["domain"],
 										"type": "object"
 									}
 								}
@@ -856,9 +850,7 @@
 												"x-linode-filterable": true
 											}
 										},
-										"required": [
-											"domain"
-										],
+										"required": ["domain"],
 										"type": "object"
 									}
 								}
