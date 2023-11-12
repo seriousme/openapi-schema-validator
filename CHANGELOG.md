@@ -5,7 +5,7 @@
 
 ## [v2.1.3] 12-11-2023
 ### Changed 
-- fix: added addSpecRef() to index.d.ts
+- fix: ref's are now checked during validation as well
 - Updated dependencies
   - @biomejs/biome  ^1.2.2  →  ^1.3.3
 
