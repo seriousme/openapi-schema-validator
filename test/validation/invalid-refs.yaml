@@ -1,0 +1,38 @@
+openapi: 3.0.0
+info:
+  title: test
+  version: 1.0.0
+paths:
+  /get:
+    get:
+      summary: test
+      description: test
+      parameters:
+        - name: param
+          in: query
+          description: param
+          required: true
+          schema:
+            type: string
+          example: "foo"
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/nonExisting1"
+components:
+  schemas:
+    testObject:
+      type: object
+      properties:
+        prop1:
+          type: string
+    searchResults:
+      type: object
+      properties:
+        testObjects:
+          type: array
+          items:
+            $ref: "#/components/schemas/nonExisting2"

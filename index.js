@@ -5,7 +5,7 @@ import addFormats from "ajv-formats";
 import Ajv2020 from "ajv/dist/2020.js";
 import { readFile } from "fs/promises";
 import { JSON_SCHEMA, load } from "js-yaml";
-import { resolve } from "./resolve.js";
+import { replaceRefs, checkRefs } from "./resolve.js";
 
 const openApiVersions = new Set(["2.0", "3.0", "3.1"]);
 const ajvVersions = {
@@ -79,7 +79,7 @@ export class Validator {
 	static supportedVersions = openApiVersions;
 
 	resolveRefs(opts = {}) {
-		return resolve(this.specification || opts.specification);
+		return replaceRefs(this.specification || opts.specification);
 	}
 
 	async addSpecRef(data, uri) {
@@ -121,12 +121,18 @@ export class Validator {
 					"Cannot find supported swagger/openapi version in specification, version must be a string.",
 			};
 		}
-		const validate = this.getAjvValidator(version);
+		const validateSchema = this.getAjvValidator(version);
+		// check if the specification matches the JSONschema
+		const schemaResult = validateSchema(specification);
+		// check if the references are valid as those can't be validated bu JSONschema
+		if (schemaResult) {
+			return checkRefs(specification);
+		}
 		const result = {
-			valid: validate(specification),
+			valid: schemaResult,
 		};
-		if (validate.errors) {
-			result.errors = validate.errors;
+		if (validateSchema.errors) {
+			result.errors = validateSchema.errors;
 		}
 		return result;
 	}
