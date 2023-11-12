@@ -8,7 +8,8 @@ function minorVersion(version) {
 }
 
 function processSingleError(error) {
-	return `Validation error: ${error}`;
+	return `
+Validation error: ${error}`;
 }
 
 function processErrors(errors) {
