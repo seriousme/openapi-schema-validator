@@ -5,7 +5,7 @@ import addFormats from "ajv-formats";
 import Ajv2020 from "ajv/dist/2020.js";
 import { readFile } from "fs/promises";
 import { JSON_SCHEMA, load } from "js-yaml";
-import { replaceRefs, checkRefs } from "./resolve.js";
+import { checkRefs, replaceRefs } from "./resolve.js";
 
 const openApiVersions = new Set(["2.0", "3.0", "3.1"]);
 const ajvVersions = {
