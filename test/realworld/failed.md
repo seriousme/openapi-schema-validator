@@ -1,11 +1,11 @@
 # Results of real world testing
-Report generated at: Tue Mar 21 2023 18:54:53 GMT+0100 (Central European Standard Time)
+Report generated at: Sun Nov 12 2023 14:31:20 GMT+0000 (Coordinated Universal Time)
 
 | APIs at [apis.guru](https://apis.guru) | #
 |--------|-------|
-|Total |2508 
-|Tested |8
-|Failed validation | 8
+|Total |2529 
+|Tested |2529
+|Failed validation | 30
 
 
 ## API: airport-web\.appspot\.com (version: v1) 
@@ -55,6 +55,136 @@ AJV errors:
 
     
 
+## API: appwrite\.io:client (version: 0.9.3) 
+openapi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/appwrite.io/client/0.9.3/openapi.yaml)
+
+API updated: 2021-08-12T15:35:25.275Z
+Validation error: $id : '[object Object]' defined more than once at #/components/schemas/document/properties
+    
+
+## API: appwrite\.io:server (version: 0.9.3) 
+openapi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/appwrite.io/server/0.9.3/openapi.yaml)
+
+API updated: 2021-08-12T15:35:06.475Z
+Validation error: $id : '[object Object]' defined more than once at #/components/schemas/document/properties
+    
+
+## API: azure\.com:network-interfaceEndpoint (version: 2019-02-01) 
+swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-interfaceEndpoint/2019-02-01/swagger.yaml)
+
+API updated: 2018-11-20T14:36:34.000Z
+Validation error: Can't resolve ./networkInterface.json#/definitions/NetworkInterface, only internal refs are supported.
+    
+
+## API: azure\.com:network-loadBalancer (version: 2019-08-01) 
+swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-loadBalancer/2019-08-01/swagger.yaml)
+
+API updated: 2019-02-26T08:40:59.000Z
+Validation error: Can't resolve ./networkInterface.json#/definitions/NetworkInterfaceIPConfiguration, only internal refs are supported.
+    
+
+## API: azure\.com:network-networkInterface (version: 2018-01-01) 
+swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-networkInterface/2018-01-01/swagger.yaml)
+
+API updated: 2018-03-10T09:23:51.000Z
+Validation error: Can't resolve ./applicationGateway.json#/definitions/ApplicationGatewayBackendAddressPool, only internal refs are supported.
+    
+
+## API: azure\.com:network-networkProfile (version: 2019-08-01) 
+swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-networkProfile/2019-08-01/swagger.yaml)
+
+API updated: 2018-11-20T14:36:34.000Z
+Validation error: Can't resolve ./virtualNetwork.json#/definitions/Subnet, only internal refs are supported.
+    
+
+## API: azure\.com:network-networkSecurityGroup (version: 2019-08-01) 
+swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-networkSecurityGroup/2019-08-01/swagger.yaml)
+
+API updated: 2018-11-20T14:36:34.000Z
+Validation error: Can't resolve ./networkInterface.json#/definitions/NetworkInterface, only internal refs are supported.
+    
+
+## API: azure\.com:network-privateEndpoint (version: 2019-08-01) 
+swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-privateEndpoint/2019-08-01/swagger.yaml)
+
+API updated: 2019-07-25T10:27:32.000Z
+Validation error: Can't resolve ./networkInterface.json#/definitions/NetworkInterface, only internal refs are supported.
+    
+
+## API: azure\.com:network-publicIpAddress (version: 2019-08-01) 
+swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-publicIpAddress/2019-08-01/swagger.yaml)
+
+API updated: 2018-03-10T09:23:51.000Z
+Validation error: Can't resolve ./networkInterface.json#/definitions/IPConfiguration, only internal refs are supported.
+    
+
+## API: azure\.com:network-routeTable (version: 2019-08-01) 
+swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-routeTable/2019-08-01/swagger.yaml)
+
+API updated: 2018-03-10T09:23:51.000Z
+Validation error: Can't resolve ./virtualNetwork.json#/definitions/Subnet, only internal refs are supported.
+    
+
+## API: azure\.com:network-serviceEndpointPolicy (version: 2019-08-01) 
+swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-serviceEndpointPolicy/2019-08-01/swagger.yaml)
+
+API updated: 2018-11-20T14:36:34.000Z
+Validation error: Can't resolve ./virtualNetwork.json#/definitions/Subnet, only internal refs are supported.
+    
+
+## API: azure\.com:network-virtualNetwork (version: 2019-08-01) 
+swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-virtualNetwork/2019-08-01/swagger.yaml)
+
+API updated: 2018-11-20T14:36:34.000Z
+Validation error: Can't resolve ./networkProfile.json#/definitions/IPConfigurationProfile, only internal refs are supported.
+    
+
+## API: azure\.com:network-virtualNetworkTap (version: 2019-08-01) 
+swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-virtualNetworkTap/2019-08-01/swagger.yaml)
+
+API updated: 2018-11-20T14:36:34.000Z
+Validation error: Can't resolve ./loadBalancer.json#/definitions/FrontendIPConfiguration, only internal refs are supported.
+    
+
 ## API: azure\.com:servicebus (version: 2017-04-01) 
 swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 [JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
@@ -101,6 +231,26 @@ AJV errors:
    |--------|-------|--------|
    |format |{"format":"uri"}| must match format "uri"
 
+    
+
+## API: box\.com (version: 2.0.0) 
+openapi: [3.0.2](https://spec.openapis.org/oas/v3.0.2)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/box.com/2.0.0/openapi.yaml)
+
+API updated: 2023-03-06T07:12:59.965Z
+Validation error: $id : '01234500-12f1-1234-aa12-b1d234cb567e' defined more than once at #/components/schemas/File--Full/allOf/1/properties/metadata/allOf/0/example/enterprise_27335/marketingCollateral
+    
+
+## API: cloud-elements\.com:ecwid (version: api-v2) 
+swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/cloud-elements.com/ecwid/api-v2/swagger.yaml)
+
+API updated: 2021-06-21T12:16:53.715Z
+Validation error: Can't resolve [object Object], only internal refs are supported.
     
 
 ## API: discourse\.local (version: latest) 
@@ -202,6 +352,56 @@ AJV errors:
    |required |{"missingProperty":"$ref"}| must have required property '$ref'
    |oneOf |{"passingSchemas":null}| must match exactly one schema in oneOf
 
+    
+
+## API: github\.com:ghes-3\.6 (version: 1.1.4) 
+openapi: [3.0.3](https://spec.openapis.org/oas/v3.0.3)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/github.com/ghes-3.6/1.1.4/openapi.yaml)
+
+API updated: 2023-02-15T18:23:37.750Z
+Validation error: Can't resolve [object Object], only internal refs are supported.
+    
+
+## API: github\.com:ghes-3\.7 (version: 1.1.4) 
+openapi: [3.0.3](https://spec.openapis.org/oas/v3.0.3)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/github.com/ghes-3.7/1.1.4/openapi.yaml)
+
+API updated: 2023-02-15T18:23:37.750Z
+Validation error: Can't resolve [object Object], only internal refs are supported.
+    
+
+## API: github\.com:ghes-3\.8 (version: 1.1.4) 
+openapi: [3.0.3](https://spec.openapis.org/oas/v3.0.3)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/github.com/ghes-3.8/1.1.4/openapi.yaml)
+
+API updated: 2023-02-15T18:23:37.750Z
+Validation error: Can't resolve [object Object], only internal refs are supported.
+    
+
+## API: googleapis\.com:discovery (version: v1) 
+openapi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/discovery/v1/openapi.yaml)
+
+API updated: 2023-04-21T23:09:23.065Z
+Validation error: Can't resolve [object Object], only internal refs are supported.
+    
+
+## API: kubernetes\.io (version: unversioned) 
+swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/kubernetes.io/unversioned/swagger.yaml)
+
+API updated: 2023-03-06T07:12:59.965Z
+Validation error: Can't resolve [object Object], only internal refs are supported.
     
 
 ## API: linode\.com (version: 4.145.0) 
@@ -633,4 +833,24 @@ AJV errors:
    |additionalProperties |{"additionalProperty":"example"}| must NOT have additional properties
    |oneOf |{"passingSchemas":null}| must match exactly one schema in oneOf
 
+    
+
+## API: spotify\.com (version: 1.0.0) 
+openapi: [3.0.3](https://spec.openapis.org/oas/v3.0.3)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/spotify.com/1.0.0/openapi.yaml)
+
+API updated: 2023-02-17T17:54:09.755Z
+Validation error: Can't resolve ../policies.yaml, only internal refs are supported.
+    
+
+## API: statsocial\.com (version: 1.0.0) 
+openapi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/statsocial.com/1.0.0/openapi.yaml)
+
+API updated: 2023-02-17T17:36:25.370Z
+Validation error: Can't resolve #/components/schemas/18_24
     
