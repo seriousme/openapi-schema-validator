@@ -1,9 +1,9 @@
 {
-	"testDate": "2023-03-21T17:54:53.939Z",
-	"totalApiCount": 2508,
-	"testedAPICount": 8,
-	"failedAPICount": 8,
-	"knownFailedCount": 7,
+	"testDate": "2023-11-12T14:31:20.650Z",
+	"totalApiCount": 2529,
+	"testedAPICount": 2529,
+	"failedAPICount": 30,
+	"knownFailedCount": 8,
 	"failedTests": [
 		{
 			"name": "airport-web.appspot.com",
@@ -144,6 +144,214 @@
 			"knownFailed": true
 		},
 		{
+			"name": "appwrite.io:client",
+			"apiVersion": "0.9.3",
+			"openApiVersion": "3.0.0",
+			"yamlUrl": "https://api.apis.guru/v2/specs/appwrite.io/client/0.9.3/openapi.yaml",
+			"jsonUrl": "https://api.apis.guru/v2/specs/appwrite.io/client/0.9.3/openapi.json",
+			"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/appwrite.io/client/0.9.3/openapi.yaml",
+			"updated": "2021-08-12T15:35:25.275Z",
+			"result": {
+				"valid": false,
+				"errors": "$id : '[object Object]' defined more than once at #/components/schemas/document/properties"
+			},
+			"validatorVersion": "3.0",
+			"specificationType": "openapi",
+			"specificationVersion": "3.0.0"
+		},
+		{
+			"name": "appwrite.io:server",
+			"apiVersion": "0.9.3",
+			"openApiVersion": "3.0.0",
+			"yamlUrl": "https://api.apis.guru/v2/specs/appwrite.io/server/0.9.3/openapi.yaml",
+			"jsonUrl": "https://api.apis.guru/v2/specs/appwrite.io/server/0.9.3/openapi.json",
+			"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/appwrite.io/server/0.9.3/openapi.yaml",
+			"updated": "2021-08-12T15:35:06.475Z",
+			"result": {
+				"valid": false,
+				"errors": "$id : '[object Object]' defined more than once at #/components/schemas/document/properties"
+			},
+			"validatorVersion": "3.0",
+			"specificationType": "openapi",
+			"specificationVersion": "3.0.0"
+		},
+		{
+			"name": "azure.com:network-interfaceEndpoint",
+			"apiVersion": "2019-02-01",
+			"openApiVersion": "2.0",
+			"yamlUrl": "https://api.apis.guru/v2/specs/azure.com/network-interfaceEndpoint/2019-02-01/swagger.yaml",
+			"jsonUrl": "https://api.apis.guru/v2/specs/azure.com/network-interfaceEndpoint/2019-02-01/swagger.json",
+			"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-interfaceEndpoint/2019-02-01/swagger.yaml",
+			"updated": "2018-11-20T14:36:34.000Z",
+			"result": {
+				"valid": false,
+				"errors": "Can't resolve ./networkInterface.json#/definitions/NetworkInterface, only internal refs are supported."
+			},
+			"validatorVersion": "2.0",
+			"specificationType": "swagger",
+			"specificationVersion": "2.0"
+		},
+		{
+			"name": "azure.com:network-loadBalancer",
+			"apiVersion": "2019-08-01",
+			"openApiVersion": "2.0",
+			"yamlUrl": "https://api.apis.guru/v2/specs/azure.com/network-loadBalancer/2019-08-01/swagger.yaml",
+			"jsonUrl": "https://api.apis.guru/v2/specs/azure.com/network-loadBalancer/2019-08-01/swagger.json",
+			"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-loadBalancer/2019-08-01/swagger.yaml",
+			"updated": "2019-02-26T08:40:59.000Z",
+			"result": {
+				"valid": false,
+				"errors": "Can't resolve ./networkInterface.json#/definitions/NetworkInterfaceIPConfiguration, only internal refs are supported."
+			},
+			"validatorVersion": "2.0",
+			"specificationType": "swagger",
+			"specificationVersion": "2.0"
+		},
+		{
+			"name": "azure.com:network-networkInterface",
+			"apiVersion": "2018-01-01",
+			"openApiVersion": "2.0",
+			"yamlUrl": "https://api.apis.guru/v2/specs/azure.com/network-networkInterface/2018-01-01/swagger.yaml",
+			"jsonUrl": "https://api.apis.guru/v2/specs/azure.com/network-networkInterface/2018-01-01/swagger.json",
+			"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-networkInterface/2018-01-01/swagger.yaml",
+			"updated": "2018-03-10T09:23:51.000Z",
+			"result": {
+				"valid": false,
+				"errors": "Can't resolve ./applicationGateway.json#/definitions/ApplicationGatewayBackendAddressPool, only internal refs are supported."
+			},
+			"validatorVersion": "2.0",
+			"specificationType": "swagger",
+			"specificationVersion": "2.0"
+		},
+		{
+			"name": "azure.com:network-networkProfile",
+			"apiVersion": "2019-08-01",
+			"openApiVersion": "2.0",
+			"yamlUrl": "https://api.apis.guru/v2/specs/azure.com/network-networkProfile/2019-08-01/swagger.yaml",
+			"jsonUrl": "https://api.apis.guru/v2/specs/azure.com/network-networkProfile/2019-08-01/swagger.json",
+			"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-networkProfile/2019-08-01/swagger.yaml",
+			"updated": "2018-11-20T14:36:34.000Z",
+			"result": {
+				"valid": false,
+				"errors": "Can't resolve ./virtualNetwork.json#/definitions/Subnet, only internal refs are supported."
+			},
+			"validatorVersion": "2.0",
+			"specificationType": "swagger",
+			"specificationVersion": "2.0"
+		},
+		{
+			"name": "azure.com:network-networkSecurityGroup",
+			"apiVersion": "2019-08-01",
+			"openApiVersion": "2.0",
+			"yamlUrl": "https://api.apis.guru/v2/specs/azure.com/network-networkSecurityGroup/2019-08-01/swagger.yaml",
+			"jsonUrl": "https://api.apis.guru/v2/specs/azure.com/network-networkSecurityGroup/2019-08-01/swagger.json",
+			"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-networkSecurityGroup/2019-08-01/swagger.yaml",
+			"updated": "2018-11-20T14:36:34.000Z",
+			"result": {
+				"valid": false,
+				"errors": "Can't resolve ./networkInterface.json#/definitions/NetworkInterface, only internal refs are supported."
+			},
+			"validatorVersion": "2.0",
+			"specificationType": "swagger",
+			"specificationVersion": "2.0"
+		},
+		{
+			"name": "azure.com:network-privateEndpoint",
+			"apiVersion": "2019-08-01",
+			"openApiVersion": "2.0",
+			"yamlUrl": "https://api.apis.guru/v2/specs/azure.com/network-privateEndpoint/2019-08-01/swagger.yaml",
+			"jsonUrl": "https://api.apis.guru/v2/specs/azure.com/network-privateEndpoint/2019-08-01/swagger.json",
+			"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-privateEndpoint/2019-08-01/swagger.yaml",
+			"updated": "2019-07-25T10:27:32.000Z",
+			"result": {
+				"valid": false,
+				"errors": "Can't resolve ./networkInterface.json#/definitions/NetworkInterface, only internal refs are supported."
+			},
+			"validatorVersion": "2.0",
+			"specificationType": "swagger",
+			"specificationVersion": "2.0"
+		},
+		{
+			"name": "azure.com:network-publicIpAddress",
+			"apiVersion": "2019-08-01",
+			"openApiVersion": "2.0",
+			"yamlUrl": "https://api.apis.guru/v2/specs/azure.com/network-publicIpAddress/2019-08-01/swagger.yaml",
+			"jsonUrl": "https://api.apis.guru/v2/specs/azure.com/network-publicIpAddress/2019-08-01/swagger.json",
+			"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-publicIpAddress/2019-08-01/swagger.yaml",
+			"updated": "2018-03-10T09:23:51.000Z",
+			"result": {
+				"valid": false,
+				"errors": "Can't resolve ./networkInterface.json#/definitions/IPConfiguration, only internal refs are supported."
+			},
+			"validatorVersion": "2.0",
+			"specificationType": "swagger",
+			"specificationVersion": "2.0"
+		},
+		{
+			"name": "azure.com:network-routeTable",
+			"apiVersion": "2019-08-01",
+			"openApiVersion": "2.0",
+			"yamlUrl": "https://api.apis.guru/v2/specs/azure.com/network-routeTable/2019-08-01/swagger.yaml",
+			"jsonUrl": "https://api.apis.guru/v2/specs/azure.com/network-routeTable/2019-08-01/swagger.json",
+			"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-routeTable/2019-08-01/swagger.yaml",
+			"updated": "2018-03-10T09:23:51.000Z",
+			"result": {
+				"valid": false,
+				"errors": "Can't resolve ./virtualNetwork.json#/definitions/Subnet, only internal refs are supported."
+			},
+			"validatorVersion": "2.0",
+			"specificationType": "swagger",
+			"specificationVersion": "2.0"
+		},
+		{
+			"name": "azure.com:network-serviceEndpointPolicy",
+			"apiVersion": "2019-08-01",
+			"openApiVersion": "2.0",
+			"yamlUrl": "https://api.apis.guru/v2/specs/azure.com/network-serviceEndpointPolicy/2019-08-01/swagger.yaml",
+			"jsonUrl": "https://api.apis.guru/v2/specs/azure.com/network-serviceEndpointPolicy/2019-08-01/swagger.json",
+			"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-serviceEndpointPolicy/2019-08-01/swagger.yaml",
+			"updated": "2018-11-20T14:36:34.000Z",
+			"result": {
+				"valid": false,
+				"errors": "Can't resolve ./virtualNetwork.json#/definitions/Subnet, only internal refs are supported."
+			},
+			"validatorVersion": "2.0",
+			"specificationType": "swagger",
+			"specificationVersion": "2.0"
+		},
+		{
+			"name": "azure.com:network-virtualNetwork",
+			"apiVersion": "2019-08-01",
+			"openApiVersion": "2.0",
+			"yamlUrl": "https://api.apis.guru/v2/specs/azure.com/network-virtualNetwork/2019-08-01/swagger.yaml",
+			"jsonUrl": "https://api.apis.guru/v2/specs/azure.com/network-virtualNetwork/2019-08-01/swagger.json",
+			"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-virtualNetwork/2019-08-01/swagger.yaml",
+			"updated": "2018-11-20T14:36:34.000Z",
+			"result": {
+				"valid": false,
+				"errors": "Can't resolve ./networkProfile.json#/definitions/IPConfigurationProfile, only internal refs are supported."
+			},
+			"validatorVersion": "2.0",
+			"specificationType": "swagger",
+			"specificationVersion": "2.0"
+		},
+		{
+			"name": "azure.com:network-virtualNetworkTap",
+			"apiVersion": "2019-08-01",
+			"openApiVersion": "2.0",
+			"yamlUrl": "https://api.apis.guru/v2/specs/azure.com/network-virtualNetworkTap/2019-08-01/swagger.yaml",
+			"jsonUrl": "https://api.apis.guru/v2/specs/azure.com/network-virtualNetworkTap/2019-08-01/swagger.json",
+			"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-virtualNetworkTap/2019-08-01/swagger.yaml",
+			"updated": "2018-11-20T14:36:34.000Z",
+			"result": {
+				"valid": false,
+				"errors": "Can't resolve ./loadBalancer.json#/definitions/FrontendIPConfiguration, only internal refs are supported."
+			},
+			"validatorVersion": "2.0",
+			"specificationType": "swagger",
+			"specificationVersion": "2.0"
+		},
+		{
 			"name": "azure.com:servicebus",
 			"apiVersion": "2017-04-01",
 			"openApiVersion": "2.0",
@@ -204,9 +412,41 @@
 			"knownFailed": true
 		},
 		{
+			"name": "box.com",
+			"apiVersion": "2.0.0",
+			"openApiVersion": "3.0.2",
+			"yamlUrl": "https://api.apis.guru/v2/specs/box.com/2.0.0/openapi.yaml",
+			"jsonUrl": "https://api.apis.guru/v2/specs/box.com/2.0.0/openapi.json",
+			"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/box.com/2.0.0/openapi.yaml",
+			"updated": "2023-03-06T07:12:59.965Z",
+			"result": {
+				"valid": false,
+				"errors": "$id : '01234500-12f1-1234-aa12-b1d234cb567e' defined more than once at #/components/schemas/File--Full/allOf/1/properties/metadata/allOf/0/example/enterprise_27335/marketingCollateral"
+			},
+			"validatorVersion": "3.0",
+			"specificationType": "openapi",
+			"specificationVersion": "3.0.2"
+		},
+		{
+			"name": "cloud-elements.com:ecwid",
+			"apiVersion": "api-v2",
+			"openApiVersion": "2.0",
+			"yamlUrl": "https://api.apis.guru/v2/specs/cloud-elements.com/ecwid/api-v2/swagger.yaml",
+			"jsonUrl": "https://api.apis.guru/v2/specs/cloud-elements.com/ecwid/api-v2/swagger.json",
+			"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/cloud-elements.com/ecwid/api-v2/swagger.yaml",
+			"updated": "2021-06-21T12:16:53.715Z",
+			"result": {
+				"valid": false,
+				"errors": "Can't resolve [object Object], only internal refs are supported."
+			},
+			"validatorVersion": "2.0",
+			"specificationType": "swagger",
+			"specificationVersion": "2.0"
+		},
+		{
 			"name": "discourse.local",
 			"apiVersion": "latest",
-			"openApiVersion": "3.0.3",
+			"openApiVersion": "3.1.0",
 			"yamlUrl": "https://api.apis.guru/v2/specs/discourse.local/latest/openapi.yaml",
 			"jsonUrl": "https://api.apis.guru/v2/specs/discourse.local/latest/openapi.json",
 			"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/discourse.local/latest/openapi.yaml",
@@ -230,7 +470,8 @@
 			},
 			"validatorVersion": "3.1",
 			"specificationType": "openapi",
-			"specificationVersion": "3.1.0"
+			"specificationVersion": "3.1.0",
+			"knownFailed": true
 		},
 		{
 			"name": "gambitcomm.local:mimic",
@@ -357,6 +598,86 @@
 			"knownFailed": true
 		},
 		{
+			"name": "github.com:ghes-3.6",
+			"apiVersion": "1.1.4",
+			"openApiVersion": "3.0.3",
+			"yamlUrl": "https://api.apis.guru/v2/specs/github.com/ghes-3.6/1.1.4/openapi.yaml",
+			"jsonUrl": "https://api.apis.guru/v2/specs/github.com/ghes-3.6/1.1.4/openapi.json",
+			"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/github.com/ghes-3.6/1.1.4/openapi.yaml",
+			"updated": "2023-02-15T18:23:37.750Z",
+			"result": {
+				"valid": false,
+				"errors": "Can't resolve [object Object], only internal refs are supported."
+			},
+			"validatorVersion": "3.0",
+			"specificationType": "openapi",
+			"specificationVersion": "3.0.3"
+		},
+		{
+			"name": "github.com:ghes-3.7",
+			"apiVersion": "1.1.4",
+			"openApiVersion": "3.0.3",
+			"yamlUrl": "https://api.apis.guru/v2/specs/github.com/ghes-3.7/1.1.4/openapi.yaml",
+			"jsonUrl": "https://api.apis.guru/v2/specs/github.com/ghes-3.7/1.1.4/openapi.json",
+			"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/github.com/ghes-3.7/1.1.4/openapi.yaml",
+			"updated": "2023-02-15T18:23:37.750Z",
+			"result": {
+				"valid": false,
+				"errors": "Can't resolve [object Object], only internal refs are supported."
+			},
+			"validatorVersion": "3.0",
+			"specificationType": "openapi",
+			"specificationVersion": "3.0.3"
+		},
+		{
+			"name": "github.com:ghes-3.8",
+			"apiVersion": "1.1.4",
+			"openApiVersion": "3.0.3",
+			"yamlUrl": "https://api.apis.guru/v2/specs/github.com/ghes-3.8/1.1.4/openapi.yaml",
+			"jsonUrl": "https://api.apis.guru/v2/specs/github.com/ghes-3.8/1.1.4/openapi.json",
+			"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/github.com/ghes-3.8/1.1.4/openapi.yaml",
+			"updated": "2023-02-15T18:23:37.750Z",
+			"result": {
+				"valid": false,
+				"errors": "Can't resolve [object Object], only internal refs are supported."
+			},
+			"validatorVersion": "3.0",
+			"specificationType": "openapi",
+			"specificationVersion": "3.0.3"
+		},
+		{
+			"name": "googleapis.com:discovery",
+			"apiVersion": "v1",
+			"openApiVersion": "3.0.0",
+			"yamlUrl": "https://api.apis.guru/v2/specs/googleapis.com/discovery/v1/openapi.yaml",
+			"jsonUrl": "https://api.apis.guru/v2/specs/googleapis.com/discovery/v1/openapi.json",
+			"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/discovery/v1/openapi.yaml",
+			"updated": "2023-04-21T23:09:23.065Z",
+			"result": {
+				"valid": false,
+				"errors": "Can't resolve [object Object], only internal refs are supported."
+			},
+			"validatorVersion": "3.0",
+			"specificationType": "openapi",
+			"specificationVersion": "3.0.0"
+		},
+		{
+			"name": "kubernetes.io",
+			"apiVersion": "unversioned",
+			"openApiVersion": "2.0",
+			"yamlUrl": "https://api.apis.guru/v2/specs/kubernetes.io/unversioned/swagger.yaml",
+			"jsonUrl": "https://api.apis.guru/v2/specs/kubernetes.io/unversioned/swagger.json",
+			"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/kubernetes.io/unversioned/swagger.yaml",
+			"updated": "2023-03-06T07:12:59.965Z",
+			"result": {
+				"valid": false,
+				"errors": "Can't resolve [object Object], only internal refs are supported."
+			},
+			"validatorVersion": "2.0",
+			"specificationType": "swagger",
+			"specificationVersion": "2.0"
+		},
+		{
 			"name": "linode.com",
 			"apiVersion": "4.145.0",
 			"openApiVersion": "3.0.1",
@@ -440,7 +761,9 @@
 									"x-linode-filterable": true
 								}
 							},
-							"required": ["domain"],
+							"required": [
+								"domain"
+							],
 							"type": "object"
 						},
 						"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml#L5840"
@@ -466,7 +789,9 @@
 									"x-linode-filterable": true
 								}
 							},
-							"required": ["domain"],
+							"required": [
+								"domain"
+							],
 							"type": "object"
 						},
 						"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/linode.com/4.145.0/openapi.yaml#L5840"
@@ -495,7 +820,9 @@
 												"x-linode-filterable": true
 											}
 										},
-										"required": ["domain"],
+										"required": [
+											"domain"
+										],
 										"type": "object"
 									}
 								}
@@ -529,7 +856,9 @@
 												"x-linode-filterable": true
 											}
 										},
-										"required": ["domain"],
+										"required": [
+											"domain"
+										],
 										"type": "object"
 									}
 								}
@@ -1219,6 +1548,38 @@
 			"specificationType": "swagger",
 			"specificationVersion": "2.0",
 			"knownFailed": true
+		},
+		{
+			"name": "spotify.com",
+			"apiVersion": "1.0.0",
+			"openApiVersion": "3.0.1",
+			"yamlUrl": "https://api.apis.guru/v2/specs/spotify.com/1.0.0/openapi.yaml",
+			"jsonUrl": "https://api.apis.guru/v2/specs/spotify.com/1.0.0/openapi.json",
+			"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/spotify.com/1.0.0/openapi.yaml",
+			"updated": "2023-02-17T17:54:09.755Z",
+			"result": {
+				"valid": false,
+				"errors": "Can't resolve ../policies.yaml, only internal refs are supported."
+			},
+			"validatorVersion": "3.0",
+			"specificationType": "openapi",
+			"specificationVersion": "3.0.3"
+		},
+		{
+			"name": "statsocial.com",
+			"apiVersion": "1.0.0",
+			"openApiVersion": "2.0",
+			"yamlUrl": "https://api.apis.guru/v2/specs/statsocial.com/1.0.0/openapi.yaml",
+			"jsonUrl": "https://api.apis.guru/v2/specs/statsocial.com/1.0.0/openapi.json",
+			"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/statsocial.com/1.0.0/openapi.yaml",
+			"updated": "2023-02-17T17:36:25.370Z",
+			"result": {
+				"valid": false,
+				"errors": "Can't resolve #/components/schemas/18_24"
+			},
+			"validatorVersion": "3.0",
+			"specificationType": "openapi",
+			"specificationVersion": "3.0.0"
 		}
 	]
 }
