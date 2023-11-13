@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 ### Changed
+
+## [v2.1.4] 13-11-2023
+### Changed 
+ - fix: recursive refs work during validation as well
  - fix: update index.d.ts to include single string errors on validate
 
 ## [v2.1.3] 12-11-2023

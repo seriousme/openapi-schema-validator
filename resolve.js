@@ -75,6 +75,10 @@ function resolve(tree, replace) {
 		return undefined;
 	}
 
+	if (replace === false) {
+		treeObj = structuredClone(tree);
+	}
+
 	const pointers = {};
 	for (const word of pointerWords) {
 		pointers[word] = [];
@@ -147,10 +151,7 @@ function resolve(tree, replace) {
 		const { ref, id, path } = item;
 		const decodedRef = decodeURIComponent(ref);
 		const fullRef = decodedRef[0] !== "#" ? decodedRef : `${id}${decodedRef}`;
-		const uri = resolveUri(fullRef, anchors);
-		if (replace) {
-			applyRef(path, uri);
-		}
+		applyRef(path, resolveUri(fullRef, anchors));
 	}
 
 	for (const item of pointers.$dynamicRef) {
@@ -158,9 +159,7 @@ function resolve(tree, replace) {
 		if (!dynamicAnchors[ref]) {
 			throw new Error(`Can't resolve $dynamicAnchor : '${ref}'`);
 		}
-		if (replace) {
-			applyRef(path, dynamicAnchors[ref]);
-		}
+		applyRef(path, dynamicAnchors[ref]);
 	}
 
 	return treeObj;
