@@ -26,6 +26,7 @@ const inlinedRefs = "x-inlined-refs";
 async function testVersion(version) {
 	test(`version ${version} works`, async (t) => {
 		const petStoreSpec = importJSON(`./v${version}/petstore.json`);
+		const copyPetStoreSpec = structuredClone(petStoreSpec);
 		const validator = new Validator();
 
 		const res = await validator.validate(petStoreSpec);
@@ -35,6 +36,11 @@ async function testVersion(version) {
 			ver,
 			version,
 			"petstore spec version matches expected version",
+		);
+		assert.deepEqual(
+			petStoreSpec,
+			copyPetStoreSpec,
+			"original petstore spec is not modified",
 		);
 	});
 }
