@@ -295,3 +295,36 @@ test("addSpecRef works", async (t) => {
 		"$refs from main spec to sub2 spec are correctly resolved",
 	);
 });
+
+test("re-validation works after resolving refs", async (t) => {
+	const validator = new Validator();
+	await validator.addSpecRef(subSpecYamlFileName, subSpecUri);
+	await validator.addSpecRef(subSpec2YamlFileName);
+	const res = await validator.validate(mainSpecYamlFileName);
+	assert.equal(res.valid, true, "main spec + subspec is valid");
+	assert.equal(
+		validator.specification[inlinedRefs][subSpecUri].components.requestBodies
+			.Pet.required,
+		true,
+	);
+	assert.equal(
+		validator.specification[inlinedRefs][subSpecUri2].get.summary,
+		"Finds Pets by status",
+	);
+
+	validator.resolveRefs();
+
+	const res2 = await validator.validate(validator.specification);
+	assert.equal(res2.valid, true, "main spec + subspec is valid after resolving refs");
+
+	assert.equal(
+		validator.specification.paths["/pet"].post.requestBody.required,
+		true,
+		"$refs from main spec to sub spec are correctly resolved",
+	);
+	assert.equal(
+		validator.specification.paths["/pet/findByStatus"].get.summary,
+		"Finds Pets by status",
+		"$refs from main spec to sub2 spec are correctly resolved",
+	);
+});
