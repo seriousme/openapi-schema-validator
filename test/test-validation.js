@@ -16,6 +16,7 @@ function importJSON(file) {
 const emptySpec = importJSON("./validation/empty.json");
 const invalidSpec = importJSON("./validation/invalid-spec.json");
 const yamlFileName = localFile("./validation/petstore-openapi.v3.yaml");
+const jsonFileName = localFile("./validation/petstore-openapi.v3.1.json");
 const mainSpecYamlFileName = localFile("./validation/main-spec.v3.yaml");
 const subSpecYamlFileName = localFile("./validation/sub-spec.v3.yaml");
 const subSpec2YamlFileName = localFile("./validation/sub-spec2.v3.yaml");
@@ -114,6 +115,51 @@ test("multiple consecutive validations work", async (t) => {
 	assert.equal(res2.valid, true, "yaml spec as string is valid in round 2");
 	const ver = validator.version;
 	assert.equal(ver, "3.0", "yaml spec version matches expected version");
+});
+
+test("json string validation works", async (t) => {
+	const jsonSpec = await readFile(jsonFileName, "utf-8");
+	const validator = new Validator();
+
+	const res = await validator.validate(jsonSpec);
+	assert.equal(res.valid, true, "json spec as string is valid");
+	const ver = validator.version;
+	assert.equal(ver, "3.1", "json spec version matches expected version");
+});
+
+test("object validation works", async (t) => {
+	const jsonSpec = await readFile(jsonFileName, "utf-8");
+	const objectSpec = JSON.parse(jsonSpec);
+	const validator = new Validator();
+
+	const res = await validator.validate(objectSpec);
+	assert.equal(res.valid, true, "spec as object is valid");
+	const ver = validator.version;
+	assert.equal(ver, "3.1", "object spec version matches expected version");
+});
+
+test("multiple consecutive object validations work", async (t) => {
+	const jsonSpec = await readFile(jsonFileName, "utf-8");
+	const objectSpec = JSON.parse(jsonSpec);
+	const validator = new Validator();
+
+	const res = await validator.validate(objectSpec);
+	assert.equal(res.valid, true, "spec as object is valid in round 1");
+	const res2 = await validator.validate(objectSpec);
+	assert.equal(res2.valid, true, "spec as object is valid in round 2");
+	const ver = validator.version;
+	assert.equal(ver, "3.1", "object spec version matches expected version");
+});
+
+test("re-validation of validator.specification works", async (t) => {
+	const validator = new Validator();
+
+	const res = await validator.validate(jsonFileName);
+	assert.equal(res.valid, true, "spec is valid in round 1");
+	const res2 = await validator.validate(validator.specification);
+	assert.equal(res2.valid, true, "spec as object is valid in round 2");
+	const ver = validator.version;
+	assert.equal(ver, "3.1", "object spec version matches expected version");
 });
 
 test("Invalid yaml specification as string gives an error", async (t) => {
