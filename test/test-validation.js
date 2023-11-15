@@ -315,7 +315,11 @@ test("re-validation works after resolving refs", async (t) => {
 	validator.resolveRefs();
 
 	const res2 = await validator.validate(validator.specification);
-	assert.equal(res2.valid, true, "main spec + subspec is valid after resolving refs");
+	assert.equal(
+		res2.valid,
+		true,
+		"main spec + subspec is valid after resolving refs",
+	);
 
 	assert.equal(
 		validator.specification.paths["/pet"].post.requestBody.required,
