@@ -3,6 +3,10 @@
 ## [Unreleased]
 ### Changed
 
+## [v2.1.5] 16-11-2023
+### Changed 
+ - fix: validation after resolveRefs (tansin)
+
 ## [v2.1.4] 13-11-2023
 ### Changed 
  - fix: recursive refs work during validation as well
