@@ -106,9 +106,7 @@ function resolve(tree, replace) {
 		for (const prop in obj) {
 			if (pointerWords.has(prop)) {
 				pointers[prop].push({ ref: obj[prop], obj, prop, path, id: objId });
-				if (replace) {
-					delete obj[prop];
-				}
+				delete obj[prop];
 			}
 			parse(obj[prop], `${path}/${escapeJsonPointer(prop)}`, objId);
 		}
