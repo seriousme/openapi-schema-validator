@@ -1,6 +1,6 @@
 {
   "name": "@seriousme/openapi-schema-validator",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "description": "Validate OpenApi specifications against their JSON schema",
   "main": "index.js",
   "type": "module",
