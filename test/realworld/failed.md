@@ -1,11 +1,11 @@
 # Results of real world testing
-Report generated at: Sun Nov 12 2023 14:31:20 GMT+0000 (Coordinated Universal Time)
+Report generated at: Thu Nov 16 2023 16:33:43 GMT+0000 (Coordinated Universal Time)
 
 | APIs at [apis.guru](https://apis.guru) | #
 |--------|-------|
 |Total |2529 
 |Tested |2529
-|Failed validation | 30
+|Failed validation | 32
 
 
 ## API: airport-web\.appspot\.com (version: v1) 
@@ -62,6 +62,7 @@ openapi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/appwrite.io/client/0.9.3/openapi.yaml)
 
 API updated: 2021-08-12T15:35:25.275Z
+
 Validation error: $id : '[object Object]' defined more than once at #/components/schemas/document/properties
     
 
@@ -72,6 +73,7 @@ openapi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/appwrite.io/server/0.9.3/openapi.yaml)
 
 API updated: 2021-08-12T15:35:06.475Z
+
 Validation error: $id : '[object Object]' defined more than once at #/components/schemas/document/properties
     
 
@@ -82,6 +84,7 @@ swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-interfaceEndpoint/2019-02-01/swagger.yaml)
 
 API updated: 2018-11-20T14:36:34.000Z
+
 Validation error: Can't resolve ./networkInterface.json#/definitions/NetworkInterface, only internal refs are supported.
     
 
@@ -92,6 +95,7 @@ swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-loadBalancer/2019-08-01/swagger.yaml)
 
 API updated: 2019-02-26T08:40:59.000Z
+
 Validation error: Can't resolve ./networkInterface.json#/definitions/NetworkInterfaceIPConfiguration, only internal refs are supported.
     
 
@@ -102,6 +106,7 @@ swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-networkInterface/2018-01-01/swagger.yaml)
 
 API updated: 2018-03-10T09:23:51.000Z
+
 Validation error: Can't resolve ./applicationGateway.json#/definitions/ApplicationGatewayBackendAddressPool, only internal refs are supported.
     
 
@@ -112,6 +117,7 @@ swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-networkProfile/2019-08-01/swagger.yaml)
 
 API updated: 2018-11-20T14:36:34.000Z
+
 Validation error: Can't resolve ./virtualNetwork.json#/definitions/Subnet, only internal refs are supported.
     
 
@@ -122,6 +128,7 @@ swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-networkSecurityGroup/2019-08-01/swagger.yaml)
 
 API updated: 2018-11-20T14:36:34.000Z
+
 Validation error: Can't resolve ./networkInterface.json#/definitions/NetworkInterface, only internal refs are supported.
     
 
@@ -132,6 +139,7 @@ swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-privateEndpoint/2019-08-01/swagger.yaml)
 
 API updated: 2019-07-25T10:27:32.000Z
+
 Validation error: Can't resolve ./networkInterface.json#/definitions/NetworkInterface, only internal refs are supported.
     
 
@@ -142,6 +150,7 @@ swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-publicIpAddress/2019-08-01/swagger.yaml)
 
 API updated: 2018-03-10T09:23:51.000Z
+
 Validation error: Can't resolve ./networkInterface.json#/definitions/IPConfiguration, only internal refs are supported.
     
 
@@ -152,6 +161,7 @@ swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-routeTable/2019-08-01/swagger.yaml)
 
 API updated: 2018-03-10T09:23:51.000Z
+
 Validation error: Can't resolve ./virtualNetwork.json#/definitions/Subnet, only internal refs are supported.
     
 
@@ -162,6 +172,7 @@ swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-serviceEndpointPolicy/2019-08-01/swagger.yaml)
 
 API updated: 2018-11-20T14:36:34.000Z
+
 Validation error: Can't resolve ./virtualNetwork.json#/definitions/Subnet, only internal refs are supported.
     
 
@@ -172,6 +183,7 @@ swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-virtualNetwork/2019-08-01/swagger.yaml)
 
 API updated: 2018-11-20T14:36:34.000Z
+
 Validation error: Can't resolve ./networkProfile.json#/definitions/IPConfigurationProfile, only internal refs are supported.
     
 
@@ -182,6 +194,7 @@ swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/network-virtualNetworkTap/2019-08-01/swagger.yaml)
 
 API updated: 2018-11-20T14:36:34.000Z
+
 Validation error: Can't resolve ./loadBalancer.json#/definitions/FrontendIPConfiguration, only internal refs are supported.
     
 
@@ -233,6 +246,17 @@ AJV errors:
 
     
 
+## API: azure\.com:web-WebApps (version: 2018-11-01) 
+swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/azure.com/web-WebApps/2018-11-01/swagger.yaml)
+
+API updated: 2020-01-07T12:09:22.000Z
+
+Validation error: Cannot set properties of undefined (setting 'items')
+    
+
 ## API: box\.com (version: 2.0.0) 
 openapi: [3.0.2](https://spec.openapis.org/oas/v3.0.2)
 [JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
@@ -240,7 +264,19 @@ openapi: [3.0.2](https://spec.openapis.org/oas/v3.0.2)
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/box.com/2.0.0/openapi.yaml)
 
 API updated: 2023-03-06T07:12:59.965Z
+
 Validation error: $id : '01234500-12f1-1234-aa12-b1d234cb567e' defined more than once at #/components/schemas/File--Full/allOf/1/properties/metadata/allOf/0/example/enterprise_27335/marketingCollateral
+    
+
+## API: clarify\.io (version: 1.3.7) 
+swagger: [2.0](https://spec.openapis.org/oas/v2.0)
+[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v2.0/schema.json)
+
+API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/clarify.io/1.3.7/swagger.yaml)
+
+API updated: 2019-01-03T07:01:34.000Z
+
+Validation error: Cannot set properties of undefined (setting '_embedded')
     
 
 ## API: cloud-elements\.com:ecwid (version: api-v2) 
@@ -250,6 +286,7 @@ swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/cloud-elements.com/ecwid/api-v2/swagger.yaml)
 
 API updated: 2021-06-21T12:16:53.715Z
+
 Validation error: Can't resolve [object Object], only internal refs are supported.
     
 
@@ -361,6 +398,7 @@ openapi: [3.0.3](https://spec.openapis.org/oas/v3.0.3)
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/github.com/ghes-3.6/1.1.4/openapi.yaml)
 
 API updated: 2023-02-15T18:23:37.750Z
+
 Validation error: Can't resolve [object Object], only internal refs are supported.
     
 
@@ -371,6 +409,7 @@ openapi: [3.0.3](https://spec.openapis.org/oas/v3.0.3)
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/github.com/ghes-3.7/1.1.4/openapi.yaml)
 
 API updated: 2023-02-15T18:23:37.750Z
+
 Validation error: Can't resolve [object Object], only internal refs are supported.
     
 
@@ -381,6 +420,7 @@ openapi: [3.0.3](https://spec.openapis.org/oas/v3.0.3)
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/github.com/ghes-3.8/1.1.4/openapi.yaml)
 
 API updated: 2023-02-15T18:23:37.750Z
+
 Validation error: Can't resolve [object Object], only internal refs are supported.
     
 
@@ -391,6 +431,7 @@ openapi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/discovery/v1/openapi.yaml)
 
 API updated: 2023-04-21T23:09:23.065Z
+
 Validation error: Can't resolve [object Object], only internal refs are supported.
     
 
@@ -401,6 +442,7 @@ swagger: [2.0](https://spec.openapis.org/oas/v2.0)
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/kubernetes.io/unversioned/swagger.yaml)
 
 API updated: 2023-03-06T07:12:59.965Z
+
 Validation error: Can't resolve [object Object], only internal refs are supported.
     
 
@@ -842,6 +884,7 @@ openapi: [3.0.3](https://spec.openapis.org/oas/v3.0.3)
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/spotify.com/1.0.0/openapi.yaml)
 
 API updated: 2023-02-17T17:54:09.755Z
+
 Validation error: Can't resolve ../policies.yaml, only internal refs are supported.
     
 
@@ -852,5 +895,6 @@ openapi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
 API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/statsocial.com/1.0.0/openapi.yaml)
 
 API updated: 2023-02-17T17:36:25.370Z
+
 Validation error: Can't resolve #/components/schemas/18_24
     
