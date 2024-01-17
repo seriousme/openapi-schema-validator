@@ -2,7 +2,7 @@
 
 [![CI status](https://github.com/seriousme/openapi-schema-validator/workflows/Node.js%20CI/badge.svg)](https://github.com/seriousme/openapi-schema-validator/actions?query=workflow%3A%22Node.js+CI%22)
 [![Coverage Status](https://coveralls.io/repos/github/seriousme/openapi-schema-validator/badge.svg?branch=master)](https://coveralls.io/github/seriousme/openapi-schema-validator?branch=master)
-[![NPM version](https://img.shields.io/npm/v/@seriousme/openapi-schema-validator.svg)](https://www.npmjs.com/package/seriousme/openapi-schema-validator)
+[![NPM version](https://img.shields.io/npm/v/@seriousme/openapi-schema-validator.svg)](https://www.npmjs.com/package/@seriousme/openapi-schema-validator)
 ![npm](https://img.shields.io/npm/dm/@seriousme/openapi-schema-validator)
 [![Tested on APIs.guru](https://api.apis.guru/badges/tested_on.svg)](https://apis.guru/browse-apis/)
 
