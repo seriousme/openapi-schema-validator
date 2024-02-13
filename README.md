@@ -169,8 +169,8 @@ specification by passing `{specification:<object>}` as options. The result is an
 
 Sometimes a specification is composed of multiple files that each contain parts
 of the specification. The specification refers to these sub specifications using
-`external references`. Since references are based on URI's (so Identifier and
-Location as in URL's!) there needs to be a way to tell the validator how to
+`external references`. Since references are based on URI's (so `Identifier` and not
+`Location` as in URL's!) there needs to be a way to tell the validator how to
 resolve those references. This is where this function comes in:
 
 E.g.: we have a main specification in `main-spec.yaml` containing:
