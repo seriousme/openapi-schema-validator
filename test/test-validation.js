@@ -1,7 +1,7 @@
 import { readFileSync } from "fs";
 import { strict as assert } from "node:assert/strict";
 import { test } from "node:test";
-import { URL, fileURLToPath } from "url";
+import { fileURLToPath, URL } from "url";
 import { readFile } from "fs/promises";
 import { Validator } from "../index.js";
 
@@ -162,7 +162,7 @@ test("re-validation of validator.specification works", async (t) => {
 	assert.equal(ver, "3.1", "object spec version matches expected version");
 });
 
-test("Invalid yaml specification as string gives an error", async (t) => {
+test("invalid yaml specification as string gives an error", async (t) => {
 	const yamlSpec = `
   yaml : : :
   yaml : : :
@@ -229,7 +229,7 @@ test(`original petstore spec works with AJV strict:"log" option`, async (t) => {
 	assert.equal(logcount > 0, true, "warnings are being logged");
 });
 
-test("Invalid filename returns an error", async (t) => {
+test("invalid filename returns an error", async (t) => {
 	const validator = new Validator();
 
 	const res = await validator.validate("nonExistingFilename");
@@ -330,5 +330,38 @@ test("re-validation works after resolving refs", async (t) => {
 		validator.specification.paths["/pet/findByStatus"].get.summary,
 		"Finds Pets by status",
 		"$refs from main spec to sub2 spec are correctly resolved",
+	);
+});
+
+test("validateBundle: no spec returns an error", async (t) => {
+	const validator = new Validator();
+	const res = await validator.validateBundle();
+	assert.equal(res.valid, false, "validation fails as expected");
+	assert.equal(
+		res.errors,
+		"Parameter data must be an array",
+		"error message matches expection",
+	);
+});
+
+test("validateBundle: unreadable spec returns an error", async (t) => {
+	const yamlSpec = `
+	yaml : : :
+	yaml : : :
+	`;
+	const validator = new Validator();
+	assert.rejects(
+		validator.validateBundle([yamlSpec]),
+		new Error("Cannot find JSON, YAML or filename in data"),
+		"error message matches expectation",
+	);
+});
+
+test("validateBundle: double spec returns an error", async (t) => {
+	const validator = new Validator();
+	assert.rejects(
+		validator.validateBundle([yamlFileName, yamlFileName]),
+		new Error("Only one openApi specification can be validated at a time"),
+		"error message matches expectation",
 	);
 });
