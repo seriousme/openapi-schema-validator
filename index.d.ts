@@ -9,6 +9,10 @@ export class Validator {
 		valid: boolean;
 		errors?: ErrorObject[] | string;
 	}>;
+	validateBundle(schema: (object | string)[]): Promise<{
+		valid: boolean;
+		errors?: ErrorObject[] | string;
+	}>;
 	addSpecRef(schema: object | string, uri: string): Promise<void>;
 	specification: object;
 	version: string;
