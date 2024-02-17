@@ -1,5 +1,5 @@
 import { readFileSync } from "fs";
-import { fileURLToPath, URL } from "url";
+import { URL, fileURLToPath } from "url";
 import Ajv04 from "ajv-draft-04";
 import addFormats from "ajv-formats";
 import Ajv2020 from "ajv/dist/2020.js";

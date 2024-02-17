@@ -1,8 +1,8 @@
-import { readFileSync, unlinkSync } from "fs";
 import { execSync } from "child_process";
+import { readFileSync, unlinkSync } from "fs";
 import { strict as assert } from "node:assert/strict";
 import { test } from "node:test";
-import { fileURLToPath, URL } from "url";
+import { URL, fileURLToPath } from "url";
 import { load } from "js-yaml";
 
 function localFile(fileName) {

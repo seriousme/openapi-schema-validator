@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-import argvParser from "minimist";
-import { argv, exit } from "process";
-import { dump } from "js-yaml";
 import { writeFileSync } from "fs";
 import { basename } from "path";
+import { dump } from "js-yaml";
+import argvParser from "minimist";
+import { argv, exit } from "process";
 import { Validator } from "../index.js";
 
 const cmd = basename(argv[1]);

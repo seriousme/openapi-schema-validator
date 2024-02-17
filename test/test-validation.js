@@ -1,7 +1,7 @@
 import { readFileSync } from "fs";
 import { strict as assert } from "node:assert/strict";
 import { test } from "node:test";
-import { fileURLToPath, URL } from "url";
+import { URL, fileURLToPath } from "url";
 import { readFile } from "fs/promises";
 import { Validator } from "../index.js";
 
