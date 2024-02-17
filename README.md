@@ -110,6 +110,7 @@ Options:
 - [`<instance>.version`](#version)
 - [`<instance>.resolveRefs(options)`](#resolveRefs)
 - [`<instance>.addSpecRef(subSpecification, uri)`](#addSpecRef)
+- [`<instance>.validateBundle([specification,subspecification, ...])`](#validateBundle)
 - [`Validator.supportedVersions`](#supportedVersions)
 
 <a name="newValidator"></a>
