@@ -1,19 +1,5 @@
 {
-	"linter": {
-		"enabled": true,
-		"ignore": [
-			".nyc_output",
-			"coverage",
-			"schemas",
-			"schemas.orig",
-			"dummy.json"
-		],
-		"rules": {
-			"recommended": true,
-			"complexity": { "useLiteralKeys": "off" }
-		}
-	},
-	"formatter": {
+	"files": {
 		"ignore": [
 			".nyc_output",
 			"coverage",
@@ -21,5 +7,12 @@
 			"schemas.orig",
 			"dummy.json"
 		]
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"complexity": { "useLiteralKeys": "off" }
+		}
 	}
 }
