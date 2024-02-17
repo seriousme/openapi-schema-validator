@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 ### Changed
+
+## [v2.2.0] 17-02-2024
+### Changed 
  - feature: added validationBundle functionality including bundle-api cli
  - updated dependencies
    - @biomejs/biome  ^1.5.2  →  ^1.5.3
