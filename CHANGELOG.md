@@ -3,7 +3,7 @@
 ## [Unreleased]
 ### Changed
 
-## [v2.2.0] 17-02-2024
+## [v2.2.1] 17-02-2024
 ### Changed 
  - fix: added validateBundle() to index.d.ts
 
