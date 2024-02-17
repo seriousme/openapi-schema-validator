@@ -62,7 +62,7 @@ See also the [upgrading guide](UPGRADING.md) if you come from a previous major v
 
 <a name="CLI"></a>
 
-### CLI
+### CLI for API validation
 
 Run with global install:
 
@@ -78,6 +78,27 @@ npx -p @seriousme/openapi-schema-validator validate-api <filename>
 ```
 
 Where `<filename>` refers to a YAML or JSON file containing the specification.
+
+### CLI for API bundling
+
+To make it easier to combine multiple YAML or JSON files into a single specification file there is the `bundle-api` command.
+(see the [validateBundle](#validateBundle) section below) 
+
+```bash
+npm install @seriousme/openapi-schema-validator -g
+bundle-api <specFiles> 
+```
+
+Run without install:
+
+```bash
+npx -p @seriousme/openapi-schema-validator bundle-api <spec files> 
+```
+
+The output will be a validated JSON specification.
+Options:
+  -o  --output <filename>   the filename to save the output to, default is STDOUT.
+  -t  --type  [JSON|YAML]   the output format, default is JSON.
 
 <a name="API"></a>
 
@@ -162,7 +183,9 @@ specification by passing `{specification:<object>}` as options. The result is an
 - a JSON object
 - a JSON object encoded as string
 - a YAML string
-- a filename `uri` must be a string (e.g. `http://www.example.com/subspec`), but
+- a filename 
+
+`uri` must be a string (e.g. `http://www.example.com/subspec`), but
   is not required if the subSpecification holds a `$id` attribute at top level.
   If you specify a value for `uri` it will overwrite the definition in the `$id`
   attribute at top level.
@@ -213,9 +236,36 @@ components:
 Then the validation can be performed as follows:
 
 ```javascript
+import { Validator } from "@seriousme/openapi-schema-validator";
 const validator = new Validator();
 await validator.addSpecRef("./sub-spec.yaml", "http://www.example.com/subspec");
 const res = await validator.validate("./main-spec.yaml");
+// res now contains the results of the validation across main-spec and sub-spec
+const specification = validator.specification;
+// specification now contains a Javascript object containing the specification
+// with the subspec inlined
+```
+
+<a name="validateBundle"></a>
+
+### `<instance>.validateBundle([specification,subspecification, ...])`
+
+This offers an alternative to the combination of `addSpecRef` and `validate`.
+You can pass an array of (sub)specifications where each can be one of:
+
+- a JSON object
+- a JSON object encoded as string
+- a YAML string
+- a filename
+
+There can only be one main specification present (starting with swagger/openapi) but it does not have to be the first one. If you provide filenames and the files do not have `$id` attributes, then the `$id` attribute will be generated from the filename.
+
+If we take the YAML specifications from the previous example then validation can be performed as follows:
+
+```javascript
+import { Validator } from "@seriousme/openapi-schema-validator";
+const validator = new Validator();
+const res = await validator.validateBundle([ "./sub-spec.yaml", "./main-spec.yaml"]);
 // res now contains the results of the validation across main-spec and sub-spec
 const specification = validator.specification;
 // specification now contains a Javascript object containing the specification

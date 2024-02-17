@@ -137,6 +137,42 @@ export class Validator {
 		return result;
 	}
 
+	async validateBundle(data) {
+		let specification = undefined;
+		if (!Array.isArray(data)) {
+			return {
+				valid: false,
+				errors: "Parameter data must be an array",
+			};
+		}
+		for (const item of data) {
+			const spec = await getSpecFromData(item);
+			let fileName = undefined;
+			if (typeof item === "string" && !item.match(/\n/)) {
+				// item is a filename
+				fileName = item;
+			}
+			if (spec === undefined) {
+				throw new Error(
+					`Cannot find JSON, YAML or filename in ${fileName || "data"}`,
+				);
+			}
+			const { version } = getOpenApiVersion(spec);
+			if (!version) {
+				// it is not the main openApi specification, but a subschema
+				this.addSpecRef(spec, spec.$id || fileName);
+				continue;
+			}
+			if (specification) {
+				throw new Error(
+					"Only one openApi specification can be validated at a time",
+				);
+			}
+			specification = spec;
+		}
+		return this.validate(specification);
+	}
+
 	getAjvValidator(version) {
 		if (!this.ajvValidators[version]) {
 			const schema = importJSON(`./schemas/v${version}/schema.json`);
