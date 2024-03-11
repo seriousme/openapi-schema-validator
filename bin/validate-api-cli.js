@@ -2,7 +2,7 @@
 
 import { Validator } from "../index.js";
 const validator = new Validator();
-import { argv, exit } from "process";
+import { argv, exit } from "node:process";
 
 const filename = argv[2];
 if (!filename) {

@@ -1,12 +1,12 @@
 // test the validator against the APIs of https://apis.guru
-import { createRequire } from "module";
+import { createRequire } from "node:module";
 const importJSON = createRequire(import.meta.url);
 const localFile = (fileName) => new URL(fileName, import.meta.url).pathname;
 import { Validator } from "../../index.js";
 const validator = new Validator();
-import { writeFileSync } from "fs";
+import { writeFileSync } from "node:fs";
+import { argv, exit } from "node:process";
 import { JSON_SCHEMA, load } from "js-yaml";
-import { argv, exit } from "process";
 import { createReport } from "./createReport.js";
 const yamlOpts = { schema: JSON_SCHEMA };
 const failedFile = localFile("./failed.json");

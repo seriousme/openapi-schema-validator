@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync, writeFileSync } from "fs";
+import { readFileSync, readdirSync, writeFileSync } from "node:fs";
 
 function localPath(path) {
 	return new URL(path, import.meta.url).pathname;

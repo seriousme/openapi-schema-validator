@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-import { writeFileSync } from "fs";
-import { basename } from "path";
+import { writeFileSync } from "node:fs";
+import { basename } from "node:path";
+import { argv, exit } from "node:process";
 import { dump } from "js-yaml";
 import argvParser from "minimist";
-import { argv, exit } from "process";
 import { Validator } from "../index.js";
 
 const cmd = basename(argv[1]);

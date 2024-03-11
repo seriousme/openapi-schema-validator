@@ -1,9 +1,9 @@
-import { createRequire } from "module";
+import { createRequire } from "node:module";
 import { createReport } from "./createReport.js";
 const importJSON = createRequire(import.meta.url);
 const localFile = (fileName) => new URL(fileName, import.meta.url).pathname;
 
-import { writeFileSync } from "fs";
+import { writeFileSync } from "node:fs";
 
 const mdFile = localFile("./failed.fromJson.md");
 const failedFile = localFile("./failed.json");
