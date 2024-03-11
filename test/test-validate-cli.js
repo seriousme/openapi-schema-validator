@@ -1,5 +1,5 @@
-import { execSync } from "node:child_process";
 import { strict as assert } from "node:assert/strict";
+import { execSync } from "node:child_process";
 import { test } from "node:test";
 import { URL, fileURLToPath } from "node:url";
 

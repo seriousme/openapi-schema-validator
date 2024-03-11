@@ -1,8 +1,8 @@
-import { readFileSync } from "node:fs";
 import { strict as assert } from "node:assert/strict";
+import { readFileSync } from "node:fs";
+import { readFile } from "node:fs/promises";
 import { test } from "node:test";
 import { URL, fileURLToPath } from "node:url";
-import { readFile } from "node:fs/promises";
 import { Validator } from "../index.js";
 
 function localFile(fileName) {

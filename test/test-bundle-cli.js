@@ -1,6 +1,6 @@
+import { strict as assert } from "node:assert/strict";
 import { execSync } from "node:child_process";
 import { readFileSync, unlinkSync } from "node:fs";
-import { strict as assert } from "node:assert/strict";
 import { test } from "node:test";
 import { URL, fileURLToPath } from "node:url";
 import { load } from "js-yaml";
