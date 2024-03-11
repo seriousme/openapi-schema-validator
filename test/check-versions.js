@@ -1,9 +1,9 @@
-import { createHash } from "crypto";
-import { readFileSync } from "fs";
+import { createHash } from "node:crypto";
+import { readFileSync } from "node:fs";
 import { strict as assert } from "node:assert/strict";
 import { test } from "node:test";
-import { URL } from "url";
-import { readdir } from "fs/promises";
+import { URL } from "node:url";
+import { readdir } from "node:fs/promises";
 import { Validator } from "../index.js";
 import { Snapshot } from "./snapshot.js";
 

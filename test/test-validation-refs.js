@@ -1,6 +1,6 @@
 import { strict as assert } from "node:assert/strict";
 import { test } from "node:test";
-import { URL, fileURLToPath } from "url";
+import { URL, fileURLToPath } from "node:url";
 import { Validator } from "../index.js";
 
 function localFile(fileName) {

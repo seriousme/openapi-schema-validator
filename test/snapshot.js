@@ -1,6 +1,6 @@
 // simple snapshot handling utility for testing, nothing fancy
 
-import { readFileSync, writeFileSync } from "fs";
+import { readFileSync, writeFileSync } from "node:fs";
 
 export class Snapshot {
 	/**
