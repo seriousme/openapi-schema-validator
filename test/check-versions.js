@@ -37,7 +37,9 @@ async function getOpenApiSchemasVersions(oasdir) {
 async function testVersion(version) {
 	test(`Check if version ${version} is unchanged`, async (t) => {
 		const versionDir = `${openApiDir}/${version}/schema/`;
-		const schemaList = (await readdir(versionDir)).filter(f => !f.endsWith(".md"));
+		const schemaList = (await readdir(versionDir)).filter(
+			(f) => !f.endsWith(".md"),
+		);
 		const lastSchema = schemaList.pop();
 		const schema = readJSON(`${openApiDir}/${version}/schema/${lastSchema}`);
 		assert.equal(
