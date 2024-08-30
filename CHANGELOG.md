@@ -3,6 +3,13 @@
 ## [Unreleased]
 ### Changed
 
+## [v2.2.2] 30-08-2024
+### Changed 
+ - updated dependencies
+    - @biomejs/biome   ^1.5.3  →   ^1.8.3
+    - ajv             ^8.12.0  →  ^8.17.1
+    - c8              ^10.1.1  →  ^10.1.2
+
 ## [v2.2.1] 17-02-2024
 ### Changed 
  - fix: added validateBundle() to index.d.ts
