@@ -1,6 +1,6 @@
 {
 	"name": "@seriousme/openapi-schema-validator",
-	"version": "2.2.2",
+	"version": "2.2.3",
 	"description": "Validate OpenApi specifications against their JSON schema",
 	"main": "index.js",
 	"type": "module",
@@ -48,7 +48,12 @@
 		"type": "git",
 		"url": "git+https://github.com/seriousme/openapi-schema-validator.git"
 	},
-	"keywords": ["openapi", "json", "schema", "validation"],
+	"keywords": [
+		"openapi",
+		"json",
+		"schema",
+		"validation"
+	],
 	"bugs": {
 		"url": "https://github.com/seriousme/openapi-schema-validator/issues"
 	},
