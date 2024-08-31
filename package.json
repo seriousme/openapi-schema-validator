@@ -48,12 +48,7 @@
 		"type": "git",
 		"url": "git+https://github.com/seriousme/openapi-schema-validator.git"
 	},
-	"keywords": [
-		"openapi",
-		"json",
-		"schema",
-		"validation"
-	],
+	"keywords": ["openapi", "json", "schema", "validation"],
 	"bugs": {
 		"url": "https://github.com/seriousme/openapi-schema-validator/issues"
 	},
