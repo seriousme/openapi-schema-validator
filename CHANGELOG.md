@@ -3,6 +3,10 @@
 ## [Unreleased]
 ### Changed
 
+## [v2.2.3] 31-08-2024
+### Changed 
+ - fix: fixed biome formatting of package.json
+
 ## [v2.2.2] 31-08-2024
 ### Changed 
  - updated dependencies
