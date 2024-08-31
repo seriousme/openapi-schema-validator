@@ -9,7 +9,7 @@
 		"bundle-api": "./bin/bundle-api-cli.js"
 	},
 	"dependencies": {
-		"ajv": "^8.12.0",
+		"ajv": "^8.17.1",
 		"ajv-draft-04": "^1.0.0",
 		"ajv-formats": "^3.0.1",
 		"js-yaml": "^4.1.0",
@@ -38,8 +38,8 @@
 	"author": "Hans Klunder",
 	"license": "MIT",
 	"devDependencies": {
-		"@biomejs/biome": "^1.5.3",
-		"c8": "^10.1.1"
+		"@biomejs/biome": "^1.8.3",
+		"c8": "^10.1.2"
 	},
 	"directories": {
 		"test": "test"
