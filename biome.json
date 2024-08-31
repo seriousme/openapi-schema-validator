@@ -5,7 +5,8 @@
 			"coverage",
 			"schemas",
 			"schemas.orig",
-			"dummy.json"
+			"dummy.json",
+			"package.json"
 		]
 	},
 	"linter": {
