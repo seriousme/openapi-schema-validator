@@ -1,9 +1,10 @@
 import { strict as assert } from "node:assert/strict";
 import { test } from "node:test";
+import { URL, fileURLToPath } from "node:url";
 import { Validator } from "../index.js";
 
-function localFile(file) {
-	return new URL(file, import.meta.url).pathname;
+function localFile(fileName) {
+	return fileURLToPath(new URL(fileName, import.meta.url));
 }
 
 const invalidRefsSpec = localFile("./validation/invalid-refs.yaml");

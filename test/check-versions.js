@@ -3,6 +3,7 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { readdir } from "node:fs/promises";
 import { test } from "node:test";
+import { URL } from "node:url";
 import { Validator } from "../index.js";
 import { Snapshot } from "./snapshot.js";
 
