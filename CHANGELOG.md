@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 ### Changed
+
+## [v2.2.5] 13-11-2024
+### Changed 
+ - fix: reverted: removed dependency on "node:url" to aid in bundling because of Windows incompatibility
+
+## [v2.2.4] 12-11-2024
+### Changed 
+ - fix: removed dependency on "node:url" to aid in bundling
  - updated dependencies
     - @biomejs/biome  ^1.8.3  →  ^1.9.4
 
