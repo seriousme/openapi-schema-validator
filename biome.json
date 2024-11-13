@@ -6,9 +6,11 @@
 			"schemas",
 			"schemas.orig",
 			"dummy.json",
-			"package.json",
-			"biome.json"
+			"package.json"
 		]
+	},
+	"formatter": {
+		"lineEnding": "lf"
 	},
 	"linter": {
 		"enabled": true,
