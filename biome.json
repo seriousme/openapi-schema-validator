@@ -6,7 +6,8 @@
 			"schemas",
 			"schemas.orig",
 			"dummy.json",
-			"package.json"
+			"package.json",
+			"biome.json"
 		]
 	},
 	"linter": {
