@@ -2,10 +2,11 @@ import { strict as assert } from "node:assert/strict";
 import { execSync } from "node:child_process";
 import { readFileSync, unlinkSync } from "node:fs";
 import { test } from "node:test";
+import { URL, fileURLToPath } from "node:url";
 import { load } from "js-yaml";
 
-function localFile(file) {
-	return new URL(file, import.meta.url).pathname;
+function localFile(fileName) {
+	return fileURLToPath(new URL(fileName, import.meta.url));
 }
 
 function importJSON(file) {
