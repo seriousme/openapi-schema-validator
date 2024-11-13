@@ -12,6 +12,11 @@
 	"formatter": {
 		"lineEnding": "lf"
 	},
+	"json": {
+		"formatter": {
+			"lineEnding": "lf"
+		}
+	},
 	"linter": {
 		"enabled": true,
 		"rules": {
