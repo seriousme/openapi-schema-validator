@@ -3,7 +3,7 @@ import { readFileSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import { test } from "node:test";
 import { URL, fileURLToPath } from "node:url";
-import { Validator } from "../index.js";
+import { Validator, getSchema } from "../index.js";
 
 function localFile(fileName) {
 	return fileURLToPath(new URL(fileName, import.meta.url));
@@ -57,6 +57,10 @@ test("Validator.supportedVersions should be a Set", (t) => {
 for (const version of Validator.supportedVersions) {
 	testVersion(version);
 }
+
+test("incorrect specification version should error", async (t) => {
+	assert.throws(() => getSchema("DOES NOT EXIST"));
+});
 
 test("empty specification should fail", async (t) => {
 	const validator = new Validator();

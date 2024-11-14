@@ -15,7 +15,7 @@ const ajvVersions = {
 };
 const inlinedRefs = "x-inlined-refs";
 
-function getSchema(version) {
+export function getSchema(version) {
 	switch (version) {
 		case "2.0":
 			return v2_0;
