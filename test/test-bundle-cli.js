@@ -1,9 +1,9 @@
+import { load } from "js-yaml";
 import { strict as assert } from "node:assert/strict";
 import { execSync } from "node:child_process";
 import { readFileSync, unlinkSync } from "node:fs";
 import { test } from "node:test";
 import { URL, fileURLToPath } from "node:url";
-import { load } from "js-yaml";
 
 function localFile(fileName) {
 	return fileURLToPath(new URL(fileName, import.meta.url));
@@ -42,9 +42,8 @@ test("cli bundles subspecs as JSON to console", (t) => {
 	const subspec = localFile("./bundle/sub-spec-withID.v3.yaml");
 	const subspec2 = localFile("./bundle/sub-spec2.v3.yaml");
 	const bundle = importJSON("./bundle/bundle.v3.json");
-	const result = JSON.parse(
-		execSync(`node ${cli} ${main} ${subspec} ${subspec2}`),
-	);
+	const command = execSync(`node ${cli} ${main} ${subspec} ${subspec2}`);
+	const result = JSON.parse(command);
 	assert.deepEqual(result, bundle);
 });
 

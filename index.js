@@ -1,11 +1,12 @@
-import { readFileSync } from "node:fs";
-import { readFile } from "node:fs/promises";
-import { URL, fileURLToPath } from "node:url";
 import Ajv04 from "ajv-draft-04";
 import addFormats from "ajv-formats";
 import Ajv2020 from "ajv/dist/2020.js";
 import { JSON_SCHEMA, load } from "js-yaml";
+import { readFile } from "node:fs/promises";
 import { checkRefs, replaceRefs } from "./resolve.js";
+import v2_0 from "./schemas/v2.0/schema.json" assert { type: "json" };
+import v3_0 from "./schemas/v3.0/schema.json" assert { type: "json" };
+import v3_1 from "./schemas/v3.1/schema.json" assert { type: "json" };
 
 const openApiVersions = new Set(["2.0", "3.0", "3.1"]);
 const ajvVersions = {
@@ -14,12 +15,17 @@ const ajvVersions = {
 };
 const inlinedRefs = "x-inlined-refs";
 
-function localFile(fileName) {
-	return fileURLToPath(new URL(fileName, import.meta.url));
-}
-
-function importJSON(file) {
-	return JSON.parse(readFileSync(localFile(file)));
+function getSchema(version) {
+	switch (version) {
+		case "2.0":
+			return v2_0;
+		case "3.0":
+			return v3_0;
+		case "3.1":
+			return v3_1;
+		default:
+			throw new Error("Failed to determine version of OAS");
+	}
 }
 
 function getOpenApiVersion(specification) {
@@ -175,7 +181,7 @@ export class Validator {
 
 	getAjvValidator(version) {
 		if (!this.ajvValidators[version]) {
-			const schema = importJSON(`./schemas/v${version}/schema.json`);
+			const schema = getSchema(version);
 			const schemaVersion = schema.$schema;
 			const AjvClass = ajvVersions[schemaVersion];
 			const ajv = new AjvClass(this.ajvOptions);
