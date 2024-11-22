@@ -3,6 +3,10 @@
 ## [Unreleased]
 ### Changed
 
+## [v2.3.0] 22-11-2024
+### Changed 
+ - updated OpenApi 3.1 schema to version 2024-11-14
+
 ## [v2.2.5] 13-11-2024
 ### Changed 
  - fix: reverted: removed dependency on "node:url" to aid in bundling because of Windows incompatibility
