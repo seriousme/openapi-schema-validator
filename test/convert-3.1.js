@@ -14,7 +14,7 @@ function importJSON(file) {
 
 function getLatestSchema(version) {
 	const srcPath = `${openApiSrcDir}/${version}/schema/`;
-	const schemaList = readdirSync(srcPath);
+	const schemaList = readdirSync(srcPath).filter((item) => !item.match(/\./));
 	const lastSchema = schemaList.pop();
 	const schema = importJSON(`${srcPath}/${lastSchema}`);
 	return schema;
