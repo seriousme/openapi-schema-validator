@@ -3,6 +3,11 @@
 ## [Unreleased]
 ### Changed
 
+## [v2.3.1] 19-01-2025
+### Changed 
+ - updated dependencies
+   - c8              ^10.1.2  →  ^10.1.3
+
 ## [v2.3.0] 22-11-2024
 ### Changed 
  - updated OpenApi 3.1 schema to version 2024-11-14
