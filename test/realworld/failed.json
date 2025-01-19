@@ -1,9 +1,9 @@
 {
-	"testDate": "2023-11-16T16:33:43.171Z",
+	"testDate": "2024-11-28T16:38:03.963Z",
 	"totalApiCount": 2529,
 	"testedAPICount": 2529,
-	"failedAPICount": 32,
-	"knownFailedCount": 30,
+	"failedAPICount": 31,
+	"knownFailedCount": 31,
 	"failedTests": [
 		{
 			"name": "airport-web.appspot.com",
@@ -438,7 +438,8 @@
 			},
 			"validatorVersion": "2.0",
 			"specificationType": "swagger",
-			"specificationVersion": "2.0"
+			"specificationVersion": "2.0",
+			"knownFailed": true
 		},
 		{
 			"name": "box.com",
@@ -471,7 +472,8 @@
 			},
 			"validatorVersion": "2.0",
 			"specificationType": "swagger",
-			"specificationVersion": "2.0"
+			"specificationVersion": "2.0",
+			"knownFailed": true
 		},
 		{
 			"name": "cloud-elements.com:ecwid",
@@ -488,36 +490,6 @@
 			"validatorVersion": "2.0",
 			"specificationType": "swagger",
 			"specificationVersion": "2.0",
-			"knownFailed": true
-		},
-		{
-			"name": "discourse.local",
-			"apiVersion": "latest",
-			"openApiVersion": "3.1.0",
-			"yamlUrl": "https://api.apis.guru/v2/specs/discourse.local/latest/openapi.yaml",
-			"jsonUrl": "https://api.apis.guru/v2/specs/discourse.local/latest/openapi.json",
-			"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/discourse.local/latest/openapi.yaml",
-			"updated": "2023-03-06T07:12:59.965Z",
-			"result": {
-				"valid": false,
-				"errors": [
-					{
-						"instancePath": "/servers/1/url",
-						"schemaPath": "#/properties/url/format",
-						"keyword": "format",
-						"params": {
-							"format": "uri-reference"
-						},
-						"message": "must match format \"uri-reference\"",
-						"hasInstanceValue": true,
-						"instanceValue": "https://{defaultHost}",
-						"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/discourse.local/latest/openapi.yaml#L68"
-					}
-				]
-			},
-			"validatorVersion": "3.1",
-			"specificationType": "openapi",
-			"specificationVersion": "3.1.0",
 			"knownFailed": true
 		},
 		{

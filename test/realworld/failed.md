@@ -1,11 +1,11 @@
 # Results of real world testing
-Report generated at: Thu Nov 16 2023 16:33:43 GMT+0000 (Coordinated Universal Time)
+Report generated at: Thu Nov 28 2024 16:38:03 GMT+0000 (Coordinated Universal Time)
 
 | APIs at [apis.guru](https://apis.guru) | #
 |--------|-------|
 |Total |2529 
 |Tested |2529
-|Failed validation | 32
+|Failed validation | 31
 
 
 ## API: airport-web\.appspot\.com (version: v1) 
@@ -288,30 +288,6 @@ API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/A
 API updated: 2021-06-21T12:16:53.715Z
 
 Validation error: Can't resolve [object Object], only internal refs are supported.
-    
-
-## API: discourse\.local (version: latest) 
-openapi: [3.1.0](https://spec.openapis.org/oas/v3.1.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.1/schema.json)
-
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/discourse.local/latest/openapi.yaml)
-
-API updated: 2023-03-06T07:12:59.965Z
-
-### Path: /servers/1/url
-Path on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/discourse.local/latest/openapi.yaml#L68)
-
-Value: 
-```json
-"https://{defaultHost}"
-```
-
-AJV errors:
-
-   |Keyword |Params |Message |
-   |--------|-------|--------|
-   |format |{"format":"uri-reference"}| must match format "uri-reference"
-
     
 
 ## API: gambitcomm\.local:mimic (version: 21.00) 
