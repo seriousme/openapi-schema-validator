@@ -280,6 +280,15 @@ const specification = validator.specification;
 This static property returns the OpenApi versions supported by this package as a
 `Set`. If present, the result of `<instance>.version` is a member of this `Set`.
 
+<a name="notes"></a>
+
+# Notes
+
+The [JSONschemas](/schemas/) are copied from the [OpenAPI specification JSONschemas](https://github.com/OAI/OpenAPI-Specification/tree/gh-pages) which might differ from the [OpenAPI specification HTML pages](https://spec.openapis.org/oas/latest.html)! 
+If you find a bug in a schema (e.g. because it behaves differently than specified in the HTML) then 
+please an issue at https://github.com/OAI/OpenAPI-Specification.
+Shortly after the specification writers update their schema,the automation will pick it up and include the updated version in this module.
+
 <a name="license"></a>
 
 # License
