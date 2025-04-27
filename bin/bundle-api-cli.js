@@ -3,8 +3,8 @@
 import { writeFileSync } from "node:fs";
 import { basename } from "node:path";
 import { argv, exit } from "node:process";
+import { parseArgs } from "node:util";
 import { dump } from "js-yaml";
-import argvParser from "minimist";
 import { Validator } from "../index.js";
 
 const cmd = basename(argv[1]);
@@ -47,34 +47,44 @@ The output will be a validated JSON specification.
 	exit(1);
 }
 
+// Define the options for parseArgs
 const argvOptions = {
-	string: ["output", "type", "_"],
-	alias: {
-		output: "o",
-		type: "t",
+	options: {
+		output: {
+			type: "string",
+			short: "o",
+			default: undefined,
+		},
+		type: {
+			type: "string",
+			short: "t",
+			default: "JSON",
+		},
+		help: {
+			type: "boolean",
+			short: "h",
+		},
 	},
-
-	default: {
-		output: false,
-		type: "JSON",
-	},
+	allowPositionals: true,
 };
 
-const args = argvParser(argv.slice(2), argvOptions);
-const type = args.type.toUpperCase();
+// Parse arguments
+const { values, positionals } = parseArgs(argvOptions);
+
+const type = values.type.toUpperCase();
 if (!validTypes.has(type)) {
-	console.log(`Unknown type: ${args.type}`);
+	console.log(`Unknown type: ${values.type}`);
 	usage();
 }
 
-if (args._.length === 0) {
+if (positionals.length === 0) {
 	usage();
 }
 
-const result = await validator.validateBundle(args._);
+const result = await validator.validateBundle(positionals);
 
 if (result.valid) {
-	writeOutput(args.output, formatOutput(type, validator.specification));
+	writeOutput(values.output, formatOutput(type, validator.specification));
 	exit(0);
 }
 
