@@ -3,6 +3,10 @@
 ## [Unreleased]
 ### Changed
 
+## [v2.4.1] 27-04-2025
+### Changed 
+ - chore: replace minimist by node:util.parseArgs
+
 ## [v2.4.0] 21-03-2025
 ### Changed 
  - feature: updated OpenApi schema 3.1 to version 2025-02-13
