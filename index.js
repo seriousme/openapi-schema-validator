@@ -1,9 +1,9 @@
 import { readFileSync } from "node:fs";
 import { readFile } from "node:fs/promises";
-import { URL, fileURLToPath } from "node:url";
+import { fileURLToPath, URL } from "node:url";
+import Ajv2020 from "ajv/dist/2020.js";
 import Ajv04 from "ajv-draft-04";
 import addFormats from "ajv-formats";
-import Ajv2020 from "ajv/dist/2020.js";
 import { JSON_SCHEMA, load } from "js-yaml";
 import { checkRefs, replaceRefs } from "./resolve.js";
 
@@ -138,7 +138,7 @@ export class Validator {
 	}
 
 	async validateBundle(data) {
-		let specification = undefined;
+		let specification;
 		if (!Array.isArray(data)) {
 			return {
 				valid: false,
@@ -147,7 +147,7 @@ export class Validator {
 		}
 		for (const item of data) {
 			const spec = await getSpecFromData(item);
-			let fileName = undefined;
+			let fileName;
 			if (typeof item === "string" && !item.match(/\n/)) {
 				// item is a filename
 				fileName = item;

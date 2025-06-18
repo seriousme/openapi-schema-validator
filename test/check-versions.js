@@ -1,4 +1,3 @@
-import { strict as assert } from "node:assert/strict";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { readdir } from "node:fs/promises";
@@ -42,7 +41,7 @@ async function testVersion(version) {
 		);
 		const lastSchema = schemaList.pop();
 		const schema = readJSON(`${openApiDir}/${version}/schema/${lastSchema}`);
-		assert.equal(
+		t.assert.equal(
 			matchSnapshot(schema, `schema v${version} is unchanged`),
 			true,
 		);
@@ -52,7 +51,7 @@ async function testVersion(version) {
 test("no new versions should be present", async (t) => {
 	const versions = await getOpenApiSchemasVersions(openApiDir);
 	const difference = versions.filter((x) => !supportedVersions.has(x));
-	assert.equal(difference.length, 0, "all versions are known");
+	t.assert.equal(difference.length, 0, "all versions are known");
 });
 
 async function testAvailableVersions() {

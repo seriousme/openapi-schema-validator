@@ -29,7 +29,7 @@ export class Snapshot {
 	_load() {
 		try {
 			return JSON.parse(readFileSync(this.fileName));
-		} catch (e) {
+		} catch (_e) {
 			return {};
 		}
 	}
