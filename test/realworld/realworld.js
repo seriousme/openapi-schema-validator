@@ -1,13 +1,18 @@
 // test the validator against the APIs of https://apis.guru
 import { createRequire } from "node:module";
+
 const importJSON = createRequire(import.meta.url);
 const localFile = (fileName) => new URL(fileName, import.meta.url).pathname;
+
 import { Validator } from "../../index.js";
+
 const validator = new Validator();
+
 import { writeFileSync } from "node:fs";
 import { argv, exit } from "node:process";
 import { JSON_SCHEMA, load } from "js-yaml";
 import { createReport } from "./createReport.js";
+
 const yamlOpts = { schema: JSON_SCHEMA };
 const failedFile = localFile("./failed.json");
 const reportFile = localFile("./failed.md");
@@ -238,7 +243,7 @@ async function testAPIs(testPercentage, onlyFailed, ci) {
 	if (onlyFailed || ci) {
 		percentage = 100;
 	}
-	const [apiList, totalSize, latestSize] = await fetchApiList(
+	const [apiList, totalSize, _latestSize] = await fetchApiList(
 		percentage,
 		onlyFailed,
 	);

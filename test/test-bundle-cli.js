@@ -1,8 +1,7 @@
-import { strict as assert } from "node:assert/strict";
 import { execSync } from "node:child_process";
 import { readFileSync, unlinkSync } from "node:fs";
 import { test } from "node:test";
-import { URL, fileURLToPath } from "node:url";
+import { fileURLToPath, URL } from "node:url";
 import { load } from "js-yaml";
 
 function localFile(fileName) {
@@ -18,7 +17,7 @@ const tmpBundle = localFile("./bundle/bundle.tmp.yaml");
 
 test("cli does not error", (t) => {
 	const yamlFileName = localFile("./validation/petstore-openapi.v3.yaml");
-	const result = assert.doesNotThrow(
+	t.assert.doesNotThrow(
 		() => JSON.parse(execSync(`node ${cli} ${yamlFileName}`)),
 		"cli bundle of petstore spec works",
 	);
@@ -26,15 +25,15 @@ test("cli does not error", (t) => {
 
 test("cli fails on empty spec", (t) => {
 	const yamlFileName = localFile("./validation/empty.json");
-	assert.throws(() => execSync(`node ${cli} ${yamlFileName}`));
+	t.assert.throws(() => execSync(`node ${cli} ${yamlFileName}`));
 });
 
 test("cli fails on no spec", (t) => {
-	assert.throws(() => execSync(`node ${cli}`));
+	t.assert.throws(() => execSync(`node ${cli}`));
 });
 
 test("cli fails on unknown type", (t) => {
-	assert.throws(() => execSync(`node ${cli} -t yason`));
+	t.assert.throws(() => execSync(`node ${cli} -t yason`));
 });
 
 test("cli bundles subspecs as JSON to console", (t) => {
@@ -45,7 +44,7 @@ test("cli bundles subspecs as JSON to console", (t) => {
 	const result = JSON.parse(
 		execSync(`node ${cli} ${main} ${subspec} ${subspec2}`),
 	);
-	assert.deepEqual(result, bundle);
+	t.assert.deepEqual(result, bundle);
 });
 
 test("cli bundles subspecs as YAML to file", (t) => {
@@ -58,5 +57,5 @@ test("cli bundles subspecs as YAML to file", (t) => {
 	);
 	const result = load(readFileSync(tmpBundle));
 	unlinkSync(tmpBundle);
-	assert.deepEqual(result, bundle);
+	t.assert.deepEqual(result, bundle);
 });

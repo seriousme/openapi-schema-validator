@@ -2,10 +2,10 @@ function escapeMarkDown(string) {
 	return string.replace(/[.*+?^~${}()|[\]\\]/g, "\\$&"); // $& means the whole matched string
 }
 
-function minorVersion(version) {
-	const [major, minor, _] = version.split(".");
-	return `${major}.${minor}`;
-}
+// function minorVersion(version) {
+// 	const [major, minor, _] = version.split(".");
+// 	return `${major}.${minor}`;
+// }
 
 function processSingleError(error) {
 	return `

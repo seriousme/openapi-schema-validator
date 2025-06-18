@@ -2,9 +2,7 @@ import type { ErrorObject, Options } from "ajv";
 export class Validator {
 	static supportedVersions: Set<string>;
 	constructor(ajvOptions?: Options);
-	resolveRefs(opts?: {
-		specification?: object;
-	}): object;
+	resolveRefs(opts?: { specification?: object }): object;
 	validate(schema: object | string): Promise<{
 		valid: boolean;
 		errors?: ErrorObject[] | string;

@@ -1,4 +1,3 @@
-import { strict as assert } from "node:assert/strict";
 import { test } from "node:test";
 // sniff test to see of the dynamic ref bug is still present in ajv
 import Ajv2020 from "ajv/dist/2020.js";
@@ -28,5 +27,5 @@ test("dynamic ref bug", (t) => {
 	const ajv = new Ajv2020();
 	const validate = ajv.compile(schema);
 	const result = validate(data);
-	assert.equal(result, false);
+	t.assert.equal(result, false);
 });
