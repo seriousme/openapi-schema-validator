@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 ### Changed
+- updated dependencies
+    - @biomejs/biome  ^1.9.4  →  ^2.0.0
 
 ## [v2.4.1] 27-04-2025
 ### Changed 
