@@ -13,7 +13,7 @@ it currently supports:
 - [3.0.x](https://spec.openapis.org/oas/v3.0.3)
 - [3.1.x](https://spec.openapis.org/oas/v3.1.0)
 
-Tested on [over 2,000 real-world APIs](https://apis.guru/browse-apis/) from AWS,
+Tested on [over 2,000 real-world APIs](https://apis.guru) from AWS,
 Microsoft, Google etc.
 
 <a name="install"></a>
