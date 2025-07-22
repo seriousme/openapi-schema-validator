@@ -37,7 +37,7 @@
 	"author": "Hans Klunder",
 	"license": "MIT",
 	"devDependencies": {
-		"@biomejs/biome": "^2.0.0",
+		"@biomejs/biome": "^2.1.2",
 		"c8": "^10.1.3"
 	},
 	"directories": {

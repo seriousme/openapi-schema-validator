@@ -2,8 +2,12 @@
 
 ## [Unreleased]
 ### Changed
+
+## [v2.4.2] 27-04-2025
+### Changed 
+ - fixed link to api.gurus in README.md (@marcalexiei)
  - updated dependencies
-    - @biomejs/biome  ^1.9.4  →  ^2.0.0
+    - @biomejs/biome  ^1.9.4  →  ^2.1.2
 
 ## [v2.4.1] 27-04-2025
 ### Changed 
