@@ -212,7 +212,7 @@ async function doTest(apiList) {
 		} else {
 			results.invalid++;
 			if (typeof api.result.errors === "object") {
-				api.result.errors.map((item) => {
+				api.result.errors.forEach((item) => {
 					const [res, value] = getInstanceValue(spec, item.instancePath);
 					item.hasInstanceValue = res;
 					item.instanceValue = value;
