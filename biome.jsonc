@@ -1,12 +1,20 @@
 {
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true
+	},
 	"files": {
 		"includes": [
 			"**",
-			"!**/.nyc_output",
-			"!**/coverage",
 			"!**/schemas",
 			"!**/schemas.orig",
 			"!**/dummy.json",
+
+			/**
+			 * `npm version` updates `package.json` in such a way that `biome format` sometimes breaks CI.
+			 * @see https://github.com/seriousme/openapi-schema-validator/pull/195#issuecomment-3193470031
+			 */
 			"!**/package.json"
 		]
 	},
