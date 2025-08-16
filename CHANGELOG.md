@@ -3,7 +3,7 @@
 ## [Unreleased]
 ### Changed
 
-## [v2.4.2] 27-04-2025
+## [v2.4.3] 16-08-2025
 ### Changed 
  - fix(types): refine Validator options disallowing boolean values for strict (@marcalexiei)
  - chore(biome): use vcs.useIgnoreFile to avoid duplicating .gitignore values (@marcalexiei)
