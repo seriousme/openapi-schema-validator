@@ -1,5 +1,5 @@
 import type { ErrorObject } from "ajv";
-import { expectType } from "tsd";
+import { expectError, expectType } from "tsd";
 import { Validator } from "./index.js";
 
 // Test static property
@@ -8,6 +8,13 @@ expectType<Set<string>>(Validator.supportedVersions);
 // Test constructor
 expectType<Validator>(new Validator());
 expectType<Validator>(new Validator({ allErrors: true }));
+expectType<Validator>(new Validator({ strict: "log" }));
+expectType<Validator>(new Validator({ strict: false }));
+
+const someCondition: boolean = true;
+expectType<Validator>(new Validator({ strict: someCondition ? "log" : false }));
+
+expectError<Validator>(new Validator({ strict: true }));
 
 // Test instance methods
 const validator = new Validator();

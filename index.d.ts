@@ -1,7 +1,7 @@
 import type { ErrorObject, Options } from "ajv";
 
 interface ValidatorOptions extends Omit<Options, "strict"> {
-	strict?: Extract<Options, "log">;
+	strict?: Extract<Options["strict"], false | "log">;
 }
 
 export class Validator {
