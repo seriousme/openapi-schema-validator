@@ -2,6 +2,7 @@
 
 ## [Unreleased]
 ### Changed
+ - feat(dev): add tsd typechecking 
 
 ## [v2.4.3] 16-08-2025
 ### Changed 
