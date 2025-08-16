@@ -5,8 +5,8 @@
 
 ## [v2.4.2] 27-04-2025
 ### Changed 
- - fix(types): refine Validator options disallowing boolean values for strict
- - chore(biome): use vcs.useIgnoreFile to avoid duplicating .gitignore values
+ - fix(types): refine Validator options disallowing boolean values for strict (@marcalexiei)
+ - chore(biome): use vcs.useIgnoreFile to avoid duplicating .gitignore values (@marcalexiei)
  - update dependencies:
     @biomejs/biome  ^2.1.2  →  ^2.2.0
 
