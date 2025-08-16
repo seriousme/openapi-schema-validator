@@ -1,14 +1,11 @@
 {
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true
+	},
 	"files": {
-		"includes": [
-			"**",
-			"!**/.nyc_output",
-			"!**/coverage",
-			"!**/schemas",
-			"!**/schemas.orig",
-			"!**/dummy.json",
-			"!**/package.json"
-		]
+		"includes": ["**", "!**/schemas", "!**/schemas.orig", "!**/dummy.json"]
 	},
 	"linter": {
 		"enabled": true,
