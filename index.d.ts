@@ -1,7 +1,12 @@
 import type { ErrorObject, Options } from "ajv";
+
+interface ValidatorOptions extends Omit<Options, "strict"> {
+	strict?: Extract<Options, "log">;
+}
+
 export class Validator {
 	static supportedVersions: Set<string>;
-	constructor(ajvOptions?: Options);
+	constructor(ajvOptions?: ValidatorOptions);
 	resolveRefs(opts?: { specification?: object }): object;
 	validate(schema: object | string): Promise<{
 		valid: boolean;
