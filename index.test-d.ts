@@ -19,19 +19,16 @@ expectError<Validator>(new Validator({ strict: true }));
 // Test instance methods
 const validator = new Validator();
 
-expectType<Promise<{ valid: boolean; errors?: ErrorObject[] | string }>>(
-	validator.validate({}),
-);
-expectType<Promise<{ valid: boolean; errors?: ErrorObject[] | string }>>(
-	validator.validate("spec.yaml"),
-);
+interface ValidationResult {
+	valid: boolean;
+	errors?: ErrorObject[] | string;
+}
 
-expectType<Promise<{ valid: boolean; errors?: ErrorObject[] | string }>>(
-	validator.validateBundle([{}]),
-);
-expectType<Promise<{ valid: boolean; errors?: ErrorObject[] | string }>>(
-	validator.validateBundle(["spec.yaml"]),
-);
+expectType<Promise<ValidationResult>>(validator.validate({}));
+expectType<Promise<ValidationResult>>(validator.validate("spec.yaml"));
+
+expectType<Promise<ValidationResult>>(validator.validateBundle([{}]));
+expectType<Promise<ValidationResult>>(validator.validateBundle(["spec.yaml"]));
 
 expectType<Promise<void>>(validator.addSpecRef({}, "http://example.com"));
 expectType<Promise<void>>(
