@@ -5,6 +5,13 @@
 
 ## [v2.4.2] 27-04-2025
 ### Changed 
+ - fix(types): refine Validator options disallowing boolean values for strict
+ - chore(biome): use vcs.useIgnoreFile to avoid duplicating .gitignore values
+ - update dependencies:
+    @biomejs/biome  ^2.1.2  →  ^2.2.0
+
+## [v2.4.2] 27-04-2025
+### Changed 
  - fixed link to api.gurus in README.md (@marcalexiei)
  - updated dependencies
     - @biomejs/biome  ^1.9.4  →  ^2.1.2
