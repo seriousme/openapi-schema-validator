@@ -1,39 +1,56 @@
 import type { ErrorObject } from "ajv";
-import { expectType } from "tsd";
+import { expectTypeOf } from "expect-type";
 import { Validator } from "./index.js";
 
 // Test static property
-expectType<Set<string>>(Validator.supportedVersions);
+expectTypeOf(Validator)
+	.toHaveProperty("supportedVersions")
+	.toEqualTypeOf<Set<string>>();
 
 // Test constructor
-expectType<Validator>(new Validator());
-expectType<Validator>(new Validator({ allErrors: true }));
+expectTypeOf(Validator).toBeConstructibleWith();
+expectTypeOf(Validator).toBeConstructibleWith({ allErrors: true });
+expectTypeOf(Validator).toBeConstructibleWith({ strict: "log" });
+expectTypeOf(Validator).toBeConstructibleWith({ strict: false });
+/** @see Validator constructor comment about ajv `strict` option */
+// @ts-expect-error
+expectTypeOf(Validator).toBeConstructibleWith({ strict: true });
+
+const someCondition: boolean = true;
+expectTypeOf(Validator).toBeConstructibleWith({
+	strict: someCondition ? "log" : false,
+});
 
 // Test instance methods
-const validator = new Validator();
+interface ValidationResult {
+	valid: boolean;
+	errors?: Array<ErrorObject> | string;
+}
 
-expectType<Promise<{ valid: boolean; errors?: ErrorObject[] | string }>>(
-	validator.validate({}),
-);
-expectType<Promise<{ valid: boolean; errors?: ErrorObject[] | string }>>(
-	validator.validate("spec.yaml"),
-);
+expectTypeOf(Validator)
+	.instance.toHaveProperty("validate")
+	.toBeCallableWith({})
+	.toBeCallableWith("spec.yaml")
+	.returns.resolves.toEqualTypeOf<ValidationResult>();
 
-expectType<Promise<{ valid: boolean; errors?: ErrorObject[] | string }>>(
-	validator.validateBundle([{}]),
-);
-expectType<Promise<{ valid: boolean; errors?: ErrorObject[] | string }>>(
-	validator.validateBundle(["spec.yaml"]),
-);
+expectTypeOf(Validator)
+	.instance.toHaveProperty("validateBundle")
+	.toBeCallableWith([{}])
+	.toBeCallableWith(["spec.yaml"])
+	.returns.resolves.toEqualTypeOf<ValidationResult>();
 
-expectType<Promise<void>>(validator.addSpecRef({}, "http://example.com"));
-expectType<Promise<void>>(
-	validator.addSpecRef("spec.yaml", "http://example.com"),
-);
+expectTypeOf(Validator)
+	.instance.toHaveProperty("addSpecRef")
+	.toBeCallableWith({}, "http://example.com")
+	.toBeCallableWith("spec.yaml", "http://example.com")
+	.returns.resolves.toBeVoid();
 
-expectType<object>(validator.resolveRefs());
-expectType<object>(validator.resolveRefs({ specification: {} }));
+expectTypeOf(Validator)
+	.instance.toHaveProperty("resolveRefs")
+	.toBeCallableWith()
+	.toBeCallableWith({ specification: {} })
+	.returns.toBeObject();
 
 // Test instance properties
-expectType<object>(validator.specification);
-expectType<string>(validator.version);
+expectTypeOf(Validator).instance.toHaveProperty("specification").toBeObject();
+expectTypeOf(Validator).instance.toHaveProperty("version").toBeString();
