@@ -2,7 +2,10 @@
 
 ## [Unreleased]
 ### Changed
- - feat(dev): add tsd typechecking 
+
+## [v2.4.4] 17-08-2025
+### Changed 
+ - fix(types): invalid strict option type (@marcalexiei)
 
 ## [v2.4.3] 16-08-2025
 ### Changed 
