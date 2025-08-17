@@ -24,7 +24,7 @@ expectTypeOf(Validator).toBeConstructibleWith({
 // Test instance methods
 interface ValidationResult {
 	valid: boolean;
-	errors?: ErrorObject[] | string;
+	errors?: Array<ErrorObject> | string;
 }
 
 expectTypeOf(Validator)

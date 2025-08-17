@@ -10,11 +10,11 @@ export class Validator {
 	resolveRefs(opts?: { specification?: object }): object;
 	validate(schema: object | string): Promise<{
 		valid: boolean;
-		errors?: ErrorObject[] | string;
+		errors?: Array<ErrorObject> | string;
 	}>;
-	validateBundle(schema: (object | string)[]): Promise<{
+	validateBundle(schema: Array<object | string>): Promise<{
 		valid: boolean;
-		errors?: ErrorObject[] | string;
+		errors?: Array<ErrorObject> | string;
 	}>;
 	addSpecRef(schema: object | string, uri: string): Promise<void>;
 	specification: object;
