@@ -1,24 +1,57 @@
+/**
+ * @param {string} str
+ * @returns {string}
+ */
 function escapeJsonPointer(str) {
 	return str.replace(/~/g, "~0").replace(/\//g, "~1");
 }
 
+/**
+ * @param {string} str
+ * @returns {string}
+ */
 function unescapeJsonPointer(str) {
 	return str.replace(/~1/g, "/").replace(/~0/g, "~");
 }
 
+/**
+ * @typedef {Record<string, unknown>} RecordStringUnknown
+ */
+
+/**
+ * @param {unknown} obj
+ * @returns {obj is RecordStringUnknown}
+ */
 const isObject = (obj) => typeof obj === "object" && obj !== null;
 
-const pointerWords = new Set([
-	"$ref",
-	"$id",
-	"$anchor",
-	"$dynamicRef",
-	"$dynamicAnchor",
-	"$schema",
-]);
+const pointerWords = new Set(
+	/** @type {const} */ ([
+		"$ref",
+		"$id",
+		"$anchor",
+		"$dynamicRef",
+		"$dynamicAnchor",
+		"$schema",
+	]),
+);
 
+/**
+ * @template T
+ * @typedef {T extends Set<infer U> ? U : never} SetValue
+ */
+
+/**
+ * @typedef {SetValue<typeof pointerWords>} PointerWord
+ */
+
+/**
+ *
+ * @param {string} uri
+ * @param {Partial<Record<string, RecordStringUnknown>>} anchors
+ * @returns {Record<string, unknown>}
+ */
 function resolveUri(uri, anchors) {
-	const [prefix, path] = uri.split("#", 2);
+	const [prefix, path] = /** @type {[string, string?]} */ (uri.split("#", 2));
 	const hashPresent = !!path;
 	const err = new Error(
 		`Can't resolve ${uri}${
@@ -44,9 +77,15 @@ function resolveUri(uri, anchors) {
 	const paths = path.split("/").slice(1);
 	try {
 		const result = paths.reduce(
-			(o, n) => o[unescapeJsonPointer(n)],
+			/**
+			 * @param {RecordStringUnknown} o
+			 * @param {string} n
+			 * @returns {RecordStringUnknown}
+			 */
+			(o, n) => /** @type {RecordStringUnknown} */ (o[unescapeJsonPointer(n)]),
 			anchors[prefix],
 		);
+
 		if (result === undefined) {
 			throw "";
 		}
@@ -56,22 +95,35 @@ function resolveUri(uri, anchors) {
 	}
 }
 
+/**
+ * @param {unknown} tree
+ * @returns {RecordStringUnknown | undefined}
+ */
 export function replaceRefs(tree) {
 	return resolve(tree, true);
 }
 
+/**
+ * @param {RecordStringUnknown} tree
+ * @returns {{ valid: boolean; errors?: string }}
+ */
 export function checkRefs(tree) {
 	try {
 		resolve(tree, false);
 		return { valid: true };
 	} catch (err) {
-		return { valid: false, errors: err.message };
+		return { valid: false, errors: /** @type {Error} */ (err).message };
 	}
 }
 
+/**
+ * @param {unknown} tree
+ * @param {boolean} replace
+ * @returns {RecordStringUnknown | undefined}
+ */
 function resolve(tree, replace) {
-	let treeObj = tree;
-	if (!isObject(treeObj)) {
+	let treeObj = /** @type {RecordStringUnknown} */ (tree);
+	if (!isObject(tree)) {
 		return undefined;
 	}
 
@@ -79,17 +131,32 @@ function resolve(tree, replace) {
 		treeObj = structuredClone(tree);
 	}
 
-	const pointers = {};
+	/**
+	 * @typedef {{
+	 * 	ref: string;
+	 * 	obj: RecordStringUnknown;
+	 * 	prop: PointerWord;
+	 * 	path: string;
+	 *  id: string;
+	 * }} PointerData
+	 */
+
+	const pointers =
+		/** @type { Record<PointerWord, Array<PointerData>> } */ ({});
 	for (const word of pointerWords) {
 		pointers[word] = [];
 	}
 
+	/**
+	 * @param {string} path
+	 * @param {RecordStringUnknown} target
+	 */
 	function applyRef(path, target) {
 		let root = treeObj;
 		const paths = path.split("/").slice(1);
 		const prop = paths.pop();
 		for (const p of paths) {
-			root = root[unescapeJsonPointer(p)];
+			root = /** @type {RecordStringUnknown} */ (root[unescapeJsonPointer(p)]);
 		}
 		if (typeof prop !== "undefined") {
 			root[unescapeJsonPointer(prop)] = target;
@@ -98,24 +165,44 @@ function resolve(tree, replace) {
 		}
 	}
 
+	/**
+	 * @param {RecordStringUnknown} obj
+	 * @param {string} path
+	 * @param {string} id
+	 * @returns {void}
+	 */
 	function parse(obj, path, id) {
 		if (!isObject(obj)) {
 			return;
 		}
-		const objId = obj.$id || id;
+
+		const objId = /** @type {string} */ (obj["$id"]) || id;
 		for (const prop in obj) {
-			if (pointerWords.has(prop)) {
-				pointers[prop].push({ ref: obj[prop], obj, prop, path, id: objId });
+			if (pointerWords.has(/** @type {PointerWord} */ (prop))) {
+				const pointerWord = /** @type {PointerWord} */ (prop);
+				pointers[pointerWord].push({
+					ref: /** @type {string} */ (obj[prop]),
+					obj,
+					prop: pointerWord,
+					path,
+					id: objId,
+				});
 				delete obj[prop];
 			}
-			parse(obj[prop], `${path}/${escapeJsonPointer(prop)}`, objId);
+			parse(
+				/** @type {RecordStringUnknown} */ (obj[prop]),
+				`${path}/${escapeJsonPointer(prop)}`,
+				objId,
+			);
 		}
 	}
 	// find all refs
 	parse(treeObj, "#", "");
 
 	// resolve them
+	/** @type {Partial<Record<string, RecordStringUnknown>>} */
 	const anchors = { "": treeObj };
+	/** @type {Partial<Record<string, RecordStringUnknown>>} */
 	const dynamicAnchors = {};
 
 	for (const item of pointers.$id) {

@@ -16,9 +16,9 @@
 	},
 	"scripts": {
 		"test": "c8 node --test test/test-*.js",
-		"test:typescript": "tsc --noEmit",
+		"test:typescript": "tsc --project tsconfig.test.json",
 		"format": "biome format --write .",
-		"lint": "biome ci .",
+		"lint": "biome ci . && tsc --noEmit",
 		"test:ci": "npm run lint && npm run covtest && npm run test:typescript",
 		"pretest": "npm run format",
 		"posttest": "c8 check-coverage --lines 100 --functions 100 --branches 100",
@@ -40,6 +40,8 @@
 	"license": "MIT",
 	"devDependencies": {
 		"@biomejs/biome": "^2.2.0",
+		"@types/js-yaml": "^4.0.9",
+		"@types/node": "^24.3.0",
 		"c8": "^10.1.3",
 		"expect-type": "^1.2.2",
 		"typescript": "^5.9.2"
