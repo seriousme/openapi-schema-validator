@@ -3,6 +3,12 @@
 ## [Unreleased]
 ### Changed
 
+## [v2.5.0] 19-08-2025
+### Changed 
+ - feat: improve error messages (@marcalexiei)
+ - feat: add JSDoc, change object to a stricter `Record<string, unknown>`
+ - docs(README): fix typos (@marcalexiei)
+
 ## [v2.4.4] 17-08-2025
 ### Changed 
  - fix(types): invalid strict option type (@marcalexiei)
