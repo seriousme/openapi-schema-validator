@@ -81,7 +81,7 @@ test("undefined specification should fail", async (t) => {
 	t.assert.equal(res.valid, false, "undefined specification is invalid");
 	t.assert.equal(
 		res.errors,
-		"Cannot find JSON, YAML or filename in data",
+		'Invalid input type. Expected "string" or "object", but got "undefined"',
 		"correct error message",
 	);
 });
@@ -180,8 +180,8 @@ test("invalid yaml specification as string gives an error", async (t) => {
 	t.assert.equal(res.valid, false, "validation fails as expected");
 	t.assert.equal(
 		res.errors,
-		"Cannot find JSON, YAML or filename in data",
-		"error message matches expection",
+		"Failed to parse input as YAML/JSON",
+		"error message matches expectation",
 	);
 });
 
@@ -243,35 +243,35 @@ test("invalid filename returns an error", async (t) => {
 	t.assert.equal(res.valid, false, "validation fails as expected");
 	t.assert.equal(
 		res.errors,
-		"Cannot find JSON, YAML or filename in data",
-		"error message matches expection",
+		'Could not read file "nonExistingFilename"',
+		"error message matches expectation",
 	);
 });
 
 test("addSpecRef: non string URI throws an error", async (t) => {
 	const validator = new Validator();
-	t.assert.rejects(
+	await t.assert.rejects(
 		validator.addSpecRef(subSpecYamlFileName, null),
 		new Error("uri parameter or $id attribute must be a string"),
-		"error message matches expection",
+		"error message matches expectation",
 	);
 });
 
 test("addSpecRef: Invalid filename returns an error", async (t) => {
 	const validator = new Validator();
-	t.assert.rejects(
+	await t.assert.rejects(
 		validator.addSpecRef("nonExistingFilename", "extraUri"),
-		new Error("Cannot find JSON, YAML or filename in data"),
-		"error message matches expection",
+		new Error('Could not read file "nonExistingFilename"'),
+		"error message matches expectation",
 	);
 });
 
-test("addSpecRef: no uri and no $id attribute returns an error", (t) => {
+test("addSpecRef: no uri and no $id attribute returns an error", async (t) => {
 	const validator = new Validator();
-	t.assert.rejects(
+	await t.assert.rejects(
 		validator.addSpecRef(subSpecYamlFileName),
 		new Error("uri parameter or $id attribute must be a string"),
-		"error message matches expection",
+		"error message matches expectation",
 	);
 });
 
@@ -347,7 +347,7 @@ test("validateBundle: no spec returns an error", async (t) => {
 	t.assert.equal(
 		res.errors,
 		"Parameter data must be an array",
-		"error message matches expection",
+		"error message matches expectation",
 	);
 });
 
@@ -357,16 +357,16 @@ test("validateBundle: unreadable spec returns an error", async (t) => {
 	yaml : : :
 	`;
 	const validator = new Validator();
-	t.assert.rejects(
-		validator.validateBundle([yamlSpec]),
-		new Error("Cannot find JSON, YAML or filename in data"),
+	await t.assert.rejects(
+		() => validator.validateBundle([yamlSpec]),
+		new Error("Failed to parse input as YAML/JSON"),
 		"error message matches expectation",
 	);
 });
 
 test("validateBundle: double spec returns an error", async (t) => {
 	const validator = new Validator();
-	t.assert.rejects(
+	await t.assert.rejects(
 		validator.validateBundle([yamlFileName, yamlFileName]),
 		new Error("Only one openApi specification can be validated at a time"),
 		"error message matches expectation",

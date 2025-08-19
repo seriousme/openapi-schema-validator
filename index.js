@@ -83,29 +83,55 @@ function getOpenApiVersion(specification) {
 
 /**
  * @param {unknown} data
- * @returns {Promise<SpecFromData | undefined>}
+ * @returns {Promise<{ loaded: true; fileName: string | null; spec: SpecFromData} | { loaded: false; errorMessage: string }>}
  */
-async function getSpecFromData(data) {
-	const yamlOpts = { schema: JSON_SCHEMA };
+async function loadSpecFromData(data) {
 	if (typeof data === "object") {
-		return /** @type {SpecFromData} */ (data);
+		return {
+			loaded: true,
+			fileName: null,
+			spec: /** @type {SpecFromData} */ (data),
+		};
 	}
-	if (typeof data === "string") {
-		if (data.match(/\n/)) {
-			try {
-				return /** @type {SpecFromData} */ (load(data, yamlOpts));
-			} catch (_) {
-				return undefined;
-			}
-		}
+
+	if (typeof data !== "string") {
+		return {
+			loaded: false,
+			errorMessage: `Invalid input type. Expected "string" or "object", but got "${typeof data}"`,
+		};
+	}
+
+	/** @type {string} */
+	let sourceData = data;
+	/** @type {string | null} */
+	let fileName = null;
+	// If string doesn't contains \n assuming is a file path
+	if (!sourceData.match(/\n/)) {
 		try {
-			const fileData = await readFile(data, "utf-8");
-			return /** @type {SpecFromData} */ (load(fileData, yamlOpts));
+			sourceData = await readFile(data, "utf-8");
+			fileName = data;
 		} catch (_) {
-			return undefined;
+			return {
+				loaded: false,
+				errorMessage: `Could not read file "${data}"`,
+			};
 		}
 	}
-	return undefined;
+
+	try {
+		return {
+			loaded: true,
+			fileName,
+			spec: /** @type {SpecFromData} */ (
+				load(sourceData, { schema: JSON_SCHEMA })
+			),
+		};
+	} catch (_) {
+		return {
+			loaded: false,
+			errorMessage: "Failed to parse input as YAML/JSON",
+		};
+	}
 }
 
 export class Validator {
@@ -136,10 +162,12 @@ export class Validator {
 
 	/** @type {ValidatorDecl['addSpecRef']} */
 	async addSpecRef(data, uri) {
-		const spec = await getSpecFromData(data);
-		if (spec === undefined) {
-			throw new Error("Cannot find JSON, YAML or filename in data");
+		const specResult = await loadSpecFromData(data);
+		if (!specResult.loaded) {
+			throw new Error(specResult.errorMessage);
 		}
+
+		const { spec } = specResult;
 
 		const newUri = uri || spec["$id"];
 		if (typeof newUri !== "string") {
@@ -152,14 +180,17 @@ export class Validator {
 
 	/** @type {ValidatorDecl['validate']} */
 	async validate(data) {
-		const specification = await getSpecFromData(data);
-		this.specification = specification;
-		if (specification === undefined || specification === null) {
+		const specResult = await loadSpecFromData(data);
+
+		if (!specResult.loaded) {
 			return {
 				valid: false,
-				errors: "Cannot find JSON, YAML or filename in data",
+				errors: specResult.errorMessage,
 			};
 		}
+		const { spec: specification } = specResult;
+		this.specification = specification;
+
 		if (Object.keys(this.externalRefs).length > 0) {
 			specification[inlinedRefs] = this.externalRefs;
 		}
@@ -197,29 +228,23 @@ export class Validator {
 
 	/** @type {ValidatorDecl['validateBundle']} */
 	async validateBundle(data) {
-		/** @type {SpecFromData | undefined} */
-		let specification;
 		if (!Array.isArray(data)) {
 			return {
 				valid: false,
 				errors: "Parameter data must be an array",
 			};
 		}
+
+		/** @type {SpecFromData | undefined} */
+		let specification;
+
 		for (const item of data) {
-			const spec = await getSpecFromData(item);
-
-			/** @type {string | undefined} */
-			let fileName;
-
-			if (typeof item === "string" && !item.match(/\n/)) {
-				// item is a filename
-				fileName = item;
+			const specResult = await loadSpecFromData(item);
+			if (!specResult.loaded) {
+				throw new Error(specResult.errorMessage);
 			}
-			if (spec === undefined) {
-				throw new Error(
-					`Cannot find JSON, YAML or filename in ${fileName || "data"}`,
-				);
-			}
+
+			const { spec, fileName } = specResult;
 			const { version } = getOpenApiVersion(spec);
 			if (!version) {
 				const uri = /** @type {string} */ (spec["$id"] || fileName);
