@@ -82,7 +82,7 @@ Where `<filename>` refers to a YAML or JSON file containing the specification.
 ### CLI for API bundling
 
 To make it easier to combine multiple YAML or JSON files into a single specification file there is the `bundle-api` command.
-(see the [validateBundle](#validateBundle) section below) 
+(see the [validateBundle](#validateBundle) section below)
 
 ```bash
 npm install @seriousme/openapi-schema-validator -g
@@ -127,7 +127,7 @@ is not a bug but a result of the complexity of the openApi JSON schemas.
 
 ### `<instance>.validate(specification)`
 
-This function tries to validata a specification against the OpenApi schemas.
+This function tries to validate a specification against the OpenApi schemas.
 `specification` can be one of:
 
 - a JSON object
@@ -152,14 +152,14 @@ object:
 
 If the validator managed to extract data from the specification parameter then
 the extracted specification is available in this property as javascript object.
-E.g. if you supplied a filename of a YAML file and the file was sucessfully read
+E.g. if you supplied a filename of a YAML file and the file was successfully read
 and its YAML decoded then the contents is here. Even if validation failed.
 
 <a name="version"></a>
 
 ### `<instance>.version`
 
-If validation is succesfull this will return the openApi version found e.g.
+If validation is successful this will return the openApi version found e.g.
 ("2.0","3.0","3.1). The openApi specification only specifies major/minor
 versions as separate schemas. So "3.0.3" results in "3.0".
 
@@ -170,7 +170,7 @@ versions as separate schemas. So "3.0.3" results in "3.0".
 This function tries to resolve all internal references. External references are
 _not_ automatically resolved so you need to inline them yourself if required e.g
 by using `<instance>.addSpecRef()`. By default it will use the last
-specification passed to `<instance>.validate()` but you can explicity pass a
+specification passed to `<instance>.validate()` but you can explicitly pass a
 specification by passing `{specification:<object>}` as options. The result is an
 `object` where all references have been resolved. Resolution of references is
 `shallow` This should normally not be a problem for this use case.
@@ -184,7 +184,7 @@ specification by passing `{specification:<object>}` as options. The result is an
 - a JSON object
 - a JSON object encoded as string
 - a YAML string
-- a filename 
+- a filename
 
 `uri` must be a string (e.g. `http://www.example.com/subspec`), but
   is not required if the subSpecification holds a `$id` attribute at top level.
