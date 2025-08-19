@@ -27,10 +27,29 @@ interface ValidationResult {
 	errors?: Array<ErrorObject> | string;
 }
 
+const openAPI3_1 = {
+	openapi: "3.1.0",
+	info: {
+		version: "1.0.0",
+		title: "Swagger Petstore",
+		license: {
+			name: "MIT",
+			url: "https://opensource.org/licenses/MIT",
+		},
+	},
+};
+
 expectTypeOf(Validator)
 	.instance.toHaveProperty("validate")
 	.toBeCallableWith({})
+	.toBeCallableWith({ openapi: "3.0.0" })
+	.toBeCallableWith({ swagger: "2.0" })
+	.toBeCallableWith(openAPI3_1)
 	.toBeCallableWith("spec.yaml")
+	// @ts-expect-error should be callable only with strings and object
+	.toBeCallableWith([1, 23])
+	// @ts-expect-error should be callable only with strings and object
+	.toBeCallableWith(1)
 	.returns.resolves.toEqualTypeOf<ValidationResult>();
 
 expectTypeOf(Validator)
@@ -52,5 +71,9 @@ expectTypeOf(Validator)
 	.returns.toBeObject();
 
 // Test instance properties
-expectTypeOf(Validator).instance.toHaveProperty("specification").toBeObject();
-expectTypeOf(Validator).instance.toHaveProperty("version").toBeString();
+expectTypeOf(Validator)
+	.instance.toHaveProperty("specification")
+	.toEqualTypeOf<Record<string, unknown>>();
+expectTypeOf(Validator)
+	.instance.toHaveProperty("version")
+	.toEqualTypeOf<string>();

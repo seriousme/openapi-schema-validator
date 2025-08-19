@@ -4,19 +4,21 @@ interface ValidatorOptions extends Omit<Options, "strict"> {
 	strict?: Extract<Options["strict"], false | "log">;
 }
 
+type SpecData = Record<string, unknown>;
+
 export class Validator {
 	static supportedVersions: Set<string>;
 	constructor(ajvOptions?: ValidatorOptions);
-	resolveRefs(opts?: { specification?: object }): object;
-	validate(schema: object | string): Promise<{
+	resolveRefs(opts?: { specification?: SpecData }): SpecData;
+	validate(schema: SpecData | string): Promise<{
 		valid: boolean;
 		errors?: Array<ErrorObject> | string;
 	}>;
-	validateBundle(schema: Array<object | string>): Promise<{
+	validateBundle(schema: Array<SpecData | string>): Promise<{
 		valid: boolean;
 		errors?: Array<ErrorObject> | string;
 	}>;
-	addSpecRef(schema: object | string, uri: string): Promise<void>;
-	specification: object;
+	addSpecRef(schema: SpecData | string, uri: string): Promise<void>;
+	specification: SpecData;
 	version: string;
 }
