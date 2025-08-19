@@ -358,7 +358,7 @@ test("validateBundle: unreadable spec returns an error", async (t) => {
 	`;
 	const validator = new Validator();
 	await t.assert.rejects(
-		() => validator.validateBundle([yamlSpec]),
+		validator.validateBundle([yamlSpec]),
 		new Error("Failed to parse input as YAML/JSON"),
 		"error message matches expectation",
 	);
