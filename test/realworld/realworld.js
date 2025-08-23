@@ -165,22 +165,24 @@ async function fetchApiList(percentage, onlyFailed = false) {
 }
 
 async function fetchYaml(url, retries = 3) {
-    for (let attempt = 1; attempt <= retries; attempt++) {
-        try {
-            const controller = new AbortController();
-            const timeout = setTimeout(() => controller.abort(), 15000); // 15s timeout
-            const response = await fetch(url, { signal: controller.signal });
-            clearTimeout(timeout);
+	for (let attempt = 1; attempt <= retries; attempt++) {
+		try {
+			const controller = new AbortController();
+			const timeout = setTimeout(() => controller.abort(), 15000); // 15s timeout
+			const response = await fetch(url, { signal: controller.signal });
+			clearTimeout(timeout);
 
-            if (!response.ok) {
-                throw new Error(`Unable to download ${url}`);
-            }
-            return await response.text();
-        } catch (error) {
-            if (attempt === retries || error.name !== 'AbortError') throw error;
-            console.warn(`Retrying fetch for ${url} (attempt ${attempt}) due to timeout...`);
-        }
-    }
+			if (!response.ok) {
+				throw new Error(`Unable to download ${url}`);
+			}
+			return await response.text();
+		} catch (error) {
+			if (attempt === retries || error.name !== "AbortError") throw error;
+			console.warn(
+				`Retrying fetch for ${url} (attempt ${attempt}) due to timeout...`,
+			);
+		}
+	}
 }
 
 function writeReport(ci, totalSize, results, failed) {
