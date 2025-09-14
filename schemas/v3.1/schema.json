@@ -1,5 +1,5 @@
 {
-	"$id": "https://spec.openapis.org/oas/3.1/schema/2025-02-13",
+	"$id": "https://spec.openapis.org/oas/3.1/schema/2025-08-31",
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"description": "The description of OpenAPI v3.1.x Documents without Schema Object validation",
 	"type": "object",
@@ -907,7 +907,7 @@
 				"description": {
 					"type": "string"
 				},
-				"body": {
+				"server": {
 					"$ref": "#/$defs/server"
 				}
 			},
@@ -1370,6 +1370,12 @@
 						"$ref": "#/$defs/example-or-reference"
 					}
 				}
+			},
+			"not": {
+				"required": [
+					"example",
+					"examples"
+				]
 			}
 		},
 		"map-of-strings": {
