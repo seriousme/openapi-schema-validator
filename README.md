@@ -12,6 +12,7 @@ it currently supports:
 - [2.0](https://spec.openapis.org/oas/v2.0)
 - [3.0.x](https://spec.openapis.org/oas/v3.0.3)
 - [3.1.x](https://spec.openapis.org/oas/v3.1.0)
+- [3.2.x](https://spec.openapis.org/oas/v3.2.0)
 
 Tested on [over 2,000 real-world APIs](https://apis.guru) from AWS,
 Microsoft, Google etc.
@@ -34,7 +35,7 @@ This module is ESM only, if you need to use commonJS please see below.
 // ESM
 import { Validator } from "@seriousme/openapi-schema-validator";
 
-console.log(Validator.supportedVersions.has("3.1"));
+console.log(Validator.supportedVersions.has("3.2"));
 // prints true
 
 const validator = new Validator();
@@ -160,7 +161,7 @@ and its YAML decoded then the contents is here. Even if validation failed.
 ### `<instance>.version`
 
 If validation is successful this will return the openApi version found e.g.
-("2.0","3.0","3.1). The openApi specification only specifies major/minor
+("2.0","3.0","3.1","3.2"). The openApi specification only specifies major/minor
 versions as separate schemas. So "3.0.3" results in "3.0".
 
 <a name="resolveRefs"></a>

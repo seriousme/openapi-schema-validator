@@ -29,8 +29,11 @@ function readJSON(file) {
 }
 
 async function getOpenApiSchemasVersions(oasdir) {
-	const dirs = (await readdir(oasdir)).filter((d) => !d.endsWith(".html"));
-	return dirs;
+	const dirents = await readdir(oasdir, { withFileTypes: true });
+	const directories = dirents
+		.filter((dirent) => dirent.isDirectory())
+		.map((dirent) => dirent.name);
+	return directories;
 }
 
 async function testVersion(version) {

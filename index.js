@@ -17,7 +17,7 @@ import { checkRefs, replaceRefs } from "./resolve.js";
 // so we need to access its default property to get the correct typed value
 const { default: addFormats } = addFormatsModule;
 
-const openApiVersions = new Set(["2.0", "3.0", "3.1"]);
+const openApiVersions = new Set(["2.0", "3.0", "3.1", "3.2"]);
 
 /** @type {Partial<Record<string, AjvCoreConstructor>>} */
 const ajvVersions = {
