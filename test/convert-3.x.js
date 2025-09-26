@@ -5,8 +5,7 @@ function localPath(path) {
 }
 const openApiSrcDir = localPath("../schemas.orig");
 const openApiDestDir = localPath("../schemas");
-const version = "3.1";
-const destFilePath = `${openApiDestDir}/v${version}/schema.json`;
+const versions = ["3.1", "3.2"];
 
 function importJSON(file) {
 	return JSON.parse(readFileSync(file));
@@ -46,26 +45,34 @@ function parse(obj, path, id) {
 		parse(obj[prop], `${path}/${escapeJsonPointer(prop)}`, objId);
 	}
 }
-const schema = getLatestSchema(version);
-// find all refs
-parse(schema, "#", "");
-const dynamicAnchors = {};
-for (const item of pointers.$dynamicAnchor) {
-	const { ref, prop, path } = item;
-	console.log({ ref, prop, path });
-	dynamicAnchors[`#${ref}`] = path;
-}
 
-for (const item of pointers.$dynamicRef) {
-	const { ref, obj, prop, path } = item;
-	if (!dynamicAnchors[ref]) {
-		throw `Can't find $dynamicAnchor for '${ref}'`;
+function convertSchema(version) {
+	const destFilePath = `${openApiDestDir}/v${version}/schema.json`;
+	const schema = getLatestSchema(version);
+	// find all refs
+	parse(schema, "#", "");
+	const dynamicAnchors = {};
+	for (const item of pointers.$dynamicAnchor) {
+		const { ref, prop, path } = item;
+		console.log({ ref, prop, path });
+		dynamicAnchors[`#${ref}`] = path;
 	}
-	console.log({ ref, prop, path, newRef: dynamicAnchors[ref] });
-	obj[prop] = undefined;
-	obj.$ref = dynamicAnchors[ref];
+
+	for (const item of pointers.$dynamicRef) {
+		const { ref, obj, prop, path } = item;
+		if (!dynamicAnchors[ref]) {
+			throw `Can't find $dynamicAnchor for '${ref}'`;
+		}
+		console.log({ ref, prop, path, newRef: dynamicAnchors[ref] });
+		obj[prop] = undefined;
+		obj.$ref = dynamicAnchors[ref];
+	}
+
+	writeFileSync(`${destFilePath}`, JSON.stringify(schema, null, "\t"));
+	console.log(`Written converted schema to ${destFilePath}`);
+	console.log(`$id: ${schema.$id}`);
 }
 
-writeFileSync(`${destFilePath}`, JSON.stringify(schema, null, "\t"));
-console.log(`Written converted schema to ${destFilePath}`);
-console.log(`$id: ${schema.$id}`);
+for (const version of versions) {
+	convertSchema(version);
+}

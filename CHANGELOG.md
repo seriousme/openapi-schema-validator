@@ -3,6 +3,11 @@
 ## [Unreleased]
 ### Changed
 
+## [v2.7.0] 26-09-2025
+### Changed
+ - feat: updated OpenApi schema 3.1 to version 2025-09-15
+ - feat: added OpenApi schema 3.2 version 2025-09-17
+
 ## [v2.6.0] 14-09-2025
 ### Changed 
  - feat: updated OpenApi schema 3.1 to version 2025-08-31
