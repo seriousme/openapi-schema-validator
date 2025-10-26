@@ -23,7 +23,7 @@
 		"pretest": "npm run format",
 		"posttest": "c8 check-coverage --lines 100 --functions 100 --branches 100",
 		"covtest": "c8 --reporter=lcov npm test",
-		"cloneOas": "rm -rf OpenAPI-Specification && git clone --branch 'gh-pages' --single-branch https://github.com/OAI/OpenAPI-Specification.git",
+		"cloneOas": "rm -rf OpenAPI-Specification && git clone --branch 'main' --single-branch https://github.com/OAI/spec.openapis.org.git",
 		"checkOasVersions": "node test/check-versions.js",
 		"checkOasVersionsSnapshot": "node test/check-versions.js --updateSnapshot",
 		"preconvert3x": "npm run cloneOas",
