@@ -10,7 +10,7 @@ name: "Real world API test"
 on:
   schedule:
     # once week on thursday 
-    - cron: '19 16 * * 4'
+    - cron: '7 7 * * 4'
   workflow_dispatch:
     inputs:
       nodeVersion:
