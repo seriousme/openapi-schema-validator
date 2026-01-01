@@ -2,6 +2,7 @@
 
 ## [Unreleased]
 ### Changed
+ - fix: use new github repo for OAS schemas
 
 ## [v2.7.0] 26-09-2025
 ### Changed
