@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 ### Changed
+
+## [v2.7.1] 17-02-2026
+### Changed
  - fix: use new github repo for OAS schemas
  - chore: updated dependencies
    - @biomejs/biome   ^2.2.4  →   ^2.4.2
