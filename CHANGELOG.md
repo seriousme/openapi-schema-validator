@@ -3,6 +3,13 @@
 ## [Unreleased]
 ### Changed
  - fix: use new github repo for OAS schemas
+ - chore: updated dependencies
+   - @biomejs/biome   ^2.2.4  →   ^2.4.2
+   - @types/node     ^25.0.0  →  ^25.2.3
+   - ajv             ^8.17.1  →  ^8.18.0
+   - expect-type      ^1.2.2  →   ^1.3.0
+   - js-yaml          ^4.1.0  →   ^4.1.1
+   - typescript       ^5.9.2  →   ^5.9.3
 
 ## [v2.7.0] 26-09-2025
 ### Changed
