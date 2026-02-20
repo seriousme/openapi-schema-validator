@@ -1,5 +1,5 @@
 {
-	"$id": "https://spec.openapis.org/oas/3.2/schema/2025-09-17",
+	"$id": "https://spec.openapis.org/oas/3.2/schema/2025-11-23",
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"description": "The description of OpenAPI v3.2.x Documents without Schema Object validation",
 	"type": "object",
@@ -611,10 +611,6 @@
 						},
 						"explode": {
 							"type": "boolean"
-						},
-						"allowReserved": {
-							"default": false,
-							"type": "boolean"
 						}
 					},
 					"allOf": [
@@ -629,9 +625,6 @@
 						},
 						{
 							"$ref": "#/$defs/parameter/dependentSchemas/schema/$defs/styles-for-cookie"
-						},
-						{
-							"$ref": "#/$defs/styles-for-form"
 						}
 					],
 					"$defs": {
@@ -645,6 +638,9 @@
 							},
 							"then": {
 								"properties": {
+									"name": {
+										"pattern": "^[^{}]+$"
+									},
 									"style": {
 										"default": "simple",
 										"enum": [
@@ -655,6 +651,13 @@
 									},
 									"required": {
 										"const": true
+									},
+									"explode": {
+										"default": false
+									},
+									"allowReserved": {
+										"type": "boolean",
+										"default": false
 									}
 								},
 								"required": [
@@ -675,6 +678,9 @@
 									"style": {
 										"default": "simple",
 										"const": "simple"
+									},
+									"explode": {
+										"default": false
 									}
 								}
 							}
@@ -697,8 +703,13 @@
 											"pipeDelimited",
 											"deepObject"
 										]
+									},
+									"allowReserved": {
+										"type": "boolean",
+										"default": false
 									}
-								}
+								},
+								"$ref": "#/$defs/explode-for-form"
 							}
 						},
 						"styles-for-cookie": {
@@ -717,6 +728,24 @@
 											"form",
 											"cookie"
 										]
+									},
+									"explode": {
+										"default": true
+									}
+								},
+								"if": {
+									"properties": {
+										"style": {
+											"const": "form"
+										}
+									}
+								},
+								"then": {
+									"properties": {
+										"allowReserved": {
+											"type": "boolean",
+											"default": false
+										}
 									}
 								}
 							}
@@ -902,7 +931,8 @@
 						"allowReserved": {
 							"default": false
 						}
-					}
+					},
+					"$ref": "#/$defs/explode-for-form"
 				},
 				"explode": {
 					"properties": {
@@ -919,17 +949,11 @@
 						"style": {
 							"default": "form"
 						}
-					}
+					},
+					"$ref": "#/$defs/explode-for-form"
 				}
 			},
-			"allOf": [
-				{
-					"$ref": "#/$defs/specification-extensions"
-				},
-				{
-					"$ref": "#/$defs/styles-for-form"
-				}
-			],
+			"$ref": "#/$defs/specification-extensions",
 			"unevaluatedProperties": false
 		},
 		"responses": {
@@ -1191,10 +1215,6 @@
 							"const": "simple"
 						},
 						"explode": {
-							"default": false,
-							"type": "boolean"
-						},
-						"allowReserved": {
 							"default": false,
 							"type": "boolean"
 						}
@@ -1636,16 +1656,14 @@
 				"type": "string"
 			}
 		},
-		"styles-for-form": {
+		"explode-for-form": {
+			"$comment": "for encoding objects, and query and cookie parameters, style=form is the default",
 			"if": {
 				"properties": {
 					"style": {
 						"const": "form"
 					}
-				},
-				"required": [
-					"style"
-				]
+				}
 			},
 			"then": {
 				"properties": {
