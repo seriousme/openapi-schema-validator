@@ -11,6 +11,7 @@
 		"noPropertyAccessFromIndexSignature": true,
 		"noUncheckedIndexedAccess": true,
 		"exactOptionalPropertyTypes": true,
+		"types": ["node"],
 
 		// Module
 		"module": "nodenext",
