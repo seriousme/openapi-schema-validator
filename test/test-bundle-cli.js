@@ -55,7 +55,7 @@ test("cli bundles subspecs as YAML to file", (t) => {
 	execSync(
 		`node ${cli} -t yaml -o ${tmpBundle} ${main} ${subspec} ${subspec2}`,
 	);
-	const result = parse(readFileSync(tmpBundle, 'utf8'));
+	const result = parse(readFileSync(tmpBundle, "utf8"));
 	unlinkSync(tmpBundle);
 	t.assert.deepEqual(result, bundle);
 });
