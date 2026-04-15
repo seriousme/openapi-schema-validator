@@ -2,7 +2,7 @@ import { execSync } from "node:child_process";
 import { readFileSync, unlinkSync } from "node:fs";
 import { test } from "node:test";
 import { fileURLToPath, URL } from "node:url";
-import { load } from "js-yaml";
+import { parse } from "yaml";
 
 function localFile(fileName) {
 	return fileURLToPath(new URL(fileName, import.meta.url));
@@ -55,7 +55,7 @@ test("cli bundles subspecs as YAML to file", (t) => {
 	execSync(
 		`node ${cli} -t yaml -o ${tmpBundle} ${main} ${subspec} ${subspec2}`,
 	);
-	const result = load(readFileSync(tmpBundle));
+	const result = parse(readFileSync(tmpBundle, "utf8"));
 	unlinkSync(tmpBundle);
 	t.assert.deepEqual(result, bundle);
 });

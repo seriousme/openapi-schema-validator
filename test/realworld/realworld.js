@@ -10,10 +10,9 @@ const validator = new Validator();
 
 import { writeFileSync } from "node:fs";
 import { argv, exit } from "node:process";
-import { JSON_SCHEMA, load } from "js-yaml";
+import { parse } from "yaml";
 import { createReport } from "./createReport.js";
 
-const yamlOpts = { schema: JSON_SCHEMA };
 const failedFile = localFile("./failed.json");
 const reportFile = localFile("./failed.md");
 const newFailedFile = localFile("./failed.updated.json");
@@ -117,7 +116,7 @@ function getInstanceValue(yamlSpec, path) {
 	if (path === "") {
 		return [false, "content too large to display here"];
 	}
-	const obj = load(yamlSpec, yamlOpts);
+	const obj = parse(yamlSpec);
 	const paths = path.split("/").slice(1);
 	const result = paths.reduce((o, n) => o[unescapeJsonPointer(n)], obj);
 	return [true, result];

@@ -4,7 +4,7 @@ import { fileURLToPath, URL } from "node:url";
 import Ajv2020 from "ajv/dist/2020.js";
 import Ajv04 from "ajv-draft-04";
 import addFormatsModule from "ajv-formats";
-import { JSON_SCHEMA, load } from "js-yaml";
+import { parse } from "yaml";
 import { checkRefs, replaceRefs } from "./resolve.js";
 
 /** @typedef {import("ajv/dist/core.js").default} AjvCore */
@@ -122,9 +122,7 @@ async function loadSpecFromData(data) {
 		return {
 			loaded: true,
 			fileName,
-			spec: /** @type {SpecFromData} */ (
-				load(sourceData, { schema: JSON_SCHEMA })
-			),
+			spec: /** @type {SpecFromData} */ (parse(sourceData)),
 		};
 	} catch (_) {
 		return {

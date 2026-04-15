@@ -4,7 +4,7 @@ import { writeFileSync } from "node:fs";
 import { basename } from "node:path";
 import { argv, exit } from "node:process";
 import { parseArgs } from "node:util";
-import { dump } from "js-yaml";
+import { stringify } from "yaml";
 import { Validator } from "../index.js";
 
 const cmd = basename(argv[1]);
@@ -13,7 +13,7 @@ const validTypes = new Set(["JSON", "YAML"]);
 
 function formatOutput(type, data) {
 	if (type === "YAML") {
-		return dump(data);
+		return stringify(data);
 	}
 	return JSON.stringify(data, null, 2);
 }
