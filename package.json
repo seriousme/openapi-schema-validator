@@ -37,8 +37,8 @@
 	"author": "Hans Klunder",
 	"license": "MIT",
 	"devDependencies": {
-		"@biomejs/biome": "^2.4.3",
-		"@types/node": "^25.3.0",
+		"@biomejs/biome": "^2.4.12",
+		"@types/node": "^25.6.0",
 		"expect-type": "^1.3.0",
 		"typescript": "^6.0.2"
 	},

@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 ### Changed
+ - feat: replaced js-yaml by yaml
+ - chore(dev): updated dependencies
+   - @biomejs/biome   ^2.4.3  →  ^2.4.12
+   - @types/node     ^25.3.0  →  ^25.6.0
 
 ## [v2.8.0] 20-02-2026
 ### Changed
