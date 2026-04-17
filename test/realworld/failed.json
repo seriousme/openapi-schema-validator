@@ -1,9 +1,9 @@
 {
-	"testDate": "2024-11-28T16:38:03.963Z",
+	"testDate": "2026-04-17T09:01:27.173Z",
 	"totalApiCount": 2529,
 	"testedAPICount": 2529,
-	"failedAPICount": 31,
-	"knownFailedCount": 31,
+	"failedAPICount": 30,
+	"knownFailedCount": 30,
 	"failedTests": [
 		{
 			"name": "airport-web.appspot.com",
@@ -1580,23 +1580,6 @@
 			"validatorVersion": "3.0",
 			"specificationType": "openapi",
 			"specificationVersion": "3.0.3",
-			"knownFailed": true
-		},
-		{
-			"name": "statsocial.com",
-			"apiVersion": "1.0.0",
-			"openApiVersion": "2.0",
-			"yamlUrl": "https://api.apis.guru/v2/specs/statsocial.com/1.0.0/openapi.yaml",
-			"jsonUrl": "https://api.apis.guru/v2/specs/statsocial.com/1.0.0/openapi.json",
-			"gitHubUrl": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/statsocial.com/1.0.0/openapi.yaml",
-			"updated": "2023-02-17T17:36:25.370Z",
-			"result": {
-				"valid": false,
-				"errors": "Can't resolve #/components/schemas/18_24"
-			},
-			"validatorVersion": "3.0",
-			"specificationType": "openapi",
-			"specificationVersion": "3.0.0",
 			"knownFailed": true
 		}
 	]
