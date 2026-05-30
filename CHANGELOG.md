@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 ### Changed
+ - chore: updated dependencies
+   - @types/node     ^25.6.0  →  ^25.9.1
+   - ajv             ^8.18.0  →  ^8.20.0
+   - typescript       ^6.0.2  →   ^6.0.3
+   - yaml             ^2.8.3  →   ^2.9.0
 
 ## [v2.9.0] 15-04-2026
 ### Changed
