@@ -1,11 +1,11 @@
 # Results of real world testing
-Report generated at: Thu Nov 28 2024 16:38:03 GMT+0000 (Coordinated Universal Time)
+Report generated at: Fri Apr 17 2026 09:01:27 GMT+0000 (Coordinated Universal Time)
 
 | APIs at [apis.guru](https://apis.guru) | #
 |--------|-------|
 |Total |2529 
 |Tested |2529
-|Failed validation | 31
+|Failed validation | 30
 
 
 ## API: airport-web\.appspot\.com (version: v1) 
@@ -862,15 +862,4 @@ API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/A
 API updated: 2023-02-17T17:54:09.755Z
 
 Validation error: Can't resolve ../policies.yaml, only internal refs are supported.
-    
-
-## API: statsocial\.com (version: 1.0.0) 
-openapi: [3.0.0](https://spec.openapis.org/oas/v3.0.0)
-[JSON Schema](https://github.com/seriousme/openapi-schema-validator/tree/master/schemas/v3.0/schema.json)
-
-API on Github: [link](https://github.com/APIs-guru/openapi-directory/blob/main/APIs/statsocial.com/1.0.0/openapi.yaml)
-
-API updated: 2023-02-17T17:36:25.370Z
-
-Validation error: Can't resolve #/components/schemas/18_24
     
