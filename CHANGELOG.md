@@ -3,10 +3,12 @@
 ## [Unreleased]
 ### Changed
  - chore: updated dependencies
-   - @types/node     ^25.6.0  →  ^25.9.1
+   - @types/node     ^25.6.0  →  ^26.1.2
    - ajv             ^8.18.0  →  ^8.20.0
    - typescript       ^6.0.2  →   ^6.0.3
    - yaml             ^2.8.3  →   ^2.9.0
+   - @biomejs/biome  ^2.4.16  →   ^2.5.7
+   - expect-type      ^1.3.0  →   ^1.4.0
 
 ## [v2.9.0] 15-04-2026
 ### Changed
