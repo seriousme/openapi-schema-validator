@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 ### Changed
+
+## [v2.9.1] 05-08-2026
+### Changed
  - chore: updated dependencies
    - @types/node     ^25.6.0  →  ^26.1.2
    - ajv             ^8.18.0  →  ^8.20.0
