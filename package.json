@@ -43,9 +43,12 @@
 		"expect-type": "^1.4.0",
 		"typescript": "^7.0.2"
 	},
-	"directories": {
-		"test": "test"
-	},
+	"files":[
+		"index.js",
+		"index.d.ts",
+		"resolve.js",
+		"schemas/"
+	],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/seriousme/openapi-schema-validator.git"
