@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 ### Changed
+
+## [v2.10.0] 18-09-2026
+### Changed
+ - feat: updated OpenApi schema 3.2 to version 2026-08-30
  - chore: reduce package size by specifying files in package.json
 
 ## [v2.9.1] 05-08-2026
