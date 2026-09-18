@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 ### Changed
+ - chore: updated dependencies
+   - @biomejs/biome  ^2.5.7  →  ^2.5.14
+   - yaml            ^2.9.0  →   ^2.9.1
+   - @types/node     ^26.1.2  →  ^26.6.1
 
 ## [v2.10.0] 18-09-2026
 ### Changed

@@ -12,7 +12,7 @@
 		"ajv": "^8.20.0",
 		"ajv-draft-04": "^1.0.0",
 		"ajv-formats": "^3.0.1",
-		"yaml": "^2.9.0"
+		"yaml": "^2.9.1"
 	},
 	"scripts": {
 		"test:typescript": "tsc --project tsconfig.test.json",
@@ -38,8 +38,8 @@
 	"author": "Hans Klunder",
 	"license": "MIT",
 	"devDependencies": {
-		"@biomejs/biome": "^2.5.7",
-		"@types/node": "^26.1.2",
+		"@biomejs/biome": "^2.5.14",
+		"@types/node": "^26.6.1",
 		"expect-type": "^1.4.0",
 		"typescript": "^7.0.2"
 	},
