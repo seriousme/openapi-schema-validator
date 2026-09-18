@@ -1,12 +1,12 @@
 {
-	"$id": "https://spec.openapis.org/oas/3.2/schema/2025-11-23",
+	"$id": "https://spec.openapis.org/oas/3.2/schema/2026-08-30",
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"description": "The description of OpenAPI v3.2.x Documents without Schema Object validation",
 	"type": "object",
 	"properties": {
 		"openapi": {
 			"type": "string",
-			"pattern": "^3\\.2\\.\\d+(-.+)?$"
+			"pattern": "^3\\.2\\.[0-9]+(-.+)?$"
 		},
 		"$self": {
 			"type": "string",
@@ -20,7 +20,7 @@
 		"jsonSchemaDialect": {
 			"type": "string",
 			"format": "uri-reference",
-			"default": "https://spec.openapis.org/oas/3.2/dialect/2025-09-17"
+			"default": "https://spec.openapis.org/oas/3.2/dialect/2026-02-26"
 		},
 		"servers": {
 			"type": "array",
@@ -341,7 +341,7 @@
 					},
 					"propertyNames": {
 						"$comment": "RFC9110 restricts methods to \"1*tchar\" in ABNF",
-						"pattern": "^[a-zA-Z0-9!#$%&'*+.^_`|~-]+$",
+						"$ref": "#/$defs/token",
 						"not": {
 							"enum": [
 								"GET",
@@ -601,6 +601,40 @@
 							"content"
 						]
 					}
+				},
+				{
+					"if": {
+						"properties": {
+							"in": {
+								"const": "path"
+							}
+						}
+					},
+					"then": {
+						"properties": {
+							"name": {
+								"$comment": "see OAS 3.2.0 §4.8.2",
+								"pattern": "^[^{}]+$"
+							}
+						}
+					}
+				},
+				{
+					"if": {
+						"properties": {
+							"in": {
+								"const": "header"
+							}
+						}
+					},
+					"then": {
+						"properties": {
+							"name": {
+								"$comment": "see RFC9110 §5.1",
+								"$ref": "#/$defs/token"
+							}
+						}
+					}
 				}
 			],
 			"dependentSchemas": {
@@ -805,7 +839,7 @@
 			}
 		},
 		"content": {
-			"$comment": "https://spec.openapis.org/oas/v3.2#fixed-fields-10",
+			"$comment": "The `content` object is a property of:\nParameter Object: https://spec.openapis.org/oas/v3.2#parameter-object\nRequest Body Object: https://spec.openapis.org/oas/v3.2#request-body-object\nResponse Object: https://spec.openapis.org/oas/v3.2#response-object\nHeader Object: https://spec.openapis.org/oas/v3.2#header-object\n",
 			"type": "object",
 			"additionalProperties": {
 				"$ref": "#/$defs/media-type-or-reference"
@@ -880,11 +914,14 @@
 			"type": "object",
 			"properties": {
 				"contentType": {
-					"type": "string",
-					"format": "media-range"
+					"$comment": "one or more comma-separated media-ranges",
+					"type": "string"
 				},
 				"headers": {
 					"type": "object",
+					"propertyNames": {
+						"$ref": "#/$defs/token"
+					},
 					"additionalProperties": {
 						"$ref": "#/$defs/header-or-reference"
 					}
@@ -996,6 +1033,9 @@
 				},
 				"headers": {
 					"type": "object",
+					"propertyNames": {
+						"$ref": "#/$defs/token"
+					},
 					"additionalProperties": {
 						"$ref": "#/$defs/header-or-reference"
 					}
@@ -1679,6 +1719,11 @@
 					}
 				}
 			}
+		},
+		"token": {
+			"$comment": "see https://www.rfc-editor.org/rfc/rfc9110.html#section-5.6.2",
+			"type": "string",
+			"pattern": "^[0-9A-Za-z!#$%&'*+.^_`|~-]+$"
 		}
 	}
 }
