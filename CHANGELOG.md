@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 ### Changed
+
+## [v2.11.0] 25-09-2026
+### Changed
+ - feat: updated OpenApi schema 3.1 to version 2026-08-30
  - chore: updated dependencies
    - @biomejs/biome  ^2.5.7  →  ^2.5.14
    - yaml            ^2.9.0  →   ^2.9.1

@@ -21,7 +21,7 @@
 		"test:ci": "npm run lint && npm run test && npm run test:typescript",
 		"pretest": "npm run format",
 		"test": "node --test  --experimental-test-coverage --test-reporter=spec --test-reporter-destination=stdout --test-reporter=lcov --test-reporter-destination=coverage.lcov --test-coverage-lines=100 --test-coverage-functions=100 --test-coverage-branches=100 test/test-*.js",
-		"cloneOas": "rm -rf OpenAPI-Specification && git clone --branch 'main' --single-branch https://github.com/OAI/spec.openapis.org.git",
+		"cloneOas": "rm -rf spec.openapis.org && git clone --branch 'main' --single-branch https://github.com/OAI/spec.openapis.org.git",
 		"checkOasVersions": "node test/check-versions.js",
 		"checkOasVersionsSnapshot": "node test/check-versions.js --updateSnapshot",
 		"preconvert3x": "npm run cloneOas",
