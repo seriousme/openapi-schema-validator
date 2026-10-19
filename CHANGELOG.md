@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 ### Changed
+ - chore: update biome config
+ - chore: refactor index.js
 
 ## [v2.11.0] 25-09-2026
 ### Changed
