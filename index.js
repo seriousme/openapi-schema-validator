@@ -1,6 +1,4 @@
-import { readFileSync } from "node:fs";
 import { readFile } from "node:fs/promises";
-import { fileURLToPath, URL } from "node:url";
 import Ajv2020 from "ajv/dist/2020.js";
 import Ajv04 from "ajv-draft-04";
 import addFormatsModule from "ajv-formats";
@@ -10,8 +8,8 @@ import { checkRefs, replaceRefs } from "./resolve.js";
 /** @typedef {import("ajv/dist/core.js").default} AjvCore */
 /** @typedef {typeof import("ajv/dist/core.js").default} AjvCoreConstructor */
 
-/** @typedef {import("./index.js").Validator} ValidatorDecl */
-/** @typedef {import("./index.js").SpecData} SpecData */
+/** @typedef {import("./index.d.ts").Validator} ValidatorDecl */
+/** @typedef {import("./index.d.ts").SpecData} SpecData */
 
 // ajv-formats is a CommonJS module,
 // so we need to access its default property to get the correct typed value
@@ -28,22 +26,6 @@ const ajvVersions = {
 };
 
 const inlinedRefs = "x-inlined-refs";
-
-/**
- * @param {string} fileName
- * @returns {string}
- */
-function localFile(fileName) {
-	return fileURLToPath(new URL(fileName, import.meta.url));
-}
-
-/**
- * @param {string} file
- * @returns {{ $schema: string, [x: string]: unknown }}
- */
-function importJSON(file) {
-	return JSON.parse(readFileSync(localFile(file), "utf-8"));
-}
 
 /**
  *
@@ -132,6 +114,29 @@ async function loadSpecFromData(data) {
 	}
 }
 
+/**
+ * @param {Partial<Record<string, import("ajv/dist/core.js").AnyValidateFunction<unknown>>>} ajvValidators
+ * @param {Ajv2020.Options | undefined} ajvOptions
+ * @param {string} version
+ */
+async function getAjvValidator(ajvValidators, ajvOptions, version) {
+	if (!ajvValidators[version]) {
+		const { default: schema } = await import(
+			`./schemas/v${version}/schema.json`,
+			{ with: { type: "json" } }
+		);
+		const schemaVersion = schema.$schema;
+		const AjvClass = /** @type {AjvCoreConstructor} */ (
+			ajvVersions[schemaVersion]
+		);
+		const ajv = new AjvClass(ajvOptions);
+		addFormats(ajv);
+		ajv.addFormat("media-range", true); // used in 3.1
+		ajvValidators[version] = ajv.compile(schema);
+	}
+	return ajvValidators[version];
+}
+
 export class Validator {
 	/**
 	 * @param {import('./index.js').ValidatorOptions} ajvOptions
@@ -204,7 +209,11 @@ export class Validator {
 					"Cannot find supported swagger/openapi version in specification, version must be a string.",
 			};
 		}
-		const validateSchema = this.getAjvValidator(version);
+		const validateSchema = await getAjvValidator(
+			this.ajvValidators,
+			this.ajvOptions,
+			version,
+		);
 		// check if the specification matches the JSONschema
 		const schemaResult = validateSchema(specification);
 		// check if the references are valid as those can't be validated bu JSONschema
@@ -259,24 +268,5 @@ export class Validator {
 			specification = spec;
 		}
 		return this.validate(/** @type {SpecFromData} */ (specification));
-	}
-
-	/**
-	 * @param {string} version
-	 * @returns {ReturnType<AjvCore['compile']>}
-	 */
-	getAjvValidator(version) {
-		if (!this.ajvValidators[version]) {
-			const schema = importJSON(`./schemas/v${version}/schema.json`);
-			const schemaVersion = schema.$schema;
-			const AjvClass = /** @type {AjvCoreConstructor} */ (
-				ajvVersions[schemaVersion]
-			);
-			const ajv = new AjvClass(this.ajvOptions);
-			addFormats(ajv);
-			ajv.addFormat("media-range", true); // used in 3.1
-			this.ajvValidators[version] = ajv.compile(schema);
-		}
-		return this.ajvValidators[version];
 	}
 }
