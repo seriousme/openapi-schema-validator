@@ -43,12 +43,12 @@ const res = await validator.validate("./petstore.json");
 const specification = validator.specification;
 // specification now contains a Javascript object containing the specification
 if (res.valid) {
-  console.log("Specification matches schema for version", validator.version);
-  const schema = validator.resolveRefs();
-  // schema now contains a Javascript object containing the dereferenced schema
+	console.log("Specification matches schema for version", validator.version);
+	const schema = validator.resolveRefs();
+	// schema now contains a Javascript object containing the dereferenced schema
 } else {
-  console.log("Specification does not match Schema");
-  console.log(res.errors);
+	console.log("Specification does not match Schema");
+	console.log(res.errors);
 }
 ```
 
@@ -56,7 +56,7 @@ This module can be used in CommonJS code via:
 
 ```javascript
 // CommonJS
-const { Validator } = await (import("@seriousme/openapi-schema-validator"));
+const { Validator } = await import("@seriousme/openapi-schema-validator");
 ```
 
 See also the [upgrading guide](UPGRADING.md) if you come from a previous major version.
@@ -98,8 +98,8 @@ npx -p @seriousme/openapi-schema-validator bundle-api <spec files>
 
 The output will be a validated JSON specification.
 Options:
-  -o  --output <filename>   the filename to save the output to, default is STDOUT.
-  -t  --type  [JSON|YAML]   the output format, default is JSON.
+-o --output <filename> the filename to save the output to, default is STDOUT.
+-t --type [JSON|YAML] the output format, default is JSON.
 
 <a name="API"></a>
 
@@ -188,9 +188,9 @@ specification by passing `{specification:<object>}` as options. The result is an
 - a filename
 
 `uri` must be a string (e.g. `http://www.example.com/subspec`), but
-  is not required if the subSpecification holds a `$id` attribute at top level.
-  If you specify a value for `uri` it will overwrite the definition in the `$id`
-  attribute at top level.
+is not required if the subSpecification holds a `$id` attribute at top level.
+If you specify a value for `uri` it will overwrite the definition in the `$id`
+attribute at top level.
 
 Sometimes a specification is composed of multiple files that each contain parts
 of the specification. The specification refers to these sub specifications using
@@ -208,13 +208,13 @@ paths:
       tags:
         - pet
       summary: Add a new pet to the store
-      description: ''
+      description: ""
       operationId: addPet
       responses:
-        '405':
+        "405":
           description: Invalid input
       requestBody:
-        $ref: 'http://www.example.com/subspec#/components/requestBodies/Pet'
+        $ref: "http://www.example.com/subspec#/components/requestBodies/Pet"
 ```
 
 And the reference is in `sub-spec.yaml`, containing:
@@ -267,7 +267,10 @@ If we take the YAML specifications from the previous example then validation can
 ```javascript
 import { Validator } from "@seriousme/openapi-schema-validator";
 const validator = new Validator();
-const res = await validator.validateBundle([ "./sub-spec.yaml", "./main-spec.yaml"]);
+const res = await validator.validateBundle([
+	"./sub-spec.yaml",
+	"./main-spec.yaml",
+]);
 // res now contains the results of the validation across main-spec and sub-spec
 const specification = validator.specification;
 // specification now contains a Javascript object containing the specification
@@ -285,10 +288,10 @@ This static property returns the OpenApi versions supported by this package as a
 
 # Notes
 
-The [JSONschemas](/schemas/) are copied from the [OpenAPI specification JSONschemas](https://github.com/OAI/OpenAPI-Specification/tree/gh-pages) which might differ from the [OpenAPI specification HTML pages](https://spec.openapis.org/oas/latest.html)! 
-If you find a bug in a schema (e.g. because it behaves differently than specified in the HTML) then 
+The [JSONschemas](/schemas/) are copied from the [OpenAPI specification JSONschemas](https://github.com/OAI/OpenAPI-Specification/tree/gh-pages) which might differ from the [OpenAPI specification HTML pages](https://spec.openapis.org/oas/latest.html)!
+If you find a bug in a schema (e.g. because it behaves differently than specified in the HTML) then
 please raise an issue at https://github.com/OAI/OpenAPI-Specification.
-Shortly after the specification writers update their schema the automation will pick it up 
+Shortly after the specification writers update their schema the automation will pick it up
 and include the updated version in this module.
 
 <a name="license"></a>

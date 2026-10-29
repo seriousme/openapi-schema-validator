@@ -28,5 +28,5 @@ You now need to do:
 // ESM
 import { Validator } from "@seriousme/openapi-schema-validator";
 // CJS
-const { Validator } = await (import("@seriousme/openapi-schema-validator"));
+const { Validator } = await import("@seriousme/openapi-schema-validator");
 ```

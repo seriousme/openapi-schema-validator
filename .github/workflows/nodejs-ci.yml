@@ -15,7 +15,7 @@ jobs:
       matrix:
         node-version: ["lts/-1", "lts/*", "node"]
         os: [ubuntu-latest, windows-latest]
-        exclude: 
+        exclude:
           - os: windows-latest
             node-version: "lts/-1"
     steps:

@@ -1,4 +1,4 @@
-$id: 'subspec2'
+$id: "subspec2"
 get:
   tags:
     - pet
@@ -22,18 +22,18 @@ get:
             - sold
           default: available
   responses:
-    '200':
+    "200":
       description: successful operation
       content:
         application/xml:
           schema:
             type: array
             items:
-              $ref: 'http://www.example.com/subspec#/components/schemas/Pet'
+              $ref: "http://www.example.com/subspec#/components/schemas/Pet"
         application/json:
           schema:
             type: array
             items:
-              $ref: 'http://www.example.com/subspec#/components/schemas/Pet'
-    '400':
+              $ref: "http://www.example.com/subspec#/components/schemas/Pet"
+    "400":
       description: Invalid status value
