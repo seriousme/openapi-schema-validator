@@ -15,11 +15,8 @@ npm run realWorldTestAll
 npm run realWorldTestFailed
 npm run realWorldTestCI
 ```
+
 - `realWorldTest` takes a random sample from the set of APIs
 - `realWorldTestAll` tests all available APIs
 - `realworldTestFailed` only tests the APIs listed in failed.json
 - `realworldTestCI` tests all available APIs and overwrites `failed.json` and `failed.md`
-
-
-
-

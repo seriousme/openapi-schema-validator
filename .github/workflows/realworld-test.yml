@@ -1,7 +1,7 @@
 # this workflow runs a check on the collection of APIs at https://apis.guru/
 # if more than one specification is present per API it will only check the lastest
 # about 2200 specifications are checked this way
-# If it finds specifications that do not match the relevant openApi JSON schema 
+# If it finds specifications that do not match the relevant openApi JSON schema
 # and for which no previous failure is known in /test/realworld/failed.json
 # it will create a new report and commit this
 #
@@ -10,7 +10,7 @@ name: "Real world API test"
 on:
   schedule:
     # once week on friday morning
-    - cron: '7 7 * * 5'
+    - cron: "7 7 * * 5"
   workflow_dispatch:
     inputs:
       nodeVersion:
@@ -18,31 +18,31 @@ on:
         required: false
         default: "lts/*"
 
-permissions: 
+permissions:
   contents: write
 
 jobs:
- realWorldTest:
+  realWorldTest:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v7
-    - name: Use Node.js 
-      uses: actions/setup-node@v7
-      with:
-        node-version: ${{ github.event.inputs.nodeVersion }}
-    - run: npm ci --ignore-scripts --no-audit --no-progress --prefer-offline
-    - run: npm run build --if-present
-    - name: Start the test
-      run: npm run realWorldTestCI
-    - name: Run format to avoid validation errors on next CI
-      run: npm run format
-    - name: Push changes to remote
-      run: |
-        git add test/realworld/failed*
-        git \
-        -c user.name="GitHub Actions" \
-        -c user.email="actions@github.com" \
-        commit -m "Updated Real World test report on `date +%F`" \
-        --author "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>" \
-        || echo "Nothing to commit, proceeding"
-        git push
+      - uses: actions/checkout@v7
+      - name: Use Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: ${{ github.event.inputs.nodeVersion }}
+      - run: npm ci --ignore-scripts --no-audit --no-progress --prefer-offline
+      - run: npm run build --if-present
+      - name: Start the test
+        run: npm run realWorldTestCI
+      - name: Run format to avoid validation errors on next CI
+        run: npm run format
+      - name: Push changes to remote
+        run: |
+          git add test/realworld/failed*
+          git \
+          -c user.name="GitHub Actions" \
+          -c user.email="actions@github.com" \
+          commit -m "Updated Real World test report on `date +%F`" \
+          --author "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>" \
+          || echo "Nothing to commit, proceeding"
+          git push
