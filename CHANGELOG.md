@@ -8,7 +8,7 @@
 - chore: refactor index.js
 - chore: updated dependencies
   - @types/node ^26.6.1 → ^26.6.6
-  - @biomejs/biome ^2.5.14 → ^2.6.4
+  - @biomejs/biome ^2.5.14 → ^2.6.6
 
 ## [v2.11.0] 25-09-2026
 

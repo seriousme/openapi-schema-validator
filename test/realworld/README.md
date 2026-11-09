@@ -9,6 +9,7 @@ Once the script completes it creates a `failed.update.json` which you can diff w
 It also creates a `failed.update.md`.
 
 You can run the script via:
+
 ```bash
 npm run realWorldTest
 npm run realWorldTestAll
