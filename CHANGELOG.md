@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [2.12.0] 13-11-2026
+
 ### Changed
 
 - feat: updated OpenApi schema 3.1 to version 2026-11-05
