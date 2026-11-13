@@ -1,12 +1,12 @@
 {
-	"$id": "https://spec.openapis.org/oas/3.1/schema/2026-08-03",
+	"$id": "https://spec.openapis.org/oas/3.1/schema/2026-11-05",
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"description": "The description of OpenAPI v3.1.x Documents without Schema Object validation",
 	"type": "object",
 	"properties": {
 		"openapi": {
 			"type": "string",
-			"pattern": "^3\\.1\\.\\d+(-.+)?$"
+			"pattern": "^3\\.1\\.[0-9]+(-.+)?$"
 		},
 		"info": {
 			"$ref": "#/$defs/info"

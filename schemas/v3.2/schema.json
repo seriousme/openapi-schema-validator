@@ -1,5 +1,5 @@
 {
-	"$id": "https://spec.openapis.org/oas/3.2/schema/2026-08-30",
+	"$id": "https://spec.openapis.org/oas/3.2/schema/2026-11-12",
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"description": "The description of OpenAPI v3.2.x Documents without Schema Object validation",
 	"type": "object",
@@ -852,9 +852,6 @@
 			"$comment": "https://spec.openapis.org/oas/v3.2#media-type-object",
 			"type": "object",
 			"properties": {
-				"description": {
-					"type": "string"
-				},
 				"schema": {
 					"$ref": "#/$defs/schema"
 				},
