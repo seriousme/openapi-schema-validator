@@ -4,6 +4,8 @@
 
 ### Changed
 
+- feat: updated OpenApi schema 3.1 to version 2026-11-05
+- feat: updated OpenApi schema 3.2 to version 2026-11-05
 - chore: update biome config
 - chore: refactor index.js
 - chore: updated dependencies
